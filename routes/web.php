@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,5 @@ Route::get('/', function () {
 Route::resource('catagories', CatagoryController::class);
 Route::resource('posts', PostController::class);
 
+////            Admin Area 
+Route::get('admin', [adminController::class,'index']);
