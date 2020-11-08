@@ -24,7 +24,6 @@ Route::group(['prefix' => 'admin','as'=>'admin.'], function() {   //'middleware'
 
     Route::resource('/event-category','EventCategoryController');
     Route::resource('/event','EventController');
-
 });
 
 

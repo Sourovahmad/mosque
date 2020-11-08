@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\event;
+use App\eventCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class EventController extends Controller
 {
@@ -24,7 +26,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        $categories = eventCategory::all();
+        return view('admin.event.create',compact('categories'));
     }
 
     /**
@@ -35,7 +38,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $event = new event;
+        $event->title = $request->title;
+        $event->category_id = $request->category_id;
+        $event->description = $request->description;
+        $event->date = $request->date;
+        $event->vanu = $request->vanu;
+        $event->start_time = $request->start_time;
+        $event->end_time = $request->end_time;
+        $event->image_id = 1;
+        $event->save();
+        return redirect(route('admin.event.index'))->withSuccess(['Event Created']);
     }
 
     /**
@@ -57,7 +70,8 @@ class EventController extends Controller
      */
     public function edit(event $event)
     {
-        //
+        $categories = eventCategory::all();
+        return view('admin.event.edit',compact('categories','event'));
     }
 
     /**
@@ -69,7 +83,16 @@ class EventController extends Controller
      */
     public function update(Request $request, event $event)
     {
-        //
+        $event->title = $request->title;
+        $event->category_id = $request->category_id;
+        $event->description = $request->description;
+        $event->date = $request->date;
+        $event->vanu = $request->vanu;
+        $event->start_time = $request->start_time;
+        $event->end_time = $request->end_time;
+        $event->image_id = 1;
+        $event->save();
+        return redirect(route('admin.event.index'))->withSuccess(['Event updated']);
     }
 
     /**
@@ -80,6 +103,7 @@ class EventController extends Controller
      */
     public function destroy(event $event)
     {
-        //
+        $event->delete();
+        return Redirect::back()->withErrors(["Event Deleted" ]);
     }
 }
