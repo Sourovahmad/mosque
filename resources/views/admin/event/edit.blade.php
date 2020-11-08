@@ -18,7 +18,7 @@
 
 
 
-            <form method="POST" id="createEventForm" action="{{ route('admin.event.update',$event->id) }}">
+            <form method="POST" id="createEventForm" action="{{ route('admin.event.update',$event->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('put')
 
@@ -67,11 +67,19 @@
                         <input type="time" name="end_time" class="form-control" id="endTime" value="{{ $event->end_time }}" required>
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-12 ">
+                    <div class="form-group col-md-6 col-sm-12 ">
                         <label for="description"> Description<span style="color: red"> *</span></label>
                         <textarea class="form-control" id="description" name="description" rows="4"   > {{ $event->description }}</textarea>
                     </div>
 
+                    <div class="form-group col-md-6 col-sm-12 ">
+                        <label for="end_time">Upload image</label><br>
+                        <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg">
+                        <div>
+                            <br>
+                            <p class="font-weight-bold">Note: Image resolution Must be 600*400 (width*height)</p>
+                        </div>
+                    </div>
 
 
 
