@@ -20,11 +20,6 @@ Route::get('/', function () {
 
 
 
-Route::group(['prefix' => 'admin','as'=>'admin.'], function() {   
-
-    Route::resource('/event-category','EventCategoryController');
-    Route::resource('/event','EventController');
-});
 
 
 
