@@ -16,7 +16,6 @@ class EventCategoryController extends Controller
      */
     public function index()
     {
-                
         $settings = setting::where('table_name','event_categories')->first();
         $settings->setting= json_decode(  json_decode(  $settings->setting,true),true);
       

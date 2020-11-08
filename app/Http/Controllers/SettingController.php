@@ -14,6 +14,8 @@ class SettingController extends Controller
      */
     public function index()
     {
+        
+        // {\n                \n                \"position\":11,\n    \n                \"create\":\"2\",\n                \"read\":\"1\",\n                \"update\":\"3\",\n                \"require\":\"1\",\n    \n                \"name\":\"product\",\n                \"input_type\" : \"dropDown\",\n                \"database_name\":\"product_id\",  \n                \"title\":\"Product\",\n                \"data\" : \"products\"\n            }
         $a = '[{
             "componentDetails":{
                 "title":"Event Category List",
@@ -21,15 +23,15 @@ class SettingController extends Controller
             },
             "routes":{
                 "create":{
-                    "name":"event-category.store",
+                    "name":"admin.event-category.store",
                     "link":"event-category"
                 },
                 "update":{
-                    "name":"event-category.update",
+                    "name":"admin.event-category.update",
                     "link":"event-category"
                 },
                 "delete":{
-                    "name":"event-category.destroy",
+                    "name":"event.event-category",
                     "link":"event-category"
                 }
             },
@@ -43,37 +45,116 @@ class SettingController extends Controller
                 "require":"1",
     
                "input_type":"text",
-               "name":"name",
-               "title":"Name",
+               "name":"title",
+               "title":"Title",
     
     
-               "database_name":"name"
+               "database_name":"title"
             },{
                     
                 "position":111,
     
-                "create":"1",
+                "create":"2",
                 "read":"1",
-                "update":"1",
-                "require":"0",
+                "update":"2",
+                "require":"1",
     
-               "input_type":"text",
-               "name":"description",
-               "title":"Description",
-               "database_name":"description"
+               "input_type":"date",
+               "name":"date",
+               "title":"Date",
+    
+    
+               "database_name":"date"
             },{
                     
                 "position":111,
     
-                "create":"3",
+                "create":"2",
                 "read":"1",
-                "update":"3",
-                "require":"0",
+                "update":"2",
+                "require":"1",
     
                "input_type":"text",
-               "name":"event_count",
-               "title":"Event Count",
-               "database_name":"event_count"
+               "name":"vanu",
+               "title":"Vanu",
+    
+    
+               "database_name":"vanu"
+            },{
+                    
+                "position":111,
+    
+                "create":"2",
+                "read":"1",
+                "update":"2",
+                "require":"1",
+    
+               "input_type":"time",
+               "name":"start_time",
+               "title":"Start Time",
+    
+    
+               "database_name":"start_time"
+            },{
+                    
+                "position":111,
+    
+                "create":"2",
+                "read":"1",
+                "update":"2",
+                "require":"1",
+    
+               "input_type":"time",
+               "name":"end_time",
+               "title":"End Time",
+    
+    
+               "database_name":"end_time"
+            },{
+                    
+                "position":111,
+    
+                "create":"2",
+                "read":"1",
+                "update":"2",
+                "require":"1",
+    
+               "input_type":"text",
+               "name":"vanu",
+               "title":"Vanu",
+    
+    
+               "database_name":"vanu"
+            },{
+                    
+                "position":111,
+    
+                "create":"2",
+                "read":"1",
+                "update":"2",
+                "require":"1",
+    
+               "input_type":"text",
+               "name":"vanu",
+               "title":"Vanu",
+    
+    
+               "database_name":"vanu"
+            },{
+                    
+                "position":111,
+    
+                "create":"2",
+                "read":"1",
+                "update":"2",
+                "require":"1",
+    
+               "input_type":"text",
+               "name":"vanu",
+               "title":"Vanu",
+    
+    
+               "database_name":"vanu"
             }
             ]
         }]' ;

@@ -17,8 +17,17 @@ Route::get('/', function () {
     return view('admin.index');
 })->name("home");
 
-Route::resource('/event-category','EventCategoryController');
-Route::resource('/event','EventController');
 
 
+
+Route::group(['prefix' => 'admin','as'=>'admin.'], function() {   //'middleware' => ['auth'],
+
+    Route::resource('/event-category','EventCategoryController');
+    Route::resource('/event','EventController');
+
+});
+
+
+
+// setting development
 Route::get('/setting','SettingController@index' )->name('setting');
