@@ -8,10 +8,10 @@
           </button>
 
           
-          <img src="{{asset('img/mabricslogo.png')}}" height="60px" alt="">
+          {{-- <img src="" height="60px" alt=""> --}}
           <a href="#">
- <span class="h2 title text-light"  > Abasas </span> 
-          <span class="h6 title text-light"  > Not Number One, WE are Only One </span> </a> 
+ <span class="h2 title text-light"  > Mosque </span> 
+          <span class="h6 title text-light"  > Allah is Almighty </span> </a> 
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
