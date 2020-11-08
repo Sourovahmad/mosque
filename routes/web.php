@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-});
+    return view('admin.index');
+})->name("home");
+
+Route::resource('/event-category','EventCategoryController');
+Route::resource('/event','EventController');
+
+
+Route::get('/setting','SettingController@index' )->name('setting');
