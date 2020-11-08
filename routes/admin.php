@@ -12,22 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('admin.index');
-})->name("home");
-
-
-
-
-Route::group(['prefix' => 'admin','as'=>'admin.'], function() {   
+ 
 
     Route::resource('/event-category','EventCategoryController');
     Route::resource('/event','EventController');
 
-});
 
 
-
-// setting development
-Route::get('/setting','SettingController@index' )->name('setting');
