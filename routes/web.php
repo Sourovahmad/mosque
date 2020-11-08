@@ -30,3 +30,6 @@ Route::group(['prefix' => 'admin','as'=>'admin.'], function() {
 
 // setting development
 Route::get('/setting','SettingController@index' )->name('setting');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
