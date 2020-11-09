@@ -31,7 +31,7 @@ class SettingController extends Controller
                     "link":"admin/blog-category"
                 },
                 "delete":{
-                    "name":"admin.blog-category",
+                    "name":"admin.blog-category.destroy",
                     "link":"admin/blog-category"
                 }
             },
@@ -65,6 +65,21 @@ class SettingController extends Controller
     
     
                "database_name":"description"
+            },{
+                    
+                "position":111,
+    
+                "create":"3",
+                "read":"1",
+                "update":"3",
+                "require":"0",
+    
+               "input_type":"text",
+               "name":"blog_count",
+               "title":"Blog Count",
+    
+    
+               "database_name":"blog_count"
             }
             ]
         }]' ;
