@@ -11,7 +11,7 @@
     <li class="nav-item active ">
         <a class="nav-link p-3 " href="">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>{{__('translate.Home')}}</span></a>
+            <span>Home</span></a>
     </li>
     <hr class="sidebar-divider m-1 p-0 ">
     <li class="nav-item">
