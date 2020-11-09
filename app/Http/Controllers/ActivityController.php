@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\salat;
+use App\activity;
 use Illuminate\Http\Request;
 
-class SalatController extends Controller
+class ActivityController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class SalatController extends Controller
      */
     public function index()
     {
-        $salat = salat::find(1);
-        return view('admin.salat.index',compact('salat'));
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class SalatController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function show(salat $salat)
+    public function show(activity $activity)
     {
         //
     }
@@ -53,10 +52,10 @@ class SalatController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function edit(salat $salat)
+    public function edit(activity $activity)
     {
         //
     }
@@ -65,29 +64,21 @@ class SalatController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\salat  $salat
+     * @param  \App\activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, salat $salat)
+    public function update(Request $request, activity $activity)
     {
-        $salat->fajr= $request->fajr;
-        $salat->dhuhr= $request->dhuhr;
-        $salat->jumma= $request->jumma;
-        $salat->asr= $request->asr;
-        $salat->maghrib= $request->maghrib;
-        $salat->isha= $request->isha;
-
-        return redirect()->back()->withSuccess(['Successfully Updated']);
-
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\activity  $activity
      * @return \Illuminate\Http\Response
      */
-    public function destroy(salat $salat)
+    public function destroy(activity $activity)
     {
         //
     }
