@@ -11,10 +11,10 @@
 									<li><p><i class="icofont icofont-full-sunny"></i>SUNRISE : <span class="time-sunrise"></span></p></li>
 									<li><p><i class="icofont icofont-full-night"></i>SUNSET : <span class="time-sunset"></span></p></li>
 								</ul>
-								<ul class="header__right__icons d-flex justify-content-end">
+								{{-- <ul class="header__right__icons d-flex justify-content-end">
 									<li class="minicart-trigger"><a href="#"><i class="fa fa-opencart"></i><span class="cart-counter">2</span></a></li>
 									<li class="accountbox-trigger"><a href="#"><i class="fa fa-user-o"></i></a></li>
-								</ul>
+								</ul> --}}
 							</div>
 							<div class="header__right__bottom">
 								

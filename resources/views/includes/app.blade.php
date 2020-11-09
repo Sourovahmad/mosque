@@ -45,7 +45,7 @@
 			<!-- //Header -->
 
 			<!-- Top Banner -->
-			<div class="banner-area">
+			<div  class="banner-area">
 				<div class="banner bg-image--1 banner-text-slide slider-arrow--style1 slide-animate-text">
 
 					<!-- Single Banner -->
@@ -96,16 +96,17 @@
 						<div class="row align-items-center">
 							<div class="col-lg-6">
 								<div class="about-content">
-									<h3><strong>“Azan”</strong> Islamic Template</h3>
-									<h2>Know the real history of Islam</h2>
+									<h2> Masjid Mission Center <strong>“MMC”</strong></h2>
+									<h4>87-26 175th St, Queens, NY 11432, United States</h4>
 									<p><span class="mark">Islam</span> is the know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because</p>
 									<p>know how to pursue pleasure rationally encounter consequences that are xtremely painful. Nor again is there anyone who loves or pursues or desires</p>
 									<div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
 										<div class="about-content__bottom__left">
-											<p>Have you any quary?</p>
-											<h3 class="body--font"><a href="callto://+00812356369">+00812 356 369</a></h3>
+											{{-- <p>Have you any quary?</p>
+											<h3 class="body--font"><a href="callto://+00812356369">+00812 356 369</a></h3> --}}
+											
 										</div>
-										<span>or</span>
+										{{-- <span>or</span> --}}
 										<div class="about-content__bottom__right">
 											<a href="about-us.html" class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--dark"><span>Read More</span></a>
 										</div>
@@ -114,9 +115,9 @@
 							</div>
 							<div class="col-lg-6">
 								<div class="about-images clearfix">
-									<img class="wow fadeInUp" src="images/about/large-1.jpg" alt="about image">
-									<img class="wow fadeInUp" src="images/about/small-1.jpg" alt="smalal image">
-									<img class="wow fadeInUp" data-wow-delay="0.1s" src="images/about/small-2.jpg" alt="smalal image">
+									<img class="wow fadeInUp" src="{{ asset('abasas/images/about/large-1.jpg')}}" alt="about image">
+									<img class="wow fadeInUp" src="{{ asset('abasas/images/about/small-1.jpg')}}" alt="smalal image">
+									<img class="wow fadeInUp" data-wow-delay="0.1s" src="{{ asset('abasas/images/about/small-2.jpg')}}" alt="smalal image">
 								</div>
 							</div>
 						</div>
@@ -127,7 +128,7 @@
 				<section class="cr-section islams-pillar-area ptb--120 bg--pattern zig-zag--top zig-zag--bottom">
 					<div class="islams-pillars d-flex justify-content-between justify-content-lg-center align-items-center flex-wrap flex-xl-nowrap flex-xx-nowrap flex-sp-nowrap">
 						<div class="islams-pillars__thumb text-lg-center wow fadeInLeft">
-							<img src="images/pillars/pillars-thumb.png" alt="pillars thumb">
+							<img src="{{ asset('abasas/images/pillars/pillars-thumb.png')}}" alt="pillars thumb">
 						</div>
 						<div class="islams-pillars__content">
 							<h2>Take the proper knowledge about piller of Islam</h2>
@@ -136,31 +137,31 @@
 						<div class="pillars d-flex justify-content-lg-between flex-md-wrap justify-content-md-center justify-content-sm-center justify-content-center">
 							<div class="pillar__single wow fadeInRight" data-wow-delay="0s">
 								<div class="pillar__single__inner">
-									<img class="pillar__single__icon" src="images/pillars/pillar-icon-1.png" alt="pillar 1">
+									<img class="pillar__single__icon" src="{{ asset('abasas/images/pillars/pillar-icon-1.png')}}" alt="pillar 1">
 									<h3>Kalima</h3>
 								</div>
 							</div>
 							<div class="pillar__single wow fadeInRight" data-wow-delay="0.1s">
 								<div class="pillar__single__inner">
-									<img class="pillar__single__icon" src="images/pillars/pillar-icon-2.png" alt="pillar 2">
+									<img class="pillar__single__icon" src="{{ asset('abasas/images/pillars/pillar-icon-2.png')}}" alt="pillar 2">
 									<h3>Salat</h3>
 								</div>
 							</div>
 							<div class="pillar__single wow fadeInRight" data-wow-delay="0.2s">
 								<div class="pillar__single__inner">
-									<img class="pillar__single__icon" src="images/pillars/pillar-icon-3.png" alt="pillar 3">
+									<img class="pillar__single__icon" src="{{ asset('abasas/images/pillars/pillar-icon-3.png')}}" alt="pillar 3">
 									<h3>Zakat</h3>
 								</div>
 							</div>
 							<div class="pillar__single wow fadeInRight" data-wow-delay="0.3s">
 								<div class="pillar__single__inner">
-									<img class="pillar__single__icon" src="images/pillars/pillar-icon-4.png" alt="pillar 4">
+									<img class="pillar__single__icon" src="{{ asset('abasas/images/pillars/pillar-icon-4.png')}}" alt="pillar 4">
 									<h3>Siam</h3>
 								</div>
 							</div>
 							<div class="pillar__single wow fadeInRight" data-wow-delay="0.4s">
 								<div class="pillar__single__inner">
-									<img class="pillar__single__icon" src="images/pillars/pillar-icon-5.png" alt="pillar 5">
+									<img class="pillar__single__icon" src="{{ asset('abasas/images/pillars/pillar-icon-5.png')}}" alt="pillar 5">
 									<h3>HAJJ</h3>
 								</div>
 							</div>
@@ -211,7 +212,7 @@
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/2.jpg" alt="event thumb">
+													<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
 													<div class="event__single__date">
 														<h3>17 December, 2017</h3>
 													</div>
@@ -231,7 +232,7 @@
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/3.jpg" alt="event thumb">
+													<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
 													<div class="event__single__date">
 														<h3>21 December, 2017</h3>
 													</div>
@@ -251,7 +252,7 @@
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/1.jpg" alt="event thumb">
+													<img src="{{ asset('abasas/images/event/1.jpg')}}" alt="event thumb">
 													<div class="event__single__date">
 														<h3>15 December, 2017</h3>
 													</div>
@@ -271,7 +272,7 @@
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/2.jpg" alt="event thumb">
+													<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
 													<div class="event__single__date">
 														<h3>17 December, 2017</h3>
 													</div>
@@ -291,7 +292,7 @@
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/3.jpg" alt="event thumb">
+													<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
 													<div class="event__single__date">
 														<h3>21 December, 2017</h3>
 													</div>
@@ -314,32 +315,32 @@
 										<div class="event-filters-active">
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/1.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
 												</div>
 											</div>
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/2.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
 												</div>
 											</div>
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/3.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
 												</div>
 											</div>
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/1.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
 												</div>
 											</div>
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/2.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
 												</div>
 											</div>
 											<div class="event__filters__single">
 												<div class="event__filters__single__inner">
-													<img src="images/event/event-filters/3.png" alt="event filters">
+													<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
 												</div>
 											</div>
 										</div>
