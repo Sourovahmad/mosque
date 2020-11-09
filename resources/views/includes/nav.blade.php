@@ -32,7 +32,7 @@
 							<!-- Main naviagtion -->
 							<nav class="menu">
 								<ul class="justify-content-center">
-									<li class="cr-dropdown"><a href="index.html">HOME</a>
+									<li class="cr-dropdown"><a href="{{ route('home') }}">HOME</a>
 										<ul class="cr-dropdown-menu">
 											<li><a href="index.html">Homepage Classic</a></li>
 											<li><a href="index-boxed.html">Homepage Boxed</a></li>
@@ -41,7 +41,7 @@
 											<li><a href="index-text-slider.html">Homepage Text Slider</a></li>
 										</ul>
 									</li>
-									<li><a href="about-us.html">ABOUT</a></li>
+									<li><a href="{{ route('about.index') }}">ABOUT</a></li>
 									<li class="cr-dropdown"><a href="events.html">EVENT</a>
 										<ul class="cr-dropdown-menu">
 											<li><a href="events.html">Events</a></li>
