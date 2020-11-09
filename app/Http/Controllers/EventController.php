@@ -7,6 +7,7 @@ use App\eventCategory;
 use App\image;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event as FacadesEvent;
 use Illuminate\Support\Facades\Redirect;
 
 class EventController extends Controller
@@ -71,9 +72,21 @@ class EventController extends Controller
      * @param  \App\event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(event $event)
-    {
-        //
+    public function show( $id)
+    { 
+
+        $event = event::find($id);
+        $eventCategories = eventCategory::all();
+
+       // return $eventCategories
+
+    //   $eventCategory = ($event->category_id);
+
+    //   $Name =  $eventCategory->name();
+       
+    //    return $Name;
+
+        return view('events.event-details',compact('event','eventCategories'));
     }
 
     /**
@@ -128,5 +141,15 @@ class EventController extends Controller
     {
         $event->delete();
         return Redirect::back()->withErrors(["Event Deleted"]);
+    }
+
+
+
+
+
+    public function frontendView()
+    {
+        $events = event::paginate(6);
+        return view('events.index',compact('events'));
     }
 }

@@ -27,6 +27,15 @@ Route::resource('about','AboutController');
 Route::post('donation-success','DonationController@success')->name('donationSuccess');
 
 
+Route::get('events','EventController@frontendView')->name('events');
+Route::get('events/{id}','EventController@show')->name('event-single');
+
+
+
+
+
+
+
 // setting development
 Route::get('/setting','SettingController@index' )->name('setting');
 Auth::routes();

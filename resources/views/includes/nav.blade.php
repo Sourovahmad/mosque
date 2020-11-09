@@ -42,9 +42,9 @@
 										</ul>
 									</li>
 									<li><a href="{{ route('about.index') }}">ABOUT</a></li>
-									<li class="cr-dropdown"><a href="events.html">EVENT</a>
+									<li class="cr-dropdown"><a href="{{ route('events') }}">EVENT</a>
 										<ul class="cr-dropdown-menu">
-											<li><a href="events.html">Events</a></li>
+											<li><a href="{{ route('events') }}">Events</a></li>
 											<li><a href="event-details.html">Event Details</a></li>
 										</ul>
 									</li>
