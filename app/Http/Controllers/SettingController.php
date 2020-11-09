@@ -18,21 +18,21 @@ class SettingController extends Controller
         // {\n                \n                \"position\":11,\n    \n                \"create\":\"2\",\n                \"read\":\"1\",\n                \"update\":\"3\",\n                \"require\":\"1\",\n    \n                \"name\":\"product\",\n                \"input_type\" : \"dropDown\",\n                \"database_name\":\"product_id\",  \n                \"title\":\"Product\",\n                \"data\" : \"products\"\n            }
         $a = '[{
             "componentDetails":{
-                "title":"Blog Category List",
-                "editTitle":"Edit Blog Category"
+                "title":"Designation List",
+                "editTitle":"Edit Designation"
             },
             "routes":{
                 "create":{
-                    "name":"admin.blog-category.store",
-                    "link":"admin/blog-category"
+                    "name":"admin.designation.store",
+                    "link":"admin/designation"
                 },
                 "update":{
-                    "name":"admin.blog-category.update",
-                    "link":"admin/blog-category"
+                    "name":"admin.designation.update",
+                    "link":"admin/designation"
                 },
                 "delete":{
-                    "name":"admin.blog-category.destroy",
-                    "link":"admin/blog-category"
+                    "name":"admin.designation.destroy",
+                    "link":"admin/designation"
                 }
             },
             "fieldList":[{
@@ -75,11 +75,11 @@ class SettingController extends Controller
                 "require":"0",
     
                "input_type":"text",
-               "name":"blog_count",
-               "title":"Blog Count",
+               "name":"member",
+               "title":"Member",
     
     
-               "database_name":"blog_count"
+               "database_name":"member"
             }
             ]
         }]' ;
@@ -88,7 +88,7 @@ class SettingController extends Controller
         
         // $setting =new setting;
         // $setting->setting = json_encode( $a);
-        // $setting->table_name = 'blog_categories';
+        // $setting->table_name = 'designations';
         // $setting->save();
         // return  "Success";
     }

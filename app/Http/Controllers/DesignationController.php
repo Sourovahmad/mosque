@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\salat;
+use App\designation;
+use App\setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
-class SalatController extends Controller
+class DesignationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,15 @@ class SalatController extends Controller
      */
     public function index()
     {
-        $salat = salat::find(1);
-        return view('admin.salat.index',compact('salat'));
+        $settings = setting::where('table_name','designations')->first();
+        $settings->setting= json_decode(  json_decode(  $settings->setting,true),true);
+      
+        $dataArray=[
+            'settings'=>$settings,
+            'items' => designation::all(),
+        ];
+
+        return view('admin.committee.designation', compact('dataArray'));
     }
 
     /**
@@ -36,16 +45,17 @@ class SalatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        designation::create($request->all());
+        return redirect()->back()->withSuccess(['Successfully Created']);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\designation  $designation
      * @return \Illuminate\Http\Response
      */
-    public function show(salat $salat)
+    public function show(designation $designation)
     {
         //
     }
@@ -53,10 +63,10 @@ class SalatController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\designation  $designation
      * @return \Illuminate\Http\Response
      */
-    public function edit(salat $salat)
+    public function edit(designation $designation)
     {
         //
     }
@@ -65,30 +75,24 @@ class SalatController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\salat  $salat
+     * @param  \App\designation  $designation
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, salat $salat)
+    public function update(Request $request, designation $designation)
     {
-        $salat->fajr= $request->fajr;
-        $salat->dhuhr= $request->dhuhr;
-        $salat->jumma= $request->jumma;
-        $salat->asr= $request->asr;
-        $salat->maghrib= $request->maghrib;
-        $salat->isha= $request->isha;
-
+        $designation->update($request->all());
         return redirect()->back()->withSuccess(['Successfully Updated']);
-
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\salat  $salat
+     * @param  \App\designation  $designation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(salat $salat)
+    public function destroy(designation $designation)
     {
-        //
+        $designation->delete();
+        return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 }
