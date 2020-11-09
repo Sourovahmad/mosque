@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
     Route::resource('/event-category','EventCategoryController');
     Route::resource('/event','EventController');
+    Route::resource('/blog-category','BlogCategoryController');
+    Route::resource('/blog','BlogController');
 
 
 

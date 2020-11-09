@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\event;
 use App\eventCategory;
 use App\image;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -17,6 +18,9 @@ class EventController extends Controller
      */
     public function index()
     {
+        $date=Carbon:: now()->format('Y-m-d');
+        $events = event::where('date','>=',$date)->orderBy('date')->orderBy('start_time')->get();
+        return view('admin.event.index',compact('events'));
     }
 
     /**

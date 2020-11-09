@@ -33,9 +33,9 @@
     <div class="card-header py-3 bg-abasas-dark">
         <nav class="navbar  ">
 
-            <div class="navbar-brand"><span id="eventList"> Event List</span> </div>
+            <div class="navbar-brand"><span id="eventList"> Blog List</span> </div>
 
-            <a href="{{route('admin.event.create')}}"><button type="button" class="btn btn-success btn-lg"
+            <a href="{{route('admin.blog.create')}}"><button type="button" class="btn btn-success btn-lg"
                     id="AddNewFormButton"><i class="fas fa-plus" id="PlusButton"></i></button></a>
 
 
@@ -51,11 +51,11 @@
 
                         <th> #</th>
                         <th>Title</th>
+                        <th>User</th>
+                        <th>Author</th>
                         <th>Category</th>
-                        <th>Vanu</th>
+                        <th>Language</th>
                         <th>Date</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
                         <th>Action</th>
 
                     </tr>
@@ -65,11 +65,11 @@
 
                         <th> #</th>
                         <th>Title</th>
+                        <th>User</th>
+                        <th>Author</th>
                         <th>Category</th>
-                        <th>Vanu</th>
+                        <th>Language</th>
                         <th>Date</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
                         <th>Action</th>
 
                     </tr>
@@ -81,27 +81,27 @@
                     @php
                     $itr=1;
                     @endphp
-                    @foreach ($events as $event)
+                    @foreach ($blogs as $blog)
 
 
                     <tr class="data-row">
                         <td class="iteration">{{$itr++}}</td>
-                        <td class="word-break">{{ $event->title }}</td>
-                        <td class="word-break">{{ $event->category->name }}</td>
-                        <td class="word-break">{{ $event->vanu }}</td>
-                        <td class="word-break">{{ $event->date }}</td>
-                        <td class="word-break">{{ $event->start_time }}</td>
-                        <td class="word-break">{{ $event->end_time }}</td>
+                        <td class="word-break">{{ $blog->title }}</td>
+                        <td class="word-break">{{ $blog->user->name }}</td>
+                        <td class="word-break">{{ $blog->author_name }}</td>
+                        <td class="word-break">{{ $blog->category->name }}</td>
+                        <td class="word-break">{{ $blog->language->name }}</td>
+                        <td class="word-break">{{ $blog->created_at->format('d M,Y h:i:a') }}</td>
 
 
                         <td class="align-middle">
-                            <a href="{{route('admin.event.edit',$event->id)}}"><button title="Edit" type="button"
+                            <a href="{{route('admin.blog.edit',$blog->id)}}"><button title="Edit" type="button"
                                     class="dataEditItemClass btn btn-success btn-sm" id="data-edit-button"> <i
                                         class="fa fa-edit" aria-hidden="false"> </i></button></a>
 
 
-                            <form method="POST" action="{{route('admin.event.destroy',$event->id)}}"
-                                id="delete-form-{{ $event->id}}" style="display:none; ">
+                            <form method="POST" action="{{route('admin.blog.destroy',$blog->id)}}"
+                                id="delete-form-{{ $blog->id}}" style="display:none; ">
                                 {{csrf_field() }}
                                 {{ method_field("delete") }}
                             </form>
@@ -110,7 +110,7 @@
 
 
                             <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-				document.getElementById('delete-form-{{ $event->id }}').submit();
+				document.getElementById('delete-form-{{ $blog->id }}').submit();
 			}
 			else{
 				event.preventDefault();

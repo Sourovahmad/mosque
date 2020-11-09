@@ -18,21 +18,21 @@ class SettingController extends Controller
         // {\n                \n                \"position\":11,\n    \n                \"create\":\"2\",\n                \"read\":\"1\",\n                \"update\":\"3\",\n                \"require\":\"1\",\n    \n                \"name\":\"product\",\n                \"input_type\" : \"dropDown\",\n                \"database_name\":\"product_id\",  \n                \"title\":\"Product\",\n                \"data\" : \"products\"\n            }
         $a = '[{
             "componentDetails":{
-                "title":"Event Category List",
-                "editTitle":"Edit Event Category"
+                "title":"Blog Category List",
+                "editTitle":"Edit Blog Category"
             },
             "routes":{
                 "create":{
-                    "name":"admin.event-category.store",
-                    "link":"event-category"
+                    "name":"admin.blog-category.store",
+                    "link":"admin/blog-category"
                 },
                 "update":{
-                    "name":"admin.event-category.update",
-                    "link":"event-category"
+                    "name":"admin.blog-category.update",
+                    "link":"admin/blog-category"
                 },
                 "delete":{
-                    "name":"event.event-category",
-                    "link":"event-category"
+                    "name":"admin.blog-category",
+                    "link":"admin/blog-category"
                 }
             },
             "fieldList":[{
@@ -45,125 +45,35 @@ class SettingController extends Controller
                 "require":"1",
     
                "input_type":"text",
-               "name":"title",
-               "title":"Title",
+               "name":"name",
+               "title":"Name",
     
     
-               "database_name":"title"
+               "database_name":"name"
             },{
                     
                 "position":111,
     
-                "create":"2",
+                "create":"1",
                 "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"date",
-               "name":"date",
-               "title":"Date",
-    
-    
-               "database_name":"date"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
+                "update":"1",
+                "require":"0",
     
                "input_type":"text",
-               "name":"vanu",
-               "title":"Vanu",
+               "name":"description",
+               "title":"Description",
     
     
-               "database_name":"vanu"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"time",
-               "name":"start_time",
-               "title":"Start Time",
-    
-    
-               "database_name":"start_time"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"time",
-               "name":"end_time",
-               "title":"End Time",
-    
-    
-               "database_name":"end_time"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"text",
-               "name":"vanu",
-               "title":"Vanu",
-    
-    
-               "database_name":"vanu"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"text",
-               "name":"vanu",
-               "title":"Vanu",
-    
-    
-               "database_name":"vanu"
-            },{
-                    
-                "position":111,
-    
-                "create":"2",
-                "read":"1",
-                "update":"2",
-                "require":"1",
-    
-               "input_type":"text",
-               "name":"vanu",
-               "title":"Vanu",
-    
-    
-               "database_name":"vanu"
+               "database_name":"description"
             }
             ]
         }]' ;
 
 
         
-        // $setting =setting::find(1);
+        // $setting =new setting;
         // $setting->setting = json_encode( $a);
-        // $setting->table_name = 'event_categories';
+        // $setting->table_name = 'blog_categories';
         // $setting->save();
         // return  "Success";
     }

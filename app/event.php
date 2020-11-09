@@ -12,4 +12,7 @@ class event extends Model
     public function image(){
         return $this->belongsTo('App\image','image_id','id')->withTrashed();
     }
+    public function category(){
+        return $this->belongsTo('App\eventCategory','category_id','id')->withTrashed();
+    }
 }
