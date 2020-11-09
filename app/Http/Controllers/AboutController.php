@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\donation;
+use App\about;
 use Illuminate\Http\Request;
+use Illuminate\Support\ViewErrorBag;
 
-class DonationController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        return view('donation.index');
+        return View('about.index');
     }
 
     /**
@@ -35,33 +36,16 @@ class DonationController extends Controller
      */
     public function store(Request $request)
     {
-        
-        // Enter Your Stripe Secret
-        \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
-        		
-		$amount = 1000;
-		$amount *= 100;
-        $amount = (int) $amount;
-        
-        $payment_intent = \Stripe\PaymentIntent::create([
-            'description' => 'Donation for MMC',
-			'amount' => $request->amount,
-			'currency' => $request->currency,
-			'payment_method_types' => ['card'],
-		]);
-		$intent = $payment_intent->client_secret;
-
-		return view('donation.checkout',compact('intent'));
         //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\donation  $donation
+     * @param  \App\about  $about
      * @return \Illuminate\Http\Response
      */
-    public function show(donation $donation)
+    public function show(about $about)
     {
         //
     }
@@ -69,10 +53,10 @@ class DonationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\donation  $donation
+     * @param  \App\about  $about
      * @return \Illuminate\Http\Response
      */
-    public function edit(donation $donation)
+    public function edit(about $about)
     {
         //
     }
@@ -81,10 +65,10 @@ class DonationController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\donation  $donation
+     * @param  \App\about  $about
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, donation $donation)
+    public function update(Request $request, about $about)
     {
         //
     }
@@ -92,14 +76,11 @@ class DonationController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\donation  $donation
+     * @param  \App\about  $about
      * @return \Illuminate\Http\Response
      */
-    public function destroy(donation $donation)
+    public function destroy(about $about)
     {
         //
-    }
-    public function success(){
-        return "success";
     }
 }

@@ -22,6 +22,9 @@ Route::get('/', function () {
 
 
 Route::resource('donations','DonationController');
+Route::resource('payments','PaymentController');
+Route::resource('about','AboutController');
+Route::post('donation-success','DonationController@success')->name('donationSuccess');
 
 
 // setting development

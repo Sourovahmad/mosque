@@ -13,7 +13,7 @@
 									<div class="single-widget widget--details">
 										<div class="logo">
 											<a href="index.html">
-												<img src="images/logo/logo-dark.png" alt="footer logo">
+												<img src="{{asset('abasas/images/logo/logo-dark.png') }}" alt="footer logo">
 											</a>
 										</div>
 										<p>Islam is the know how to pursue pleasure rationally encounter consequences</p>
@@ -72,9 +72,9 @@
 										<div class="single-widget widget--instagram">
 											<h4 class="widget-title">Instagram</h4>
 											<ul>
-												<li><a href="https://www.instagram.com/p/BcRw69njBbZ/?taken-by=portfolio.devitems"><img src="images/instagram-widget/1.png" alt="widget instagram"></a></li>
-												<li><a href="https://www.instagram.com/"><img src="images/instagram-widget/2.png" alt="widget instagram"></a></li>
-												<li><a href="https://www.instagram.com/"><img src="images/instagram-widget/3.png" alt="widget instagram"></a></li>
+												<li><a href="https://www.instagram.com/p/BcRw69njBbZ/?taken-by=portfolio.devitems"><img src="{{ asset('abasas/images/instagram-widget/1.png') }}" alt="widget instagram"></a></li>
+												<li><a href="https://www.instagram.com/"><img src="{{ asset('abasas/images/instagram-widget/2.png ')}}" alt="widget instagram"></a></li>
+												<li><a href="https://www.instagram.com/"><img src="{{ asset('abasas/images/instagram-widget/3.png ')}}" alt="widget instagram"></a></li>
 											</ul>
 										</div><!-- //Single Widget -->
 
