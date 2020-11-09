@@ -21,11 +21,11 @@ Route::get('/', function () {
 
 
 
-
+Route::resource('donations','DonationController');
 
 
 // setting development
 Route::get('/setting','SettingController@index' )->name('setting');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
