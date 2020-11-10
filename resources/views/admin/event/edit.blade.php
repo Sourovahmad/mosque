@@ -45,7 +45,7 @@
 
                     
                     <div class="form-group col-md-4 col-sm-12 ">
-                        <label for="vanu"> Vanu<span style="color: red"> *</span></label>
+                        <label for="vanu"> Venu<span style="color: red"> *</span></label>
                         <input type="text" name="vanu" class="form-control" id="vanu" placeholder="Vanu" value="{{ $event->vanu }}" required>
                     </div>
 
@@ -69,7 +69,7 @@
 
                     <div class="form-group col-md-6 col-sm-12 ">
                         <label for="description"> Description<span style="color: red"> *</span></label>
-                        <textarea class="form-control" id="description" name="description" rows="4"   > {{ $event->description }}</textarea>
+                        <textarea class="form-control" id="description" name="description" rows="4"  required > {{ $event->description }}</textarea>
                     </div>
 
                     <div class="form-group col-md-6 col-sm-12 ">

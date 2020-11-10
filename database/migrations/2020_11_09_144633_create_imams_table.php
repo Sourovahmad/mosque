@@ -15,6 +15,8 @@ class CreateImamsTable extends Migration
     {
         Schema::create('imams', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('image_id');
+            $table->string('name');
             $table->timestamps();
         });
     }

@@ -50,6 +50,27 @@
 
 
     <!-- Divider -->
+    <!-- Divider -->
+    <hr class="sidebar-divider m-1 p-0 ">
+
+
+    <li class="nav-item">
+        <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseEvent" aria-expanded="true" aria-controls="collapseEvent">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Activity</span>
+        </a>
+        <div id="collapseEvent" class="collapse" aria-labelledby="headingSell" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="{{ route('admin.activity.index') }}">All Activity </a>
+                <a class="collapse-item" href="{{ route('admin.activity.create') }}">New Activity </a>
+
+            </div>
+        </div>
+    </li>
+
+
+    <!-- Divider -->
 
     <hr class="sidebar-divider m-1 p-0 ">
 

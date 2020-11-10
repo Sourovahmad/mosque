@@ -42,7 +42,7 @@
 
                     
                     <div class="form-group col-md-4 col-sm-12 ">
-                        <label for="vanu"> Vanu<span style="color: red"> *</span></label>
+                        <label for="vanu"> Venu<span style="color: red"> *</span></label>
                         <input type="text" name="vanu" class="form-control" id="vanu"  required>
                     </div>
 

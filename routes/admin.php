@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/salat','SalatController');
     Route::resource('/designation','DesignationController');
     Route::resource('/committee','CommitteeController');
+    Route::resource('/activity','ActivityController');
 
 
 

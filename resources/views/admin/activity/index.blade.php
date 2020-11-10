@@ -33,9 +33,9 @@
     <div class="card-header py-3 bg-abasas-dark">
         <nav class="navbar  ">
 
-            <div class="navbar-brand"><span id="eventList"> Event List</span> </div>
+            <div class="navbar-brand"><span id="eventList"> Activity List</span> </div>
 
-            <a href="{{route('admin.event.create')}}"><button type="button" class="btn btn-success btn-lg"
+            <a href="{{route('admin.activity.create')}}"><button type="button" class="btn btn-success btn-lg"
                     id="AddNewFormButton"><i class="fas fa-plus" id="PlusButton"></i></button></a>
 
 
@@ -51,11 +51,6 @@
 
                         <th> #</th>
                         <th>Title</th>
-                        <th>Category</th>
-                        <th>Venu</th>
-                        <th>Date</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
                         <th>Action</th>
 
                     </tr>
@@ -65,11 +60,6 @@
 
                         <th> #</th>
                         <th>Title</th>
-                        <th>Category</th>
-                        <th>Venu</th>
-                        <th>Date</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
                         <th>Action</th>
 
                     </tr>
@@ -81,27 +71,22 @@
                     @php
                     $itr=1;
                     @endphp
-                    @foreach ($events as $event)
+                    @foreach ($activities as $activity)
 
 
                     <tr class="data-row">
                         <td class="iteration">{{$itr++}}</td>
-                        <td class="word-break">{{ $event->title }}</td>
-                        <td class="word-break">{{ $event->category->name }}</td>
-                        <td class="word-break">{{ $event->vanu }}</td>
-                        <td class="word-break">{{ $event->date }}</td>
-                        <td class="word-break">{{ $event->start_time }}</td>
-                        <td class="word-break">{{ $event->end_time }}</td>
+                        <td class="word-break">{{ $activity->title }}</td>
 
 
                         <td class="align-middle">
-                            <a href="{{route('admin.event.edit',$event->id)}}"><button title="Edit" type="button"
+                            <a href="{{route('admin.activity.edit',$activity->id)}}"><button title="Edit" type="button"
                                     class="dataEditItemClass btn btn-success btn-sm" id="data-edit-button"> <i
                                         class="fa fa-edit" aria-hidden="false"> </i></button></a>
 
 
-                            <form method="POST" action="{{route('admin.event.destroy',$event->id)}}"
-                                id="delete-form-{{ $event->id}}" style="display:none; ">
+                            <form method="POST" action="{{route('admin.activity.destroy',$activity->id)}}"
+                                id="delete-form-{{ $activity->id}}" style="display:none; ">
                                 {{csrf_field() }}
                                 {{ method_field("delete") }}
                             </form>
@@ -110,7 +95,7 @@
 
 
                             <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-				document.getElementById('delete-form-{{ $event->id }}').submit();
+				document.getElementById('delete-form-{{ $activity->id }}').submit();
 			}
 			else{
 				event.preventDefault();
