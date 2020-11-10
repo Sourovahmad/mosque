@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
  
 
+    Route::get('/','DashboardController@index')->name('dashboard');
+
     Route::resource('/event-category','EventCategoryController');
     Route::resource('/event','EventController');
     Route::resource('/blog-category','BlogCategoryController');
