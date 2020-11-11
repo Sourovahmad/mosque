@@ -1,37 +1,63 @@
 @extends('includes.app')
 
 @section('Breadcrumb')
-    <!-- Top Banner -->
+<!-- //Breadcrumb area -->
+			 <!-- Top Banner -->
+			<div  class="banner-area">
+				<div class="banner bg-image--4 banner-text-slide slider-arrow--style1 slide-animate-text">
 
-    <!-- Breadcrumb area -->
-    <section class="cr-section breadcrumb-area" data-black-overlay="7">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="cr-breadcrumb text-center">
-                        <h2 class="cr-breadcrumb__title">Donation</h2>
-                        <div class="cr-breadcrumb__tree text-left text-md-left text-center">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li>Donation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- //Breadcrumb area -->
+						<!-- Single Banner -->
+						<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="banner__content text-center">	
+                                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
+									
+											<h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari]. </h3>
+											
+											<div class="banner__content__button">
+												<a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- //Single Banner -->
 
 
-    <!-- //Top Banner -->
+				</div>
+			</div><!-- //Top Banner --> 
+
+
 @endsection
 
 @section('content')
 
+				<!-- Team Area -->
+				<section class="cr-section team-area ptb--150 bg--white flower--left-bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+								<div class="section-title text-center">
+									<h2>REMEMBER ALLAH</h2>
+									<h5>ALLAH SAID IN QURAN</h5>
+									<div>
+                                        يَسْأَلُونَكَ مَاذَا يُنفِقُونَ قُلْ مَا أَنفَقْتُم مِّنْ خَيْرٍ فَلِلْوَالِدَيْنِ وَالأَقْرَبِينَ وَالْيَتَامَى وَالْمَسَاكِينِ وَابْنِ السَّبِيلِ وَمَا تَفْعَلُواْ مِنْ خَيْرٍ فَإِنَّ اللّهَ بِهِ عَلِيمٌ 
+                                    </div>
+									<p>They will ask thee as to what they should spend on others. Say: “Whatever of your wealth you spend, shall (first) be for your parents, and for the near of kin, and the orphans, and the needy, and the wayfarer; and whatever good you do, verily, God has full knowledge thereof.” (Surah Baqarah: 215)
+                                    </p>
+                                        <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent  cr-btn--sm"><span>Donate Now</span></a>
+                                    
+								</div>
+							</div>
+						</div>
+					</div>
+				</section><!-- //Team Area -->
 
 
     <!-- Donnation Form -->
-    <div class="pg-donation-area ptb--150 bg--white border">
+    <div class="pg-donation-area ptb--150 bg-image--5 border" id="donate" >
         <div class="container">
             <form action="{{ route('donations.store') }}" method="post" id="pg-donation" class="pg-donation">
                 @csrf

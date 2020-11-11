@@ -56,7 +56,7 @@
 											</ul>
 										</li>
 										<li><a href="about-us.html">EVENT</a></li>
-										<li><a href="about-us.html">DONATION</a></li>
+										<li><a href="{{ route('donations.index') }}">DONATION</a></li>
 
 										<li class="cr-dropdown"><a href="activities.html">OUR PROGRAMS</a>
 											<ul class="cr-dropdown-menu">
@@ -66,7 +66,7 @@
 												<li><a href="single-activity.html">Special Event</a></li>
 											</ul>
 										</li>
-										<li><a href="donation.html">DONATION</a></li>
+										<li><a href="donation.html">Blog</a></li>
 									
 									</ul>
 								</nav><!-- //Main naviagtion -->                                                                            
