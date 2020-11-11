@@ -15,7 +15,8 @@ class GalleryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
+        
         return view('admin.gallery.index');
     }
 
@@ -43,8 +44,8 @@ class GalleryController extends Controller
         $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
         $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
 
-        $picture = Photo::make($request->image)->fit(600, 400)->save('images/'.$fileNameFull);
-        $picture = Photo::make($request->image)->fit(300, 200)->save('images/'.$fileNameSmall);
+        $picture = Photo::make($request->image)->fit(800, 600)->save('images/'.$fileNameFull);
+        $picture = Photo::make($request->image)->fit(300, 225)->save('images/'.$fileNameSmall);
 
         $image = new image;
         $image->url = 'images/' . $fileNameFull;
@@ -102,5 +103,12 @@ class GalleryController extends Controller
     public function destroy(gallery $gallery)
     {
         //
+    }
+
+
+    public function showImage()
+    {
+       $galleries = gallery::all();
+       return view('gallery.index',compact('galleries'));
     }
 }

@@ -41,3 +41,8 @@ Route::get('/setting','SettingController@index' )->name('setting');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//  Gallery Section
+Route::get('gallery','GalleryController@showImage')->name('gallery');
