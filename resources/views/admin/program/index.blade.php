@@ -33,9 +33,9 @@
     <div class="card-header py-3 bg-abasas-dark">
         <nav class="navbar  ">
 
-            <div class="navbar-brand"><span id="eventList"> Activity List</span> </div>
+            <div class="navbar-brand"><span id="eventList"> Program List</span> </div>
 
-            <a href="{{route('admin.activity.create')}}"><button type="button" class="btn btn-success btn-lg"
+            <a href="{{route('admin.programs.create')}}"><button type="button" class="btn btn-success btn-lg"
                     id="AddNewFormButton"><i class="fas fa-plus" id="PlusButton"></i></button></a>
 
 
@@ -51,6 +51,7 @@
 
                         <th> #</th>
                         <th>Title</th>
+                        <th>Category</th>
                         <th>Action</th>
 
                     </tr>
@@ -60,6 +61,7 @@
 
                         <th> #</th>
                         <th>Title</th>
+                        <th>Category</th>
                         <th>Action</th>
 
                     </tr>
@@ -71,22 +73,23 @@
                     @php
                     $itr=1;
                     @endphp
-                    @foreach ($activities as $activity)
+                    @foreach ($programs as $program)
 
 
                     <tr class="data-row">
                         <td class="iteration">{{$itr++}}</td>
-                        <td class="word-break">{{ $activity->title }}</td>
+                        <td class="word-break">{{ $program->title }}</td>
+                        <td class="word-break">{{ $program->category->name }}</td>
 
 
                         <td class="align-middle">
-                            <a href="{{route('admin.activity.edit',$activity->id)}}"><button title="Edit" type="button"
+                            <a href="{{route('admin.programs.edit',$program->id)}}"><button title="Edit" type="button"
                                     class="dataEditItemClass btn btn-success btn-sm" id="data-edit-button"> <i
                                         class="fa fa-edit" aria-hidden="false"> </i></button></a>
 
 
-                            <form method="POST" action="{{route('admin.activity.destroy',$activity->id)}}"
-                                id="delete-form-{{ $activity->id}}" style="display:none; ">
+                            <form method="POST" action="{{route('admin.programs.destroy',$program->id)}}"
+                                id="delete-form-{{ $program->id}}" style="display:none; ">
                                 {{csrf_field() }}
                                 {{ method_field("delete") }}
                             </form>
@@ -95,7 +98,7 @@
 
 
                             <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-				document.getElementById('delete-form-{{ $activity->id }}').submit();
+				document.getElementById('delete-form-{{ $program->id }}').submit();
 			}
 			else{
 				event.preventDefault();

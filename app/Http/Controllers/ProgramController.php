@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\activity;
 use App\image;
+use App\program;
+use App\programCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
 
-class ActivityController extends Controller
+class ProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +18,8 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        $activities = activity::all();
-        return view('admin.activity.index', compact('activities'));
+        $programs = program::all();
+        return view('admin.program.index', compact('programs'));
     }
 
     /**
@@ -28,7 +29,9 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        return view('admin.activity.create');
+        
+        $categories = programCategory::all();
+        return view('admin.program.create',compact('categories'));
     }
 
     /**
@@ -39,31 +42,32 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $activity = new activity;
-        $activity->title = $request->title;
-        $activity->description = $request->description;
+        $program = new program;
+        $program->title = $request->title;
+        $program->category_id = $request->category_id;
+        $program->description = $request->description;
 
 
         $fileName = time() . '.' . $request->image->getClientOriginalName();
         $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
-        $image = new image();
+        $image = new image;
         $image->url = 'images/' . $fileName;
         $image->save();
 
-        $activity->image_id = $image->id;
+        $program->image_id = $image->id;
 
-        $activity->save();
+        $program->save();
 
-        return redirect(route('admin.activity.index'))->withSuccess(['activity Created']);
+        return redirect(route('admin.programs.index'))->withSuccess(['Program Created']);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\activity  $activity
+     * @param  \App\program  $program
      * @return \Illuminate\Http\Response
      */
-    public function show(activity $activity)
+    public function show(program $program)
     {
         //
     }
@@ -71,25 +75,27 @@ class ActivityController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\activity  $activity
+     * @param  \App\program  $program
      * @return \Illuminate\Http\Response
      */
-    public function edit(activity $activity)
+    public function edit(program $program)
     {
-        return view('admin.activity.edit', compact('activity'));
+        $categories= programCategory::all();
+        return view('admin.program.edit', compact('program','categories'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\activity  $activity
+     * @param  \App\program  $program
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, activity $activity)
+    public function update(Request $request, program $program)
     {
-        $activity->title = $request->title;
-        $activity->description = $request->description;
+        $program->title = $request->title;
+        $program->description = $request->description;
+        $program->category_id = $request->category_id;
 
         if (!is_null($request->file)) {
             $fileName = time() . '.' . $request->image->getClientOriginalName();
@@ -98,22 +104,22 @@ class ActivityController extends Controller
             $image->url = 'images/' . $fileName;
             $image->save();
 
-            $activity->image_id = $image->id;
+            $program->image_id = $image->id;
         }
-        $activity->save();
+        $program->save();
 
-        return redirect(route('admin.activity.index'))->withSuccess(['activity Created']);
+        return redirect(route('admin.programs.index'))->withSuccess(['Program Created']);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\activity  $activity
+     * @param  \App\program  $program
      * @return \Illuminate\Http\Response
      */
-    public function destroy(activity $activity)
+    public function destroy(program $program)
     {
-        $activity->delete();
-        return Redirect::back()->withErrors(["Activity Deleted"]);
+        $program->delete();
+        return Redirect::back()->withErrors(["Program Deleted"]);
     }
 }
