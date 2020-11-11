@@ -80,7 +80,7 @@ class ImamController extends Controller
 
             $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
 
-            $image = new image();
+            $image = new image;
             $image->url = 'images/' . $fileName;
             $image->save();
 

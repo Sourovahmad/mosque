@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/designation','DesignationController');
     Route::resource('/committee','CommitteeController');
     Route::resource('/activity','ActivityController');
+    Route::resource('/gallery','GalleryController');
 
 
 

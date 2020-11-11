@@ -35,49 +35,35 @@
     <div class="card-header py-3 bg-abasas-dark">
         <nav class="navbar  ">
 
-            <div class="navbar-brand"><span id="eventList"> Imam Information</span> </div>
+            <div class="navbar-brand"><span id="eventList"> Gallery Image</span> </div>
 
         </nav>
     </div>
 
     <div class="card-body">
         <div class="row">
-            <div class="col-md-6 col-sm-12 p-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset($imam->image->url) }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ $imam->name  }}</h5>
-                    </div>
-
-                </div>
-
-
-
-
-                
-            </div>
+            
             <div class="col-md-6 col-sm-12 p-4">
 
-                <form method="POST" id="createEventForm" action="{{ route('admin.imam.update',$imam->id ) }}" enctype="multipart/form-data">
+                <form method="POST" id="createEventForm" action="{{ route('admin.gallery.store' ) }}" enctype="multipart/form-data">
                     @csrf
-                    @method('put')
 
                     <div class="row">
                         
                     <div class="form-group col-12  ">
                         <label for="image">Upload image</label><br>
-                        <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
+                        <input type="file" name="image" id="image" accept=" .jpg, .jpeg" >
                     </div>
                     
                     <div class="form-group col-12  ">
-                        <label for="name"> Name<span style="color: red"> *</span></label>
-                        <input type="text" name="name" class="form-control" id="name" value="{{ $imam->name }}"  required>
+                        <label for="caption"> Caption<span style="color: red"> *</span></label>
+                        <input type="text" name="caption" class="form-control" id="caption"   required>
                     </div>
 
 
                     </div>
 
-                    <button type="submit" id="createEventSubmit" class="btn bg-abasas-dark"> Update</button>
+                    <button type="submit" id="createEventSubmit" class="btn bg-abasas-dark"> Submit</button>
 
 
 
