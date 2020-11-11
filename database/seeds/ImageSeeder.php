@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ImageSeeder extends Seeder
 {
@@ -11,6 +12,10 @@ class ImageSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('images')->insert([
+            [
+                'url' => 'images/imam.jpg',
+            ],
+        ]);
     }
 }

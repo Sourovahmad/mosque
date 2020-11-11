@@ -7,8 +7,8 @@ use App\eventCategory;
 use App\image;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Event as FacadesEvent;
 use Illuminate\Support\Facades\Redirect;
+use Intervention\Image\ImageManagerStatic as Photo;
 
 class EventController extends Controller
 {
@@ -54,7 +54,7 @@ class EventController extends Controller
 
 
         $fileName = time() . '.' . $request->image->getClientOriginalName();
-        $request->image->move(public_path('images'), $fileName);
+        $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
         $image = new image;
         $image->url = 'images/' . $fileName;
         $image->save();
@@ -120,7 +120,8 @@ class EventController extends Controller
 
         if (!is_null($request->file)) {
             $fileName = time() . '.' . $request->image->getClientOriginalName();
-            $request->image->move(public_path('images'), $fileName);
+            
+            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
             $image = new image;
             $image->url = 'images/' . $fileName;
             $image->save();

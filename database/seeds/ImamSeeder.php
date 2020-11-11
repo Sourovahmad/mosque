@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ImamSeeder extends Seeder
 {
@@ -11,6 +12,11 @@ class ImamSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('imams')->insert([
+            [
+                'name' => 'MD. Masum Billah',
+                'image_id' => '1',
+            ],
+        ]);
     }
 }

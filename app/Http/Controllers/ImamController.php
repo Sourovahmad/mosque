@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\image;
 use App\imam;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Intervention\Image\ImageManagerStatic as Photo;
 
 class ImamController extends Controller
 {
@@ -14,7 +17,8 @@ class ImamController extends Controller
      */
     public function index()
     {
-        //
+        $imam = imam :: find(1);
+        return view('admin.imam.index',compact('imam'));
     }
 
     /**
@@ -69,7 +73,22 @@ class ImamController extends Controller
      */
     public function update(Request $request, imam $imam)
     {
-        //
+        $imam->name = $request->name;
+
+        if ( !is_null($request->image) ) {
+            $fileName = time() . '.' . $request->image->getClientOriginalName();
+
+            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+
+            $image = new image();
+            $image->url = 'images/' . $fileName;
+            $image->save();
+
+            $imam->image_id = $image->id;
+        }
+        
+        $imam->save();
+        return redirect()->back()->withSuccess(['Successfully Updated']);
     }
 
     /**

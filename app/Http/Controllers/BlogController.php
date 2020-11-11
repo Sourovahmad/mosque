@@ -8,7 +8,8 @@ use App\blogLanguage;
 use App\image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-
+use Intervention\Image\ImageManager;
+use Intervention\Image\ImageManagerStatic as Photo;
 class BlogController extends Controller
 {
     /**
@@ -52,7 +53,9 @@ class BlogController extends Controller
 
 
         $fileName = time() . '.' . $request->image->getClientOriginalName();
-        $request->image->move(public_path('images'), $fileName);
+        $picture = Photo::make($request->image)->fit(800, 800);
+        $picture->save('images/'.$fileName);
+
         $image = new image();
         $image->url = 'images/' . $fileName;
         $image->save();
@@ -104,9 +107,11 @@ class BlogController extends Controller
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;
 
-        if (!is_null($request->file)) {
+        if ( !is_null($request->image) ) {
             $fileName = time() . '.' . $request->image->getClientOriginalName();
-            $request->image->move(public_path('images'), $fileName);
+            
+            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+
             $image = new image();
             $image->url = 'images/' . $fileName;
             $image->save();

@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/blog-category','BlogCategoryController');
     Route::resource('/blog','BlogController');
     Route::resource('/salat','SalatController');
+    Route::resource('/imam','ImamController');
     Route::resource('/designation','DesignationController');
     Route::resource('/committee','CommitteeController');
     Route::resource('/activity','ActivityController');
