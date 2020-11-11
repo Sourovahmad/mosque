@@ -47,7 +47,14 @@
 										<li><a href="{{ route('home') }}">HOME</a></li>
 
 										
-										<li><a href="about-us.html">ABOUT</a></li>
+										<li class="cr-dropdown"><a href="activities.html">About</a>
+											<ul class="cr-dropdown-menu">
+												<li><a href="activities.html">MMC members</a></li>
+												<li><a href="single-activity.html">Imams</a></li>
+												<li><a href="single-activity.html">Gallery</a></li>
+												
+											</ul>
+										</li>
 										<li><a href="about-us.html">EVENT</a></li>
 										<li><a href="about-us.html">DONATION</a></li>
 
@@ -55,30 +62,12 @@
 											<ul class="cr-dropdown-menu">
 												<li><a href="activities.html">Jummah Kutba</a></li>
 												<li><a href="single-activity.html">Darse Bujhari</a></li>
+												<li><a href="single-activity.html">Darse Quran</a></li>
+												<li><a href="single-activity.html">Special Event</a></li>
 											</ul>
 										</li>
 										<li><a href="donation.html">DONATION</a></li>
-										<li class="cr-dropdown"><a href="#">PAGES</a>
-											<ul class="cr-dropdown-menu">
-												<li><a href="shop.html">Shop</a></li>
-												<li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-												<li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
-												<li><a href="product-details.html">Product Details</a></li>
-												<li><a href="cart.html">Shopping Cart</a></li>
-												<li><a href="wishlist.html">Wishlist</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
-											</ul>
-										</li>
-										<li class="cr-dropdown"><a href="blogs-right-sidebar.html">BLOG</a>
-											<ul class="cr-dropdown-menu">
-												<li><a href="blogs.html">Blogs</a></li>
-												<li><a href="blogs-right-sidebar.html">Blogs Right Sidebar</a></li>
-												<li><a href="blogs-left-sidebar.html">Blogs Left Sidebar</a></li>
-												<li><a href="blog-details.html">Blog Details</a></li>
-												<li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-											</ul>
-										</li>
-										<li><a href="contact.html">Contact</a></li>
+									
 									</ul>
 								</nav><!-- //Main naviagtion -->                                                                            
 
