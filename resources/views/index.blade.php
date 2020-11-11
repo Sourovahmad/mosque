@@ -16,7 +16,7 @@
 											<h3>In the name of <strong>“Allah”</strong></h3>
 											<h1>Come to the straight path</h1>
 											<div class="banner__content__button">
-												<a href="about-us.html" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
+												<a href="" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
 											</div>
 										</div>
 									</div>
@@ -24,23 +24,24 @@
 							</div>
 						</div><!-- //Single Banner -->
 
-					<!-- Single Banner -->
-					<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="banner__content text-center">
-										<img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
-										<h3>O’ Allah we believe</h3>
-										<h1>That Only you can save us</h1>
-										<div class="banner__content__button">
-											<a href="about-us.html" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
+						<!-- Single Banner -->
+						<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="banner__content text-center">	
+                                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
+									
+											<h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari]. </h3>
+											
+											<div class="banner__content__button">
+												<a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div><!-- //Single Banner -->
+						</div><!-- //Single Banner -->
 
 				</div>
 			</div><!-- //Top Banner --> 
@@ -314,319 +315,112 @@
 					</div>
 				</section><!-- //Upcoming Events -->
 
-				<!-- Activities area -->
-				<section class="cr-section activities-area half--bg bg-image--1 pt--90 pb--150">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-								<div class="section-title section-title--white text-center">
-									<h4>Our “Activities”</h4>
-									<h2>Here is our Activities</h2>
-									<p><span>Islam</span> is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-								</div>
-							</div>
-						</div>
-						<div class="activities">
-							<div class="row">
-								<!-- Single Activity -->
-								<div class="col-lg-4 col-md-6 col-sm-12 col-12">
-									<figure class="activity wow fadeInLeft">
-										<div class="activity__thumb">
-											<a href="single-activity.html">
-												<img src="images/activity/1.jpg" alt="activity image">
-											</a>
+                				<!-- Team Area -->
+								<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom	">
+									<div class="container">
+										<div class="row">
+											<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+												<div class="section-title text-center">
+													
+													<h2>Islamic Prayer</h2>
+													<p>It is obligatory upon every muslim to offer their salaah (prayers) five times a day.  The image below shows the correct positions of  praying in every salah.</p>
+												</div>
+											</div>
 										</div>
-										<figcaption class="activity__content text-center">
-											<h3><a href="single-activity.html">Quran Learning</a></h3>
-											<p>Islam is the know how to pursuesure rationally encounter consequences  extremely painful again we love islam for peace </p>
-										</figcaption>
-									</figure>
-								</div><!-- //Single Activity -->
-								<!-- Single Activity -->
-								<div class="col-lg-4 col-md-6 col-sm-12 col-12">
-									<figure class="activity wow fadeInUp">
-										<div class="activity__thumb">
-											<a href="single-activity.html">
-												<img src="images/activity/2.jpg" alt="activity image">
-											</a>
-										</div>
-										<figcaption class="activity__content text-center">
-											<h3><a href="single-activity.html">Funeral Service</a></h3>
-											<p>Islam is the know how to pursuesure rationally encounter consequences  extremely painful again we love islam for peace </p>
-										</figcaption>
-									</figure>
-								</div><!-- //Single Activity -->
-								<!-- Single Activity -->
-								<div class="col-lg-4 col-md-6 col-sm-12 col-12 offset-md-3 offset-lg-0 offset-0">
-									<figure class="activity wow fadeInRight">
-										<div class="activity__thumb">
-											<a href="single-activity.html">
-												<img src="images/activity/3.jpg" alt="activity image">
-											</a>
-										</div>
-										<figcaption class="activity__content text-center">
-											<h3><a href="single-activity.html">Mosque Development</a></h3>
-											<p>Islam is the know how to pursuesure rationally encounter consequences  extremely painful again we love islam for peace </p>
-										</figcaption>
-									</figure>
-								</div><!-- //Single Activity -->
-							</div>
-						</div>
-					</div>
-				</section><!-- //Activities area -->
+										<div class="row">
 
-				<!-- Salat times area -->
-				<section class="cr-section salat-times-area bg--pattern bg--pattern zig-zag--top zig-zag--bottom">
-					<div class="row no-gutters salat-times-wrap align-items-center">
-						<div class="col-lg-12 col-xl-5">
-							<div class="salat-times d-flex align-items-center justify-content-center">
-								<div class="salat-times__inner text-center">
-									<h2>Time of Salat</h2>
-									<h4>Prayer Times</h4>
-									<div class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-center flex-md-nowrap">
-										<div class="salat-times__box">
-											<h4>Fajr</h4>
-											<span>[{timeCalc.timeDawn}]</span>
-										</div>
-										<div class="salat-times__box">
-											<h4>Dhuhr</h4>
-											<span>[{timeCalc.timeZuhr}]</span>
-										</div>
-										<div class="salat-times__box">
-											<h4>Asr</h4>
-											<span>[{timeCalc.timeAsr}]</span>
-										</div>
-										<div class="salat-times__box">
-											<h4>Maghrib</h4>
-											<span><span class="time-sunset"></span></span>
-										</div>
-										<div class="salat-times__box">
-											<h4>Isha</h4>
-											<span>[{timeCalc.timeIsha}]</span>
+											<div class="col-12">
+												<img  class="w-100" src="{{ asset('abasas/images/fajr-2-rakat.png')}}" alt="Salath">
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-12 col-xl-7">
-							<div class="donation-wantend text-center ptb--130">
-								<h2>Donation wanted for...</h2>
-								<h5>Mosque development & kid’s school</h5>
-								<p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-								<div class="donation-wantend__form">
-									<form action="#">
-										<input type="text" placeholder="Your amount here">
-										<button class="cr-btn cr-btn--black"><span>DONATE NOW</span></button>
-									</form>
+								</section>
+				<!-- Salat times area -->
+				
+				<section class="cr-section salat-times-area">
+					<div class="salat-times large--width d-flex align-items-center justify-content-center">
+						<div class="salat-times__inner text-center">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-10 offset-lg-1">
+										<h2>Time of Salat</h2>
+										<h4>Prayer Times</h4>
+										<div class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-md-between justify-content-center flex-md-nowrap"><div class="salat-times__box"><h4>fajr</h4><span>4:30 pm</span></div><div class="salat-times__box"><h4>dhuhr</h4><span>11:04 pm</span></div><div class="salat-times__box"><h4>asr</h4><span>1:38 am</span></div><div class="salat-times__box"><h4>maghrib</h4><span>4:00 am</span></div><div class="salat-times__box"><h4>isha</h4><span>5:32 am</span></div></div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section><!-- //Salat times area -->
 
-				<!-- Team Area -->
-				<section class="cr-section team-area ptb--150 bg--white flower--left-bottom">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-								<div class="section-title text-center">
-									<h4>Our “Team”</h4>
-									<h2>Meet our Organizer</h2>
-									<p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<!-- Single Team -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<figure class="team-member wow fadeInUp">
-									<div class="team-member__thumb">
-										<div class="hexagon">
-											<div class="hexagon__inner1">
-												<div class="hexagon__inner2">
-													<img src="images/team/1.jpg" alt="team member 1">
-												</div>
-											</div>
-										</div>
-									</div>
-									<figcaption class="team-member__content">
-										<h3>Sawad Bin Maksud</h3>
-										<h5>President</h5>
-									</figcaption>
-								</figure>
-							</div><!-- //Single Team -->
-							<!-- Single Team -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<figure class="team-member wow fadeInUp">
-									<div class="team-member__thumb">
-										<div class="hexagon">
-											<div class="hexagon__inner1">
-												<div class="hexagon__inner2">
-													<img src="images/team/2.jpg" alt="team member 1">
-												</div>
-											</div>
-										</div>
-									</div>
-									<figcaption class="team-member__content">
-										<h3>Nahiyan Bin Momen</h3>
-										<h5>Event Organizer</h5>
-									</figcaption>
-								</figure>
-							</div><!-- //Single Team -->
-							<!-- Single Team -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<figure class="team-member wow fadeInUp">
-									<div class="team-member__thumb">
-										<div class="hexagon">
-											<div class="hexagon__inner1">
-												<div class="hexagon__inner2">
-													<img src="images/team/3.jpg" alt="team member 1">
-												</div>
-											</div>
-										</div>
-									</div>
-									<figcaption class="team-member__content">
-										<h3>Julfiker Amin Ali</h3>
-										<h5>Quran Teacher</h5>
-									</figcaption>
-								</figure>
-							</div><!-- //Single Team -->
-							<!-- Single Team -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<figure class="team-member wow fadeInUp">
-									<div class="team-member__thumb">
-										<div class="hexagon">
-											<div class="hexagon__inner1">
-												<div class="hexagon__inner2">
-													<img src="images/team/4.jpg" alt="team member 1">
-												</div>
-											</div>
-										</div>
-									</div>
-									<figcaption class="team-member__content">
-										<h3>Hasib Bin Asfaque</h3>
-										<h5>Imam</h5>
-									</figcaption>
-								</figure>
-							</div><!-- //Single Team -->
-						</div>
-					</div>
-				</section><!-- //Team Area -->
-
+				
 				<!-- Offer area -->
 				<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom">
 					<div class="container">
 						<div class="row">
-							<div class="col-xl-10 offset-xl-1 col-lg-12 offset-lg-0 col-md-12 offset-0 col-12">
-								<div class="offer d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap">
-									<div class="offer__content text-center order-2 order-sm-1">
-										<img src="images/others-png/kaba.png" alt="kaba">
-										<h2>Special Discount on...</h2>
-										<h4>Hajj & Umrah package </h4>
-										<a href="#" class="cr-btn cr-btn--transparent"><span>Contact Us</span></a>
-									</div>
-									<div class="offer__thumb text-lg-center order-1 order-sm-2">
-										<img class="wow fadeInRight" src="images/others-png/offer-thumb.png" alt="offer thumb">
-									</div>
-								</div>
-							</div>
-						</div>
+							<a mt-4 href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+							</a>
+						  </div>
 					</div>
 				</section><!-- //Offer area -->
 
-				<!-- Blog Area -->
-				<section class="cr-section blog-area pt--150 pb--140 bg--white flower--right-bottom">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-								<div class="section-title text-center">
-									<h4>From “Blog”</h4>
-									<h2>Latest Blog Post</h2>
-									<p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
 
-							<!-- Start Single Blog -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<article class="blog wow fadeInUp">
-									<div class="blog__thumb">
-										<a href="blog-details.html">
-											<img src="images/blog/1.jpg" alt="single blog thumb">
-										</a>
-									</div>
-									<div class="blog__content">
-										<div class="blog__content__meta">
-											<p>December 20, 2017 - <a href="blogs.html">Afser</a></p>
-										</div>
-										<h4 class="blog-title"><a href="blog-details.html">Islam is the only one way for peace </a></h4>
-										<p>Islam is the know how to pursuesure nally encounter consequences  extremely </p>
-										<a href="blog-details.html" class="cr-readmore">Read</a>
-									</div>
-								</article>
-							</div><!-- //Start Single Blog -->
 
-							<!-- Start Single Blog -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<article class="blog wow fadeInUp">
-									<div class="blog__thumb">
-										<a href="blog-details.html">
-											<img src="images/blog/2.jpg" alt="single blog thumb">
-										</a>
-									</div>
-									<div class="blog__content">
-										<div class="blog__content__meta">
-											<p>December 18, 2017 - <a href="blogs.html">Julfiqar</a></p>
-										</div>
-										<h4 class="blog-title"><a href="blog-details.html">Salat can help us to move closer to Allah </a></h4>
-										<p>Islam is the know how to pursuesure nally encounter consequences  extremely </p>
-										<a href="blog-details.html" class="cr-readmore">Read</a>
-									</div>
-								</article>
-							</div><!-- //Start Single Blog -->
 
-							<!-- Start Single Blog -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<article class="blog wow fadeInUp">
-									<div class="blog__thumb">
-										<a href="blog-details.html">
-											<img src="images/blog/3.jpg" alt="single blog thumb">
-										</a>
-									</div>
-									<div class="blog__content">
-										<div class="blog__content__meta">
-											<p>December 15, 2017 - <a href="blogs.html">Iftekhar</a></p>
-										</div>
-										<h4 class="blog-title"><a href="blog-details.html">Ramadan teach us how to realize fasting</a></h4>
-										<p>Islam is the know how to pursuesure nally encounter consequences  extremely </p>
-										<a href="blog-details.html" class="cr-readmore">Read</a>
-									</div>
-								</article>
-							</div><!-- //Start Single Blog -->
 
-							<!-- Start Single Blog -->
-							<div class="col-lg-6 col-md-6 col-xl-3">
-								<article class="blog wow fadeInUp">
-									<div class="blog__thumb">
-										<a href="blog-details.html">
-											<img src="images/blog/4.jpg" alt="single blog thumb">
-										</a>
-									</div>
-									<div class="blog__content">
-										<div class="blog__content__meta">
-											<p>December 12, 2017 - <a href="blogs.html">Momen</a></p>
-										</div>
-										<h4 class="blog-title"><a href="blog-details.html">Learn about Islam, It is very simple & realistic</a></h4>
-										<p>Islam is the know how to pursuesure nally encounter consequences  extremely </p>
-										<a href="blog-details.html" class="cr-readmore">Read</a>
-									</div>
-								</article>
-							</div><!-- //Start Single Blog -->
 
-						</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class=" modal fade" id="covidModal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+					  <div class="modal-content">
+						
+						<img src="{{ asset('abasas/images/covid19/COVID_Rules_alert.jpg')}}" width="100%" alt="Covid 19 Alert">
+	  
+					  </div>
 					</div>
-				</section><!-- //Blog Area -->
+				</div>
+				
 
 
 @endsection
