@@ -46,7 +46,7 @@
 
                         <div class="form-group col-12">
                             <label for="category_id">Blog Category<span style="color: red"> *</span></label>
-                            <select class="form-control form-control" value="" name="category_id" id="catagory_id" required>
+                            <select class="form-control form-control" value="" name="category_id" id="category_id" required>
                                 <option disabled selected value> select a Category </option>'
                                 @foreach ($categories as $category)
                                 @if ( $category->id == $blog->category_id)
@@ -56,6 +56,8 @@
                                 @endif
                                 @endforeach
                             </select>
+                            <button type="button" id="addBlogCategory" class="btn btn-link">Add New Category</button>
+                            <div  id="inputForCategory">
                         </div>
                         <div class="form-group col-12">
                             <label for="language_id">Blog Language<span style="color: red"> *</span></label>
@@ -124,6 +126,95 @@
                 ['view', ['fullscreen', 'codeview', 'help']]
             ]
         });
+
+
+        
+        $(document).on('click', "#addBlogCategory", function () {
+            
+         
+            var html ='';
+            html+= '<form id="categoryAddFormInput" >';
+            html+= '<div class="form-group pl-4">';
+            html+=    '<label class="col-form-label" for="addName">Category Name<span style="color: red"> *</span></label>';
+            html+=    '<input type="text" name="name" class="form-control" id="addName">';
+            html+=' </div>';
+            html+='<div class="btn-group   pl-4 ">';
+            html+=   '<button type="button" id="cancel-button"  class="form-control btn btn-danger ">Cancel</button>';
+            html+=   '<button type="button" id="submit-button"  class="form-control btn btn-success ">Submit</button>';
+            html+='  </div>';
+            html+= ' </form>';
+          
+            $('#inputForCategory').html(html);
+           
+
+        });
+        
+        $(document).on('click', "#cancel-button", function () {
+
+            var html ='';
+            $('#inputForCategory').html(html);
+        });
+        $(document).on('click', "#submit-button", function () {
+            var token = $('#csrfToken').val();
+            var name = $('#addName').val();
+
+            var home = "{{route('home')}}";
+            var link = "admin/store-blog-category"
+            var action = home.trim() + '/' + link.trim();
+
+            $.ajax({
+                url : action,
+                method : 'POST',
+                data: {
+                    '_token': token,
+                    'name': name
+                },
+                success : function(categories){
+                    if(categories !='Error'){
+                        var html2 = '';
+
+                        var len = categories.length - 1;
+                        
+                        categories.forEach(function (category, item) {
+
+                                if (len == item ) {
+                                    html2 += '   <option  selected="selected"  value="  ' + category.id + ' ">  ' + category.name + '    </option>';
+                                } else {
+                                    html2 += '   <option value="  ' + category.id + ' "> ' + category.name + '</option>';
+                                }
+
+                        });
+                        $("#category_id").html(html2);
+                    }
+
+
+                    
+
+
+                },
+                error : function(err){
+
+                    console.log(err);
+
+                }
+            });
+
+
+
+            var html ='';
+            $('#inputForCategory').html(html);
+        });
+
+
+        $('#category_id').change(function(){
+            var html = '';
+            $('#inputForCategory').html(html);            
+        });
+
+
+
+
+
     });
 
 </script>

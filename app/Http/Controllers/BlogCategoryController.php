@@ -98,4 +98,17 @@ class BlogCategoryController extends Controller
         $blogCategory->delete();
         return Redirect::back()->withErrors(["Item Deleted" ]);
     }
+
+
+    
+    public function storeCategory(Request $request)
+    {
+        if(is_null($request->name) ){
+            return 'Error';
+        }
+        $eventCategory=blogCategory::create($request->all());
+        $categories = blogCategory::all();
+        return $categories;
+
+    }
 }

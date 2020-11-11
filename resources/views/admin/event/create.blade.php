@@ -167,7 +167,7 @@
             var name = $('#addName').val();
 
             var home = "{{route('home')}}";
-            var link = "admin/storeCategory"
+            var link = "admin/store-event-category"
             var action = home.trim() + '/' + link.trim();
 
             $.ajax({
@@ -218,15 +218,6 @@
             var html = '';
             $('#inputForCategory').html(html);            
         });
-
-
-
-        // $(document).on('change', "#category_id", function () {
-        //     var html = '';
-        //    // $('#inputForCategory').html(html);
-        // }
-       
-        
 
 
         
