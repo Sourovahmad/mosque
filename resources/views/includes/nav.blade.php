@@ -1,3 +1,25 @@
+	{{-- Home
+	About 
+	Event
+	Donation
+	Our Programs
+		- Jummah Kutba
+		- Darse Bujhari
+		- Darse Quran
+		- special Event
+	MMC Members
+		- Life Members
+		- General Members
+		- Executive Committee
+	BOT 
+	Imams
+	
+	
+	 --}}			
+			
+			
+			
+			
 			<!-- Header -->
 			<header id="header-area" class="header-area fixed--header sticky--header">
 				<div class="container">
@@ -21,26 +43,18 @@
 								<!-- Main naviagtion -->
 								<nav class="menu">
 									<ul class="justify-content-end">
-										<li class="cr-dropdown"><a href="index.html">HOME</a>
-											<ul class="cr-dropdown-menu">
-												<li><a href="index.html">Homepage Classic</a></li>
-												<li><a href="index-boxed.html">Homepage Boxed</a></li>
-												<li><a href="index-2.html">Homepage Style 2</a></li>
-												<li><a href="index-slider.html">Homepage Slider</a></li>
-												<li><a href="index-text-slider.html">Homepage Text Slider</a></li>
-											</ul>
-										</li>
+										
+										<li><a href="{{ route('home') }}">HOME</a></li>
+
+										
 										<li><a href="about-us.html">ABOUT</a></li>
-										<li class="cr-dropdown"><a href="events.html">EVENT</a>
+										<li><a href="about-us.html">EVENT</a></li>
+										<li><a href="about-us.html">DONATION</a></li>
+
+										<li class="cr-dropdown"><a href="activities.html">OUR PROGRAMS</a>
 											<ul class="cr-dropdown-menu">
-												<li><a href="events.html">Events</a></li>
-												<li><a href="event-details.html">Event Details</a></li>
-											</ul>
-										</li>
-										<li class="cr-dropdown"><a href="activities.html">ACTIVITIES</a>
-											<ul class="cr-dropdown-menu">
-												<li><a href="activities.html">Activities</a></li>
-												<li><a href="single-activity.html">Single Activity</a></li>
+												<li><a href="activities.html">Jummah Kutba</a></li>
+												<li><a href="single-activity.html">Darse Bujhari</a></li>
 											</ul>
 										</li>
 										<li><a href="donation.html">DONATION</a></li>
