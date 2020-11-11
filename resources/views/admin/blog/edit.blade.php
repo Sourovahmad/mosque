@@ -57,7 +57,7 @@
                                 @endforeach
                             </select>
                             <button type="button" id="addBlogCategory" class="btn btn-link">Add New Category</button>
-                            <div  id="inputForCategory">
+                            <div  id="inputForCategory"></div>
                         </div>
                         <div class="form-group col-12">
                             <label for="language_id">Blog Language<span style="color: red"> *</span></label>
@@ -123,7 +123,7 @@
                 ['font', ['bold', 'underline', 'clear']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
-                ['view', ['fullscreen', 'codeview', 'help']]
+                ['view', ['fullscreen',   'help']]
             ]
         });
 

@@ -58,7 +58,7 @@
                                 @endforeach
                             </select>
                             <button type="button" id="addEventCategory" class="btn btn-link">Add New Category</button>
-                            <div  id="inputForCategory">
+                            <div  id="inputForCategory"></div>
                         </div>
 
 
@@ -121,7 +121,7 @@
                 ['font', ['bold', 'underline', 'clear']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
-                ['view', ['fullscreen', 'codeview', 'help']]
+                ['view', ['fullscreen',   'help']]
             ]
         });
 
