@@ -35,64 +35,6 @@
 
 <div class="container-fluid">
 
-    <div class="card mb-4 shadow collapse" id="addCommittee">
-
-
-        <div class="card-header py-3 bg-abasas-dark">
-            <nav class="navbar navbar-dark ">
-                <a class="navbar-brand">New Event</a>
-
-            </nav>
-        </div>
-        <div class="card-body">
-
-
-
-            <form method="POST" id="createEventForm" action="{{ route('admin.committee.store') }}">
-                @csrf
-
-
-                <div class="row">
-                    <div class="form-group col-md-4 col-sm-12">
-                        <label for="name"> Name<span style="color: red"> *</span></label>
-                        <input type="text" name="name" class="form-control" id="name" required>
-                    </div>
-
-
-                    <div class="form-group col-md-4 col-sm-12">
-                        <label for="designation_id">Designation<span style="color: red"> *</span></label>
-                        <select class="form-control form-control" value="" name="designation_id" id="designation_id"
-                            required>
-                            <option disabled selected value> select a Designation </option>'
-                            @foreach ($designations as $designation)
-                            <option value="{{$designation->id}}"> {{$designation->name}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-
-
-                    <div class="form-group col-md-4 col-sm-12 ">
-                        <label for="phone"> Phone<span style="color: red"> *</span></label>
-                        <input type="tel" name="phone" class="form-control" id="phone" required>
-                    </div>
-
-
-
-                </div>
-
-                <button type="submit" id="createEventSubmit" class="btn bg-abasas-dark"> Submit</button>
-
-
-
-            </form>
-
-        </div>
-    </div>
-
-
-
-
-
 
     <div class="card mb-4 shadow">
 
@@ -101,11 +43,38 @@
 
                 <div class="navbar-brand"><span id="eventList"> Committee List</span> </div>
 
-                <div id="AddNewFormButtonDiv">
-                    <button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
-                        data-target="#addCommittee" aria-expanded="false" aria-controls="collapseExample"><i
-                            class="fas fa-plus" id="PlusButton"></i>
-                    </button>
+                <div>
+                    <form method="get">
+                        <div class="form-row align-items-center">
+                            <div class="col-auto">
+                                <label for="member_type">Member Type<span style="color: red"> *</span></label>
+                                <select class="form-control " value="" name="member_type" id="member_type"
+                                required>
+                               
+                                @foreach ($member_types as $member_type)
+                                @if ($memberTypeId == $member_type->id )
+                                    <option selected="selected" value="{{$member_type->id}}"> {{$member_type->name}}</option>
+                                @else 
+                                 <option value="{{$member_type->id}}"> {{$member_type->name}}</option>
+                                @endif
+                                @endforeach
+                            </select>
+                            </div>
+
+
+                            <div id="addSessionSelect">
+
+                            </div>
+
+
+
+
+
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary mt-3">Filter</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
 
@@ -290,22 +259,47 @@
 
 $(document).ready(function(){
 
+    insertMemberType();
+    $('#member_type').change(function(){
 
-    $('body').on('click', '#AddNewFormButton', function () {
-            $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
+        insertMemberType();
 
-        });
+    }); 
+    function insertMemberType(){
+        var memberType=  $('#member_type').val() ;
+        if(memberType == 3){
+
+            var sessionhtml = '';
+            sessionhtml +='<div class="col-auto"> ';
+            sessionhtml +='    <label for="session_id">Active Session<span style="color: red"> *</span></label>';
+            sessionhtml +='    <select class="form-control form-control" value="" name="session_id" id="session_id"';
+            sessionhtml +='       required>';
+            sessionhtml +='        @foreach ($sessions as $session)'; 
+            sessionhtml +='                    @if ($sessionId == $session->id ) ';
+            sessionhtml +='                        <option selected="selected" value="{{$session->id}}"> {{$session->name}}</option>';
+            sessionhtml +='                    @else ';
+            sessionhtml +='                      <option value="{{$session->id}}"> {{$session->name}}</option>';
+            sessionhtml +='                     @endif';
+            sessionhtml +='        @endforeach';
+            sessionhtml +='    </select>';
+            sessionhtml +='</div>';
+
+
+            $('#addSessionSelect').html(sessionhtml);
+        }
+        else{
+            var sessionhtml = '';
+            $('#addSessionSelect').html(sessionhtml);
+        }
+    } 
 
 
 
 
     $("#sortable").sortable({
-
         update: function (event, ui) {
             $(this).children().each(function (index) {
-                if ($(this).attr('db_position') != index + 1) {
-                    $(this).attr('db_position', index + 1)
-                }
+                $(this).attr('db_position', index + 1);
             });
 
         }
@@ -318,8 +312,7 @@ $(document).ready(function(){
         var positionArray = {
             "_token": $("#csrfToken").val().trim()
 
-        };
-
+        };-
         $("#sortable").children().each(function (index) {
             var id = $(this).attr('db_id').trim()
             var position = $(this).attr('db_position').trim();
@@ -332,14 +325,17 @@ $(document).ready(function(){
 
     function saveSettings(positionArray) {
         var url = $("#homeRoute").val().trim() + "/admin/committee_position";
+        console.log(url);
         $.ajax({
             url: url,
             data: positionArray,
             type: 'post',
-            success: function () {
-                location.reload(true);
+            success: function (data) {
+                console.log(data); 
+                //location.reload(true);
             },
             error: function (data) {
+                console.log(data); 
                 alert('Error');
             }
         });

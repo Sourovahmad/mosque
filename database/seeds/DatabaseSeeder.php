@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ImamSeeder::class);
         $this->call(ImageSeeder::class);
         $this->call(ProgramCategorySeeder::class);
+        $this->call(MemberTypeSeeder::class);
         DB::table('users')->insert([
             [
                 'name' => 'Masum Billah',

@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use App\committee;
 use App\designation;
+use App\memberType;
+use App\session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+
+use function PHPUnit\Framework\isNull;
 
 class CommitteeController extends Controller
 {
@@ -14,11 +18,27 @@ class CommitteeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $sessionId =1;
+        $memberTypeId=  1;
+        if(! is_null($request->member_type)){
+            $memberTypeId=$request->member_type;
+        }
+        
+        if(! is_null($request->session_id)){
+            $sessionId=$request->session_id;
+        }
+        $member_types =memberType::all();
+        $sessions = session::all();
         $designations = designation::all();
-        $committees= committee::orderby('position')->get();
-        return view('admin.committee.index',compact('committees','designations'));
+        if($memberTypeId !=3){
+            $committees= committee::where('member_type',$memberTypeId)-> orderby('position')->get();
+        }
+        else{
+            $committees= committee::where('member_type',$memberTypeId)->where('session_id',$sessionId)-> orderby('position')->get();
+        }
+        return view('admin.committee.index',compact('committees','designations','member_types','sessions','memberTypeId','sessionId'));
     }
 
     /**
@@ -28,7 +48,10 @@ class CommitteeController extends Controller
      */
     public function create()
     {
-        //
+        $member_types =memberType::all();
+        $sessions = session::all();
+        $designations = designation::all();
+        return view('admin.committee.create',compact('member_types','sessions','designations'));
     }
 
     /**
@@ -42,11 +65,14 @@ class CommitteeController extends Controller
         $committee =new committee;
         $committee->name= $request->name;
         $committee->designation_id= $request->designation_id;
+        $committee->member_type= $request->member_type;
         $committee->phone= $request->phone;
         $committee->position= 99999;
-
+        if(!is_null($request->session_id)){
+            $committee->session_id= $request->session_id;
+        }
         $committee->save();
-        return redirect()->back()->withSuccess(['Successfully Created']);
+        return redirect(route('admin.committee.index'))->withSuccess(['Member Created']);
     }
 
     /**
@@ -105,8 +131,10 @@ class CommitteeController extends Controller
     {
         $committees= committee::all();
         foreach($committees as $committee){
-             $committee->position = $request[$committee->id];
-             $committee->save();
+            if(!is_null($request[$committee->id])){
+                $committee->position = $request[$committee->id];
+                $committee->save();
+            }
         }
     }
 
