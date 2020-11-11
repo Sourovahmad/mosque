@@ -83,7 +83,7 @@
           ['font', ['bold', 'underline', 'clear']],
           ['color', ['color']],
           ['para', ['ul', 'ol', 'paragraph']],
-          ['view', ['fullscreen', 'codeview', 'help']]
+          ['view', ['fullscreen',   'help']]
         ]
       });
     });

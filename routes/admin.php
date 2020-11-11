@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
  
 
     Route::get('/','DashboardController@index')->name('dashboard');
+    Route::get('/post','PostController@index')->name('post');
 
     Route::resource('/event-category','EventCategoryController');
     Route::resource('/event','EventController');
