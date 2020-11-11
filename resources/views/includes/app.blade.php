@@ -28,7 +28,7 @@
 		<!-- Modernizer js -->
 		<script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 	</head>
-	<body>
+	<body >
 		<!--[if lte IE 9]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 		<![endif]-->

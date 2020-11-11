@@ -16,7 +16,7 @@
 											<h3>In the name of <strong>“Allah”</strong></h3>
 											<h1>Come to the straight path</h1>
 											<div class="banner__content__button">
-												<a href="about-us.html" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
+												<a href="" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
 											</div>
 										</div>
 									</div>
@@ -24,23 +24,24 @@
 							</div>
 						</div><!-- //Single Banner -->
 
-					<!-- Single Banner -->
-					<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="banner__content text-center">
-										<img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
-										<h3>O’ Allah we believe</h3>
-										<h1>That Only you can save us</h1>
-										<div class="banner__content__button">
-											<a href="about-us.html" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn More</span></a>
+						<!-- Single Banner -->
+						<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="banner__content text-center">	
+                                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
+									
+											<h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari]. </h3>
+											
+											<div class="banner__content__button">
+												<a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div><!-- //Single Banner -->
+						</div><!-- //Single Banner -->
 
 				</div>
 			</div><!-- //Top Banner --> 
