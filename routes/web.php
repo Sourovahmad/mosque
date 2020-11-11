@@ -1,5 +1,7 @@
 <?php
 
+use App\event;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+
+    $date = Carbon::now()->format('T-m-d');
+    $events = event::where('date','>=',$date)->take(6)->get();
+
+    return view('index',compact('events'));
 })->name("home");
 
 
@@ -28,7 +34,7 @@ Route::post('donation-success','DonationController@success')->name('donationSucc
 
 
 Route::get('events','EventController@frontendView')->name('events');
-Route::get('events/{id}','EventController@show')->name('event-single');
+Route::get('events/{id}','EventController@singleview')->name('event-single');
 
 
 

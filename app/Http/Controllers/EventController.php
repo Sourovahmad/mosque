@@ -53,10 +53,15 @@ class EventController extends Controller
         $event->end_time = $request->end_time;
 
 
-        $fileName = time() . '.' . $request->image->getClientOriginalName();
-        $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+        $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+        $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+        $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+        $picture = Photo::make($request->image)->fit(248, 278)->save('images/'.$fileNameSmall);
+
+
         $image = new image;
-        $image->url = 'images/' . $fileName;
+        $image->url = 'images/' . $fileNameFull;
+        $image->thumbnail = 'images/' . $fileNameSmall;
         $image->save();
 
         $event->image_id = $image->id;
@@ -72,22 +77,13 @@ class EventController extends Controller
      * @param  \App\event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show( $id)
+    public function show( event $event)
     { 
 
-        $event = event::find($id);
-        $eventCategories = eventCategory::all();
-
-       // return $eventCategories
-
-    //   $eventCategory = ($event->category_id);
-
-    //   $Name =  $eventCategory->name();
-       
-    //    return $Name;
-
-        return view('events.event-details',compact('event','eventCategories'));
+    //
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -119,11 +115,17 @@ class EventController extends Controller
         $event->end_time = $request->end_time;
 
         if (!is_null($request->file)) {
-            $fileName = time() . '.' . $request->image->getClientOriginalName();
-            
-            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+
+
+            $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+            $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+            $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+            $picture = Photo::make($request->image)->fit(248, 278)->save('images/'.$fileNameSmall);
+    
+    
             $image = new image;
-            $image->url = 'images/' . $fileName;
+            $image->url = 'images/' . $fileNameFull;
+            $image->thumbnail = 'images/' . $fileNameSmall;
             $image->save();
 
             $event->image_id = $image->id;
@@ -150,7 +152,20 @@ class EventController extends Controller
 
     public function frontendView()
     {
-        $events = event::paginate(6);
+         
+        $events = event:: paginate(6);
         return view('events.index',compact('events'));
+
+    }
+
+    public function singleview( $id)
+    { 
+
+        $event = event::find($id);
+        $eventCategories = eventCategory::all();
+        $events = event::orderBy('id','desc')->take(10)->get();
+      
+
+        return view('events.event-details',compact('event','eventCategories','events'));
     }
 }

@@ -63,7 +63,7 @@
 												
 											</ul>
 										</li>
-										<li><a href="about-us.html">EVENT</a></li>
+										<li><a href="{{ route('events') }}">EVENT</a></li>
 										<li><a href="{{ route('donations.index') }}">DONATION</a></li>
 
 										<li class="cr-dropdown"><a href="activities.html">OUR PROGRAMS</a>

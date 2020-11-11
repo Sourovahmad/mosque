@@ -150,162 +150,50 @@
 
 									<!-- Event Content -->
 									<div class="event__inner event-slide-active slider-dots--style1">
-
+				
+										
+										@foreach ($events as $event )
+											
+										
 										<!-- Event Single -->
 										<div class="event__single">
 											<div class="event__single__inner">
 												<div class="event__single__thumb">
-													<img src="images/event/1.jpg" alt="event thumb">
+													<img src="{{ asset($event->image->thumbnail) }}" alt="event thumb">
 													<div class="event__single__date">
-														<h3>15 December, 2017</h3>
+														<h3>{{ Carbon\Carbon::parse($event->date)->format('d F, Y') }}</h3>
 													</div>
 												</div>
 												<div class="event__single__content">
-													<h3><a href="event-details.html">Importance of “Hajj” in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+													<h3><a href="event-details.html">{{ $event->title }}</a></h3>
+													<p>@php echo substr($event->description, 0,50) @endphp</p>
 													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Al-arafah masque, Old town, Paris</p>
-														<p><i class="icofont icofont-wall-clock"></i> 03.00 am to 05.30pm</p>
+														<p><i class="icofont icofont-institution"></i> {{ $event->vanu }}</p>
+														<p><i class="icofont icofont-wall-clock"></i>   {{Carbon\Carbon::parse($event->start_time)->format('h:i:a')  }} to
+															{{Carbon\Carbon::parse($event->end_time)->format('h:i:a')  }}</p></p>
 													</div>
 												</div>
 											</div>
 										</div><!-- //Event Single -->
+										@endforeach
+					
 
-										<!-- Event Single -->
-										<div class="event__single">
-											<div class="event__single__inner">
-												<div class="event__single__thumb">
-													<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
-													<div class="event__single__date">
-														<h3>17 December, 2017</h3>
-													</div>
-												</div>
-												<div class="event__single__content">
-													<h3><a href="event-details.html">Importance of “Sijdah” in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
-													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Central masque, New town, Las Vegas</p>
-														<p><i class="icofont icofont-wall-clock"></i> 11.00 am to 01.30pm</p>
-													</div>
-												</div>
-											</div>
-										</div><!-- //Event Single -->
-
-										<!-- Event Single -->
-										<div class="event__single">
-											<div class="event__single__inner">
-												<div class="event__single__thumb">
-													<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
-													<div class="event__single__date">
-														<h3>21 December, 2017</h3>
-													</div>
-												</div>
-												<div class="event__single__content">
-													<h3><a href="event-details.html">Preferred Foods in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
-													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Al-Madina masque, City, New York</p>
-														<p><i class="icofont icofont-wall-clock"></i> 10.00 am to 12.30pm</p>
-													</div>
-												</div>
-											</div>
-										</div><!-- //Event Single -->
-
-										<!-- Event Single -->
-										<div class="event__single">
-											<div class="event__single__inner">
-												<div class="event__single__thumb">
-													<img src="{{ asset('abasas/images/event/1.jpg')}}" alt="event thumb">
-													<div class="event__single__date">
-														<h3>15 December, 2017</h3>
-													</div>
-												</div>
-												<div class="event__single__content">
-													<h3><a href="event-details.html">Importance of “Hajj” in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
-													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Al-arafah masque, Old town, Paris</p>
-														<p><i class="icofont icofont-wall-clock"></i> 03.00 am to 05.30pm</p>
-													</div>
-												</div>
-											</div>
-										</div><!-- //Event Single -->
-
-										<!-- Event Single -->
-										<div class="event__single">
-											<div class="event__single__inner">
-												<div class="event__single__thumb">
-													<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
-													<div class="event__single__date">
-														<h3>17 December, 2017</h3>
-													</div>
-												</div>
-												<div class="event__single__content">
-													<h3><a href="event-details.html">Importance of “Sijdah” in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
-													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Central masque, New town, Las Vegas</p>
-														<p><i class="icofont icofont-wall-clock"></i> 11.00 am to 01.30pm</p>
-													</div>
-												</div>
-											</div>
-										</div><!-- //Event Single -->
-
-										<!-- Event Single -->
-										<div class="event__single">
-											<div class="event__single__inner">
-												<div class="event__single__thumb">
-													<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
-													<div class="event__single__date">
-														<h3>21 December, 2017</h3>
-													</div>
-												</div>
-												<div class="event__single__content">
-													<h3><a href="event-details.html">Preferred Foods in Islam</a></h3>
-													<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
-													<div class="event__single__content__location">
-														<p><i class="icofont icofont-institution"></i> Al-Madina masque, City, New York</p>
-														<p><i class="icofont icofont-wall-clock"></i> 10.00 am to 12.30pm</p>
-													</div>
-												</div>
-											</div>
-										</div><!-- //Event Single -->
+									
 
 									</div><!-- //Event Content -->
 
 									<!-- Event Filters -->
 									<div class="event__filters">
 										<div class="event-filters-active">
+											@foreach ($events as $event)
+												
 											<div class="event__filters__single">
+
 												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
+													<img src="{{ asset($event->image->thumbnail)}}" alt="event filters">
 												</div>
 											</div>
-											<div class="event__filters__single">
-												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
-												</div>
-											</div>
-											<div class="event__filters__single">
-												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
-												</div>
-											</div>
-											<div class="event__filters__single">
-												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
-												</div>
-											</div>
-											<div class="event__filters__single">
-												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
-												</div>
-											</div>
-											<div class="event__filters__single">
-												<div class="event__filters__single__inner">
-													<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
-												</div>
-											</div>
+									 @endforeach
 										</div>
 									</div><!-- //Event Filters -->
 
