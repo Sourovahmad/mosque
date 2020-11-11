@@ -17,7 +17,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="">
-                    <p>You will be charged rs 100</p>
+                    <p>You will be charged :  <b>  {{ $currency }} {{ $amount/100 }} </b></p>
                 </div>
                 <div class="card">
                     <form action="{{route('donationSuccess')}}"  method="post" id="payment-form">
