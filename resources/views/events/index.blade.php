@@ -12,7 +12,7 @@
 					<h2 class="cr-breadcrumb__title">Events</h2>
 					<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 						<ul>
-							<li><a href="{{ route('home') }}">Events</a></li>
+							<li><a href="{{ route('home') }}">Home</a></li>
 							<li>Event</li>
 						</ul>
 					</div>
@@ -21,6 +21,7 @@
 		</div>
 	</div>
 </section><!-- //Breadcrumb area -->
+    
 
 
 <!-- //Top Banner -->

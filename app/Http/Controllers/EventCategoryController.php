@@ -59,7 +59,7 @@ class EventCategoryController extends Controller
      */
     public function show(eventCategory $eventCategory)
     {
-        //
+        return $eventCategory->events->count();
     }
 
     /**

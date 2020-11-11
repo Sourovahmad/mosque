@@ -39,19 +39,20 @@ class DonationController extends Controller
         // Enter Your Stripe Secret
         \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
         		
-		$amount = 1000;
+        $amount = $request->amount;
+        $currency= $request->currency;
 		$amount *= 100;
         $amount = (int) $amount;
         
         $payment_intent = \Stripe\PaymentIntent::create([
             'description' => 'Donation for MMC',
-			'amount' => $request->amount,
-			'currency' => $request->currency,
+			'amount' => $amount,
+			'currency' => $currency,
 			'payment_method_types' => ['card'],
 		]);
 		$intent = $payment_intent->client_secret;
 
-		return view('donation.checkout',compact('intent'));
+		return view('donation.checkout',compact('intent','amount','currency'));
         //
     }
 

@@ -2295,7 +2295,7 @@ a.mobile-logo {
   left: 0;
   top: 0;
   z-index: 998;
-  background: #009047;
+  background: #000;
   -webkit-animation: fadeInDown 0.4s ease-in-out both;
   -moz-animation: fadeInDown 0.4s ease-in-out both;
   -ms-animation: fadeInDown 0.4s ease-in-out both;
@@ -2389,7 +2389,7 @@ a.mobile-logo {
 /* Header Style 2 navigation */
 .header.header--style-2 nav.menu ul li a {
   padding: 25px 0;
-  color: #fff;
+  color: #343a40;
   font-weight: 600; }
 
 /* Dropdown Style */
