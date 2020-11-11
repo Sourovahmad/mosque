@@ -20,7 +20,7 @@ class EventController extends Controller
     public function index()
     {
         $date=Carbon:: now()->format('Y-m-d');
-        $events = event::where('date','>=',$date)->orderBy('date')->orderBy('start_time')->get();
+        $events = event::orderBy('date','desc')->orderBy('start_time')->get();
         return view('admin.event.index',compact('events'));
     }
 

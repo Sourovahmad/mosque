@@ -30,6 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 
     Route::post('/committee_position','CommitteeController@position');
+    Route::post('/storeCategory','EventCategoryController@storeCategory');
 
 
 

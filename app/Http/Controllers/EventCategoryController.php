@@ -99,4 +99,20 @@ class EventCategoryController extends Controller
         $eventCategory->delete();
         return Redirect::back()->withErrors(["Item Deleted" ]);
     }
+
+
+
+
+
+
+    public function storeCategory(Request $request)
+    {
+        if(is_null($request->name) ){
+            return 'Error';
+        }
+        $eventCategory=eventCategory::create($request->all());
+        $categories = eventCategory::all();
+        return $categories;
+
+    }
 }
