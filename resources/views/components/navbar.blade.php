@@ -12,6 +12,9 @@
           <a href="{{ route('admin.dashboard') }}">
  <span class="h2 title text-light"  > Mosque </span>  </a> 
 
+
+        <a href='{{ route("admin.post") }}'><button type="button" class="btn btn-link"><i class="fa fa-plus text-light" aria-hidden="true"></i><span class="text-light">Post</span> </button></a>
+
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
