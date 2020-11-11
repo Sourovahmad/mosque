@@ -49,9 +49,17 @@
 										
 										<li class="cr-dropdown"><a href="activities.html">About</a>
 											<ul class="cr-dropdown-menu">
-												<li><a href="activities.html">MMC members</a></li>
 												<li><a href="single-activity.html">Imams</a></li>
-												<li><a href="single-activity.html">Gallery</a></li>
+												<li><a href="{{ route('gallery') }}">Gallery</a></li>
+												
+											</ul>
+										</li>
+										
+										<li class="cr-dropdown"><a href="activities.html">MMC members</a>
+											<ul class="cr-dropdown-menu">
+												<li><a href="single-activity.html">Life Members</a></li>
+												<li><a href="{{ route('gallery') }}">General Members</a></li>
+												<li><a href="{{ route('gallery') }}">Executive Committee</a></li>
 												
 											</ul>
 										</li>
