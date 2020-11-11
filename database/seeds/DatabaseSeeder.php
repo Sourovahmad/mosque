@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call(SalatSeeder::class);
         $this->call(ImamSeeder::class);
         $this->call(ImageSeeder::class);
+        $this->call(ProgramCategorySeeder::class);
         DB::table('users')->insert([
             [
                 'name' => 'Masum Billah',

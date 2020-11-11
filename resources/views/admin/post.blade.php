@@ -76,7 +76,7 @@
                                 
                                 <option value="event"> Event</option>
                                 <option value="blog">Blog</option>
-                                <option value="activity"> Activity</option>
+                                <option value="program"> Program</option>
                             </select>
                         </div>
                         <div id='addSection'> </div>
@@ -179,10 +179,22 @@
         $('#postType').change(function(){
 
             var postType=  $('#postType').val() ;
-            if(postType == 'activity'){
-                var action = "{{ route('admin.activity.store') }}";
+            if(postType == 'program'){
+                var action = "{{ route('admin.programs.store') }}";
                 $('#createPostForm').attr('action',action);
                 var activityhtml = '';
+                activityhtml +='<div class="form-group col-12"> ';
+                activityhtml +='    <label for="category_id">Program Category<span style="color: red"> *</span></label>';
+                activityhtml +='    <select class="form-control form-control" value="" name="category_id" id="category_id"';
+                activityhtml +='       required>';
+                activityhtml +='        <option disabled selected value> select a Category </option>';
+                activityhtml +='        @foreach ($programCategories as $category)';
+                activityhtml +='        <option value="{{$category->id}}"> {{$category->name}}</option>';
+                activityhtml +='        @endforeach';
+                activityhtml +='    </select>';
+                activityhtml +='</div>';
+
+
                 $('#addSection').html(activityhtml);
 
             }

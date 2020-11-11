@@ -8,11 +8,11 @@
     <div class="card mb-4 shadow">
 
 
-        <form method="POST" id="createEventForm" action="{{ route('admin.activity.store') }}"  enctype="multipart/form-data">
+        <form method="POST" id="createEventForm" action="{{ route('admin.programs.store') }}"  enctype="multipart/form-data">
             @csrf
             <div class="card-header py-3 bg-abasas-dark">
                 <nav class="navbar navbar-dark ">
-                    <a class="navbar-brand">New Activity</a>
+                    <a class="navbar-brand">New Program</a>
                     <button type="submit" id="createEventSubmit" class="btn btn-success btn-lg ">Publish</button>
                 </nav>
             </div>
@@ -22,7 +22,7 @@
                     <div class="col-md-9 col-sm-12 " >   {{-- style="background-color: #F5EFE0;" --}}
 
                         <div class="form-group col-12  ">
-                            <label  > Activity Title<span style="color: red"> *</span></label>
+                            <label  > Program Title<span style="color: red"> *</span></label>
                             <input type="text" name="title" class="form-control" id="title"  required>
                         </div>
 
@@ -38,6 +38,19 @@
                     </div>
 
                     <div class="col-md-3 col-sm-12" >
+
+
+                        <div class="form-group col-12">
+                            <label for="category_id">Programs Category<span style="color: red"> *</span></label>
+                            <select class="form-control form-control" value="" name="category_id" id="category_id"
+                                required>
+                                <option disabled selected value> select a Category </option>'
+                                @foreach ($categories as $category)
+                                <option value="{{$category->id}}"> {{$category->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
 
                         <div class="form-group col-12 ">
                             <label for="image">Upload image<span style="color: red"> *</span></label><br>

@@ -18,6 +18,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
 
 		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
 		<link rel="stylesheet" href="{{asset('abasas/css/bootstrap.min.css')}}">
 		<link rel="stylesheet" href="{{asset('abasas/css/plugins.css')}}">
 		<link rel="stylesheet" href="{{asset('abasas/style.css')}}">
@@ -198,7 +199,15 @@
 		<script src="{{asset('abasas/js/PrayTimes.js')}}"></script>
 		<script src="{{asset('abasas/js/active.js')}}"></script>
 		<script src="{{asset('abasas/js/scripts.js')}}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#covidModal").modal();
+				$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+			})
+		</script>
 	</body>
-
-<!-- Mirrored from demo.hasthemes.com/azan-preview/azan/index-text-slider.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Oct 2020 04:25:56 GMT -->
 </html>

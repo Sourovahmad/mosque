@@ -66,6 +66,8 @@
 												<li><a href="single-activity.html">Special Event</a></li>
 											</ul>
 										</li>
+										
+										<li><a target="_blank" href="{{ asset('abasas/images/prayingTimes.jpg') }}">Praying Times</a></li>
 										<li><a href="donation.html">Blog</a></li>
 									
 									</ul>
