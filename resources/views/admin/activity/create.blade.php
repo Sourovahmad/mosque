@@ -19,29 +19,29 @@
             <div class="card-body">
 
                 <div class="row">
-                    <div class="col-md-9 col-sm-12" style="background-color: #F5EFE0;">
+                    <div class="col-md-9 col-sm-12 " >   {{-- style="background-color: #F5EFE0;" --}}
 
                         <div class="form-group col-12  ">
-                            <label for="title"> Activity Title<span style="color: red"> *</span></label>
-                            <input type="text" name="title" class="form-control" id="title" required>
+                            <label  > Activity Title<span style="color: red"> *</span></label>
+                            <input type="text" name="title" class="form-control" id="title"  required>
                         </div>
 
 
 
                         <div class="form-group col-12 ">
                             <label for="description"> Description<span style="color: red"> *</span></label>
-                            <textarea class="form-control" id="description" name="description" rows="12"
+                            <textarea class="form-control" id="description" name="description" rows="15"
                                 required></textarea>
                         </div>
 
 
                     </div>
 
-                    <div class="col-md-3 col-sm-12">
+                    <div class="col-md-3 col-sm-12" >
 
                         <div class="form-group col-12 ">
                             <label for="image">Upload image<span style="color: red"> *</span></label><br>
-                            <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg" required>
+                            <input type="file" name="image" id="image" accept=".jpg, .jpeg" required>
                         </div>
     
 
@@ -68,6 +68,23 @@
 
 </div>
 
+
+<script>
+    $(document).ready(function() {
+        $('#description').summernote({
+        tabsize: 4,
+        height: 300,
+        disableDragAndDrop: true,
+        toolbar: [
+          ['style', ['style']],
+          ['font', ['bold', 'underline', 'clear']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+      });
+    });
+</script>
 
 
 @endsection
