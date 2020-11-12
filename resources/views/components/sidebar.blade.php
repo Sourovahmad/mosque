@@ -13,6 +13,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
+    {{-- <li class="nav-item active ">
+        <a class="nav-link p-3 " href="{{ route('admin.post') }}">
+            <i class="fas fa-fw fa-plus"></i>
+            <span>New Post</span></a>
+    </li> --}}
     <hr class="sidebar-divider m-1 p-0 ">
     <li class="nav-item">
         <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#collapseProducts" aria-expanded="true" aria-controls="collapseProducts">
