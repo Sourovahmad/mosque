@@ -48,10 +48,16 @@ class ProgramController extends Controller
         $program->description = $request->description;
 
 
-        $fileName = time() . '.' . $request->image->getClientOriginalName();
-        $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+  
+        $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+        $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+        $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+        $picture = Photo::make($request->image)->fit(370, 230)->save('images/'.$fileNameSmall);
+
+
         $image = new image;
-        $image->url = 'images/' . $fileName;
+        $image->url = 'images/' . $fileNameFull;
+        $image->thumbnail = 'images/' . $fileNameSmall;
         $image->save();
 
         $program->image_id = $image->id;
@@ -97,11 +103,17 @@ class ProgramController extends Controller
         $program->description = $request->description;
         $program->category_id = $request->category_id;
 
-        if (!is_null($request->file)) {
-            $fileName = time() . '.' . $request->image->getClientOriginalName();
-            $request->image->move(public_path('images'), $fileName);
-            $image = new image();
-            $image->url = 'images/' . $fileName;
+        if (!is_null($request->image)) {
+
+            $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+            $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+            $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+            $picture = Photo::make($request->image)->fit(370, 230)->save('images/'.$fileNameSmall);
+    
+    
+            $image = new image;
+            $image->url = 'images/' . $fileNameFull;
+            $image->thumbnail = 'images/' . $fileNameSmall;
             $image->save();
 
             $program->image_id = $image->id;
@@ -121,5 +133,28 @@ class ProgramController extends Controller
     {
         $program->delete();
         return Redirect::back()->withErrors(["Program Deleted"]);
+    }
+
+
+
+    public function FrontendProgram()
+    {
+
+        $programs = program::paginate(6);
+        return view('program.index',compact('programs'));
+    }
+
+    public function FrontendProgramCategory($category_id)
+    {
+
+       $category = programCategory::find($category_id);
+        $programs = program::where('category_id',$category_id)->paginate(6);
+        return view('program.category',compact('programs','category'));
+    }
+    public function programSingle($id)
+    { 
+        $programs = program::orderBy('id','desc')->take(5)->get();
+        $program = program::find($id);
+        return view('program.singleview',compact('program','programs'));
     }
 }

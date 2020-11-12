@@ -64,10 +64,11 @@
                             </div>
                             <div class="event-single__content">
                                 <h3><a href="{{ route('event-single', $event->id) }}">{{ $event->title }}</a></h3>
-                                <p>@php echo substr($event->description, 0,50) @endphp </p>
+                                <p> @php echo substr($event->description, 0,50) @endphp ... </p>
                                 <div class="event-single__content__location">
                                     <p><i class="icofont icofont-institution"></i>{{ $event->vanu}}</p>
-                                    <p><i class="icofont icofont-wall-clock"></i>
+                                    <p><i class="icofont icofont-wall-clock"></i>{{ Carbon\Carbon::parse($event->start_time)->format('h:i:a') }} to
+                                        {{ Carbon\Carbon::parse($event->end_time)->format('h:i:a') }}</p>
                                       
                                 </div>
                             </div>

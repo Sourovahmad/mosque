@@ -35,7 +35,7 @@
                             {{-- <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word"> --}}
 {{-- <h1> Event Details</h1> --}}
 <h1 >Event Details</h1>
-<div class="cr-breadcrumb__tree text-left text-md-left text-center">
+<div class="cr-breadcrumb__tree text-left">
     <ul>
         <li><a href="{{ route('home') }}">Events</a></li>
         <li>{{ $event->title }}</li>
@@ -50,10 +50,14 @@
                     </div>
                 </div>
             </div>
+
+           
+    
         </div><!-- //Single Banner -->
-
-
+       
     </div>
+
+  
 </div><!-- //Top Banner -->
 
 

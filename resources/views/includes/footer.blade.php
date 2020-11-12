@@ -13,7 +13,7 @@
 									<div class="single-widget widget--details">
 										<div class="logo">
 											<a href="index.html">
-												<img src="{{asset('abasas/images/logo/logo-dark.png') }}" alt="footer logo">
+												<img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="footer logo">
 											</a>
 										</div>
 										<p>Islam is the know how to pursue pleasure rationally encounter consequences</p>
@@ -31,11 +31,11 @@
 									<div class="single-widget widget--support">
 										<h4 class="widget-title">Support</h4>
 										<ul>
-											<li><a href="about-us.html">About us</a></li>
+											<li><a href="">About us</a></li>
 											<li><a href="#">Help Center</a></li>
-											<li><a href="shop-right-sidebar.html">Shop now</a></li>
-											<li><a href="blogs-right-sidebar.html">Latest Blog</a></li>
-											<li><a href="contact.html">Contact</a></li>
+											<li><a href="">Shop now</a></li>
+											<li><a href="">Latest Blog</a></li>
+											<li><a href="">Contact</a></li>
 										</ul>
 									</div><!-- //Single Widgets -->
 
@@ -51,8 +51,8 @@
 												<a href="callto://+02157587452">02157 587 452</a>
 											</li>
 											<li>
-												<a href="mailto://infomation@azan.com">infomation@azan.com</a>
-												<a href="mailto://www.azan.com">www.azan.com</a>
+												<a href="mailto://infomation@azan.com">conatact@abasas.tech</a>
+												<a href="mailto://www.azan.com">www.abasas.tech</a>
 											</li>
 										</ul>
 									</div><!-- //Single Widgets -->
@@ -90,7 +90,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-6 col-md-6">
-								<p>Copyright© <a href="https://hastech.company/">Hastech</a>, All rights Reserved, 2018</p>
+								<p>Copyright© <a href="https://hastech.company/">Abasas</a>, All rights Reserved, 2018</p>
 							</div>
 							<div class="col-lg-6 col-md-6">
 								<div class="footer__payment-icons text-right">

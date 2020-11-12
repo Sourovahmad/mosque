@@ -13,4 +13,9 @@ class program extends Model
     {
         return $this->belongsTo('App\programCategory','category_id','id')->withTrashed();
     }
+
+    public function image()
+    {
+        return $this->belongsTo('App\image','image_id','id')->withTrashed();
+    }
 }

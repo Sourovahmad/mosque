@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\blog;
 use App\blogCategory;
 use App\blogLanguage;
+use App\event;
 use App\image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -52,15 +53,19 @@ class BlogController extends Controller
         $blog->description = $request->description;
 
 
-        $fileName = time() . '.' . $request->image->getClientOriginalName();
-        $picture = Photo::make($request->image)->fit(800, 800);
-        $picture->save('images/'.$fileName);
 
-        $image = new image();
-        $image->url = 'images/' . $fileName;
-        $image->save();
-
+            $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+            $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+            $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+            $picture = Photo::make($request->image)->fit(370, 230)->save('images/'.$fileNameSmall);
+    
+    
+            $image = new image;
+            $image->url = 'images/' . $fileNameFull;
+            $image->thumbnail = 'images/' . $fileNameSmall;
+            $image->save();
         $blog->image_id = $image->id;
+
 
 
         $blog->save();
@@ -107,13 +112,17 @@ class BlogController extends Controller
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;
 
-        if ( !is_null($request->image) ) {
-            $fileName = time() . '.' . $request->image->getClientOriginalName();
-            
-            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+        if (!is_null($request->image)) {
 
-            $image = new image();
-            $image->url = 'images/' . $fileName;
+            $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+            $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
+            $picture = Photo::make($request->image)->fit(600, 375)->save('images/'.$fileNameFull);
+            $picture = Photo::make($request->image)->fit(370, 230)->save('images/'.$fileNameSmall);
+    
+    
+            $image = new image;
+            $image->url = 'images/' . $fileNameFull;
+            $image->thumbnail = 'images/' . $fileNameSmall;
             $image->save();
 
             $blog->image_id = $image->id;
@@ -134,4 +143,22 @@ class BlogController extends Controller
         $blog->delete();
         return Redirect::back()->withErrors(["Blog Deleted"]);
     }
+
+    public function frontendView()
+    {
+      $blogs = blog::orderBy('id','desc')->paginate(9);
+      $events = event::orderBy('id','desc')->take(5)->get();
+
+      return view('blogs.index',compact('blogs','events'));
+    }
+
+
+    public function singleview($id)
+    {
+        $blog = blog::find($id);
+        $blogs = blog::orderBy('id','desc')->take(5)->get();
+        return view('blogs.singleview',compact('blog','blogs'));
+    }
+
+
 }
