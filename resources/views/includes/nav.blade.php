@@ -4,7 +4,7 @@
 	Donation
 	Our Programs
 		- Jummah Kutba
-		- Darse Bujhari
+		- Darse Bukhari
 		- Darse Quran
 		- special Event
 	MMC Members
@@ -50,12 +50,12 @@
 										<li class="cr-dropdown"><a href="{{ route('about.index') }}">About</a>
 											<ul class="cr-dropdown-menu">
 												<li><a href="{{ route('about.index') }}/#imam">Imam</a></li>
-												<li><a href="{{ route('about.index') }}/#gallery">Gallery</a></li>
+												<li><a href="{{ route('gallery') }}">Gallery</a></li>
 												
 											</ul>
 										</li>
 										
-										<li class="cr-dropdown"><a href="activities.html">MMC members</a>
+										<li class="cr-dropdown"><a href="activities.html">MMC Members</a>
 											<ul class="cr-dropdown-menu">
 												<li><a href="">Life Members</a></li>
 												<li><a href="">General Members</a></li>
@@ -69,13 +69,13 @@
 										<li class="cr-dropdown"><a href="{{ route('programs') }}">OUR PROGRAMS</a>
 											<ul class="cr-dropdown-menu">
 												<li><a href="{{ route('program-category',1) }}">Jummah Kutba</a></li>
-												<li><a href="{{ route('program-category',2) }}">Darse Bujhari</a></li>
+												<li><a href="{{ route('program-category',2) }}">Darse Bukhari</a></li>
 												<li><a href="{{ route('program-category',3) }}">Darse Quran</a></li>
 												<li><a href="{{ route('program-category',4) }}">Special Event</a></li>
 											</ul>
 										</li>
 										
-										<li><a target="_blank" href="{{ asset('abasas/images/prayingTimes.jpg') }}">Praying Times</a></li>
+										<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
 										<li><a href="{{ route('blogs') }}">Blog</a></li>
 									
 									</ul>
