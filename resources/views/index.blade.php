@@ -132,7 +132,7 @@
 					</div>
 				</section><!-- //Pillar Of Islam -->
 
-				<!-- Upcoming Events -->
+				{{-- <!-- Upcoming Events -->
 				<section class="cr-section events-area bg--white ptb--150 flower--left-bottom">
 					<div class="container">
 						<div class="row">
@@ -201,8 +201,193 @@
 							</div>
 						</div>
 					</div>
-				</section><!-- //Upcoming Events -->
+				</section><!-- //Upcoming Events --> --}}
 
+
+							<!-- Upcoming Events -->
+							<section class="cr-section events-area bg--white ptb--150 flower--left-bottom">
+								<div class="container">
+									<div class="row">
+										<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+											<div class="section-title text-center">
+												<h4>Our “Events”</h4>
+												<h2>Upcoming Events</h2>
+												<p><span>Islam</span> is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="event">
+			
+												<!-- Event Content -->
+												<div class="event__inner event-slide-active slider-dots--style1">
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/1.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>15 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Importance of “Hajj” in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Al-arafah masque, Old town, Paris</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 03.00 am to 05.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>17 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Importance of “Sijdah” in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Central masque, New town, Las Vegas</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 11.00 am to 01.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>21 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Preferred Foods in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Al-Madina masque, City, New York</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 10.00 am to 12.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/1.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>15 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Importance of “Hajj” in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Al-arafah masque, Old town, Paris</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 03.00 am to 05.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/2.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>17 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Importance of “Sijdah” in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Central masque, New town, Las Vegas</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 11.00 am to 01.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+													<!-- Event Single -->
+													<div class="event__single">
+														<div class="event__single__inner">
+															<div class="event__single__thumb">
+																<img src="{{ asset('abasas/images/event/3.jpg')}}" alt="event thumb">
+																<div class="event__single__date">
+																	<h3>21 December, 2017</h3>
+																</div>
+															</div>
+															<div class="event__single__content">
+																<h3><a href="event-details.html">Preferred Foods in Islam</a></h3>
+																<p><strong>Ramadan</strong> is the know how to pursue pleasure rationally ncountr consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of tself, because it  pain, but because occasionally </p>
+																<div class="event__single__content__location">
+																	<p><i class="icofont icofont-institution"></i> Al-Madina masque, City, New York</p>
+																	<p><i class="icofont icofont-wall-clock"></i> 10.00 am to 12.30pm</p>
+																</div>
+															</div>
+														</div>
+													</div><!-- //Event Single -->
+			
+												</div><!-- //Event Content -->
+			
+												<!-- Event Filters -->
+												<div class="event__filters">
+													<div class="event-filters-active">
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
+															</div>
+														</div>
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
+															</div>
+														</div>
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
+															</div>
+														</div>
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/1.png')}}" alt="event filters">
+															</div>
+														</div>
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/2.png')}}" alt="event filters">
+															</div>
+														</div>
+														<div class="event__filters__single">
+															<div class="event__filters__single__inner">
+																<img src="{{ asset('abasas/images/event/event-filters/3.png')}}" alt="event filters">
+															</div>
+														</div>
+													</div>
+												</div><!-- //Event Filters -->
+			
+											</div>
+										</div>
+									</div>
+								</div>
+							</section><!-- //Upcoming Events -->
+			
+				
                 				<!-- Team Area -->
 								<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom	">
 									<div class="container">

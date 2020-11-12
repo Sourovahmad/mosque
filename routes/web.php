@@ -36,6 +36,13 @@ Route::post('donation-success','DonationController@success')->name('donationSucc
 Route::get('events','EventController@frontendView')->name('events');
 Route::get('events/{id}','EventController@singleview')->name('event-single');
 
+Route::get('/members',function(){
+    return view('blog');
+})->name('blog');
+
+Route::get('/blog',function(){
+    return view('blog');
+})->name('blog');
 
 
 
