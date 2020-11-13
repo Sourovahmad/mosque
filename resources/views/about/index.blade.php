@@ -44,7 +44,7 @@
 @section('content')
 
 <!-- About Details Area -->
-<div class="cr-section about-details-area ptb--120 bg--pattern">
+<div class="cr-section about-details-area ptb--120 bg--pattern zig-zag--bottom">
     <div class="container">
         <div class="about-details">
             <div class="row">
@@ -117,7 +117,7 @@
 {{-- Rules and Regulation Area  --}}
 
 
-<section class="bg-white">
+<section class="bg-white flower--right-bottom">
     <div class="p-4">
         <h3 class="text-center">Rules and Regulation</h3>
         
