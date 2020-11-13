@@ -53,7 +53,7 @@
 
 
                         <div class="form-group col-12 ">
-                            <label for="image">Upload image<span style="color: red"> *</span><i class="fa fa-info-circle"  title="Image Resulation: 600 X 375" aria-hidden="true"></i></label><br>
+                            <label for="image">Upload image<span style="color: red"> *&nbsp;</span><i class="fa fa-info-circle"  title="Image Resulation: 600 X 375" aria-hidden="true"></i></label><br>
                             <input type="file" name="image" id="image" accept=".jpg, .jpeg" required>
                         </div>
     
