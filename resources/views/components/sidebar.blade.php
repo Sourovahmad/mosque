@@ -111,6 +111,12 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Imam</span></a>
     </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item  ">
+        <a class="nav-link p-3 " href="{{ route('admin.gallery.index') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Gallery</span></a>
+    </li>
 
 
     <hr class="sidebar-divider m-1 p-0 ">
