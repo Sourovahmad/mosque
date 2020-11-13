@@ -83,7 +83,7 @@
 
 
                         <div class="form-group col-12 ">
-                            <label for="image">Upload image<span style="color: red"> *</span></label><br>
+                            <label for="image">Upload image<span style="color: red"> * &nbsp;</span><i id="InfoIcon" class="fa fa-info-circle" title='Image Resulation: 600 X 375'  aria-hidden="true"></i></label><br>
                             <input type="file" name="image" id="image" accept=".png, .jpg, .jpeg" required>
                         </div>
 
@@ -346,6 +346,17 @@
     });
 
 
+
+    // $('#postType').change(function(){
+
+    //     var selectedOption = $(this).children("option:selected").val();
+      
+    //        if(selectedOption == 'event') {
+    //            $('#InfoIcon').attr( 'title', 'Image Resulation: 600 X 375');
+              
+    //        }
+
+    // });
 
 
 </script>
