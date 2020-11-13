@@ -17,7 +17,7 @@ class ProgramCategorySeeder extends Seeder
                 'name' => 'Jummah Kutba',
             ],
             [
-                'name' => 'Darse Bujhari',
+                'name' => 'Darse Bukhari',
             ],
             [
                 'name' => 'Darse Quran',

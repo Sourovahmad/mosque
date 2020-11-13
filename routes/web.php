@@ -16,13 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    $date = Carbon::now()->format('T-m-d');
-    $events = event::where('date','>=',$date)->take(6)->get();
 
-    return view('index',compact('events'));
-})->name("home");
+
+Route::get('/','IndexController@index')->name('home');
+
 
 
 
@@ -32,15 +30,21 @@ Route::resource('payments','PaymentController');
 Route::resource('about','AboutController');
 Route::post('donation-success','DonationController@success')->name('donationSuccess');
 
-
 Route::get('events','EventController@frontendView')->name('events');
 Route::get('events/{id}','EventController@singleview')->name('event-single');
 
+Route::get('programs','ProgramController@FrontendProgram')->name('programs');
+Route::get('program-single/{id}','ProgramController@programSingle')->name('program-single');
+Route::get('program-category/{category_id}','ProgramController@FrontendProgramCategory')->name('program-category');
+
+Route::get('blogs','BlogController@frontendView')->name('blogs');
+Route::get('blog/{id}','BlogController@singleview')->name('blog-singleview');
+
+Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
 
 
-
-
-
+Route::get('gallery','GalleryController@showImage')->name('gallery');
+Route::get('praying-time','SalatController@prayingtime')->name('praying-time');
 
 // setting development
 Route::get('/setting','SettingController@index' )->name('setting');
@@ -50,5 +54,3 @@ Auth::routes();
 
 
 
-//  Gallery Section
-Route::get('gallery','GalleryController@showImage')->name('gallery');

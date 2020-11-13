@@ -3,24 +3,34 @@
 @section('Breadcrumb')
     <!-- Top Banner -->
 
-    <!-- Breadcrumb area -->
-    <section class="cr-section breadcrumb-area" data-black-overlay="7">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="cr-breadcrumb text-center">
-                        <h2 class="cr-breadcrumb__title">About us</h2>
-                        <div class="cr-breadcrumb__tree text-left text-md-left text-center">
-                            <ul>
-                                <li><a href="{{ route('home') }}">Home</a></li>
-                                <li>About</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- //Breadcrumb area -->
+    
+			 <!-- Top Banner -->
+			<div  class="banner-area">
+				<div class="banner bg-image--6 banner-text-slide slider-arrow--style1 slide-animate-text">
+
+						<!-- Single Banner -->
+						<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="banner__content text-center">	
+                                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
+									
+											<h3>
+                                                Who we are Masjid Mission Center ( MMC ) is a 501 ( c ) religious organization in Jamaica NY - a community of believers adhering to the Qur'an and the life traditions of Prophet Muhammad (Peace and Blessing Be Upon Him) </h3>
+											
+											<div class="banner__content__button">
+												<a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- //Single Banner -->
+
+
+				</div>
+			</div><!-- //Top Banner --> 
 
 
     <!-- //Top Banner -->
@@ -34,16 +44,16 @@
         <div class="container">
             <div class="about-details">
                 <div class="row">
-                    <div class="col-lg-5 col-md-8 offset-0 offset-md-2 offset-lg-0">
+                    {{-- <div class="col-lg-5 col-md-8 offset-0 offset-md-2 offset-lg-0">
                         <!-- About Details Thumb -->
                         <div class="about-details__thumb video--trigger">
                             <a class="video--trigger" href="https://www.youtube.com/watch?v=XwVGF2mhLIg">
-                                <img src="{{ asset('abasas/images/about/about-details-thumb.jpg') }}"
+                                <img src="{{ asset('abasas/images/about/home.jpg') }}"
                                     alt="about details thumb">
                             </a>
                         </div><!-- //About Details Thumb -->
-                    </div>
-                    <div class="col-lg-7">
+                    </div> --}}
+                    <div class="col-lg-12">
                         <!-- About Details Content -->
                         <div class="about-details__content">
                             <div class="row">
@@ -59,7 +69,7 @@
                                     </div>
 
                                 </div>
-
+                               
                                 <div class="col-lg-6 col-md-6">
                                     <div class="single-block">
                                         <h4 class="single-block__title">Activites And Services</h4>
@@ -77,14 +87,14 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                {{-- <div class="col-lg-6 col-md-6">
                                     <div class="single-block">
                                         <h4 class="single-block__title">Who We Are</h4>
                                         <p>Who we are Masjid Mission Center ( MMC ) is a 501 ( c ) religious organization in
                                             Jamaica NY - a community of believers adhering to the Qur'an and the life
                                             traditions of Prophet Muhammad (Peace and Blessing Be Upon Him)</p>
                                     </div>
-                                </div>
+                                </div> --}}
 
 
 
@@ -95,15 +105,54 @@
             </div>
         </div>
     </div><!-- //About Details Area -->
+      
+
+   
+
+
+ {{-- Rules and Regulation Area  --}}
+
+
+<section style="background-color: lavender">
+    <div>
+        <h3></h3>
+    </div>
+    <div class="row">
+
+    <div class="col-md-5 col-sm-12 p-4">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          </div>
+    </div>
+    <div class="col-md-7 col-sm-12 p-4">
+        
+         <div class="tab-content" id="v-pills-tabContent">
+           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+           <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+         </div>
+       
+       </div>
+       
+    </div>
+</section>
 
 
 
 
-    <div class="container-fluid	 bg-light pt-4">
+
+
+
+
+
 
         <div class="title ">
 
-            <h1 class="text-light font-weight-bold pt-4 text-center pt-4 bg-danger"> Rules And Regulation</h1>
+            <h1 class=" font-weight-bold pt-4 text-center pt-4 "> Rules And Regulation</h1>
 
         </div>
         <div class="row pl-4">
@@ -238,8 +287,48 @@
 
 
 
+				
+				<!-- Offer area -->
+				<section id="gallery" class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+								<div class="section-title text-center">
+									
+									<h2>OUR GALLERY</h2>
+									{{-- <p>It is obligatory upon every muslim to offer their salaah (prayers) five times a day.  The image below shows the correct positions of  praying in every salah.</p> --}}
+								</div>
+							</div>
+						</div>
 
-    <!-- Team Area -->
+						<div class="row">
+							
+							<a mt-4 href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=254" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=255" class="img-fluid rounded">
+							</a>
+							<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 mt-4">
+							  <img src="https://unsplash.it/600.jpg?image=256" class="img-fluid rounded">
+							</a>
+						  </div>
+					</div>
+				</section><!-- //Offer area -->
+
+
+
+
+    {{-- <!-- Team Area -->
     <section class="cr-section team-area ptb--150 bg--white flower--right-bottom">
         <div class="container">
             <div class="row">
@@ -327,5 +416,8 @@
                 </div><!-- //Single Team -->
             </div>
         </div>
-    </section>
+    </section> --}}
+
+
+
 @endsection

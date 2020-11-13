@@ -161,50 +161,50 @@
 	
 
 	/*=========== Prayer Times ===========*/
-	(function prayerTimesInit(){
-		var lat,
-			long,
-			date,
-			zone,
-			html;
-		date = new Date();
-		zone = date.getTimezoneOffset() / -60;
-		function prayerTimesFun(lat = 43, long = -80, zone = -5) {
-			var prayertimes = prayTimes.getTimes(date, [lat, long], zone, 0, '12h');
-			var prayerNames = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
-			for(var i in prayerNames) {
-				html = '<div class="salat-times__box"><h4>' + prayerNames[i] + '</h4><span>' + prayertimes[prayerNames[i]] + '</span></div>';
-				$('.salat-times__boxes').append(html);
-			}
-			$('.time-sunrise').text(prayertimes.sunrise);
-			$('.time-sunset').text(prayertimes.sunset);
-		}
-		prayerTimesFun(lat, long, zone);
-		function getLocation() {
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(function(position) {
-					$('.salat-times__boxes').children().remove();
-					var lat = position.coords.latitude,
-						long = position.coords.longitude;
-					prayerTimesFun(lat, long, zone);
-				}, function(error) {
-					if( error.PERMISSION_DENIED) {
-					  alert("Please allow location traking to see your location prayer times.")
-					} else if( error.POSITION_UNAVAILABLE) {
-					  alert("Location information is unavailable.")
-					} else if( error.TIMEOUT) {
-					  alert("The request to get user location timed out.")
-					} else if( error.UNKNOWN_ERROR) {
-					  alert("An unknown error occurred.")
-					}
-				});
-			} else {
-				alert("Geolocation is not supported by this browser.");
-			}
-		}
-		$(window).on('load', getLocation());
+	// (function prayerTimesInit(){
+	// 	var lat,
+	// 		long,
+	// 		date,
+	// 		zone,
+	// 		html;
+	// 	date = new Date();
+	// 	zone = date.getTimezoneOffset() / -60;
+	// 	function prayerTimesFun(lat = 43, long = -80, zone = -5) {
+	// 		var prayertimes = prayTimes.getTimes(date, [lat, long], zone, 0, '12h');
+	// 		var prayerNames = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+	// 		for(var i in prayerNames) {
+	// 			html = '<div class="salat-times__box"><h4>' + prayerNames[i] + '</h4><span>' + prayertimes[prayerNames[i]] + '</span></div>';
+	// 			$('.salat-times__boxes').append(html);
+	// 		}
+	// 		$('.time-sunrise').text(prayertimes.sunrise);
+	// 		$('.time-sunset').text(prayertimes.sunset);
+	// 	}
+	// 	prayerTimesFun(lat, long, zone);
+	// 	function getLocation() {
+	// 		if (navigator.geolocation) {
+	// 			navigator.geolocation.getCurrentPosition(function(position) {
+	// 				$('.salat-times__boxes').children().remove();
+	// 				var lat = position.coords.latitude,
+	// 					long = position.coords.longitude;
+	// 				prayerTimesFun(lat, long, zone);
+	// 			}, function(error) {
+	// 				if( error.PERMISSION_DENIED) {
+	// 				  alert("Please allow location traking to see your location prayer times.")
+	// 				} else if( error.POSITION_UNAVAILABLE) {
+	// 				  alert("Location information is unavailable.")
+	// 				} else if( error.TIMEOUT) {
+	// 				  alert("The request to get user location timed out.")
+	// 				} else if( error.UNKNOWN_ERROR) {
+	// 				  alert("An unknown error occurred.")
+	// 				}
+	// 			});
+	// 		} else {
+	// 			alert("Geolocation is not supported by this browser.");
+	// 		}
+	// 	}
+	// 	$(window).on('load', getLocation());
 		
-	})();
+	// })();
 
 			
 

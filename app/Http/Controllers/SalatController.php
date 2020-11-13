@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\image;
 use App\salat;
 use Illuminate\Http\Request;
+use Intervention\Image\ImageManagerStatic as Photo;
 
 class SalatController extends Controller
 {
@@ -36,7 +38,22 @@ class SalatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $salat = salat::find(1);
+        $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
+        $picture = Photo::make($request->image);
+
+        $height = $picture->height();
+        $width = $picture->width();
+
+        $picture->resize($width, $height)->save('images/'.$fileNameFull);
+        
+        $image = new image;
+        $image->url = 'images/' . $fileNameFull;
+        $image->thumbnail = 'images/' . $fileNameFull;
+        $image->save();
+        $salat->image_id = $image->id;
+        $salat->save();
+        return redirect()->back()->withSuccess(['Image Changed']);
     }
 
     /**
@@ -90,5 +107,11 @@ class SalatController extends Controller
     public function destroy(salat $salat)
     {
         //
+    }
+
+    public function prayingtime()
+    {
+        $salat= salat::find(1);
+        return view('prayer-time.index',compact('salat'));
     }
 }

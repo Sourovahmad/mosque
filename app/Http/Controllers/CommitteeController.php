@@ -137,6 +137,11 @@ class CommitteeController extends Controller
             }
         }
     }
+    
+    public function frontendView()
+    {
+        return view('member.index');
+    }
 
 
 }

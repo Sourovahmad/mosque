@@ -463,7 +463,7 @@ select:focus, select:active {
 .bg-image--7 {
   background-image: url(images/bg/7.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center center; }
 
 .bg-image--8 {
@@ -2364,7 +2364,7 @@ a.mobile-logo {
       .header nav.menu ul li:last-child {
         padding-right: 0; }
       .header nav.menu ul li a {
-        font-size: 16px;
+        font-size: 15px;
         display: inline-block;
         line-height: 1;
         letter-spacing: 0.5px;
@@ -2379,13 +2379,13 @@ a.mobile-logo {
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .header nav.menu ul li a {
-    font-size: 16px; } }
+    font-size: 15px; } }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header nav.menu ul li {
     padding: 0 16px; }
     .header nav.menu ul li a {
-      font-size: 16px; } }
+      font-size: 15px; } }
 
 /* Header Style 2 navigation */
 .header.header--style-2 nav.menu ul li a {

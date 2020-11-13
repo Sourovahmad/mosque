@@ -78,7 +78,7 @@ class ImamController extends Controller
         if ( !is_null($request->image) ) {
             $fileName = time() . '.' . $request->image->getClientOriginalName();
 
-            $picture = Photo::make($request->image)->fit(300, 300)->save('images/'.$fileName);
+            $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
 
             $image = new image;
             $image->url = 'images/' . $fileName;

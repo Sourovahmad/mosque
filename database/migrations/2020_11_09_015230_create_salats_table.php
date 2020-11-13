@@ -21,6 +21,7 @@ class CreateSalatsTable extends Migration
             $table->time('asr') ;
             $table->time('maghrib') ;
             $table->time('isha') ;
+            $table->unsignedBigInteger('image_id')->nullable();
             $table->timestamps();
         });
     }

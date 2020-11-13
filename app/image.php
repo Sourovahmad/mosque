@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class image extends Model
 {
     use SoftDeletes;
+    
 }

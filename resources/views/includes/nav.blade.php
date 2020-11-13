@@ -4,7 +4,7 @@
 	Donation
 	Our Programs
 		- Jummah Kutba
-		- Darse Bujhari
+		- Darse Bukhari
 		- Darse Quran
 		- special Event
 	MMC Members
@@ -47,36 +47,36 @@
 										<li><a href="{{ route('home') }}">HOME</a></li>
 
 										
-										<li class="cr-dropdown"><a href="activities.html">About</a>
+										<li class="cr-dropdown"><a href="{{ route('about.index') }}">About</a>
 											<ul class="cr-dropdown-menu">
-												<li><a href="single-activity.html">Imams</a></li>
+												<li><a href="{{ route('about.index') }}/#imam">Imam</a></li>
 												<li><a href="{{ route('gallery') }}">Gallery</a></li>
 												
 											</ul>
 										</li>
 										
-										<li class="cr-dropdown"><a href="activities.html">MMC members</a>
+										<li class="cr-dropdown"><a href="activities.html">MMC Members</a>
 											<ul class="cr-dropdown-menu">
-												<li><a href="single-activity.html">Life Members</a></li>
-												<li><a href="{{ route('gallery') }}">General Members</a></li>
-												<li><a href="{{ route('gallery') }}">Executive Committee</a></li>
+												<li><a href="">Life Members</a></li>
+												<li><a href="">General Members</a></li>
+												<li><a href="">Executive Committee</a></li>
 												
 											</ul>
 										</li>
 										<li><a href="{{ route('events') }}">EVENT</a></li>
 										<li><a href="{{ route('donations.index') }}">DONATION</a></li>
 
-										<li class="cr-dropdown"><a href="activities.html">OUR PROGRAMS</a>
+										<li class="cr-dropdown"><a href="{{ route('programs') }}">OUR PROGRAMS</a>
 											<ul class="cr-dropdown-menu">
-												<li><a href="activities.html">Jummah Kutba</a></li>
-												<li><a href="single-activity.html">Darse Bujhari</a></li>
-												<li><a href="single-activity.html">Darse Quran</a></li>
-												<li><a href="single-activity.html">Special Event</a></li>
+												<li><a href="{{ route('program-category',1) }}">Jummah Kutba</a></li>
+												<li><a href="{{ route('program-category',2) }}">Darse Bukhari</a></li>
+												<li><a href="{{ route('program-category',3) }}">Darse Quran</a></li>
+												<li><a href="{{ route('program-category',4) }}">Special Event</a></li>
 											</ul>
 										</li>
 										
-										<li><a target="_blank" href="{{ asset('abasas/images/prayingTimes.jpg') }}">Praying Times</a></li>
-										<li><a href="donation.html">Blog</a></li>
+										<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
+										<li><a href="{{ route('blogs') }}">Blog</a></li>
 									
 									</ul>
 								</nav><!-- //Main naviagtion -->                                                                            

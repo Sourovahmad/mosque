@@ -10,10 +10,14 @@
           
           {{-- <img src="" height="60px" alt=""> --}}
           <a href="{{ route('admin.dashboard') }}">
- <span class="h2 title text-light"  > Masjid Mission Center </span>  </a> 
+            <img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo" height="60px"> </a> 
 
 
-        <a href='{{ route("admin.post") }}'><button type="button" class="btn btn-link"><i class="fa fa-plus text-light" aria-hidden="true"></i><span class="text-light">Post</span> </button></a>
+            <li class="nav-item active ">
+              <a class="nav-link p-3 " href="{{ route('admin.post') }}">
+                  <i class="fas fa-plus text-light "></i>
+                  <span class=" text-light ">New Post</span></a>
+          </li>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
