@@ -19,7 +19,7 @@
 			
 			
 			
-			
+{{-- 			
 			<!-- Header -->
 			<header id="header-area" class="header-area fixed--header sticky--header">
 				<div class="container">
@@ -36,7 +36,7 @@
 								{{-- <ul class="header__right__icons d-flex justify-content-end">
 									<li class="minicart-trigger"><a href="#"><i class="fa fa-opencart"></i><span class="cart-counter">2</span></a></li>
 									<li class="accountbox-trigger"><a href="#"><i class="fa fa-user-o"></i></a></li>
-								</ul> --}}
+								</ul> 
 							</div>
 							<div class="header__right__bottom">
 								
@@ -89,4 +89,105 @@
 						</div>
 					</div>
 				</div>
-			</header>
+			</header> 
+			--}}
+
+
+	
+			<!-- Header -->
+			<header id="header-area" class="header-area sticky--header">
+				<div class="header header--style-2">
+					<!-- Header Top Area <-->
+					<div class="header__top bg--theme">
+						<div class="container">
+							<div class="header__top__inner">
+								<div class="logo image--logo ">
+									<a href="{{ route('home') }}"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo"></a>
+								</div>
+								<div class="text-center" >
+									
+								
+								<div class="" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#2D3691; font-size:36px;" >MASJID&nbsp;MISSION&nbsp;CENTER&nbsp;INC.</div>
+								<div class="  	  	" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#f00"> (HAJI CAMP MASJID USA )</div>
+								<div>87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
+								<div>masjidmissioncenterusa@gmail.com</div>
+							</div>
+								<div class="header__right">
+									{{-- <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">
+										<ul class="header__right__times d-flex justify-content-end">
+											<li><p><i class="icofont icofont-full-sunny"></i>SUNRISE : <span class="time-sunrise"></span></p></li>
+											<li><p><i class="icofont icofont-full-night"></i>SUNSET : <span class="time-sunset"></span></p></li>
+										</ul>
+										 <ul class="header__right__icons d-flex justify-content-end">
+											<li class="minicart-trigger"><a href="#"><i class="fa fa-opencart"></i><span class="cart-counter">2</span></a></li>
+											<li class="accountbox-trigger"><a href="#"><i class="fa fa-user-o"></i></a></li>
+										</ul> 
+									</div> --}}
+								</div>
+							</div>
+						</div>
+					</div><!-- //Header Top Area -->
+					
+					<!-- Header Bottom Area -->
+					<div class="header__bottom bg--theme">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12">
+									<!-- Main naviagtion -->
+									<nav class="menu">
+										<ul class="justify-content-end">
+										
+											<li><a href="{{ route('home') }}">HOME</a></li>
+	
+											
+											<li class="cr-dropdown"><a href="{{ route('about.index') }}">About</a>
+												<ul class="cr-dropdown-menu">
+													<li><a href="{{ route('about.index') }}/#imam">Imam</a></li>
+													<li><a href="{{ route('gallery') }}">Gallery</a></li>
+													
+												</ul>
+											</li>
+											
+											<li class="cr-dropdown"><a href="">MMC Members</a>
+												<ul class="cr-dropdown-menu">
+													<li><a href="">Life Members</a></li>
+													<li><a href="">General Members</a></li>
+													<li><a href="">Executive Committee</a></li>
+													<li><a href="">Board Of Treasures</a></li>
+													
+												</ul>
+											</li>
+											<li><a href="{{ route('events') }}">EVENT</a></li>
+											<li><a href="{{ route('donations.index') }}">DONATION</a></li>
+	
+											<li class="cr-dropdown"><a href="{{ route('programs') }}">OUR PROGRAMS</a>
+												<ul class="cr-dropdown-menu">
+													<li><a href="{{ route('program-category',1) }}">Jummah Kutba</a></li>
+													<li><a href="{{ route('program-category',2) }}">Darse Bukhari</a></li>
+													<li><a href="{{ route('program-category',3) }}">Darse Quran</a></li>
+													<li><a href="{{ route('program-category',4) }}">Special Event</a></li>
+												</ul>
+											</li>
+											
+											<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
+											<li><a href="{{ route('blogs') }}">Blog</a></li>
+										
+										</ul>
+									</nav><!-- //Main naviagtion --> 
+
+									<!-- Mobile Menu -->
+									<div class="mobile-menu hidden-lg hidden-xlg hidden-xx hidden-sp">
+										<a class="mobile-logo" href="index.html"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="logo"></a>
+									</div><!-- //Mobile Menu -->
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- //Header Bottom Area -->
+					
+					
+
+				</div>
+			</header><!-- //Header -->

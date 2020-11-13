@@ -389,7 +389,7 @@ select:focus, select:active {
   color: #ffffff; }
 
 .bg--theme {
-  background: #009047; }
+background: #D4F0FE;; }
 
 .bg--light {
   background: #999999; }
@@ -2372,7 +2372,7 @@ a.mobile-logo {
         display: inline-block;
         line-height: 1;
         letter-spacing: 0.5px;
-        color: #ffffff;
+        color: #000000;
         padding: 25px 0;
         font-family: "Hind", sans-serif;
         font-weight: 600;
@@ -2394,7 +2394,7 @@ a.mobile-logo {
 /* Header Style 2 navigation */
 .header.header--style-2 nav.menu ul li a {
   padding: 25px 0;
-  color: #343a40;
+
   font-weight: 600; }
 
 /* Dropdown Style */
