@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="form-group col-md-6 col-sm-12 p-4  ">
-                        <label for="image">Upload image</label><br>
+                        <label for="image">Upload image <span style="color: red"> *</span></label><i class="fa fa-info-circle"  title="Image Resulation: 600 X 375" aria-hidden="true"></i><br>
                         <input type="file" name="image" id="image" accept=" .jpg, .jpeg" required >
                     </div>
                     
