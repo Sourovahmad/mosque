@@ -2296,7 +2296,7 @@ a.mobile-logo {
   left: 0;
   top: 0;
   z-index: 998;
-  background: #000;
+  background: #f8f9fa;
   -webkit-animation: fadeInDown 0.4s ease-in-out both;
   -moz-animation: fadeInDown 0.4s ease-in-out both;
   -ms-animation: fadeInDown 0.4s ease-in-out both;
@@ -2322,8 +2322,12 @@ a.mobile-logo {
     -moz-justify-content: center !important;
     justify-content: center !important; }
     .sticky--header.is-sticky .header--style-1 .header__right__bottom nav.menu > ul > li:hover > a {
-      color: #dddddd; }
+      color:#009047;
+    }
 
+      .sticky--header.is-sticky .header--style-1 .header__right__bottom nav.menu > ul > li> a {
+        color: #000 ; }
+  
 .sticky--header.is-sticky .mean-container .mean-bar {
   border-top: 0px; }
 
@@ -2356,7 +2360,7 @@ a.mobile-logo {
     list-style: none;
     padding-left: 0; }
     .header nav.menu ul li {
-      padding: 0 25px;
+      padding: 0 15px;
       display: inline-block;
       position: relative; }
       .header nav.menu ul li:first-child {
