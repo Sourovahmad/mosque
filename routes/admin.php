@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/committee','CommitteeController');
     Route::resource('/programs','ProgramController');
     Route::resource('/gallery','GalleryController');
+    Route::resource('/sessions','SessionController');
 
 
 

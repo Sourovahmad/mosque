@@ -18,21 +18,21 @@ class SettingController extends Controller
         // {\n                \n                \"position\":11,\n    \n                \"create\":\"2\",\n                \"read\":\"1\",\n                \"update\":\"3\",\n                \"require\":\"1\",\n    \n                \"name\":\"product\",\n                \"input_type\" : \"dropDown\",\n                \"database_name\":\"product_id\",  \n                \"title\":\"Product\",\n                \"data\" : \"products\"\n            }
         $a = '[{
             "componentDetails":{
-                "title":"Designation List",
-                "editTitle":"Edit Designation"
+                "title":"Sessions List",
+                "editTitle":"Edit Session"
             },
             "routes":{
                 "create":{
-                    "name":"admin.designation.store",
-                    "link":"admin/designation"
+                    "name":"admin.sessions.store",
+                    "link":"admin/sessions"
                 },
                 "update":{
-                    "name":"admin.designation.update",
-                    "link":"admin/designation"
+                    "name":"admin.sessions.update",
+                    "link":"admin/sessions"
                 },
                 "delete":{
-                    "name":"admin.designation.destroy",
-                    "link":"admin/designation"
+                    "name":"admin.sessions.destroy",
+                    "link":"admin/sessions"
                 }
             },
             "fieldList":[{
@@ -76,7 +76,7 @@ class SettingController extends Controller
     
                "input_type":"text",
                "name":"member",
-               "title":"Member",
+               "title":"Member Count",
     
     
                "database_name":"member"
@@ -88,7 +88,7 @@ class SettingController extends Controller
         
         // $setting =new setting;
         // $setting->setting = json_encode( $a);
-        // $setting->table_name = 'designations';
+        // $setting->table_name = 'sessions';
         // $setting->save();
         // return  "Success";
     }

@@ -13,11 +13,10 @@
             <img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo" height="60px"> </a> 
 
 
-            <li class="nav-item active ">
               <a class="nav-link p-3 " href="{{ route('admin.post') }}">
                   <i class="fas fa-plus text-light "></i>
                   <span class=" text-light ">New Post</span></a>
-          </li>
+        
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\gallery;
 use App\image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
 
 class GalleryController extends Controller
@@ -16,8 +17,8 @@ class GalleryController extends Controller
      */
     public function index()
     { 
-        
-        return view('admin.gallery.index');
+        $galleries = gallery::paginate(6);
+        return view('admin.gallery.index',compact('galleries'));
     }
 
     /**
@@ -102,7 +103,8 @@ class GalleryController extends Controller
      */
     public function destroy(gallery $gallery)
     {
-        //
+        $gallery->delete();
+        return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 
 

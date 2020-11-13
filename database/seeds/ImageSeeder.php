@@ -39,7 +39,7 @@ class ImageSeeder extends Seeder
             ],
             [
                 'url' => 'images/1605191961.full.mosque6.jpg',           //7
-                'thumbnail' => '1605191961.small.mosque6.jpg',
+                'thumbnail' => 'images/1605191961.small.mosque6.jpg',
             ],
             [
                 'url' => 'images/1605191969.full.mosque7.jpg',            //8
@@ -51,7 +51,7 @@ class ImageSeeder extends Seeder
             ],
             [
                 'url' => 'images/1605191989.full.mosque9.jpg',       //10
-                'thumbnail' => 'images/1605191989.small.mosque9.jpg.jpg',
+                'thumbnail' => 'images/1605191989.small.mosque9.jpg',
             ],
             [
                 'url' => 'images/1605195989.fullprayingTimes.jpg',            //11

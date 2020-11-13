@@ -88,7 +88,9 @@
             <div class="bg-white py-2 collapse-inner rounded">
 
                 <a class="collapse-item" href="{{ route('admin.committee.index') }}">Committee </a>
+                <a class="collapse-item" href="{{ route('admin.committee.create') }}">Add Committee </a>
                 <a class="collapse-item" href="{{ route('admin.designation.index') }}">Designation </a>
+                <a class="collapse-item" href="{{ route('admin.sessions.index') }}">Session </a>
 
             </div>
         </div>
