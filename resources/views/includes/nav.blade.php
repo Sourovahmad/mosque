@@ -55,7 +55,7 @@
 											</ul>
 										</li>
 										
-										<li class="cr-dropdown"><a href="activities.html">MMC Members</a>
+										<li class="cr-dropdown"><a href="">MMC Members</a>
 											<ul class="cr-dropdown-menu">
 												<li><a href="">Life Members</a></li>
 												<li><a href="">General Members</a></li>
