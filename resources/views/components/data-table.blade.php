@@ -570,7 +570,7 @@ $("#settingsSaveButton").on('click',function(){
 
 });
 function saveSettings(positionArray){
-    var url = $("#homeRoute").val().trim()+"/settings/"+"{{ $settings->id }}";
+    var url = $("#homeRoute").val().trim()+"/setting/"+"{{ $settings->id }}";
     // console.log(url);
                 $.ajax({
                         url: url,

@@ -47,7 +47,7 @@ Route::get('gallery','GalleryController@showImage')->name('gallery');
 Route::get('praying-time','SalatController@prayingtime')->name('praying-time');
 
 // setting development
-Route::get('/setting','SettingController@index' )->name('setting');
+Route::resource('/setting','SettingController');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');

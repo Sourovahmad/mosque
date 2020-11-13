@@ -93,7 +93,7 @@ class SalatController extends Controller
         $salat->asr= $request->asr;
         $salat->maghrib= $request->maghrib;
         $salat->isha= $request->isha;
-
+        $salat->save();
         return redirect()->back()->withSuccess(['Successfully Updated']);
 
     }

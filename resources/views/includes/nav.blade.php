@@ -60,6 +60,7 @@
 												<li><a href="">Life Members</a></li>
 												<li><a href="">General Members</a></li>
 												<li><a href="">Executive Committee</a></li>
+												<li><a href="">Board Of Treasures</a></li>
 												
 											</ul>
 										</li>

@@ -50,14 +50,20 @@
                                 <label for="member_type">Member Type<span style="color: red"> *</span></label>
                                 <select class="form-control " value="" name="member_type" id="member_type"
                                 required>
-                               
+                                @if($memberTypeId == 0)
+                                <option selected="selected" value="0"> All</option>
+                                @else 
+                                    <option  value="0"> All</option>
+                                @endif
                                 @foreach ($member_types as $member_type)
+                                
                                 @if ($memberTypeId == $member_type->id )
                                     <option selected="selected" value="{{$member_type->id}}"> {{$member_type->name}}</option>
                                 @else 
                                  <option value="{{$member_type->id}}"> {{$member_type->name}}</option>
                                 @endif
                                 @endforeach
+                                
                             </select>
                             </div>
 
@@ -332,7 +338,7 @@ $(document).ready(function(){
             type: 'post',
             success: function (data) {
                 console.log(data); 
-                //location.reload(true);
+                location.reload(true);
             },
             error: function (data) {
                 console.log(data); 

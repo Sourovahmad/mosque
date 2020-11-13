@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\about;
+use App\gallery;
+use App\imam;
 use Illuminate\Http\Request;
 use Illuminate\Support\ViewErrorBag;
 
@@ -15,7 +17,9 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return View('about.index');
+        $imam = imam::find(1);
+        $galleries = gallery::orderBy('id','desc')->take(6)->get();
+        return View('about.index',compact('galleries','imam'));
     }
 
     /**

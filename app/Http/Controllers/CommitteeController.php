@@ -21,7 +21,7 @@ class CommitteeController extends Controller
     public function index(Request $request)
     {
         $sessionId =1;
-        $memberTypeId=  1;
+        $memberTypeId=  0;
         if(! is_null($request->member_type)){
             $memberTypeId=$request->member_type;
         }
@@ -32,11 +32,15 @@ class CommitteeController extends Controller
         $member_types =memberType::all();
         $sessions = session::all();
         $designations = designation::all();
-        if($memberTypeId !=3){
-            $committees= committee::where('member_type',$memberTypeId)-> orderby('position')->get();
+        if($memberTypeId ==3){
+            $committees= committee::where('member_type',$memberTypeId)->where('session_id',$sessionId)-> orderby('position')->get();
+        }
+        elseif($memberTypeId ==0){
+            $committees= committee:: orderby('position')->get();
         }
         else{
-            $committees= committee::where('member_type',$memberTypeId)->where('session_id',$sessionId)-> orderby('position')->get();
+            $committees= committee::where('member_type',$memberTypeId)-> orderby('position')->get();
+            
         }
         return view('admin.committee.index',compact('committees','designations','member_types','sessions','memberTypeId','sessionId'));
     }
