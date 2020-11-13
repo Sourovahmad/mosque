@@ -76,7 +76,7 @@
                         </div>
                         {{-- <span>or</span> --}}
                         <div class="about-content__bottom__right">
-                            <a href="about-us.html"
+                            <a href="{{ route('about.index') }}"
                                 class="cr-btn cr-btn--sm cr-btn--transparent cr-btn--dark"><span>Read More</span></a>
                         </div>
                     </div>
