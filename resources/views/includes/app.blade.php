@@ -28,6 +28,18 @@
 
 		<!-- Modernizer js -->
 		<script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+		<style>
+			.rules-side-nav .nav-link{
+				
+				color: black;
+			 
+				font-weight: 600;
+			}
+			.rules-side-nav .nav-link.active{
+				color:black;
+				background-color:rgb(202, 197, 189);
+			}
+		</style>
 	</head>
 	<body >
 		<!--[if lte IE 9]>
