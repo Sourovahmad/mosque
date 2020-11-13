@@ -28,7 +28,7 @@ class ImamController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -39,7 +39,7 @@ class ImamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -50,7 +50,7 @@ class ImamController extends Controller
      */
     public function show(imam $imam)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -61,7 +61,7 @@ class ImamController extends Controller
      */
     public function edit(imam $imam)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -99,6 +99,6 @@ class ImamController extends Controller
      */
     public function destroy(imam $imam)
     {
-        //
+        return abort(404);
     }
 }

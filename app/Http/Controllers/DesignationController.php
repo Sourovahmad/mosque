@@ -34,7 +34,7 @@ class DesignationController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -57,7 +57,7 @@ class DesignationController extends Controller
      */
     public function show(designation $designation)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -68,7 +68,7 @@ class DesignationController extends Controller
      */
     public function edit(designation $designation)
     {
-        //
+        return abort(404);
     }
 
     /**

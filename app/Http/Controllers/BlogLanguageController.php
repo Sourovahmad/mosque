@@ -14,7 +14,7 @@ class BlogLanguageController extends Controller
      */
     public function index()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -24,7 +24,7 @@ class BlogLanguageController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -35,7 +35,7 @@ class BlogLanguageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -46,7 +46,7 @@ class BlogLanguageController extends Controller
      */
     public function show(blogLanguage $blogLanguage)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -57,7 +57,7 @@ class BlogLanguageController extends Controller
      */
     public function edit(blogLanguage $blogLanguage)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -69,7 +69,7 @@ class BlogLanguageController extends Controller
      */
     public function update(Request $request, blogLanguage $blogLanguage)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -80,6 +80,6 @@ class BlogLanguageController extends Controller
      */
     public function destroy(blogLanguage $blogLanguage)
     {
-        //
+        return abort(404);
     }
 }

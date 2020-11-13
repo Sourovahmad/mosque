@@ -17,7 +17,7 @@ class GalleryController extends Controller
      */
     public function index()
     { 
-        $galleries = gallery::paginate(6);
+        $galleries = gallery::orderBy('id','desc')->paginate(6);
         return view('admin.gallery.index',compact('galleries'));
     }
 
@@ -28,7 +28,7 @@ class GalleryController extends Controller
      */
     public function create()
     {
-        return view('admin.gallery.create');
+        return abort(404);
     }
 
     /**
@@ -69,7 +69,7 @@ class GalleryController extends Controller
      */
     public function show(gallery $gallery)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -80,7 +80,7 @@ class GalleryController extends Controller
      */
     public function edit(gallery $gallery)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -92,7 +92,7 @@ class GalleryController extends Controller
      */
     public function update(Request $request, gallery $gallery)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -104,6 +104,9 @@ class GalleryController extends Controller
     public function destroy(gallery $gallery)
     {
         $gallery->delete();
+        unlink($gallery->image->url);
+        unlink($gallery->image->thumbnail);
+
         return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 

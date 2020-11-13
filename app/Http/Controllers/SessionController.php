@@ -34,7 +34,7 @@ class SessionController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -57,7 +57,7 @@ class SessionController extends Controller
      */
     public function show(session $session)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -68,7 +68,7 @@ class SessionController extends Controller
      */
     public function edit(session $session)
     {
-        //
+        return abort(404);
     }
 
     /**

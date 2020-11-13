@@ -34,7 +34,7 @@ class EventCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -70,7 +70,7 @@ class EventCategoryController extends Controller
      */
     public function edit(eventCategory $eventCategory)
     {
-        //
+        return abort(404);
     }
 
     /**
