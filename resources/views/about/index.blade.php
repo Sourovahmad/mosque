@@ -152,7 +152,7 @@
                 <div class="tab-pane fade show active" id="v-pills-basic" role="tabpanel"
                     aria-labelledby="v-pills-basic-tab">
                     <p>
-                        in order To ensure the smooth operation of Masjid Mission Center ( MMC ) and to better serve the
+                        In order To ensure the smooth operation of Masjid Mission Center ( MMC ) and to better serve the
                         community, the following policy has been formulated and will be implemented regarding non - MMC
                         / Masjid
                         sponsored programs, announcements, events, and activities.
@@ -166,16 +166,6 @@
                 </div>
                 <div class="tab-pane fade show" id="v-pills-fundraising" role="tabpanel"
                     aria-labelledby="v-pills-fundraising-tab">
-                    in order To ensure the smooth operation of Masjid Mission Center ( MMC ) and to better serve the
-                    community, the following policy has been formulated and will be implemented regarding non - MMC /
-                    Masjid
-                    sponsored programs, announcements, events, and activities.
-                    This policy is subject to change without notice. Please see a member of the Masjid Committee of
-                    email
-                    masjid pncenterusögmail.com for any questions or concerns.
-                </div>
-                <div class="tab-pane fade" id="v-pills-announcement" role="tabpanel"
-                    aria-labelledby="v-pills-announcement-tab">
                     <ul>
 
                         <li> All fund raising requests should be submitted four ( 4 ) months prior to the event</li>
@@ -196,7 +186,8 @@
 
                     </ul>
                 </div>
-                <div class="tab-pane fade" id="v-pills-posting" role="tabpanel" aria-labelledby="v-pills-posting-tab">
+                <div class="tab-pane fade" id="v-pills-announcement" role="tabpanel"
+                    aria-labelledby="v-pills-announcement-tab">
 
                     <ul>
 
@@ -218,6 +209,25 @@
                                     Masjid committee</li>
                             </ul>
                         </li>
+                    </ul>
+
+                    
+                </div>
+                <div class="tab-pane fade" id="v-pills-posting" role="tabpanel" aria-labelledby="v-pills-posting-tab">
+
+                    <ul>
+                        <li>Approval of Imam or a member of the Masjid committee.
+
+                        </li>
+                        <li>Fees may Apply
+
+                        </li>
+
+
+                    </ul>
+
+
+
                 </div>
                 <div class="tab-pane fade" id="v-pills-organize" role="tabpanel" aria-labelledby="v-pills-organize-tab">
                     <p>
