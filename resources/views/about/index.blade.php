@@ -17,7 +17,7 @@
                             <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
 
                             <h3>
-                                Who we are Masjid Mission Center ( MMC ) is a 501 ( c ) religious organization in
+                                 Masjid Mission Center ( MMC ) is a 501 ( c ) religious organization in
                                 Jamaica NY - a community of believers adhering to the Qur'an and the life traditions of
                                 Prophet Muhammad (Peace and Blessing Be Upon Him) </h3>
 
