@@ -65,11 +65,9 @@
                 <div class="about-content">
                     <h2> Masjid Mission Center <strong>“MMC”</strong></h2>
                     <h4>87-26 175th St, Queens, NY 11432, United States</h4>
-                    <p><span class="mark">Islam</span> is the know how to pursue pleasure rationally encounter
-                        consequences that are extremely painful. Nor again is there anyone who loves or pursues or
-                        desires to obtain pain of itself, because it is pain, but because</p>
-                    <p>know how to pursue pleasure rationally encounter consequences that are xtremely painful. Nor
-                        again is there anyone who loves or pursues or desires</p>
+                    <p><span class="mark">Masjid Mission Center ( MMC )</span>   is a 501 ( c ) religious organization in
+                        Jamaica NY - a community of believers adhering to the Qur'an and the life traditions of
+                        Prophet Muhammad (Peace and Blessing Be Upon Him)</p>
                     <div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
                         <div class="about-content__bottom__left">
                             {{-- <p>Have you any quary?</p>
@@ -291,7 +289,7 @@
 
 
 <!-- Team Area -->
-<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom	">
+<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top 	">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
@@ -352,7 +350,7 @@
 
 
 <!-- Offer area -->
-<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom">
+<section class="cr-section offer-area ptb--70 bg--pattern ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
