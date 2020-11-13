@@ -75,7 +75,7 @@ class ProgramController extends Controller
      */
     public function show(program $program)
     {
-        //
+        return abort(404);
     }
 
     /**

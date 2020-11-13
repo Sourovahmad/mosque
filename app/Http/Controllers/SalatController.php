@@ -27,7 +27,7 @@ class SalatController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -64,7 +64,7 @@ class SalatController extends Controller
      */
     public function show(salat $salat)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -75,7 +75,7 @@ class SalatController extends Controller
      */
     public function edit(salat $salat)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -106,7 +106,7 @@ class SalatController extends Controller
      */
     public function destroy(salat $salat)
     {
-        //
+        return abort(404);
     }
 
     public function prayingtime()

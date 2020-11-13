@@ -100,7 +100,7 @@ class SettingController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -111,7 +111,7 @@ class SettingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -122,7 +122,7 @@ class SettingController extends Controller
      */
     public function show(setting $setting)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -133,7 +133,7 @@ class SettingController extends Controller
      */
     public function edit(setting $setting)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -145,7 +145,7 @@ class SettingController extends Controller
      */
     public function update(Request $request, setting $setting)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -156,6 +156,6 @@ class SettingController extends Controller
      */
     public function destroy(setting $setting)
     {
-        //
+        return abort(404);
     }
 }

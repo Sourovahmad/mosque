@@ -37,6 +37,8 @@
 
 
 
+<div class="container-fluid">
+    
 <!-- Begin Page Content -->
 <div class="collapse" id="createNewForm">
     <div class="card mb-4 shadow">
@@ -47,20 +49,21 @@
             </nav>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('admin.gallery.') }}">
+            <form method="POST" action="{{ route('admin.gallery.store') }}"  enctype="multipart/form-data">
                 @csrf
                 <div class="form-row align-items-center" id="createFormFieldList">
                   
                 
+                    <div class="form-group col-md-6 col-sm-12 p-4  ">
+                        <label for="caption"> Caption<span style="color: red"> *</span></label>
+                        <input type="text" name="caption" class="form-control" id="caption"   required>
+                    </div>
 
-
+                    <div class="form-group col-md-6 col-sm-12 p-4  ">
+                        <label for="image">Upload image</label><br>
+                        <input type="file" name="image" id="image" accept=" .jpg, .jpeg" required >
+                    </div>
                     
-
-                   
-
-
-
-                   
 
                 </div>
                 <div class="col-12">
@@ -73,7 +76,6 @@
 </div>
 
 
-<div class="container-fluid">
 
 
     <div class="card mb-4 shadow">
@@ -82,6 +84,9 @@
             <nav class="navbar  ">
 
                 <div class="navbar-brand"><span id="eventList"> Gallery List</span> </div>
+                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
+                    data-target="#createNewForm" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"
+                        id="PlusButton"></i></button></div> 
 
             </nav>
         </div>
@@ -182,7 +187,15 @@
 
 
 
+<script>
+    $(document).ready(function(){
+        
+        $('body').on('click', '#AddNewFormButton', function () {
+            $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
 
+        });
+    })
+</script>
 
  
 @endsection

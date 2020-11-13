@@ -35,7 +35,7 @@ class BlogCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -59,7 +59,7 @@ class BlogCategoryController extends Controller
      */
     public function show(blogCategory $blogCategory)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -70,7 +70,7 @@ class BlogCategoryController extends Controller
      */
     public function edit(blogCategory $blogCategory)
     {
-        //
+        return abort(404);
     }
 
     /**

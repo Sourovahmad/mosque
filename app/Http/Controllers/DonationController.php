@@ -24,7 +24,7 @@ class DonationController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -64,7 +64,7 @@ class DonationController extends Controller
      */
     public function show(donation $donation)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -75,7 +75,7 @@ class DonationController extends Controller
      */
     public function edit(donation $donation)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -87,7 +87,7 @@ class DonationController extends Controller
      */
     public function update(Request $request, donation $donation)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -98,7 +98,7 @@ class DonationController extends Controller
      */
     public function destroy(donation $donation)
     {
-        //
+        return abort(404);
     }
     public function success(){
         return "success";

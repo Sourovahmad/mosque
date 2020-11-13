@@ -79,8 +79,7 @@ class EventController extends Controller
      */
     public function show( event $event)
     { 
-
-    //
+        return abort(404);
     }
 
 

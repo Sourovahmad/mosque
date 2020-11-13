@@ -24,7 +24,7 @@ class DashboardController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -35,7 +35,7 @@ class DashboardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -46,7 +46,7 @@ class DashboardController extends Controller
      */
     public function show(dashboard $dashboard)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -57,7 +57,7 @@ class DashboardController extends Controller
      */
     public function edit(dashboard $dashboard)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -69,7 +69,7 @@ class DashboardController extends Controller
      */
     public function update(Request $request, dashboard $dashboard)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -80,6 +80,6 @@ class DashboardController extends Controller
      */
     public function destroy(dashboard $dashboard)
     {
-        //
+        return abort(404);
     }
 }

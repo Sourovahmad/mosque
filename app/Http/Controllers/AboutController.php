@@ -25,7 +25,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -36,7 +36,7 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -47,7 +47,7 @@ class AboutController extends Controller
      */
     public function show(about $about)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -58,7 +58,7 @@ class AboutController extends Controller
      */
     public function edit(about $about)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -70,7 +70,7 @@ class AboutController extends Controller
      */
     public function update(Request $request, about $about)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -81,6 +81,6 @@ class AboutController extends Controller
      */
     public function destroy(about $about)
     {
-        //
+        return abort(404);
     }
 }

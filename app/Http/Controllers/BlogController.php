@@ -80,7 +80,7 @@ class BlogController extends Controller
      */
     public function show(blog $blog)
     {
-        //
+        return abort(404);
     }
 
     /**

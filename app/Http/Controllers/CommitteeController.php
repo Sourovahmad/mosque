@@ -83,7 +83,7 @@ class CommitteeController extends Controller
      */
     public function show(committee $committee)
     {
-        //
+        return abort(404);
     }
 
     /**
@@ -94,7 +94,7 @@ class CommitteeController extends Controller
      */
     public function edit(committee $committee)
     {
-        //
+        return abort(404);
     }
 
     /**
