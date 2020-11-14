@@ -1,4 +1,10 @@
-	{{-- Home
+	
+	
+	 <link rel="preconnect" href="https://fonts.gstatic.com">
+	 <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet"> 
+	 
+	 
+	 {{-- Home
 	About 
 	Event
 	Donation
@@ -107,10 +113,10 @@
 								<div class="text-center" >
 									
 								
-								<div class="" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#2D3691; font-size:36px;" >MASJID&nbsp;MISSION&nbsp;CENTER&nbsp;INC.</div>
-								<div class="  	  	" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#f00"> (HAJI CAMP MASJID USA )</div>
-								<div>87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
-								<div>masjidmissioncenterusa@gmail.com</div>
+								<div class="" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#2D3691; font-size:40px; font-family: 'Oswald', sans-serif; line-height:normal;" >MASJID&nbsp;MISSION&nbsp;CENTER&nbsp;INC.</div>
+								<div class="  	  	" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:rgb(207, 58, 58)"> (HAJI CAMP MASJID USA )</div>
+								<div class="color:black">87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
+								<div class="color:black">masjidmissioncenterusa@gmail.com</div>
 							</div>
 								<div class="header__right">
 									{{-- <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">
@@ -129,7 +135,7 @@
 					</div><!-- //Header Top Area -->
 					
 					<!-- Header Bottom Area -->
-					<div class="header__bottom bg--theme">
+					<div class="header__bottom bg--white">
 						<div class="container">
 							<div class="row">
 								<div class="col-lg-12">
