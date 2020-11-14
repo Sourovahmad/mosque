@@ -22,6 +22,10 @@ class DatabaseSeeder extends Seeder
         $this->call(ProgramCategorySeeder::class);
         $this->call(MemberTypeSeeder::class);
         $this->call(GallerySeeder::class);
+        $this->call(CommitteeSeeder::class);
+        $this->call(DesignationSeeder::class);
+        $this->call(SessionSeeder::class);
+        
         DB::table('users')->insert([
             [
                 'name' => 'Masum Billah',

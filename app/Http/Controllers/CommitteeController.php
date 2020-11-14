@@ -7,6 +7,7 @@ use App\designation;
 use App\memberType;
 use App\session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 use function PHPUnit\Framework\isNull;
@@ -141,11 +142,69 @@ class CommitteeController extends Controller
             }
         }
     }
-    
+
+
+
+
     public function frontendView()
     {
-        return view('member.index');
+   
+    $committees = committee::all();
+    return view('committee.index',compact('committees'));
+
+
+
     }
 
 
+    
+    public function frontendViewTwo($type_id)
+    {
+    if($type_id < 1){
+    $committees = committee::all();
+    return view('committee.index',compact('committees'));
+ }
+
+      $memberType = memberType::find($type_id); 
+      $TypeName =  $memberType->name;
+
+      $committees = committee::whereIn('member_type',  $memberType)->get();
+       
+     
+       return view('committee.index',compact('committees','TypeName'));
+
+
+    }
+
+    public function executive()
+    {
+        $allSessions = session::all();
+        $sessions=[];
+        foreach($allSessions as $s){
+            $sessions[$s->id] = $s->name;
+        }
+
+        $committee = committee::all();
+       
+        $committeies = $committee->groupBy('session_id');
+   
+       return view('committee.executive',compact('committeies','sessions'));
+
+
+    }
+
+    // public function executiveFilter($id)
+    // {
+
+    //     return $id;
+    //     $sessions = session::all();
+    //     $memberType = memberType::find($id);
+
+    //     $committees = committee::whereIn('member_type',  $memberType)->get();
+
+    //    return view('committee.executive',compact('committees','sessions'));
+
+
+    // }
+    
 }

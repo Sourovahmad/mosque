@@ -12,4 +12,11 @@ class committee extends Model
     {
         return $this->belongsTo('App\designation','designation_id','id')->withTrashed();
     }
+
+    // public function session()
+    // {
+    //     return $this->belongsTo('App\session','session_id','id')->withTrashed();
+    // }
+
+   
 }

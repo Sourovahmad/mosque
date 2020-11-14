@@ -43,6 +43,14 @@ Route::get('blog/{id}','BlogController@singleview')->name('blog-singleview');
 Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
 
 
+
+
+Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
+Route::get('mmc-members/{type_id}','CommitteeController@frontendViewTwo')->name('mmc-type');
+Route::get('executive','CommitteeController@executive')->name('executive');
+
+
+
 Route::get('gallery','GalleryController@showImage')->name('gallery');
 Route::get('praying-time','SalatController@prayingtime')->name('praying-time');
 

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class SessionSeeder extends Seeder
 {
@@ -11,6 +12,17 @@ class SessionSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('sessions')->insert([
+            [
+                'name' => '2014 - 2018',
+                'description' => 'First Session'
+            ],
+            [
+                'name' => '2019 - 2020',
+                'description' =>'Secend Session'
+            ],
+           
+            
+        ]);
     }
 }
