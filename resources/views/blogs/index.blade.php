@@ -1,34 +1,24 @@
 @extends('includes.app')
 
 @section('Breadcrumb')
-<!-- //Breadcrumb area -->
-<!-- Top Banner -->
-<div class="banner-area">
-    <div class="banner bg-image--7 banner-text-slide slider-arrow--style1 slide-animate-text">
-
-        <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner__content text-center">
-                            {{-- <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word"> --}}
-<h1>Blogs</h1>
-                            {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for
-                                him in Paradise." [Bukhari]. </h3> --}}
-
-                            {{-- <div class="banner__content__button">
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- //Single Banner -->
-
-
-    </div>
-</div><!-- //Top Banner -->
-
+			<!-- Breadcrumb area -->
+			<section class="cr-section breadcrumb-area" data-black-overlay="2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="cr-breadcrumb text-center">
+								<h2 class="cr-breadcrumb__title ">BLOG</h2>
+								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
+									<ul>
+										<li><a href="index.html">blog</a></li>
+										<li>about</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- //Breadcrumb area -->
 
 
 
@@ -43,10 +33,26 @@
             <div class="pg-blogs-area bg--white ptb--150">
                 <div class="container">
                     <div class="row">
+                        
                         <div class="col-lg-8 col-xl-9">
                             <div class="pg-blogs right--sidebar">
                                 <div class="row">
                                     <!-- Start Single Blog -->
+                                    <div class="col-12">
+                                        <nav class="navbar bg-dark">
+            
+                                            <div class="navbar-brand text-light"> All Post </div>
+                                
+                                            <div><select class="form-control "  >
+                                                <option value="1"> English</option>
+                                                <option value="2">  বাংলা</option>
+                                                    </option>                                                                
+                                            </select></div>
+
+                                
+                                
+                                        </nav>
+                                    </div>
 
                                     @foreach ($blogs as $blog)
                                         
@@ -69,8 +75,8 @@
                                             </div>
                                         </article>
 
-                                        @endforeach
                                     </div><!-- //Start Single Blog -->
+                                        @endforeach
 
 
 

@@ -115,8 +115,8 @@
 								
 								<div class="" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:#2D3691; font-size:40px; font-family: 'Oswald', sans-serif; line-height:normal;" >MASJID&nbsp;MISSION&nbsp;CENTER&nbsp;INC.</div>
 								<div class="  	  	" style="font-family:'Arial', Times, serif; font-style:normal ; font-weight:800; color:rgb(207, 58, 58)"> (HAJI CAMP MASJID USA )</div>
-								<div class="color:black">87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
-								<div class="color:black">masjidmissioncenterusa@gmail.com</div>
+								<div style="color:black">87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
+								<div style="color:black">masjidmissioncenterusa@gmail.com</div>
 							</div>
 								<div class="header__right">
 									{{-- <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">
@@ -154,12 +154,13 @@
 												</ul>
 											</li>
 											
-											<li class="cr-dropdown"><a href="">MMC Members</a>
+											<li class="cr-dropdown"><a href="#">MMC Members</a>
 												<ul class="cr-dropdown-menu">
-													<li><a href="">Life Members</a></li>
-													<li><a href="">General Members</a></li>
-													<li><a href="">Executive Committee</a></li>
-													<li><a href="">Board Of Treasures</a></li>
+													<li><a href="{{ route('mmc-type',1)}}">Life Members</a></li>
+													<li><a href="{{ route('mmc-type',2)}}">General Members</a></li>
+													<li><a href="{{ route('executive') }}">Executive Committee</a></li>
+													
+													<li><a href="{{ route('mmc-type',3)}}">BOT </a></li>
 													
 												</ul>
 											</li>

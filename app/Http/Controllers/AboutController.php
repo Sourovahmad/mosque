@@ -17,9 +17,10 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $imam = imam::find(1);
+        $imams = imam::all();
         $galleries = gallery::orderBy('id','desc')->take(6)->get();
-        return View('about.index',compact('galleries','imam'));
+        
+        return View('about.index',compact('galleries','imams'));
     }
 
     /**

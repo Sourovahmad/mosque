@@ -16,6 +16,12 @@ class ImamSeeder extends Seeder
             [
                 'name' => 'MD. Masum Billah',
                 'image_id' => '1',
+                'designation' => 'Imam',
+            ],
+            [
+                'name' => 'MD. haha Billah',
+                'image_id' => '1',
+                'designation' => 'Quran Teacher',
             ],
         ]);
     }

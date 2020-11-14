@@ -367,9 +367,9 @@
             @foreach ($galleries as $gallery)
                 
           
-            <a mt-4 href="{{ $gallery->image->url }}" data-toggle="lightbox" data-gallery="gallery"
+            <a mt-4 href="{{ route('home') }}/{{ $gallery->image->url }}" data-toggle="lightbox" data-gallery="gallery"
                 class="col-md-4 mt-4">
-                <img src="{{ $gallery->image->thumbnail }}" class="img-fluid rounded" style="width: 100%" alt="{{ $gallery->caption }}">
+                <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded" style="width: 100%" alt="{{ $gallery->caption }}">
             </a>
             @endforeach
 
