@@ -1,62 +1,29 @@
 @extends('includes.app')
-
 @section('Breadcrumb')
-    <!-- Top Banner -->
-
-    {{-- <!-- Breadcrumb area -->
-    <section class="cr-section breadcrumb-area" data-black-overlay="7">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="cr-breadcrumb text-center">
-                        <h2 class="cr-breadcrumb__title">Event Details</h2>
-                        <div class="cr-breadcrumb__tree text-left text-md-left text-center">
-                            <ul>
-                                <li><a href="{{ route('home') }}">Events</a></li>
-                                <li>Event</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- //Breadcrumb area --> --}}
-    <!-- //Breadcrumb area -->
 <!-- Top Banner -->
-<div class="banner-area">
-    <div class="banner bg-image--7 banner-text-slide slider-arrow--style1 slide-animate-text">
-
-        <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner__content text-center">
-                            {{-- <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word"> --}}
-{{-- <h1> Event Details</h1> --}}
-<h1 >Blog Details</h1>
-
-                            {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for
-                                him in Paradise." [Bukhari]. </h3> --}}
-
-                            {{-- <div class="banner__content__button">
-                            </div> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-           
-    
-        </div><!-- //Single Banner -->
-       
-    </div>
-
-  
-</div><!-- //Top Banner -->
 
 
-    <!-- //Top Banner -->
+			<!-- Breadcrumb area -->
+			<section class="cr-section breadcrumb-area" data-black-overlay="2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="cr-breadcrumb text-center">
+								<h2 class="cr-breadcrumb__title">BLOG DETAILS</h2>
+								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
+									<ul>
+										<li>Blog</li>
+										<li> {{ $blog ->title }}</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- //Breadcrumb area -->
+
+<!-- //Top Banner -->
 @endsection
 
 

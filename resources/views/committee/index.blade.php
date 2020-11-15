@@ -10,11 +10,11 @@
 					<div class="row">
 						<div class="col-lg-12 text-center">
 							<div class="cr-breadcrumb text-center">
-								<h2 class="cr-breadcrumb__title">MMC-MEMBERS</h2>
+								<h2 class="cr-breadcrumb__title TextUppercase ">MMC-{{ $TypeName }}</h2>
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li>MMC-MEMBERS</li>
+										<li>MMC - </li>
+										<li>{{ $TypeName }}</li>
 									</ul>
 								</div>
 							</div>
@@ -33,8 +33,8 @@
          
 <section class="about-area ptb--150 bg--white flower--left-top flower--right-bottom" style="padding-top: 0px;">
 
-    <h1 class="text-center p-4 uppercase" style="font-weight: 800" >
-MMC MEMBERS
+    <h1 class="text-center p-4 TextUppercase " style="font-weight: 800" >
+  MMC  {{ $TypeName }} 
     </h1>
 
      

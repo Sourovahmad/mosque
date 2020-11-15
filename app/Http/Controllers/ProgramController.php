@@ -150,6 +150,7 @@ class ProgramController extends Controller
        $category = programCategory::find($category_id);
         $programs = program::where('category_id',$category_id)->paginate(6);
         return view('program.category',compact('programs','category'));
+        
     }
     public function programSingle($id)
     { 

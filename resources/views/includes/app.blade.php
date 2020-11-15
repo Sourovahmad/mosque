@@ -38,7 +38,14 @@
 			.rules-side-nav .nav-link.active{
 				color:black;
 				background-color:rgb(202, 197, 189);
+
+				
 			}
+
+			.TextUppercase {
+					 
+				text-transform: uppercase;
+				}
 		</style>
 	</head>
 	<body >

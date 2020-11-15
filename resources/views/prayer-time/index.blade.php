@@ -1,33 +1,32 @@
 @extends('includes.app')
 
 @section('Breadcrumb')
-<!-- //Breadcrumb area -->
-			 <!-- Top Banner -->
-			<div  class="banner-area">
-				<div class="banner bg-image--8 banner-text-slide slider-arrow--style1 slide-animate-text">
+<!-- Top Banner -->
 
-						<!-- Single Banner -->
-						<div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12">
-										<div class="banner__content text-center">	
-                                            
-									
-											<h1>Praying Time</h1>
-											
-										</div>
-									</div>
+
+			<!-- Breadcrumb area -->
+			<section class="cr-section breadcrumb-area" data-black-overlay="2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="cr-breadcrumb text-center">
+								<h2 class="cr-breadcrumb__title">PRAYING  TIME</h2>
+								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="index.html">Praying Time	</a></li>
+										
+									</ul>
 								</div>
 							</div>
-						</div><!-- //Single Banner -->
-
-
+						</div>
+					</div>
 				</div>
-			</div><!-- //Top Banner --> 
+			</section><!-- //Breadcrumb area -->
 
-
+<!-- //Top Banner -->
 @endsection
+
 
 @section('content')
 
@@ -37,7 +36,7 @@
 	<div class="row">
 		<div class="col-md-9 col-sm-12 pl-4 pt-4">
 			<div>
-				<h3 class="text-center font-weight-bold">Praying Time of {{ Carbon\Carbon:: now()->format('F, Y') }}</h3>
+				<h1 class="text-center font-weight-bold p-4" style="font-weight: 800">Praying Time of {{ Carbon\Carbon:: now()->format('F, Y') }}</h1>
 			</div>
 			<div class="pl-4">
 				<img src="{{ asset($salat->image->url) }}" alt="Praying Time" >

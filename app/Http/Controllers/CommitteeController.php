@@ -167,7 +167,7 @@ class CommitteeController extends Controller
 
       $memberType = memberType::find($type_id); 
       $TypeName =  $memberType->name;
-
+   
       $committees = committee::whereIn('member_type',  $memberType)->get();
        
      

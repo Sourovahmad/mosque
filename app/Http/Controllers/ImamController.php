@@ -17,8 +17,10 @@ class ImamController extends Controller
      */
     public function index()
     {
-        $imam = imam :: find(1);
-        return view('admin.imam.index',compact('imam'));
+        $imams = imam::orderBy('id','desc')->paginate(6);
+        return view('admin.imam.index',compact('imams'));
+
+       
     }
 
     /**
@@ -39,7 +41,27 @@ class ImamController extends Controller
      */
     public function store(Request $request)
     {
-        return abort(404);
+
+
+        $imam = new imam;
+        $imam->name = $request->name;
+        $imam->designation = $request->designation;
+
+        if ( !is_null($request->image) ) {
+            $fileName = time() . '.' . $request->image->getClientOriginalName();
+
+            $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
+
+            $image = new image;
+            $image->url = 'images/' . $fileName;
+            $image->save();
+
+            $imam->image_id = $image->id;
+        }
+        
+      
+        $imam->save();
+        return redirect()->back()->withSuccess(['Successfully Added']);
     }
 
     /**
@@ -73,22 +95,24 @@ class ImamController extends Controller
      */
     public function update(Request $request, imam $imam)
     {
-        $imam->name = $request->name;
 
-        if ( !is_null($request->image) ) {
-            $fileName = time() . '.' . $request->image->getClientOriginalName();
+        return abort(404);
+        // $imam->name = $request->name;
 
-            $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
+        // if ( !is_null($request->image) ) {
+        //     $fileName = time() . '.' . $request->image->getClientOriginalName();
 
-            $image = new image;
-            $image->url = 'images/' . $fileName;
-            $image->save();
+        //     $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
 
-            $imam->image_id = $image->id;
-        }
+        //     $image = new image;
+        //     $image->url = 'images/' . $fileName;
+        //     $image->save();
+
+        //     $imam->image_id = $image->id;
+        // }
         
-        $imam->save();
-        return redirect()->back()->withSuccess(['Successfully Updated']);
+        // $imam->save();
+        // return redirect()->back()->withSuccess(['Successfully Updated']);
     }
 
     /**
@@ -99,6 +123,9 @@ class ImamController extends Controller
      */
     public function destroy(imam $imam)
     {
-        return abort(404);
+        $imam->delete();
+        unlink($imam->image->url);
+
+        return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 }
