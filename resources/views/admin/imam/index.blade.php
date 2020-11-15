@@ -124,82 +124,77 @@
     
     
 
-    <div class="card mb-4 shadow">
+
+    <div class="card shadow mb-4">
 
         <div class="card-header py-3 bg-abasas-dark">
             <nav class="navbar  ">
-
+    
                 <div class="navbar-brand"><span id="eventList"> Imam List</span> </div>
                 <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" ><i class="fas fa-plus"
                         id="PlusButton"></i></button></div> 
-
+    
+    
             </nav>
         </div>
         <div class="card-body">
-
-
-            <table class="table-responsive">
-
-
-
+    
+            <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-
                     <thead class="bg-abasas-dark">
-
+    
                         <tr>
-
+    
                             <th> #</th>
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Image</th>
                             <th>Action</th>
-
+    
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                         <tr>
-
+    
                             <th> #</th>
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Image</th>
                             <th>Action</th>
-
+    
                         </tr>
-
+    
                     </tfoot>
-
-                    <tbody >
-
+    
+                    <tbody>
                         @php
                         $itr=1;
                         @endphp
                         @foreach ($imams as $imam)
-
-
+    
+    
                         <tr class="data-row" >
                             <td class="iteration">{{$itr++}}</td>
                             <td class="word-break name">{{ $imam->name }}</td>
                             <td class="word-break designation">{{ $imam->designation }}</td>
                             <td class="word-break image"> <img src="{{ asset($imam->image->url) }}" alt="{{ $imam->designation }} " height="100px"> </td>
-
-
+    
+    
                             <td class="align-middle">
                                 <button type="button" class="btn btn-success" id="ImamEditButton" 
-
+    
                                 data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
-
-
+    
+    
                                 <form method="POST" action="{{route('admin.imam.destroy',$imam->id)}}"
                                     id="delete-form-{{ $imam->id}}" style="display:none; ">
                                     {{csrf_field() }}
                                     {{ method_field("delete") }}
                                 </form>
-
-
-
-
+    
+    
+    
+    
                                 <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
                     document.getElementById('delete-form-{{ $imam->id }}').submit();
                 }
@@ -208,32 +203,34 @@
                 }
                 " class="btn btn-danger btn-sm btn-raised">
                                     <i class="fa fa-trash" aria-hidden="false">
-
+    
                                     </i>
                                 </button>
-
-
-
-
+    
+    
+    
+    
                             </td>
-
-
+    
+    
                         </tr>
                         @endforeach
-
+    
                     </tbody>
+    
+    
                 </table>
+                
                 {{ $imams->links() }}
-              
-
-            </table>
-
-
+            </div>
         </div>
-
-
     </div>
+    
+    
 </div>
+
+
+
 
 
 
