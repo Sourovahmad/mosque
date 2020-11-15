@@ -97,17 +97,17 @@
 
                     <div class="form-group col-md-6 col-sm-12 ">
                         <label for="name"> Name<span style="color: red"> *</span></label>
-                        <input type="text" name="name" class="form-control" id="name" value=""  required>
+                        <input type="text" name="name" class="form-control" id="Updatename" value=""  required>
                     </div>
 
                     <div class="form-group col-md-6 col-sm-12 ">
                         <label for="name"> Designation <span style="color: red"> *</span></label>
-                        <input type="text" name="designation" class="form-control" id="designation"  required>
+                        <input type="text" name="designation" class="form-control" id="Updatedesignation"  required>
                     </div>
 
                     <div class="form-group col-12  ">
                         <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
-                        <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
+                        <input type="file" name="image"  accept=".jpg, .jpeg" >
                     </div>
                     
 
@@ -256,16 +256,27 @@
 
         var row = trigger.closest(".data-row");
 
-        var id = trigger.data('item-id');
 
-        // alert (id);
+        var id =  $(this).attr("data-item-id");
 
-        var name = row.children(".name").text();
-        var designation = row.children(".designation").text();
+        var home = "{{route('home')}}";
+            var link = "admin/imam/"
+            var action = home.trim() + '/' + link.trim() + id;
+
+            $('#UpdateForm').attr('action',action);
+       
+         var name = row.children(".name").text();
+         var designation = row.children(".designation").text();
+
+         $('#Updatename').val(name);
+         $('#Updatedesignation').val(designation);
+
+
+        
   
-       var image = row.children(".image").val();
+    //    var image = row.children(".image").val();
 
-       alert(image);
+    //    alert(image);
 
 
         // var lastname = row.children(".lastname").text();
@@ -290,82 +301,3 @@
  
 @endsection
 
-
-
-
-
-
-{{-- 
-<div class="card shadow mb-4">
-
-    <div class="card-header py-3 bg-abasas-dark">
-        <nav class="navbar  ">
-
-            <div class="navbar-brand"><span id="eventList"> Imam Information</span> </div>
-
-        </nav>
-    </div>
-
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 p-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset($imam->image->url) }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ $imam->name  }}</h5>
-                    </div>
-
-                </div>
-
-
-
-
-                
-            </div>
-            <div class="col-md-6 col-sm-12 p-4">
-
-                <form method="POST" id="createEventForm" action="{{ route('admin.imam.store' ) }}" enctype="multipart/form-data">
-                    @csrf
-                    @method('post')
-
-                    <div class="row">
-                        
-                    <div class="form-group col-12  ">
-                        <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
-                        <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
-                    </div>
-                    
-                    <div class="form-group col-12  ">
-                        <label for="name"> Name<span style="color: red"> *</span></label>
-                        <input type="text" name="name" class="form-control" id="name"   required>
-                    </div>
-
-                    <div class="form-group col-12  ">
-                        <label for="name"> Designation <span style="color: red"> *</span></label>
-                        <input type="text" name="designation" class="form-control" id="designation"  required>
-                    </div>
-
-
-                    </div>
-
-                    <button type="submit"  class="btn bg-abasas-dark"> Submit</button>
-
-
-
-
-
-
-
-                </form>
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-</div> --}}
-
-
-{{-- @endsection --}}

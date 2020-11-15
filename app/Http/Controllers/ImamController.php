@@ -96,23 +96,23 @@ class ImamController extends Controller
     public function update(Request $request, imam $imam)
     {
 
-        return abort(404);
-        // $imam->name = $request->name;
+        $imam->name = $request->name;
 
-        // if ( !is_null($request->image) ) {
-        //     $fileName = time() . '.' . $request->image->getClientOriginalName();
+        if ( !is_null($request->image) ) {
+            $fileName = time() . '.' . $request->image->getClientOriginalName();
 
-        //     $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
+            $picture = Photo::make($request->image)->fit(400, 500)->save('images/'.$fileName);
 
-        //     $image = new image;
-        //     $image->url = 'images/' . $fileName;
-        //     $image->save();
+            $image = new image;
+            $image->url = 'images/' . $fileName;
+            $image->save();
 
-        //     $imam->image_id = $image->id;
-        // }
+            $imam->image_id = $image->id;
+        }
         
-        // $imam->save();
-        // return redirect()->back()->withSuccess(['Successfully Updated']);
+        $imam->save();
+        return redirect()->back()->withSuccess(['Successfully Updated']);
+
     }
 
     /**
