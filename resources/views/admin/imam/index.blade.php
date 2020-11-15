@@ -58,7 +58,7 @@
                         <input type="text" name="designation" class="form-control" id="designation"  required>
                     </div>
 
-                    <div class="form-group col-12  ">
+                    <div class="form-group col-md-6 col-sm-12 ">
                         <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
                         <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
                     </div>
@@ -105,7 +105,7 @@
                         <input type="text" name="designation" class="form-control" id="Updatedesignation"  required>
                     </div>
 
-                    <div class="form-group col-12  ">
+                    <div class="form-group col-md-6 col-sm-12  ">
                         <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
                         <input type="file" name="image"  accept=".jpg, .jpeg" >
                     </div>
