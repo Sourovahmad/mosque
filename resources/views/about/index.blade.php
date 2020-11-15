@@ -4,38 +4,24 @@
 <!-- Top Banner -->
 
 
-<!-- Top Banner -->
-<div class="banner-area">
-    <div class="banner bg-image--6 banner-text-slide slider-arrow--style1 slide-animate-text">
-
-        <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner__content text-center">
-                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
-
-                            <h3>
-                                Masjid Mission Center ( MMC ) is a 501 ( c ) religious organization in
-                                Jamaica NY - a community of believers adhering to the Qur'an and the life traditions of
-                                Prophet Muhammad (Peace and Blessing Be Upon Him) </h3>
-
-                            <div class="banner__content__button">
-                                <a href="{{ route('donations.index') }}#donate"
-                                    class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate
-                                        Now</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- //Single Banner -->
-
-
-    </div>
-</div><!-- //Top Banner -->
-
+			<!-- Breadcrumb area -->
+			<section class="cr-section breadcrumb-area" data-black-overlay="2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<div class="cr-breadcrumb text-center">
+								<h2 class="cr-breadcrumb__title">ABOUT</h2>
+								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li>about</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!-- //Breadcrumb area -->
 
 <!-- //Top Banner -->
 @endsection
@@ -51,25 +37,24 @@
     <div class="container">
         <div class="about-details">
             <div class="row">
-                <div class="col-lg-5 col-md-8 offset-0 offset-md-2 offset-lg-0 pl-4">
-                    <!-- About Details Thumb -->
-                    <div class="about-details__thumb video--trigger" id="imam">
-                       <h3 class="text-center">Imam</h3>
-                       <div class="d-flex justify-content-center">
-                        <img src="{{ asset($imam->image->url)}}" alt="{{ $imam->name }}" height="400px" >
-                       </div>
-                       <div>
-                           <h3 class="text-center">Name: {{ $imam->name }}</h3>
-                       </div>
-                            
-                       
-                    </div><!-- //About Details Thumb -->
+                <div class="col-12 col-md-3 offset-0 offset-md-2 offset-lg-0 pl-4">
+                    <div class="about-details__content">
+                        <div class="row">
+                            <div class=" col-12 col-lg-12 col-md-12">
+                    <div class="single-block">
+                        <h4 class="single-block__title">Who we are </h4>
+                        <p> Masjid Mission Center (MMC) is a 501(c) religious organization in Jamaica NY - a
+                            community of believers adhering to the Qur'an and the life traditions of Prophet
+                            Muhammad (Peace and Blessing Be Upon Him). </p>
+                    </div>
                 </div>
-                <div class="col-lg-7">
+                        </div>
+                    </div></div>
+                <div class="col-lg-9 col-12">
                     <!-- About Details Content -->
                     <div class="about-details__content">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class=" col-12 col-lg-5 col-md-5">
                                 <div class="single-block">
                                     <h4 class="single-block__title">Our Mission and Our Vision</h4>
                                     <p>Masjid Mission Center ( MMC ) is committed to the Islamic way of life based on
@@ -79,14 +64,9 @@
                                         to promoting excellence in community life and human dignity throughout our
                                         neighborhoods, city, country, and global community.</p>
                                 </div>
-                                <div class="single-block">
-                                    <h4 class="single-block__title">Who we are </h4>
-                                    <p> Masjid Mission Center (MMC) is a 501(c) religious organization in Jamaica NY - a
-                                        community of believers adhering to the Qur'an and the life traditions of Prophet
-                                        Muhammad (Peace and Blessing Be Upon Him). </p>
-                                </div>
+                             
                             </div>
-                            <div class="col-lg-6 col-md-6">
+                            <div class=" col-12 col-lg-7 col-md-7">
                                 <div class="single-block">
                                     <h4 class="single-block__title">Activities & Services</h4>
                                     <p>
@@ -115,6 +95,98 @@
 </div><!-- //About Details Area -->
 
 
+		<!-- Team Area -->
+        <section class="cr-section team-area ptb--150 bg-image--7 " id="imam" data-black-overlay="8">
+            <div class="container">
+                {{-- <div class="row">
+                    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+                        <div class="section-title text-center">
+                            <h4>Our “Team”</h4>
+                            <h2>Meet our Organizer</h2>
+                            <p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
+                        </div>
+                    </div>
+                </div> --}}
+                <div class="row">
+                    <!-- Single Team -->
+                    @foreach ($imams as $imam )
+                        
+               
+                    <div class="col-lg-6 col-md-6 col-xl-3">
+                        <figure class="team-member wow fadeInUp">
+                            <div class="team-member__thumb">
+                                <div class="hexagon">
+                                    <div class="hexagon__inner1">
+                                        <div class="hexagon__inner2">
+                                            <img src="{{ asset($imam->image->url)}}" alt="{{ $imam->name }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="team-member__content">
+                                <h3>{{ $imam->name }}</h3>
+                                <h5>{{ $imam->designation }}</h5>
+                            </figcaption>
+                        </figure>
+                    </div><!-- //Single Team -->
+                    @endforeach
+                    <!-- Single Team -->
+                    {{-- <div class="col-lg-6 col-md-6 col-xl-3">
+                        <figure class="team-member wow fadeInUp">
+                            <div class="team-member__thumb">
+                                <div class="hexagon">
+                                    <div class="hexagon__inner1">
+                                        <div class="hexagon__inner2">
+                                            <img src="images/team/2.jpg" alt="team member 1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="team-member__content">
+                                <h3>Nahiyan Bin Momen</h3>
+                                <h5>Event Organizer</h5>
+                            </figcaption>
+                        </figure>
+                    </div><!-- //Single Team -->
+                    <!-- Single Team -->
+                    <div class="col-lg-6 col-md-6 col-xl-3">
+                        <figure class="team-member wow fadeInUp">
+                            <div class="team-member__thumb">
+                                <div class="hexagon">
+                                    <div class="hexagon__inner1">
+                                        <div class="hexagon__inner2">
+                                            <img src="images/team/3.jpg" alt="team member 1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="team-member__content">
+                                <h3>Julfiker Amin Ali</h3>
+                                <h5>Quran Teacher</h5>
+                            </figcaption>
+                        </figure>
+                    </div><!-- //Single Team -->
+                    <!-- Single Team -->
+                    <div class="col-lg-6 col-md-6 col-xl-3">
+                        <figure class="team-member wow fadeInUp">
+                            <div class="team-member__thumb">
+                                <div class="hexagon">
+                                    <div class="hexagon__inner1">
+                                        <div class="hexagon__inner2">
+                                            <img src="images/team/4.jpg" alt="team member 1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <figcaption class="team-member__content">
+                                <h3>Hasib Bin Asfaque</h3>
+                                <h5>Imam</h5>
+                            </figcaption>
+                        </figure>
+                    </div><!-- //Single Team --> --}}
+                </div>
+            </div>
+        </section><!-- //Team Area -->
 
 
 {{-- Rules and Regulation Area  --}}
@@ -314,15 +386,12 @@
 
 
 
-
-
 <!-- Offer area -->
 <section class="cr-section offer-area ptb--70 bg--pattern ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
                 <div class="section-title text-center">
-
                     <h2>OUR GALLERY</h2>
                     {{-- <p>It is obligatory upon every muslim to offer their salaah (prayers) five times a day.  The image below shows the correct positions of  praying in every salah.</p> --}}
                 </div>
@@ -332,19 +401,16 @@
         <div class="row">
 
             @foreach ($galleries as $gallery)
-
-
-            <a mt-4 href="{{ $gallery->image->url }}" data-toggle="lightbox" data-gallery="gallery"
+          
+            <a mt-4 href="{{ route('home') }}/{{ $gallery->image->url }}" data-toggle="lightbox" data-gallery="gallery"
                 class="col-md-4 mt-4">
-                <img src="{{ $gallery->image->thumbnail }}" class="img-fluid rounded" style="width: 100%"
-                    alt="{{ $gallery->caption }}">
+                <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded" style="width: 100%" alt="{{ $gallery->caption }}">
             </a>
             @endforeach
 
         </div>
     </div>
 </section><!-- //Offer area -->
-
 
 
 

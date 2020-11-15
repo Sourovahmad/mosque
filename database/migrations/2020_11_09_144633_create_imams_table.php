@@ -17,6 +17,7 @@ class CreateImamsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('image_id');
             $table->string('name');
+            $table->string('designation');
             $table->timestamps();
         });
     }
