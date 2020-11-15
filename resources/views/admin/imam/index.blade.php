@@ -32,7 +32,7 @@
 <div class="container-fluid">
     
     <!-- Begin Page Content -->
-    <div class="collapse" id="createNewForm">
+    <div class="" id="createNewForm"  style="display: none">
         <div class="card mb-4 shadow">
     
             <div class="card-header py-3  bg-abasas-dark ">
@@ -79,7 +79,7 @@
 
 
 
-    <div class="collapse" id="ImamUpdateForm">
+    <div class="" id="ImamUpdateForm" style="display: none">
         <div class="card mb-4 shadow">
     
             <div class="card-header py-3  bg-abasas-dark ">
@@ -114,7 +114,7 @@
 
                     </div>
 
-                    <button type="submit"  class="btn bg-abasas-dark" id="ImamUpdateButton"> Submit</button>
+                    <button type="Updatesubmit"  class="btn bg-abasas-dark" id="ImamUpdateButton"> Submit</button>
 
                 </form>
             </div>
@@ -130,8 +130,7 @@
             <nav class="navbar  ">
 
                 <div class="navbar-brand"><span id="eventList"> Imam List</span> </div>
-                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
-                    data-target="#createNewForm" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"
+                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" ><i class="fas fa-plus"
                         id="PlusButton"></i></button></div> 
 
             </nav>
@@ -187,9 +186,9 @@
 
 
                             <td class="align-middle">
-                                <button type="button" class="btn btn-success" id="ImamEditButton" data-toggle="collapse"
+                                <button type="button" class="btn btn-success" id="ImamEditButton" 
 
-                                data-target="#ImamUpdateForm" data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
+                                data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
 
 
                                 <form method="POST" action="{{route('admin.imam.destroy',$imam->id)}}"
@@ -242,54 +241,52 @@
     $(document).ready(function(){
         
         $('body').on('click', '#AddNewFormButton', function () {
+            $('#createNewForm').toggle();
             $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
+            
+            $('#ImamUpdateForm').hide();
 
         });
 
 
         $(document).on('click','#ImamEditButton',function(){ 
+            if( $('#PlusButton').hasClass('fa-minus')){
+                $('#createNewForm').toggle();
+                $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
+            }
+            $('#ImamUpdateForm').show();
 
-       $(this).addClass('edit-item-trigger-clicked');
-
-       
-       var trigger = $(".edit-item-trigger-clicked"); 
-
-        var row = trigger.closest(".data-row");
+            var id =  $(this).attr("data-item-id");
 
 
-        var id =  $(this).attr("data-item-id");
+            var imamss = @json($imams);
+            var name ='';
+            var designation = '';
+            $.each(imamss.data, function (key) {
+                if(id == imamss.data[key].id){
+                        name = imamss.data[key].name;
+                        designation = imamss.data[key].designation;
+                }
 
-        var home = "{{route('home')}}";
-            var link = "admin/imam/"
-            var action = home.trim() + '/' + link.trim() + id;
+            });
+                
 
-            $('#UpdateForm').attr('action',action);
-       
-         var name = row.children(".name").text();
-         var designation = row.children(".designation").text();
+            var home = "{{route('home')}}";
+                var link = "admin/imam/"
+                var action = home.trim() + '/' + link.trim() + id;
 
-         $('#Updatename').val(name);
-         $('#Updatedesignation').val(designation);
+                $('#UpdateForm').attr('action',action);
+        
+            $('#Updatename').val(name);
+            $('#Updatedesignation').val(designation);
+
+
+        });
 
 
         
-  
-    //    var image = row.children(".image").val();
 
-    //    alert(image);
-
-
-        // var lastname = row.children(".lastname").text();
-        // var email = row.children(".email").text();
-        // var phone = row.children(".phone").text();
-
-        //  var id =  $(this).attr("ImamID");
-
-
-
-});
-
-    })
+    });
 
    
 
