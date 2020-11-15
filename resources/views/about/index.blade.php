@@ -33,7 +33,7 @@
 
 
     <!-- About Details Area -->
-    <div class="cr-section about-details-area ptb--120 bg--pattern">
+    <div class="cr-section about-details-area ptb--120 bg--pattern" id="Who-We-Are">
         <div class="container">
             <div class="about-details">
                 <div class="row">

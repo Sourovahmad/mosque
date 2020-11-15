@@ -1,104 +1,152 @@
+<footer id="footer" class="footer-area  bgColor text-light pt-4">
+
+    <div class="container">
 
 
-			<footer id="footer" class="footer-area fixed--footer">
+        <div class="row">
 
-				<!-- Footer Widgets -->
-				<div class="footer__widgets ptb--100 bg--dark--light">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="widgets footer--widgets d-flex justify-content-between flex-md-wrap flex-wrap flex-lg-nowrap">
+            <div class="col-sm-12 col-md-3 col-lg-3 pr-3 pt-3">
 
-									<!-- Single Widgets -->
-									<div class="single-widget widget--details">
-										<div class="logo">
-											<a href="index.html">
-												<img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="footer logo">
-											</a>
-										</div>
-										<p>Islam is the know how to pursue pleasure rationally encounter consequences</p>
-										<div class="social-icons social-icons--rounded">
-											<ul>
-												<li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-												<li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-												<li class="instagram"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
-												<li class="google-plus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
-											</ul>
-										</div>
-									</div><!-- //Single Widgets -->
+                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:800; font-size:22px; ">CONTACT
+                    US </div>
+                <hr>
+                <p class="text-light pt-4 pr-3 text-left"> Islam is the know how to pursue pleasure rationally encounter
+                    consequences</p>
+                <div class="Footertable pt-4 pb-4 pr-4">
+                    <div class="footerDetails align-left">
+                        <ul>
+                            <li> <a href="tel: 718-526-2451" title="718-526-2451" style="font-size: 19px"> <i
+                                        class=" fa fa-phone"></i> <span class="text-success pl-2 font-weight-bold">
+                                        718-526-2451 </span> </a> </li>
+                            <li> <a href="mailto: masjidmissioncenterusa@gmail.com" title="718-526-2451"
+                                    style="font-size: 16px"> <i class=" fa fa-envelope"></i> <span
+                                        class="text-light pl-2 font-weight-bold">Mail Us </span> </a> </li>
+                            <li> <a href="" title="718-526-2451" style="font-size: 16px"> <i
+                                        class=" fa fa-map-marker"></i> <span class="text-light pl-2 font-weight-bold">
+                                        87-26 175th St, jamaica, NY 11432 </span> </a> </li>
 
-									<!-- Single Widgets -->
-									<div class="single-widget widget--support">
-										<h4 class="widget-title">Support</h4>
-										<ul>
-											<li><a href="">About us</a></li>
-											<li><a href="#">Help Center</a></li>
-											<li><a href="">Shop now</a></li>
-											<li><a href="">Latest Blog</a></li>
-											<li><a href="">Contact</a></li>
-										</ul>
-									</div><!-- //Single Widgets -->
+                        </ul>
+                    </div>
 
-									<!-- Single Widgets -->
-									<div class="single-widget widget--contact">
-										<h4 class="widget-title">Contact</h4>
-										<ul>
-											<li>
-												259, Islamic Center, Center Hall Main Street, Las Vagas, USA
-											</li>
-											<li>
-												<a href="callto://+01254365785">01254 365 785 (toll free)</a>
-												<a href="callto://+02157587452">02157 587 452</a>
-											</li>
-											<li>
-												<a href="mailto://infomation@azan.com">conatact@abasas.tech</a>
-												<a href="mailto://www.azan.com">www.abasas.tech</a>
-											</li>
-										</ul>
-									</div><!-- //Single Widgets -->
+                </div>
 
-									<div class="widget-row">
 
-										<!-- Single Widget -->
-										<div class="single-widget widget--newsletter">
-											<h4 class="widget-title">Newsletter</h4>
-											<form action="#">
-												<input type="text" placeholder="Email here">
-												<button type="submit"><i class="fa fa-paper-plane-o"></i></button>
-											</form>
-										</div><!-- //Single Widget -->
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 pt-3 pl-3">
 
-										<!-- Single Widget -->
-										<div class="single-widget widget--instagram">
-											<h4 class="widget-title">Instagram</h4>
-											<ul>
-												<li><a href="https://www.instagram.com/p/BcRw69njBbZ/?taken-by=portfolio.devitems"><img src="{{ asset('abasas/images/instagram-widget/1.png') }}" alt="widget instagram"></a></li>
-												<li><a href="https://www.instagram.com/"><img src="{{ asset('abasas/images/instagram-widget/2.png ')}}" alt="widget instagram"></a></li>
-												<li><a href="https://www.instagram.com/"><img src="{{ asset('abasas/images/instagram-widget/3.png ')}}" alt="widget instagram"></a></li>
-											</ul>
-										</div><!-- //Single Widget -->
+                <div class="Footertitle text-light pt-4  Footertitle" style="font-weight:800; font-size:22px; ">SUPPORT
+                </div>
+                <hr>
+                <div class="footerDetailsTwo align-left pt-4">
 
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div><!-- //Footer Widgets -->
+                    <ul>
+                        <li> <a href="{{ route('about.index') }} "> <span class="font-weight-bold"
+                                    style="font-size: 17px">About US </span> </a> </li>
+                        <li> <a href="{{ route('about.index') }} "><span class="font-weight-bold"
+                                    style="font-size: 17px"> Help Center </span> </a></li>
+                        <li> <a href="{{ route('blogs') }} "><span class="font-weight-bold" style="font-size: 17px">
+                                    Latest Blogs </span> </i> </a> </li>
+                        <li> <a href=" {{ route('events') }}"> <span class="font-weight-bold" style="font-size: 17px">
+                                    Event </span></a></li>
 
-				<!-- Footer Copyright -->
-				<div class="footer__copyright bg--dark ptb--20">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-6 col-md-6">
-								<p>Copyright© <a href="https://hastech.company/">Abasas</a>, All rights Reserved, 2018</p>
-							</div>
-							<div class="col-lg-6 col-md-6">
-								<div class="footer__payment-icons text-right">
-									<img src="images/icons/payment-method.png" alt="payment method">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div><!-- //Footer Copyright -->
+                    </ul>
+                </div>
 
-			</footer><!-- //Footer -->
+
+
+            </div>
+
+
+
+            <div class="col-sm-12 col-md-3 col-lg-3 pr-3 pt-3">
+
+                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:800; font-size:22px; ">USEFULL
+                    LINKS</div>
+                <hr>
+
+                <div class="Footertable pr-4 pb-4 pt-4">
+                    <div class="footerDetails align-left">
+                        <ul>
+                            <li> <a href="{{ route('about.index') }}/#Who-We-Are "> <i class=" fa fa-hand-o-right"></i>
+                                    <span class="p-2 font-weight-bold text-light" style="font-size:18px"> Who are are ?
+                                    </span></a> </li>
+                            <li> <a href="{{ route('about.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> About Us
+                                    </span></a> </li>
+                            <li> <a href="{{ route('programs') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> Our Programs
+                                    </span></a> </li>
+                            <li> <a href="{{ route('donations.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> Donation
+                                    </span></a> </li>
+                            <li> <a href="{{ route('mmc-members') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> Members
+                                    </span></a> </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 pt-3 pr-3">
+
+
+
+
+
+                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:800; font-size:22px; ">Location
+                </div>
+                <hr>
+
+                <div class="Footertable p-4">
+                    <div class="footerDetails align-right">
+
+                        <div class="map">
+                            <a href="https://www.google.com/maps/place/Masjid+Mission+Center+(Haji+Camp+Mashjid)/@40.7107396,-73.7876219,21z/data=!4m12!1m6!3m5!1s0x89c261193c2f5941:0xdb852857584dd493!2sMasjid+Mission+Center+(Haji+Camp+Mashjid)!8m2!3d40.7108127!4d-73.7874962!3m4!1s0x89c261193c2f5941:0xdb852857584dd493!8m2!3d40.7108127!4d-73.7874962"
+                                target="_blank"> <img src="{{ asset('images/masjidmissioncenter.PNG') }}"
+                                    alt="Masjid mission center usa"> </a>
+                        </div>
+
+                    </div>
+
+                    <div class="socialLinks pt-3 pr-4 pb-4">
+
+                        <ul>
+                            <li> <a href="#"> <i class="fa fa-facebook"></i></a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i></a> </li>
+                            <li> <a href="#"> <i class="fa fa-linkedin"></i></a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="footer__copyright bgColor ptb--20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <p >Copyright© <a target="_blank" href="https://abasas.tech"> <span class="font-weight-bold text-success"> Abasas</span> </a>, All rights Reserved, 2018
+                    </p>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__payment-icons text-right">
+                        <img src="images/icons/payment-method.png" alt="payment method">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //Footer Copyright -->
+
+</footer><!-- //Footer -->

@@ -46,6 +46,13 @@
 					 
 				text-transform: uppercase;
 				}
+
+				
+				.Footertitle{
+
+				
+			
+				}
 		</style>
 	</head>
 	<body >

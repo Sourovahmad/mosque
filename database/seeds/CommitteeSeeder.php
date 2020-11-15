@@ -63,6 +63,15 @@ class CommitteeSeeder extends Seeder
                 'position' => 3,
             ],
             
+            [
+                'name' => 'Shahin Rohamn',
+                'designation_id' => 3,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '12345678910',
+                'position' => 3,
+            ],
+            
         ]);
     } 
 }
