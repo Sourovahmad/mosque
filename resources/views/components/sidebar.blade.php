@@ -168,9 +168,16 @@
           <ul class="navbar-nav bg-abasas-dark  sidebar sidebar-dark accordion " id="accordionSidebar">
 
           
-
-
-    <li class="nav-item active ">
+            
+                <li class="nav-item  ">
+                    <a class="nav-link text-center btn  " href="{{ route('admin.post') }}">
+                        
+                        <span class=" text-light   "> <i class="fas fa-plus text-light   "></i>New </span></a>
+                </li> 
+           
+              
+     <hr class="sidebar-divider m-1 p-0 ">
+    <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
