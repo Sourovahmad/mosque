@@ -160,7 +160,7 @@
 													<li><a href="{{ route('mmc-type',2)}}">General Members</a></li>
 													<li><a href="{{ route('executive') }}">Executive Committee</a></li>
 													
-													<li><a href="{{ route('mmc-type',3)}}">BOT </a></li>
+													<li><a href="{{ route('mmc-type',4)}}">BOT </a></li>
 													
 												</ul>
 											</li>

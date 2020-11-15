@@ -28,9 +28,6 @@
 
 
 
-
-
-        
         <!-- Single Banner -->
         <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
             <div class="container">
