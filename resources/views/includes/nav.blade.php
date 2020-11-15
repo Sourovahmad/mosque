@@ -154,7 +154,7 @@
 												</ul>
 											</li>
 											
-											<li class="cr-dropdown"><a href="#">MMC Members</a>
+											<li class="cr-dropdown"><a >MMC Members</a>
 												<ul class="cr-dropdown-menu">
 													<li><a href="{{ route('mmc-type',1)}}">Life Members</a></li>
 													<li><a href="{{ route('mmc-type',2)}}">General Members</a></li>
