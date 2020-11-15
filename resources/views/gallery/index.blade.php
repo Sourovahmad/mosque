@@ -29,7 +29,7 @@
 @section('content')
 
 <!-- Offer area -->
-<section class="cr-section offer-area ptb--70 bg--pattern zig-zag--top zig-zag--bottom">
+<section class="cr-section offer-area ptb--70 bg--pattern ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">

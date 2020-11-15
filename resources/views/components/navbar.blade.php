@@ -13,9 +13,9 @@
             <img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo" height="60px"> </a> 
 
 
-              <a class="nav-link p-3 " href="{{ route('admin.post') }}">
+              <a class="nav-link  btn border border-primary ml-4 " href="{{ route('admin.post') }}">
                   <i class="fas fa-plus text-light "></i>
-                  <span class=" text-light ">New Post</span></a>
+                  <span class=" text-light ">New </span></a>
         
 
           <!-- Topbar Navbar -->
