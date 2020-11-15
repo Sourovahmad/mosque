@@ -32,7 +32,7 @@
 <div class="container-fluid">
     
     <!-- Begin Page Content -->
-    <div class="collapse" id="createNewForm">
+    <div class="" id="createNewForm"  style="display: none">
         <div class="card mb-4 shadow">
     
             <div class="card-header py-3  bg-abasas-dark ">
@@ -58,7 +58,7 @@
                         <input type="text" name="designation" class="form-control" id="designation"  required>
                     </div>
 
-                    <div class="form-group col-12  ">
+                    <div class="form-group col-md-6 col-sm-12 ">
                         <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
                         <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
                     </div>
@@ -79,7 +79,7 @@
 
 
 
-    <div class="collapse" id="ImamUpdateForm">
+    <div class="" id="ImamUpdateForm" style="display: none">
         <div class="card mb-4 shadow">
     
             <div class="card-header py-3  bg-abasas-dark ">
@@ -105,7 +105,7 @@
                         <input type="text" name="designation" class="form-control" id="Updatedesignation"  required>
                     </div>
 
-                    <div class="form-group col-12  ">
+                    <div class="form-group col-md-6 col-sm-12  ">
                         <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
                         <input type="file" name="image"  accept=".jpg, .jpeg" >
                     </div>
@@ -114,7 +114,7 @@
 
                     </div>
 
-                    <button type="submit"  class="btn bg-abasas-dark" id="ImamUpdateButton"> Submit</button>
+                    <button type="Updatesubmit"  class="btn bg-abasas-dark" id="ImamUpdateButton"> Submit</button>
 
                 </form>
             </div>
@@ -124,83 +124,77 @@
     
     
 
-    <div class="card mb-4 shadow">
+
+    <div class="card shadow mb-4">
 
         <div class="card-header py-3 bg-abasas-dark">
             <nav class="navbar  ">
-
+    
                 <div class="navbar-brand"><span id="eventList"> Imam List</span> </div>
-                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
-                    data-target="#createNewForm" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"
+                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" ><i class="fas fa-plus"
                         id="PlusButton"></i></button></div> 
-
+    
+    
             </nav>
         </div>
         <div class="card-body">
-
-
-            <table class="table-responsive">
-
-
-
+    
+            <div class="table-responsive">
                 <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-
                     <thead class="bg-abasas-dark">
-
+    
                         <tr>
-
+    
                             <th> #</th>
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Image</th>
                             <th>Action</th>
-
+    
                         </tr>
                     </thead>
                     <tfoot class="bg-abasas-dark">
                         <tr>
-
+    
                             <th> #</th>
                             <th>Name</th>
                             <th>Designation</th>
                             <th>Image</th>
                             <th>Action</th>
-
+    
                         </tr>
-
+    
                     </tfoot>
-
-                    <tbody >
-
+    
+                    <tbody>
                         @php
                         $itr=1;
                         @endphp
                         @foreach ($imams as $imam)
-
-
+    
+    
                         <tr class="data-row" >
                             <td class="iteration">{{$itr++}}</td>
                             <td class="word-break name">{{ $imam->name }}</td>
                             <td class="word-break designation">{{ $imam->designation }}</td>
                             <td class="word-break image"> <img src="{{ asset($imam->image->url) }}" alt="{{ $imam->designation }} " height="100px"> </td>
-
-
+    
+    
                             <td class="align-middle">
-                                <button type="button" class="btn btn-success" id="ImamEditButton" data-toggle="collapse"
-
-                                data-target="#ImamUpdateForm" data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
-
-
+                                <button type="button" class="btn btn-success" id="ImamEditButton" 
+    
+                                data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
+    
+    
                                 <form method="POST" action="{{route('admin.imam.destroy',$imam->id)}}"
                                     id="delete-form-{{ $imam->id}}" style="display:none; ">
                                     {{csrf_field() }}
                                     {{ method_field("delete") }}
                                 </form>
-
-
-
-
+    
+    
+    
+    
                                 <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
                     document.getElementById('delete-form-{{ $imam->id }}').submit();
                 }
@@ -209,32 +203,34 @@
                 }
                 " class="btn btn-danger btn-sm btn-raised">
                                     <i class="fa fa-trash" aria-hidden="false">
-
+    
                                     </i>
                                 </button>
-
-
-
-
+    
+    
+    
+    
                             </td>
-
-
+    
+    
                         </tr>
                         @endforeach
-
+    
                     </tbody>
+    
+    
                 </table>
+                
                 {{ $imams->links() }}
-              
-
-            </table>
-
-
+            </div>
         </div>
-
-
     </div>
+    
+    
 </div>
+
+
+
 
 
 
@@ -242,54 +238,52 @@
     $(document).ready(function(){
         
         $('body').on('click', '#AddNewFormButton', function () {
+            $('#createNewForm').toggle();
             $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
+            
+            $('#ImamUpdateForm').hide();
 
         });
 
 
         $(document).on('click','#ImamEditButton',function(){ 
+            if( $('#PlusButton').hasClass('fa-minus')){
+                $('#createNewForm').toggle();
+                $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
+            }
+            $('#ImamUpdateForm').show();
 
-       $(this).addClass('edit-item-trigger-clicked');
-
-       
-       var trigger = $(".edit-item-trigger-clicked"); 
-
-        var row = trigger.closest(".data-row");
+            var id =  $(this).attr("data-item-id");
 
 
-        var id =  $(this).attr("data-item-id");
+            var imamss = @json($imams);
+            var name ='';
+            var designation = '';
+            $.each(imamss.data, function (key) {
+                if(id == imamss.data[key].id){
+                        name = imamss.data[key].name;
+                        designation = imamss.data[key].designation;
+                }
 
-        var home = "{{route('home')}}";
-            var link = "admin/imam/"
-            var action = home.trim() + '/' + link.trim() + id;
+            });
+                
 
-            $('#UpdateForm').attr('action',action);
-       
-         var name = row.children(".name").text();
-         var designation = row.children(".designation").text();
+            var home = "{{route('home')}}";
+                var link = "admin/imam/"
+                var action = home.trim() + '/' + link.trim() + id;
 
-         $('#Updatename').val(name);
-         $('#Updatedesignation').val(designation);
+                $('#UpdateForm').attr('action',action);
+        
+            $('#Updatename').val(name);
+            $('#Updatedesignation').val(designation);
+
+
+        });
 
 
         
-  
-    //    var image = row.children(".image").val();
 
-    //    alert(image);
-
-
-        // var lastname = row.children(".lastname").text();
-        // var email = row.children(".email").text();
-        // var phone = row.children(".phone").text();
-
-        //  var id =  $(this).attr("ImamID");
-
-
-
-});
-
-    })
+    });
 
    
 

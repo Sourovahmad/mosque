@@ -33,10 +33,55 @@
    
 .bg-abasas-dark {
 
-    background-color: #2a3f5c;
+    background-color: #2a3f5c !important;
     color: #fff;
 
 }
+.adminTitle{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family:'Arial', Times, serif; 
+    font-style:normal ; 
+    font-weight:800; 
+    color: #2a3f5c !important ;
+    line-height:normal;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1920px) {
+  .adminTitle {
+    font-size: 45px; } }
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  .adminTitle {
+    font-size: 45px;
+ } }
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .adminTitle {
+    font-size: 40px;
+ } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .adminTitle {
+    font-size: 30px;
+ } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .adminTitle {
+    font-size: 25px;
+ } }
+
+@media only screen and (max-width: 767px) {
+  .adminTitle {
+    font-size: 18px;
+ } }
+
+@media only screen and (max-width: 576px) {
+  .adminTitle {
+    font-size: 15px;
+ } }
+
     </style>
 
 
@@ -63,23 +108,23 @@
 
 $(document).ready(function(){
     
-    $('[data-toggle="tooltip"]').tooltip()
-
+    $('[data-toggle="tooltip"]').tooltip();
+   
 });
 </script>
 </head>
 
-<body>
 
+<body id="page-top">
 
-
+{{-- 
     <x-navbar>
 
-    </x-navbar>
+    </x-navbar> --}}
 
 
 
-    <div class="row">
+    {{-- <div class="row">
 
         <div class="col-2">
             <x-sidebar />
@@ -111,6 +156,81 @@ $(document).ready(function(){
 
 
 
+
+ --}}
+
+
+
+ 
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+
+        <x-sidebar />
+   
+
+    
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                
+                <x-navbar/>
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    @yield('content')
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
 
 
 

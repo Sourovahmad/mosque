@@ -7,7 +7,7 @@
     <div class="banner bg-image--1 banner-text-slide slider-arrow--style1 slide-animate-text">
 
         <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -29,7 +29,7 @@
 
 
         <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="6">
+        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="3">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
