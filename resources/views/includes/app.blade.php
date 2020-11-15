@@ -64,7 +64,13 @@
 			font-style:normal ; 
 			font-weight:800; 
 			color:rgb(207, 58, 58);
-        }
+		}
+		.address{
+			font-size:15px; 
+			color: black;
+			font-family:'Arial', Times, serif;
+
+		}
 
 
 
@@ -77,7 +83,14 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			
+			#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+			display: none;
+			}
         }
 
         @media only screen and (min-width: 1600px) and (max-width: 1919px) {
@@ -89,7 +102,14 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+		
+			display: none !important;
+			}
         }
 
         @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -101,7 +121,13 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+			display: none;
+			}
         }
 
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -113,7 +139,16 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			.address{
+			font-size:12px; 
+		}
+		#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+			display: none;
+			}
         }
 
         @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -125,7 +160,17 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			.address{
+			font-size:12px; 
+		}
+		#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+			display: none;
+			}
+
         }
 
         @media only screen and (max-width: 767px) {
@@ -137,7 +182,16 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			.address{
+			font-size:12px; 
+		}
+		#desktopLogoTop{
+			display: block;
+			}
+			#mobileLogoTop{
+			display: none;
+			}
         }
 
         @media only screen and (max-width: 576px) {
@@ -149,7 +203,22 @@
 
             .subTitle {
                 font-size: 15px;
-            }
+			}
+			
+
+			.address{
+			font-size:12px; 
+		}
+
+		#desktopLogoTop{
+			display: none;
+			}
+			#mobileLogoTop{
+			display: block;
+			}
+
+
+
         }
 
     </style>

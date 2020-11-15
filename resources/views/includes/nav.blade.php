@@ -108,15 +108,17 @@
 						<div class="container">
 							<div class="header__top__inner">
 								<div class="logo image--logo ">
-									<a href="{{ route('home') }}"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo"></a>
+									<a href="{{ route('home') }}" id="desktopLogoTop"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo"></a>
 								</div>
 								<div class="text-center" >
+									<span id="mobileLogoTop" >
+										<a href="{{ route('home') }}" ><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="header logo"></a>
+									</span>
 									
-								
 								<div class="title"  >MASJID MISSION CENTER INC.</div>
 								<div class="subTitle" > (HAJI CAMP MASJID USA )</div>
-								<div style="color:black">87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
-								<div style="color:black">masjidmissioncenterusa@gmail.com</div>
+								<div class="address" >87-26 175th St, jamaica, NY 11432, Phone : 718-526-2451,718-526-2471</div>
+								<div class="address" >masjidmissioncenterusa@gmail.com</div>
 							</div>
 								<div class="header__right">
 									{{-- <div class="header__right__top d-flex justify-content-end align-items-center flex-wrap flex-sm-nowrap">

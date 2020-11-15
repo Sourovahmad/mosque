@@ -2239,7 +2239,7 @@ a.mobile-logo {
 
 @media only screen and (max-width: 767px) {
   .header.header--style-2 {
-    padding-top: 25px;
+    padding-top: 0px;
     padding-bottom: 0; }
     .header.header--style-2 .header__right ul li {
       padding-top: 0;

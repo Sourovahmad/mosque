@@ -108,15 +108,14 @@
 
 $(document).ready(function(){
     
-    $('[data-toggle="tooltip"]').tooltip()
-
+    $('[data-toggle="tooltip"]').tooltip();
+   
 });
 </script>
 </head>
 
 
 <body id="page-top">
-
 
 {{-- 
     <x-navbar>
