@@ -34,7 +34,7 @@
 <section class="about-area ptb--150 bg--white flower--left-top flower--right-bottom" style="padding-top: 0px;">
 
     <h1 class="text-center p-4 TextUppercase " style="font-weight: 800" >
-  MMC  {{ $TypeName }} 
+  {{-- MMC  {{ $TypeName }}  --}}
     </h1>
 
      
