@@ -38,10 +38,50 @@
 
 }
 .adminTitle{
-    font-weight: 700;
     font-size: 30px;
     text-transform: uppercase;
+    font-family:'Arial', Times, serif; 
+    font-style:normal ; 
+    font-weight:800; 
+    color: #2a3f5c !important ;
+    line-height:normal;
+    text-align: center;
 }
+
+@media only screen and (min-width: 1920px) {
+  .adminTitle {
+    font-size: 45px; } }
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px) {
+  .adminTitle {
+    font-size: 45px;
+ } }
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .adminTitle {
+    font-size: 40px;
+ } }
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .adminTitle {
+    font-size: 30px;
+ } }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .adminTitle {
+    font-size: 25px;
+ } }
+
+@media only screen and (max-width: 767px) {
+  .adminTitle {
+    font-size: 18px;
+ } }
+
+@media only screen and (max-width: 576px) {
+  .adminTitle {
+    font-size: 15px;
+ } }
+
     </style>
 
 
