@@ -73,6 +73,53 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <div class="collapse" id="ImamUpdateForm">
+        <div class="card mb-4 shadow">
+    
+            <div class="card-header py-3  bg-abasas-dark ">
+                <nav class="navbar navbar-dark">
+                    <a class="navbar-brand text-light"> Update Imam  </a>
+                </nav>
+            </div>
+            <div class="card-body">
+                <form method="POST" id="UpdateForm" action="" enctype="multipart/form-data">
+                    @csrf
+                    @method('put')
+
+                    <div class="row">
+                        
+
+                    <div class="form-group col-md-6 col-sm-12 ">
+                        <label for="name"> Name<span style="color: red"> *</span></label>
+                        <input type="text" name="name" class="form-control" id="Updatename" value=""  required>
+                    </div>
+
+                    <div class="form-group col-md-6 col-sm-12 ">
+                        <label for="name"> Designation <span style="color: red"> *</span></label>
+                        <input type="text" name="designation" class="form-control" id="Updatedesignation"  required>
+                    </div>
+
+                    <div class="form-group col-12  ">
+                        <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
+                        <input type="file" name="image"  accept=".jpg, .jpeg" >
+                    </div>
+                    
+
+
+                    </div>
+
+                    <button type="submit"  class="btn bg-abasas-dark" id="ImamUpdateButton"> Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
     
     
     
@@ -134,14 +181,15 @@
 
                         <tr class="data-row" >
                             <td class="iteration">{{$itr++}}</td>
-                            <td class="word-break">{{ $imam->name }}</td>
-                            <td class="word-break">{{ $imam->designation }}</td>
-                            <td class="word-break"> <img src="{{ asset($imam->image->url) }}" alt="{{ $imam->designation }} " height="100px"> </td>
-
+                            <td class="word-break name">{{ $imam->name }}</td>
+                            <td class="word-break designation">{{ $imam->designation }}</td>
+                            <td class="word-break image"> <img src="{{ asset($imam->image->url) }}" alt="{{ $imam->designation }} " height="100px"> </td>
 
 
                             <td class="align-middle">
-                               
+                                <button type="button" class="btn btn-success" id="ImamEditButton" data-toggle="collapse"
+
+                                data-target="#ImamUpdateForm" data-item-id={{$imam->id}}> <i class="fa fa-edit" aria-hidden="false"> </i></button>
 
 
                                 <form method="POST" action="{{route('admin.imam.destroy',$imam->id)}}"
@@ -197,88 +245,59 @@
             $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
 
         });
+
+
+        $(document).on('click','#ImamEditButton',function(){ 
+
+       $(this).addClass('edit-item-trigger-clicked');
+
+       
+       var trigger = $(".edit-item-trigger-clicked"); 
+
+        var row = trigger.closest(".data-row");
+
+
+        var id =  $(this).attr("data-item-id");
+
+        var home = "{{route('home')}}";
+            var link = "admin/imam/"
+            var action = home.trim() + '/' + link.trim() + id;
+
+            $('#UpdateForm').attr('action',action);
+       
+         var name = row.children(".name").text();
+         var designation = row.children(".designation").text();
+
+         $('#Updatename').val(name);
+         $('#Updatedesignation').val(designation);
+
+
+        
+  
+    //    var image = row.children(".image").val();
+
+    //    alert(image);
+
+
+        // var lastname = row.children(".lastname").text();
+        // var email = row.children(".email").text();
+        // var phone = row.children(".phone").text();
+
+        //  var id =  $(this).attr("ImamID");
+
+
+
+});
+
     })
+
+   
+
+
+
+
 </script>
 
  
 @endsection
 
-
-
-
-
-
-{{-- 
-<div class="card shadow mb-4">
-
-    <div class="card-header py-3 bg-abasas-dark">
-        <nav class="navbar  ">
-
-            <div class="navbar-brand"><span id="eventList"> Imam Information</span> </div>
-
-        </nav>
-    </div>
-
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 p-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ asset($imam->image->url) }}" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">{{ $imam->name  }}</h5>
-                    </div>
-
-                </div>
-
-
-
-
-                
-            </div>
-            <div class="col-md-6 col-sm-12 p-4">
-
-                <form method="POST" id="createEventForm" action="{{ route('admin.imam.store' ) }}" enctype="multipart/form-data">
-                    @csrf
-                    @method('post')
-
-                    <div class="row">
-                        
-                    <div class="form-group col-12  ">
-                        <label for="image">Upload image &nbsp;</label><i class="fa fa-info-circle"  title="Image Resulation: 400 X 500" aria-hidden="true"></i><br>
-                        <input type="file" name="image" id="image" accept=".jpg, .jpeg" >
-                    </div>
-                    
-                    <div class="form-group col-12  ">
-                        <label for="name"> Name<span style="color: red"> *</span></label>
-                        <input type="text" name="name" class="form-control" id="name"   required>
-                    </div>
-
-                    <div class="form-group col-12  ">
-                        <label for="name"> Designation <span style="color: red"> *</span></label>
-                        <input type="text" name="designation" class="form-control" id="designation"  required>
-                    </div>
-
-
-                    </div>
-
-                    <button type="submit"  class="btn bg-abasas-dark"> Submit</button>
-
-
-
-
-
-
-
-                </form>
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-</div> --}}
-
-
-{{-- @endsection --}}
