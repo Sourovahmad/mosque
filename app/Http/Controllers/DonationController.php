@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\donation;
+use App\Notifications\PaidNotification;
 use Illuminate\Http\Request;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Notification;
 
 class DonationController extends Controller
 {
@@ -101,11 +104,14 @@ class DonationController extends Controller
         
         // Enter Your Stripe Secret
         \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
-        		
+       
+        	
         $amount = $request->amount;
         $currency= $request->currency;
 		$amount *= 100;
         $amount = (int) $amount;
+
+        $user = $request->email;
         
         $payment_intent = \Stripe\PaymentIntent::create([
             'setup_future_usage' => 'on_session',
@@ -117,7 +123,7 @@ class DonationController extends Controller
         $intent = $payment_intent->client_secret;
         
 
-		return view('donation.checkout',compact('intent','amount','currency'));
+		return view('donation.checkout',compact('intent','amount','currency','user'));
         //
     }
 
@@ -165,7 +171,17 @@ class DonationController extends Controller
     {
         return abort(404);
     }
-    public function success(){
-        return "success";
+
+    public function success($user){
+
+       
+       $email =  $user;
+       
+
+       Notification::route('mail', $email)->notify(new PaidNotification($email));
+
+    //    $email->notify(new PaidNotification($email));
+       return redirect()->back()->withSuccess(['Successfully Doneted']);
+     
     }
 }

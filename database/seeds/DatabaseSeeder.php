@@ -32,6 +32,11 @@ class DatabaseSeeder extends Seeder
                 'email' => 'masumbillah3416@gmail.com',
                 'password' => Hash::make('1234'),
             ],
+            [
+                'name' => 'Sourov Ahmed',
+                'email' => 'sourov.okk@gmail.com',
+                'password' => Hash::make('1234'),
+            ],
         ]);
     }
 }

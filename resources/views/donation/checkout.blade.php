@@ -10,6 +10,35 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if (session()->has('success'))
+<div class="alert alert-success">
+    @if(is_array(session('success')))
+        <ul>
+            @foreach (session('success') as $message)
+                <li>{{  $message }}</li>
+            @endforeach
+        </ul>
+    @else
+        {{ session('success') }}
+    @endif
+</div>
+@endif
+
+
+
+
+
     @php
         $stripe_key = 'pk_test_51Hl3M4LtX3QocVix8Kq6e56OyI5ANiTi2mHpvIi24zVe6RTG3HoVpWgN7NZ8sCRyyR0ONtJfradWieV2MPQATH9P00IEC0qlfT';
     @endphp
@@ -20,7 +49,7 @@
                     <p>You will be charged :  <b>  {{ $currency }} {{ $amount/100 }} </b></p>
                 </div>
                 <div class="card">
-                    <form action="{{route('donationSuccess')}}"  method="post" id="payment-form">
+                    <form action="{{route('donationSuccess', $user )}}"  method="post" id="payment-form">
                         @csrf                    
                         <div class="form-group">
                             <div class="card-header">

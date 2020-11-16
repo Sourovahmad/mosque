@@ -28,7 +28,9 @@ Route::get('/','IndexController@index')->name('home');
 Route::resource('donations','DonationController');
 Route::resource('payments','PaymentController');
 Route::resource('about','AboutController');
+
 Route::post('donation-success','DonationController@success')->name('donationSuccess');
+Route::post('donation-success/{user}','DonationController@success')->name('donationSuccess');
 
 Route::get('events','EventController@frontendView')->name('events');
 Route::get('events/{id}','EventController@singleview')->name('event-single');
@@ -62,3 +64,4 @@ Auth::routes();
 
 
 
+Route::get('/test-mail','test@index')->name('test');

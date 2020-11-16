@@ -187,8 +187,8 @@
     <section class="bg-white flower--right-bottom">
         <div class="container">
 
-            <div class="p-4">
-                <h3 class="text-center">Rules and Regulation</h3>
+            <div class="pt-4 pr-4" >
+                <div class="text-center font-weight-bold" style="font-weight: 800; font-size:28px; color:black; padding-top: 20px">Rules and Regulation</div>
 
             </div>
             <div class="row p-4">
@@ -421,13 +421,13 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row AboutImage">
 
                 @foreach ($galleries as $gallery)
 
                     <a mt-4 href="{{ route('home') }}/{{ $gallery->image->url }}" data-toggle="lightbox"
-                        data-gallery="gallery" class="col-md-4 mt-4">
-                        <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded"
+                        data-gallery="gallery" class="col-md-4 mt-4 ">
+                        <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded AboutImage"
                             style="width: 100%" alt="{{ $gallery->caption }}">
                     </a>
                 @endforeach
