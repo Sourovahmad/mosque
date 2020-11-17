@@ -53,9 +53,11 @@ class ImageSeeder extends Seeder
             ],
             
             [
-                'url' => 'images/1605195989.fullprayingTimes.jpg',            //7
-                'thumbnail' => 'images/1605195989.fullprayingTimes.jpg',
+                'url' => 'images/1605628330.full.December_2020.jpg',            //7
+                'thumbnail' => 'images/1605628330.full.December_2020.jpg',
             ],
+            
+
         ]);
     }
 }
