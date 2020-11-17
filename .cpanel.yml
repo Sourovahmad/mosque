@@ -1,5 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/demos.abasas.tech/mmc
-    - /bin/cp -R public $DEPLOYPATH
+    - export DEPLOYPATH=/home/mumixhqm/demos.abasas.tech/mmc
+    - /bin/cp -r * $DEPLOYPATH #copy all from root
+    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
