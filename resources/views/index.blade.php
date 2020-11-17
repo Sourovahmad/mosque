@@ -325,24 +325,31 @@
                         <div
                             class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-md-between justify-content-center flex-md-nowrap">
                             <div class="salat-times__box">
-                                <h4>fajr</h4><span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span>
+                            <div style="font-weight: 800; font-size:22px;color:#fff;">fajr  </div> <span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span> 
                             </div>
+
                             <div class="salat-times__box">
-                                <h4>jumma</h4><span>{{ Carbon\Carbon::parse($salat->jumma)->format('h:i:a') }}</span>
-                            </div>
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Jumma  </div> <span>{{ Carbon\Carbon::parse($salat->jumma)->format('h:i:a') }}</span> 
+                                </div>
+
+                                
                             <div class="salat-times__box">
-                                <h4>dhuhr</h4><span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span>
-                            </div>
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Dhuhr  </div> <span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span> 
+                                </div>
+                                                                
                             <div class="salat-times__box">
-                                <h4>asr</h4><span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span>
-                            </div>
-                            <div class="salat-times__box">
-                                <h4>maghrib</h4>
-                                <span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span>
-                            </div>
-                            <div class="salat-times__box">
-                                <h4>isha</h4><span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span>
-                            </div>
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Asr  </div> <span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span> 
+                                </div>
+
+                                <div class="salat-times__box">
+                                    <div style="font-weight: 800; font-size:20px;color:#fff;">Maghrib  </div> <span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span> 
+                                    </div>
+                                    
+                                <div class="salat-times__box">
+                                    <div style="font-weight: 800; font-size:22px;color:#fff;">Isha  </div> <span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span> 
+                                    </div>
+    
+
                         </div>
                     </div>
                 </div>
