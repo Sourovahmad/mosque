@@ -13,16 +13,18 @@ class ImamSeeder extends Seeder
     public function run()
     {
         DB::table('imams')->insert([
+
             [
-                'name' => 'MD. Masum Billah',
-                'image_id' => '1',
-                'designation' => 'Imam',
-            ],
-            [
-                'name' => 'MD. haha Billah',
+                'name' => 'Imam Hafez Rafiqul Islam',
                 'image_id' => '1',
                 'designation' => 'Quran Teacher',
             ],
+            [
+                'name' => 'Muhammad Manjurul Karim',
+                'image_id' => '2',
+                'designation' => 'Imam and Religious Teacher',
+            ],
+
         ]);
     }
 }

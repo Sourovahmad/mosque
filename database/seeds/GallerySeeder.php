@@ -14,42 +14,33 @@ class GallerySeeder extends Seeder
     {
         DB::table('galleries')->insert([
             
+  
             [
-                'caption' => 'Mosque',
-                'image_id' => '2',
-            ],
-            [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 1 ',
                 'image_id' => '3',
             ],
             [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 2 ',
                 'image_id' => '4',
             ],
             [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 3 ',
                 'image_id' => '5',
             ],
             [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 4 ',
                 'image_id' => '6',
             ],
             [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 5 ',
                 'image_id' => '7',
             ],
+            
             [
-                'caption' => 'Mosque',
+                'caption' => 'MMC Image 6 ',
                 'image_id' => '8',
             ],
-            [
-                'caption' => 'Mosque',
-                'image_id' => '9',
-            ],
-            [
-                'caption' => 'Mosque',
-                'image_id' => '10',
-            ],
+
         ]);
     }
 }
