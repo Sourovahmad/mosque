@@ -7695,3 +7695,8 @@ input[type="submit"] {
 
   padding-left: 0px !important ;
 }
+.textColor {
+
+  color:#d7d7d7 !important;
+  font-weight: 530;
+}
