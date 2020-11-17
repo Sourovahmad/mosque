@@ -104,7 +104,7 @@ class CommitteeSeeder extends Seeder
 
 
 
-            // // Executive Area session 2 
+            // Executive Area session 2 
             [
                 'name' => 'Sabbir Ahmed',
                 'designation_id' => 1,
@@ -236,7 +236,64 @@ class CommitteeSeeder extends Seeder
 
             // End Executive Area session 2 
 
-   
+            // board of trustess
+            [
+                'name' => 'Mirza Moshiur Rahman',
+                'designation_id' => 15,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+            [
+                'name' => 'MuhammadAbdul Malek',
+                'designation_id' => 14,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+            [
+                'name' => 'Hafez Mohammed Rafiqul Islam',
+                'designation_id' => 14,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+            [
+                'name' => 'Maulana MirzaAbu Zafar Beg',
+                'designation_id' => 14,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+            [
+                'name' => 'Abdul Hadi jabbar',
+                'designation_id' => 14,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+            [
+                'name' => 'Mohammad Mozzammel Hossain Farque',
+                'designation_id' => 14,
+                'member_type' => 4,
+                'session_id' => 2,
+                'phone' => '',
+                'position' => 1,
+                              
+            ],
+
+          
+
 
      
         ]);

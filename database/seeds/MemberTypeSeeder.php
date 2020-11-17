@@ -23,7 +23,7 @@ class MemberTypeSeeder extends Seeder
                 'name' => 'Executive Committee',
             ],
             [
-                'name' => 'Board of Treasure',
+                'name' => 'Board of Trustees',
             ],
             
         ]);

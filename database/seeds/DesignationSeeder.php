@@ -81,6 +81,12 @@ class DesignationSeeder extends Seeder
                 'name' => 'Member',
                 'description' => 'Description OF Member',
             ],
+            
+
+            [
+                'name' => 'Chairman',
+                'description' => 'Description OF Chairman',
+            ],
 
          ]);
     }    

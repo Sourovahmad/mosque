@@ -19,8 +19,8 @@ class CreateCommitteesTable extends Migration
             $table->unsignedBigInteger('designation_id');
             $table->unsignedBigInteger('member_type');
             $table->unsignedBigInteger('session_id')->nullable();
-            $table->string('phone');
-            $table->integer('position');
+            $table->string('phone')->nullable();
+            $table->integer('position')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });
