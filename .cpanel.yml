@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/mumixhqm/demos.abasas.tech/mmc
+    - export DEPLOYPATH=/home/user/demos.abasas.tech/mmc
     - /bin/cp -R public $DEPLOYPATH
