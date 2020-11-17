@@ -30,6 +30,13 @@
 		<!-- Modernizer js -->
 		<script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 		<style>
+            .bg-abasas-dark {
+
+background-color: #2a3f5c !important;
+color: #fff;
+
+}
+
 			.rules-side-nav .nav-link{
 				
 				color: black;

@@ -1,4 +1,4 @@
-<footer id="footer" class="footer-area  bgColor text-light pt-4">
+<footer id="footer" class="footer-area  bg-abasas-dark text-light pt-4">
 
     <div class="container">
 
@@ -7,18 +7,18 @@
 
             <div class="col-sm-12 col-md-3 col-lg-3 pr-3 pt-3">
 
-                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:800; font-size:22px; ">CONTACT
+                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:700; font-size:22px; ">CONTACT
                     US </div>
                 <hr>
-                <p class="text-light pt-4 pr-3 text-left"> Islam is the know how to pursue pleasure rationally encounter
-                    consequences</p>
+                {{-- <p class="text-light pt-4 pr-3 text-left"> Islam is the know how to pursue pleasure rationally encounter
+                    consequences</p> --}}
                 <div class="Footertable pt-4 pb-4 pr-4">
                     <div class="footerDetails align-left">
                         <ul>
                             <li> <a href="tel: 718-526-2451" title="718-526-2451" style="font-size: 19px"> <i
                                         class=" fa fa-phone"></i> <span class="text-success pl-2 font-weight-bold">
                                         718-526-2451 </span> </a> </li>
-                            <li> <a href="mailto: masjidmissioncenterusa@gmail.com" title="718-526-2451"
+                            <li> <a href="mailto:masjidmissioncenterusa@gmail.com" title="718-526-2451"
                                     style="font-size: 16px"> <i class=" fa fa-envelope"></i> <span
                                         class="text-light pl-2 font-weight-bold">Mail Us </span> </a> </li>
                             <li> <a href="" title="718-526-2451" style="font-size: 16px"> <i
@@ -34,7 +34,7 @@
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 pt-3 pl-3">
 
-                <div class="Footertitle text-light pt-4  Footertitle" style="font-weight:800; font-size:22px; ">SUPPORT
+                <div class="Footertitle text-light pt-4  Footertitle" style="font-weight:700; font-size:22px; ">SUPPORT
                 </div>
                 <hr>
                 <div class="footerDetailsTwo align-left pt-4">
@@ -96,7 +96,7 @@
 
 
 
-                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:800; font-size:22px; ">Location
+                <div class="Footertitle text-light pt-4 Footertitle" style="font-weight:700; font-size:22px; ">Location
                 </div>
                 <hr>
 
@@ -137,14 +137,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6">
-                    <p >Copyright© <a target="_blank" href="https://abasas.tech"> <span class="font-weight-bold text-success"> Abasas</span> </a>, All rights Reserved, 2018
+                    <p >Developed By <a target="_blank" href="https://abasas.tech"> <span class="font-weight-bold text-success"> Abasas Technologies</span> </a>
                     </p>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                {{-- <div class="col-lg-6 col-md-6">
                     <div class="footer__payment-icons text-right">
                         <img src="images/icons/payment-method.png" alt="payment method">
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div><!-- //Footer Copyright -->
