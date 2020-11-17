@@ -68,7 +68,7 @@
                     <div class="footerDetails align-left">
                         <ul>
                             <li> <a href="{{ route('about.index') }}/#Who-We-Are "> <i class=" fa fa-hand-o-right"></i>
-                                    <span class="p-2 font-weight-bold text-light" style="font-size:18px"> Who are are ?
+                                    <span class="p-2 font-weight-bold text-light" style="font-size:18px"> Who are we ?
                                     </span></a> </li>
                             <li> <a href="{{ route('about.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
                                         class="p-2 font-weight-bold text-light" style="font-size:18px"> About Us
