@@ -1,4 +1,4 @@
-<footer id="footer" class="footer-area  bg-abasas-dark text-light pt-4">
+<footer id="footer" class="footer-area  text-light pt-4" style="background-color: black">
 
     <div class="container">
 
@@ -16,13 +16,13 @@
                     <div class="footerDetails align-left">
                         <ul>
                             <li> <a href="tel: 718-526-2451" title="718-526-2451" style="font-size: 19px"> <i
-                                        class=" fa fa-phone"></i> <span class="text-success pl-2 font-weight-bold">
+                                        class=" fa fa-phone"></i> <span class="text-success pl-2 textColor">
                                         718-526-2451 </span> </a> </li>
                             <li> <a href="mailto:masjidmissioncenterusa@gmail.com" title="718-526-2451"
                                     style="font-size: 16px"> <i class=" fa fa-envelope"></i> <span
-                                        class="text-light pl-2 font-weight-bold">Mail Us </span> </a> </li>
+                                        class="textColor pl-2">Mail Us </span> </a> </li>
                             <li> <a href="" title="718-526-2451" style="font-size: 16px"> <i
-                                        class=" fa fa-map-marker"></i> <span class="text-light pl-2 font-weight-bold">
+                                        class=" fa fa-map-marker"></i> <span class=" pl-2 textColor">
                                         87-26 175th St, jamaica, NY 11432 </span> </a> </li>
 
                         </ul>
@@ -40,13 +40,13 @@
                 <div class="footerDetailsTwo align-left pt-4">
 
                     <ul>
-                        <li> <a href="{{ route('about.index') }} "> <span class="font-weight-bold"
+                        <li> <a href="{{ route('about.index') }} "> <span class="textColor "
                                     style="font-size: 17px">About US </span> </a> </li>
-                        <li> <a href="{{ route('about.index') }} "><span class="font-weight-bold"
+                        <li> <a href="{{ route('about.index') }} "><span class="textColor"
                                     style="font-size: 17px"> Help Center </span> </a></li>
-                        <li> <a href="{{ route('blogs') }} "><span class="font-weight-bold" style="font-size: 17px">
+                        <li> <a href="{{ route('blogs') }} "><span class="textColor" style="font-size: 17px">
                                     Latest Blogs </span> </i> </a> </li>
-                        <li> <a href=" {{ route('events') }}"> <span class="font-weight-bold" style="font-size: 17px">
+                        <li> <a href=" {{ route('events') }}"> <span class="textColor" style="font-size: 17px">
                                     Event </span></a></li>
 
                     </ul>
@@ -68,20 +68,20 @@
                     <div class="footerDetails align-left">
                         <ul>
                             <li> <a href="{{ route('about.index') }}/#Who-We-Are "> <i class=" fa fa-hand-o-right"></i>
-                                    <span class="p-2 font-weight-bold text-light" style="font-size:18px"> Who are we ?
+                                    <span class="p-2 textColor textColor" style="font-size:18px"> Who are we ?
                                     </span></a> </li>
                             <li> <a href="{{ route('about.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
-                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> About Us
+                                        class="p-2 textColor textColor" style="font-size:18px"> About Us
                                     </span></a> </li>
                             <li> <a href="{{ route('programs') }} "> <i class=" fa fa-hand-o-right"></i> <span
-                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> Our Programs
+                                        class="p-2 textColor textColor" style="font-size:18px"> Our Programs
                                     </span></a> </li>
                             <li> <a href="{{ route('donations.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
-                                        class="p-2 font-weight-bold text-light" style="font-size:18px"> Donation
+                                        class="p-2 textColor textColor" style="font-size:18px"> Donation
                                     </span></a> </li>
-                            <li> <a href="{{ route('mmc-members') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                            {{-- <li> <a href="{{ route('mmc-members') }} "> <i class=" fa fa-hand-o-right"></i> <span
                                         class="p-2 font-weight-bold text-light" style="font-size:18px"> Members
-                                    </span></a> </li>
+                                    </span></a> </li> --}}
 
                         </ul>
                     </div>

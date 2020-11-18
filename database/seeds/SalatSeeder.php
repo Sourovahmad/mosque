@@ -20,7 +20,7 @@ class SalatSeeder extends Seeder
                 'asr' => '14:21:00',
                 'maghrib' => '16:44:00',
                 'isha' => '18:42:00',
-                'image_id' => 11,
+                'image_id' => 9,
             ],
         ]);
     }
