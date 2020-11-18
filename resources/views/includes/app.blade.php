@@ -61,7 +61,183 @@ color: #fff;
 				
 			
 				}
-		</style>
+     
+    
+  
+    
+    
+            .title {
+                font-style:normal ;
+                font-weight:800; 
+                color:#2D3691; 
+                font-size:60px; 
+                font-family: 'Oswald', sans-serif;
+                line-height:normal;
+            }
+    
+            .subTitle {
+                font-family:'Arial', Times, serif;
+                font-style:normal ; 
+                font-weight:800; 
+                color:rgb(207, 58, 58);
+            }
+            .address{
+                font-size:15px; 
+                color: black;
+                font-family:'Arial', Times, serif;
+    
+            }
+    
+    
+    
+            @media only screen and (min-width: 1920px) {
+    
+    
+                .title {
+                    font-size: 60px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                
+                #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+                display: none;
+                }
+            }
+    
+            @media only screen and (min-width: 1600px) and (max-width: 1919px) {
+    
+    
+                .title {
+                    font-size: 60px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+            
+                display: none !important;
+                }
+            }
+    
+            @media only screen and (min-width: 1200px) and (max-width: 1599px) {
+    
+    
+                .title {
+                    font-size: 60px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+                display: none;
+                }
+            }
+    
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    
+                .title {
+                    font-size: 50px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                .address{
+                font-size:12px; 
+            }
+            #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+                display: none;
+                }
+            }
+    
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+    
+    
+                .title {
+                    font-size: 40px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                .address{
+                font-size:12px; 
+            }
+            #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+                display: none;
+                }
+    
+            }
+    
+            @media only screen and (max-width: 767px) {
+    
+    
+                .title {
+                    font-size: 30px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                .address{
+                font-size:12px; 
+            }
+            #desktopLogoTop{
+                display: block;
+                }
+                #mobileLogoTop{
+                display: none;
+                }
+            }
+    
+            @media only screen and (max-width: 576px) {
+    
+    
+                .title {
+                    font-size: 25px;
+                }
+    
+                .subTitle {
+                    font-size: 15px;
+                }
+                
+    
+                .address{
+                font-size:12px; 
+            }
+    
+            #desktopLogoTop{
+                display: none;
+                }
+                #mobileLogoTop{
+                display: block;
+                }
+    
+    
+    
+            }
+    
+        </style>
 	</head>
 	<body >
 		<!--[if lte IE 9]>
@@ -93,200 +269,7 @@ color: #fff;
 
     <!-- Modernizer js -->
     <script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <style>
-        .rules-side-nav .nav-link {
-
-            color: black;
-
-            font-weight: 600;
-        }
-
-        .rules-side-nav .nav-link.active {
-            color: black;
-            background-color: rgb(202, 197, 189);
-
-
-        }
-
-        .TextUppercase {
-
-            text-transform: uppercase;
-        }
-
-
-
-        .title {
-			font-style:normal ;
-			font-weight:800; 
-			color:#2D3691; 
-			font-size:40px; 
-			font-family: 'Oswald', sans-serif;
-			line-height:normal;
-        }
-
-        .subTitle {
-			font-family:'Arial', Times, serif;
-			font-style:normal ; 
-			font-weight:800; 
-			color:rgb(207, 58, 58);
-		}
-		.address{
-			font-size:15px; 
-			color: black;
-			font-family:'Arial', Times, serif;
-
-		}
-
-
-
-        @media only screen and (min-width: 1920px) {
-
-
-            .title {
-                font-size: 45px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			
-			#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-			display: none;
-			}
-        }
-
-        @media only screen and (min-width: 1600px) and (max-width: 1919px) {
-
-
-            .title {
-                font-size: 45px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-		
-			display: none !important;
-			}
-        }
-
-        @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-
-
-            .title {
-                font-size: 40px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-			display: none;
-			}
-        }
-
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
-
-            .title {
-                font-size: 30px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			.address{
-			font-size:12px; 
-		}
-		#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-			display: none;
-			}
-        }
-
-        @media only screen and (min-width: 768px) and (max-width: 991px) {
-
-
-            .title {
-                font-size: 25px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			.address{
-			font-size:12px; 
-		}
-		#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-			display: none;
-			}
-
-        }
-
-        @media only screen and (max-width: 767px) {
-
-
-            .title {
-                font-size: 18px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			.address{
-			font-size:12px; 
-		}
-		#desktopLogoTop{
-			display: block;
-			}
-			#mobileLogoTop{
-			display: none;
-			}
-        }
-
-        @media only screen and (max-width: 576px) {
-
-
-            .title {
-                font-size: 15px;
-            }
-
-            .subTitle {
-                font-size: 15px;
-			}
-			
-
-			.address{
-			font-size:12px; 
-		}
-
-		#desktopLogoTop{
-			display: none;
-			}
-			#mobileLogoTop{
-			display: block;
-			}
-
-
-
-        }
-
-    </style>
+   
 </head>
 
 <body>
