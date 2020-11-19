@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DesignationSeeder::class);
         $this->call(SessionSeeder::class);
         $this->call(PrayingTimeSeeder::class);
-        $this->call(YearSeeder::class);
         $this->call(MonthSeeder::class);
      
         DB::table('users')->insert([

@@ -53,12 +53,12 @@
 
     
 <!-- Begin Page Content -->
-<div class="collapse" id="createNewForm">
+<div class="" id="createNewForm">
     <div class="card mb-4 shadow">
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light"> Add new  </a>
+                <a class="navbar-brand text-light"> Add new and Update Schedule </a>
             </nav>
         </div>
         <div class="card-body">
@@ -68,21 +68,32 @@
                   
                 
                     <div class="form-group col-md-4 col-sm-12">
-                        <label for="year_id">Year<span style="color: red"> *</span></label>
-                        <select class="form-control form-control" value="" name="year_id" id="year_id"
+                        <label for="year">Year<span style="color: red"> *</span></label>
+                        <select class="form-control form-control" value="" name="year" id="year"
                             required>
-                            <option disabled selected value> select an option </option>'
-                            @foreach ($years as $year)
-                            <option value="{{$year->id}}"> {{$year->name}}</option>
-                            @endforeach
+
+                            <option disabled selected value> select year </option>'
+                            <option value="2020"> 2020</option>
+                            <option value="2021"> 2021</option>
+                            <option value="2022"> 2022</option>
+                            <option value="2023"> 2023</option>
+                            <option value="2024"> 2024</option>
+                            <option value="2025"> 2025</option>
+                            <option value="2026"> 2026</option>
+                            <option value="2027"> 2027</option>
+                            <option value="2028"> 2028</option>
+                            <option value="2029"> 2029</option>
+                            <option value="2030"> 2030</option>
+                            <option value="2031"> 2031</option>
+
                         </select>
                     </div>
                     
 
 
                     <div class="form-group col-md-4 col-sm-12">
-                        <label for="month_id">month<span style="color: red"> *</span></label>
-                        <select class="form-control form-control" value="" name="month_id" id="month_id"
+                        <label for="month">month<span style="color: red"> *</span></label>
+                        <select class="form-control form-control" value="" name="month" id="month"
                             required>
                             @foreach ($months as $month)
                             <option value="{{$month->id}}"> {{$month->name}}</option>
@@ -116,22 +127,42 @@
         <div class="card-header py-3 bg-abasas-dark">
             <nav class="navbar">
 
-                <div class="navbar-brand"><span id="eventList"> All list</span> </div>
-                <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
+                <div class="navbar-brand"><span id="eventList"> Praying Time at {{ $year }}</span> </div>
+                {{-- <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
                     data-target="#createNewForm" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"
-                        id="PlusButton"></i></button></div> 
+                        id="PlusButton"></i></button></div>  --}}
                         <div class="filterform">
-                            <form id="yearfilterform" method="post">
+                            <form id="yearfilterform" class="form-inline" method="post">
                              @csrf
-                                <select class="form-control form-control" value="" name="year_id" id="yearfilterselectbar"
+
+
+                             <div class="form-group  mb-2">
+                                <select class="form-control " value="" name="year" id="yearfilterselectbar"
                                 required>
                                 <option disabled selected value> select year </option>'
-                                @foreach ($years as $year)
-                                <option value="{{$year->id}}"> {{$year->name}}</option>
-                                @endforeach
+                                <option value="2020"> 2020</option>
+                                <option value="2021"> 2021</option>
+                                <option value="2022"> 2022</option>
+                                <option value="2023"> 2023</option>
+                                <option value="2024"> 2024</option>
+                                <option value="2025"> 2025</option>
+                                <option value="2026"> 2026</option>
+                                <option value="2027"> 2027</option>
+                                <option value="2028"> 2028</option>
+                                <option value="2029"> 2029</option>
+                                <option value="2030"> 2030</option>
+                                <option value="2031"> 2031</option>
                             </select>
+                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-3" id="yearfilterbutton">Filter</button>
+                    
+
+                             <div class="form-group  mb-2"> 
+                                <button type="submit" id="yearfilterbutton" class="btn btn-primary mb-2 form-control">Filter</button>
+                             </div>
+
+
+                              
                             </form>
                         </div>
 
@@ -139,7 +170,7 @@
 
         </div>
 
-            <div class="card-body">
+            {{-- <div class="card-body">
 
 
                 <div class="table-responsive">
@@ -154,10 +185,8 @@
                             <tr>
         
                                 <th> #</th>
-                                <th>Year</th>
                                 <th>Month</th>
                                 <th>Image</th>
-                                <th>Action</th>
         
                             </tr>
                         </thead>
@@ -165,10 +194,8 @@
                             <tr>
         
                                 <th> #</th>
-                                <th>Year</th>
                                 <th>Month</th>
                                 <th>Image</th>
-                                <th>Action</th>
                             </tr>
         
                         </tfoot>
@@ -183,41 +210,12 @@
         
                             <tr class="data-row" >
                                 <td class="iteration">{{$itr++}}</td>
-                         {{-- <td class="word-break">{{ $prayingtime->year->name }}</td>  --}}
-                             {{-- <td class="word-break">{{ $prayingtime->month->name }}</td>  --}}
+                             <td class="word-break">{{ $prayingtime->month_name->name }}</td> 
                                 <td class="word-break"> <img src="{{ asset($prayingtime->image->thumbnail) }}" height="100px"> </td>
         
         
         
-                                <td class="align-middle">
-                                   
-        
-        
-                                    <form method="POST" action="{{route('praying.destroy',$prayingtime->id)}}"
-                                        id="delete-form-{{ $prayingtime->id}}" style="display:none; ">
-                                        {{csrf_field() }}
-                                        {{ method_field("delete") }}
-                                    </form>
-        
-        
-        
-        
-                                    <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-                        document.getElementById('delete-form-{{ $prayingtime->id }}').submit();
-                    }
-                    else{
-                        event.preventDefault();
-                    }
-                    " class="btn btn-danger btn-sm btn-raised">
-                                        <i class="fa fa-trash" aria-hidden="false">
-        
-                                        </i>
-                                    </button>
-        
-        
-        
-        
-                                </td>
+                             
         
         
                             </tr>
@@ -228,8 +226,35 @@
         
                 </div>
         
+
+
         
+            </div> --}}
+
+ <div class="row">
+
+  @foreach ($prayingtimes as $prayingtime) 
+    <div class="col-md-6 col-sm-12 p-4" >
+
+        <div class="card" style="width: 24rem; ">
+            <img class="card-img-top" src="{{ asset($prayingtime->image->url) }}" alt="Card image cap" style="height:300px;">
+            <div class="card-body">
+       <p class="text-dark">{{ $prayingtime->month_name->name }}</p>
             </div>
+          </div>   
+    
+         
+    </div>
+    
+ @endforeach 
+
+
+
+ </div>
+
+
+
+
 
 </div>
 </div>

@@ -11,6 +11,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
+
+use function PHPUnit\Framework\isNull;
+
 class PrayingTimeController extends Controller
 {
     /**
@@ -20,14 +23,18 @@ class PrayingTimeController extends Controller
      */
     public function index()
     {
+        $year= carbon::now()->format('Y');
+        $month= carbon::now()->format('m');
+        
 
-$prayingtimes = PrayingTime::all();
-        $years = year::all();
-
+        $prayingtimes = PrayingTime::where('year',$year)->orderBy('month','asc')->get();
+    
         $months = month::all();
 
 
-         return view('admin.PrayingTime.index',compact('years','months','prayingtimes'));  
+         return view('admin.PrayingTime.index',compact('months','prayingtimes','year'));  
+
+
 
    
     }
@@ -52,9 +59,18 @@ $prayingtimes = PrayingTime::all();
     {
        
 
-        $prayingtime = new prayingtime;
-        $prayingtime->year_id = $request->year_id;
-        $prayingtime->month_id = $request->month_id;
+   
+
+$year = $request->year;
+$month = $request->month;
+
+$prayingtime = PrayingTime::where('year',$year)->where('month',$month)->first();
+if( is_null($prayingtime) ){
+    $prayingtime = new prayingtime;
+}
+
+        $prayingtime->year = $request->year;
+        $prayingtime->month = $request->month;
 
         $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
         $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
@@ -130,15 +146,14 @@ $prayingtimes = PrayingTime::all();
 
     public function yearfilter($id)
 
-    {     $years = year::all();
-        $a = year::find($id);
-        $name = $a->name;
+    {  
         
+        $year = $id;
         $months = month::all();
-
-        $yearfilter = PrayingTime::where('year_id',$id)->orderBy('month_id','asc')->get();
+        $prayingtimes = PrayingTime::where('year',$id)->orderBy('month','asc')->get();
+        $yearfilter = PrayingTime::where('year',$id)->orderBy('month','asc')->get();
        
-        return view('admin.PrayingTime.filterd',compact('years','yearfilter','months','name'));
+        return view('admin.PrayingTime.index',compact('yearfilter','months','prayingtimes','year'));
 
     }
 }

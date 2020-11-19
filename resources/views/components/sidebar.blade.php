@@ -274,7 +274,7 @@
             <span>Salat</span></a>
     </li>
     <li class="nav-item  ">
-        <a class="nav-link p-3 " href="{{ route('praying.index') }}">
+        <a class="nav-link p-3 " href="{{ route('praying.index',2020) }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Praying Time</span></a>
     </li>
