@@ -57,6 +57,11 @@ class ImageSeeder extends Seeder
                 'thumbnail' => 'images/1605628330.full.December_2020.jpg',
             ],
             
+            [
+                'url' => 'images/1605628330.full.December_2020.jpg',            //7
+                'thumbnail' => 'images/1605628330.full.December_2020.jpg',
+            ],
+            
 
         ]);
     }

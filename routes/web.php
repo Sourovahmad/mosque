@@ -56,6 +56,8 @@ Route::get('executive','CommitteeController@executive')->name('executive');
 Route::get('gallery','GalleryController@showImage')->name('gallery');
 Route::get('praying-time','SalatController@prayingtime')->name('praying-time');
 
+
+
 // setting development
 Route::resource('/setting','SettingController');
 Auth::routes();
@@ -63,5 +65,14 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-
 Route::get('/test-mail','test@index')->name('test');
+
+
+
+
+Route::resource('praying','PrayingTimeController');
+
+Route::get('yearfilter/{id}','PrayingTimeController@yearfilter')->name('yearfilter');
+
+
+

@@ -264,7 +264,7 @@
                                         <p>
                                             <input type="radio" name="pg-donation-type" value="lifeMember" class="text-dark"
                                                 name="donation-type" id="pg-donation-type-lifeMember">
-                                            <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($100)</label>
+                                            <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($1000)</label>
                                         </p>
                                         <p>
                                             <input type="radio" name="pg-donation-type" value="sadaqah" class="text-dark"

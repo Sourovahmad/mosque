@@ -104,7 +104,7 @@
             <div class="row">
                 <div class="form-group col-md-6 col-sm-12 p-4">
                     <div>
-                        <h3 class="text-center font-weight-bold">Current Image</h3>
+                        <h3 class="text-center font-weight-bold"> Salt Time of --Current month--</h3>
                     </div>
                     <div class="pl-4">
                         <img src="{{ asset($salat->image->url) }}" alt="Praying Time" width="100%">
@@ -113,6 +113,7 @@
 
                 <div class="form-group col-md-6 col-sm-12 p-4">
                     <div>
+                        
                         <h3 class="text-center font-weight-bold">Change Image</h3>
                     </div>
                     <div class="row p-4">
