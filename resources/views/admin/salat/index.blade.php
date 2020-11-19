@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<div class="card shadow mb-4">
+{{-- <div class="card shadow mb-4">
 
     <div class="card-header py-3 bg-abasas-dark">
         <nav class="navbar  ">
@@ -93,9 +93,9 @@
             <div class="navbar-brand"><span id="eventList">Prayer Time</span> </div>
 
         </nav>
-    </div>
+    </div> --}}
 
-    <div class="card-body">
+    {{-- <div class="card-body">
 
         <form method="POST" id="createEventForm" action="{{ route('admin.salat.store') }}"
             enctype="multipart/form-data">
@@ -131,7 +131,7 @@
             </div>
 
         </form>
-    </div>
+    </div> --}}
 </div>
 
 

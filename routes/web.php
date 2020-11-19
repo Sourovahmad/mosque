@@ -72,7 +72,7 @@ Route::get('/test-mail','test@index')->name('test');
 
 Route::resource('praying','PrayingTimeController');
 
-Route::get('yearfilter/{id}','PrayingTimeController@yearfilter')->name('yearfilter');
+Route::post('yearfilter/{id}','PrayingTimeController@yearfilter')->name('yearfilter');
 
 
 

@@ -6,8 +6,10 @@ use App\image;
 use App\month;
 use App\PrayingTime;
 use App\year;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
 class PrayingTimeController extends Controller
 {
@@ -18,18 +20,15 @@ class PrayingTimeController extends Controller
      */
     public function index()
     {
-       $activePrayerTime = PrayingTime::find(1);
-      
+
+$prayingtimes = PrayingTime::all();
         $years = year::all();
 
-        $months = month::orderBy('id')->get();
+        $months = month::all();
 
 
-        // $prayingtimes = PrayingTime::orderBy('month_id','asc')->get();
+         return view('admin.PrayingTime.index',compact('years','months','prayingtimes'));  
 
-        $prayingtimes = PrayingTime::all();
-
-         return view('admin.PrayingTime.index',compact('years','months','activePrayerTime','prayingtimes'));  
    
     }
 
@@ -122,11 +121,24 @@ class PrayingTimeController extends Controller
      */
     public function destroy(PrayingTime $prayingTime)
     {
-        //
+        $prayingTime->delete();
+        // unlink($prayingTime->image->url);
+        // unlink($prayingTime->image->thumbnail);
+
+        return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 
-    public function yearfilter(Request $request)
-    {
-        return $request;
+    public function yearfilter($id)
+
+    {     $years = year::all();
+        $a = year::find($id);
+        $name = $a->name;
+        
+        $months = month::all();
+
+        $yearfilter = PrayingTime::where('year_id',$id)->orderBy('month_id','asc')->get();
+       
+        return view('admin.PrayingTime.filterd',compact('years','yearfilter','months','name'));
+
     }
 }

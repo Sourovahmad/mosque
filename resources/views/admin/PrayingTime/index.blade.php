@@ -42,10 +42,10 @@
 
     <div class="form-group col-md-6 col-sm-12 p-4">
         <div>
-            <h3 class="text-center font-weight-bold"> Salt Time of --Current month--</h3>
+            <h3 class="text-center font-weight-bold"> Salat Time Of current Month</h3>
         </div>
         <div class="pl-4">
-            <img src="{{ asset($activePrayerTime->image->url) }}" alt="Praying Time" width="100%">
+            {{-- <img src="{{ asset($activePrayerTime->image->url) }}" alt="Praying Time" width="100%"> --}}
         </div>
     </div>
 
@@ -116,13 +116,13 @@
         <div class="card-header py-3 bg-abasas-dark">
             <nav class="navbar">
 
-                <div class="navbar-brand"><span id="eventList"> All Months list</span> </div>
+                <div class="navbar-brand"><span id="eventList"> All list</span> </div>
                 <div id="AddNewFormButtonDiv"><button type="button" class="btn btn-success btn-lg" id="AddNewFormButton" data-toggle="collapse"
                     data-target="#createNewForm" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"
                         id="PlusButton"></i></button></div> 
                         <div class="filterform">
-                            <form id="yearfilterform">
-                             
+                            <form id="yearfilterform" method="post">
+                             @csrf
                                 <select class="form-control form-control" value="" name="year_id" id="yearfilterselectbar"
                                 required>
                                 <option disabled selected value> select year </option>'
@@ -136,103 +136,103 @@
                         </div>
 
             </nav>
+
         </div>
-        <div class="card-body">
+
+            <div class="card-body">
 
 
-            <div class="table-responsive">
-
-
-
-                <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-
-                    <thead class="bg-abasas-dark">
-
-                        <tr>
-
-                            <th> #</th>
-                            <th>Year</th>
-                            <th>Month</th>
-                            <th>Image</th>
-                            <th>Action</th>
-
-                        </tr>
-                    </thead>
-                    <tfoot class="bg-abasas-dark">
-                        <tr>
-
-                            <th> #</th>
-                            <th>Year</th>
-                            <th>Month</th>
-                            <th>Image</th>
-                            <th>Action</th>
-
-                        </tr>
-
-                    </tfoot>
-
-                   <tbody >
-
-                        @php
-                        $itr=1;
-                        @endphp
-
-                            @foreach ($prayingtimes as $prayingtime)
-                           <tr class="data-row" >
-                            <td class="iteration">{{$itr++}}</td>
-                            {{-- <td class="word-break">{{ $prayingtime->year->name }}</td>  --}}
-                            {{-- <td class="word-break">{{ $prayingtime->month->name }}</td> --}} 
-
-                             <td class="word-break"> <img src="{{ asset($prayingtime->image->thumbnail) }}" height="100px"> </td>
-
-                            <td class="align-middle">
-                               
-
-{{-- 
-                                <form method="POST" action="{{route('admin.gallery.destroy',$gallery->id)}}"
-                                    id="delete-form-{{ $gallery->id}}" style="display:none; ">
-                                    {{csrf_field() }}
-                                    {{ method_field("delete") }}
-                                </form>
-
-
-
-
-                                <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-                    document.getElementById('delete-form-{{ $gallery->id }}').submit();
-                }
-                else{
-                    event.preventDefault();
-                }
-                " class="btn btn-danger btn-sm btn-raised">
-                                    <i class="fa fa-trash" aria-hidden="false"> --}}
-
-                                    </i>
-                                </button>
-
-
-
-
-                            </td>
-
-
-                        </tr>
-                      
-                        @endforeach
-
-                    </tbody>
-                </table>
+                <div class="table-responsive">
         
+        
+        
+                    <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
+        
+        
+                        <thead class="bg-abasas-dark">
+        
+                            <tr>
+        
+                                <th> #</th>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>Image</th>
+                                <th>Action</th>
+        
+                            </tr>
+                        </thead>
+                        <tfoot class="bg-abasas-dark">
+                            <tr>
+        
+                                <th> #</th>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>Image</th>
+                                <th>Action</th>
+                            </tr>
+        
+                        </tfoot>
+        
+                        <tbody >
 
+                          @php
+                            $itr=1;
+                            @endphp
+                            @foreach ($prayingtimes as $prayingtime)
+        
+        
+                            <tr class="data-row" >
+                                <td class="iteration">{{$itr++}}</td>
+                         {{-- <td class="word-break">{{ $prayingtime->year->name }}</td>  --}}
+                             {{-- <td class="word-break">{{ $prayingtime->month->name }}</td>  --}}
+                                <td class="word-break"> <img src="{{ asset($prayingtime->image->thumbnail) }}" height="100px"> </td>
+        
+        
+        
+                                <td class="align-middle">
+                                   
+        
+        
+                                    <form method="POST" action="{{route('praying.destroy',$prayingtime->id)}}"
+                                        id="delete-form-{{ $prayingtime->id}}" style="display:none; ">
+                                        {{csrf_field() }}
+                                        {{ method_field("delete") }}
+                                    </form>
+        
+        
+        
+        
+                                    <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
+                        document.getElementById('delete-form-{{ $prayingtime->id }}').submit();
+                    }
+                    else{
+                        event.preventDefault();
+                    }
+                    " class="btn btn-danger btn-sm btn-raised">
+                                        <i class="fa fa-trash" aria-hidden="false">
+        
+                                        </i>
+                                    </button>
+        
+        
+        
+        
+                                </td>
+        
+        
+                            </tr>
+                            @endforeach
+        
+                        </tbody>  
+                    </table>
+        
+                </div>
+        
+        
             </div>
 
-
-        </div>
-
-
-    </div>
-</div> 
+</div>
+</div>
 
 
 
@@ -247,10 +247,10 @@
 
 
     $(document).on('click','#yearfilterbutton',function(){
-        var selected =    $('#yearfilterselectbar option:selected').val();
+        var id =    $('#yearfilterselectbar option:selected').val();
 
         var home = "{{route('home')}}";
-            var link = "/yearfilter"
+            var link = "yearfilter"
             var action = home.trim() + '/' + link.trim() + '/' + id;
             $("#yearfilterform").attr('action', action);
    

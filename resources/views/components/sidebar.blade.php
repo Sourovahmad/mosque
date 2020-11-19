@@ -273,6 +273,11 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Salat</span></a>
     </li>
+    <li class="nav-item  ">
+        <a class="nav-link p-3 " href="{{ route('praying.index') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Praying Time</span></a>
+    </li>
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">
