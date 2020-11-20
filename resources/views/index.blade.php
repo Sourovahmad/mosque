@@ -16,29 +16,29 @@
             class="banner__single right-side--bg fullscreen d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center">
 
 
-
-            <div class="banner__content color--theme text-center">
-                <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word">
-                <h3>O’ Allah we believe that</h3>
-                <h1>Only you can save us</h1>
+            <div class="banner__content text-white text-center">
+                {{-- <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word"> --}}
+                <h1>In the name of <strong>“Allah”</strong></h1>
+                {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari].</h3> --}}
                 <div class="banner__content__button">
-                    <a href="about-us.html" class="cr-btn cr-btn--theme cr-btn--transparent cr-btn--sm"><span>Learn
-                            More</span></a>
+                    <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--gra cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+										
                 </div>
             </div>
-            <div class="banner__side-photo" style="top:10px; padding:20px; ">
+
+            <div class="banner__side-photo " style="top:10px; padding:20px; ">
                 {{-- <img src="images/others-png/munajat.png" alt="banner side image"> --}}
 
 
 
 
 
-                <div style="border:2px solid; margin:25px;">
+                <div class="text-light bg-dark" style="border:2px solid; margin:25px;">
 
-                    <table class="table table-sm table-bordered table-striped p-4 ">
+                    <table class="table table-sm table-bordered table-striped p-4 text-light ">
 
 
-                        <thead class="thead text-light" style="background-color: #2F3690">
+                        <thead class="thead text-light bg-abasas-dark" >
                             <tr>
 
 
@@ -48,7 +48,7 @@
                         </thead>
 
 
-                        <tbody>
+                        <tbody >
 
                             <tr>
                                 <td>Fajr</td>
@@ -122,29 +122,29 @@
         <!-- Single Banner -->
         <div
             class="banner__single right-side--bg fullscreen d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center">
-            <div class="banner__content color--theme text-center">
-                <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word">
-                <h3>In the name of <strong>“Allah”</strong></h3>
-                <h1>Come to the straight path</h1>
+            <div class="banner__content text-white text-center">
+                {{-- <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word"> --}}
+                <h1>In the name of <strong>“Allah”</strong></h1>
+                {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari].</h3> --}}
                 <div class="banner__content__button">
-                    <a href="about-us.html" class="cr-btn cr-btn--theme cr-btn--transparent cr-btn--sm"><span>Learn
-                            More</span></a>
+                    <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--gra cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+										
                 </div>
             </div>
 
-            <div class="banner__side-photo" style="top:10px; padding:20px; ">
+            <div class="banner__side-photo " style="top:10px; padding:20px; ">
                 {{-- <img src="images/others-png/munajat.png" alt="banner side image"> --}}
 
 
 
 
 
-                <div style="border:2px solid; margin:25px;">
+                <div class="text-light bg-dark" style="border:2px solid; margin:25px;">
 
-                    <table class="table table-sm table-bordered table-striped p-4 ">
+                    <table class="table table-sm table-bordered table-striped p-4 text-light ">
 
 
-                        <thead class="thead text-light" style="background-color: #2F3690">
+                        <thead class="thead text-light bg-abasas-dark" >
                             <tr>
 
 
@@ -154,7 +154,7 @@
                         </thead>
 
 
-                        <tbody>
+                        <tbody >
 
                             <tr>
                                 <td>Fajr</td>
@@ -229,9 +229,9 @@
 </div><!-- //Top Banner -->
 
 
-<div class="alert alert-danger alert-dismissible" role="alert" >
+<div class="alert bg--theme alert-dismissible" role="alert" >
     <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-    <strong><i class="fa fa-warning"></i> COVID 19!</strong> <marquee><p style="font-family: Impact; font-size: 18pt">
+    <strong><i class="fa fa-warning"></i> COVID 19!</strong> <marquee><p style="font-family: Impact; font-size: 18pt; color:#2D3691">
         For Your convenience and in accordance with the advice of the NYC Officials to limit crowds. Masjid Mission Center will have the following. JUMMAH SESSIONS:
         ​ 1st. 12:30PM Khutbah
          2nd. 1:00PM Khutbah

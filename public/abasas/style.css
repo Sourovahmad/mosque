@@ -2491,7 +2491,7 @@ a.mobile-logo {
 /*======= Banner Styles =======*/
 .right-side--bg {
   background-color: #f3f3f3;
-  background: url(images/bg/banner2-bg.jpg);
+  background: url(images/bg/bg-custom.jpg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover; }
