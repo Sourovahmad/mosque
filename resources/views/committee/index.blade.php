@@ -29,6 +29,12 @@
 
 
 
+
+
+
+
+
+
 @section('content')
          
 <section class="about-area ptb--150 bg--white flower--left-top flower--right-bottom" style="padding-top: 0px;">
