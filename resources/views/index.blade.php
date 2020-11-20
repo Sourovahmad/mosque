@@ -1,58 +1,249 @@
 @extends('includes.app')
 
 @section('Breadcrumb')
-<!-- //Breadcrumb area -->
+
+
+
+
+
+
 <!-- Top Banner -->
 <div class="banner-area">
-    <div class="banner bg-image--1 banner-text-slide slider-arrow--style1 slide-animate-text">
+    <div class="banner banner-slide-active fullscreen slide-animate-text slider-arrow--style1 arrow--dark">
 
         <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner__content text-center">
-                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
-                            <h3>In the name of <strong>“Allah”</strong></h3>
-                            <h1>Come to the straight path</h1>
-                            <div class="banner__content__button">
-                                <a href="" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Learn
-                                        More</span></a>
-                            </div>
-                        </div>
-                    </div>
+        <div
+            class="banner__single right-side--bg fullscreen d-flex flex-wrap flex-md-nowrap justify-content-center align-items-center">
+
+
+
+            <div class="banner__content color--theme text-center">
+                <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word">
+                <h3>O’ Allah we believe that</h3>
+                <h1>Only you can save us</h1>
+                <div class="banner__content__button">
+                    <a href="about-us.html" class="cr-btn cr-btn--theme cr-btn--transparent cr-btn--sm"><span>Learn
+                            More</span></a>
                 </div>
+            </div>
+            <div class="banner__side-photo" style="top:10px; padding:20px; ">
+                {{-- <img src="images/others-png/munajat.png" alt="banner side image"> --}}
+
+
+
+
+
+                <div style="border:2px solid; margin:25px;">
+
+                    <table class="table table-sm table-bordered table-striped p-4 ">
+
+
+                        <thead class="thead text-light" style="background-color: #2F3690">
+                            <tr>
+
+
+                                <th scope="col"> Prayer</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+                    <div class="bg-abasas-dark" style="padding-left: 40px;padding-right: 40px;">
+
+                        <div>JUMMAH SESSIONS:</div>
+                        <hr style="padding: 0; margin:0; color:white; width:100%">
+                        <div>1st. 12:30PM Khutbah </div>
+                        <div>2nd. 1:00PM Khutbah </div>
+                        <div>3rd. 1:30PM Khutbah </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div><!-- //Single Banner -->
 
-
-
-
         <!-- Single Banner -->
-        <div class="banner__single fullscreen d-flex align-items-center" data-black-overlay="3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="banner__content text-center">
-                            <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
-
-                            <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for
-                                him in Paradise." [Bukhari]. </h3>
-
-                            <div class="banner__content__button">
-                                <a href="{{ route('donations.index') }}#donate"
-                                    class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate
-                                        Now</span></a>
-                            </div>
-                        </div>
-                    </div>
+        <div
+            class="banner__single right-side--bg fullscreen d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center">
+            <div class="banner__content color--theme text-center">
+                <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word">
+                <h3>In the name of <strong>“Allah”</strong></h3>
+                <h1>Come to the straight path</h1>
+                <div class="banner__content__button">
+                    <a href="about-us.html" class="cr-btn cr-btn--theme cr-btn--transparent cr-btn--sm"><span>Learn
+                            More</span></a>
                 </div>
+            </div>
+
+            <div class="banner__side-photo" style="top:10px; padding:20px; ">
+                {{-- <img src="images/others-png/munajat.png" alt="banner side image"> --}}
+
+
+
+
+
+                <div style="border:2px solid; margin:25px;">
+
+                    <table class="table table-sm table-bordered table-striped p-4 ">
+
+
+                        <thead class="thead text-light" style="background-color: #2F3690">
+                            <tr>
+
+
+                                <th scope="col"> Prayer</th>
+                                <th scope="col">Time</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                            <tr>
+                                <td>Fajr</td>
+                                <td>05:45 AM. </td>
+
+                            </tr>
+
+                        </tbody>
+
+
+                    </table>
+                    <div class="bg-abasas-dark" style="padding-left: 40px;padding-right: 40px;">
+
+                        <div>JUMMAH SESSIONS:</div>
+                        <hr style="padding: 0; margin:0; color:white; width:100%">
+                        <div>1st. 12:30PM Khutbah </div>
+                        <div>2nd. 1:00PM Khutbah </div>
+                        <div>3rd. 1:30PM Khutbah </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         </div><!-- //Single Banner -->
 
     </div>
 </div><!-- //Top Banner -->
 
+
+<div class="alert alert-danger alert-dismissible" role="alert" >
+    <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <strong><i class="fa fa-warning"></i> COVID 19!</strong> <marquee><p style="font-family: Impact; font-size: 18pt">
+        For Your convenience and in accordance with the advice of the NYC Officials to limit crowds. Masjid Mission Center will have the following. JUMMAH SESSIONS:
+        ​ 1st. 12:30PM Khutbah
+         2nd. 1:00PM Khutbah
+         3rd. 1:30PM Khutbah
+     
+     Please Pray your Sunnah Prayers at home.
+     
+     Thank you for your understanding and we Apologize for the inconvenience.May Allah keep us all safe.
+     
+    
+    </p></marquee>
+  </div>
 
 @endsection
 
@@ -68,7 +259,7 @@
                 <div class="about-content">
                     <h2> Masjid Mission Center <strong>“MMC”</strong></h2>
                     <h4>87-26 175th St, Queens, NY 11432, United States</h4>
-                    <p><span class="mark">Masjid Mission Center ( MMC )</span>   is a 501 ( c ) religious organization in
+                    <p><span class="mark">Masjid Mission Center ( MMC )</span> is a 501 ( c ) religious organization in
                         Jamaica NY - a community of believers adhering to the Qur'an and the life traditions of
                         Prophet Muhammad (Peace and Blessing Be Upon Him)</p>
                     <div class="about-content__bottom d-flex align-items-center flex-wrap flex-sm-nowrap">
@@ -250,7 +441,8 @@
                         <div class="event__single">
                             <div class="event__single__inner">
                                 <div class="event__single__thumb">
-                                    <img src="{{ asset($event->image->url)}}" alt="event thumb" style="height: 354px; width:315px; object-fit: cover;">
+                                    <img src="{{ asset($event->image->url)}}" alt="event thumb"
+                                        style="height: 354px; width:315px; object-fit: cover;">
                                     <div class="event__single__date">
                                         <h3>{{ Carbon\Carbon::parse($event->date)->format('d F, Y') }}</h3>
                                     </div>
@@ -261,7 +453,9 @@
                                     <div class="event__single__content__location">
                                         <p><i class="icofont icofont-institution"></i> {{ $event->vanu }}
                                         </p>
-                                        <p><i class="icofont icofont-wall-clock"></i>{{ Carbon\Carbon::parse($event->start_time)->format('h:i:a') }} to {{ Carbon\Carbon::parse($event->end_time)->format('h:i:a') }}</p>
+                                        <p><i
+                                                class="icofont icofont-wall-clock"></i>{{ Carbon\Carbon::parse($event->start_time)->format('h:i:a') }}
+                                            to {{ Carbon\Carbon::parse($event->end_time)->format('h:i:a') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -277,7 +471,8 @@
 
                             <div class="event__filters__single">
                                 <div class="event__filters__single__inner">
-                                    <img src="{{ asset($event->image->thumbnail)}}" alt="event filters" style="height: 118px; width:158px; object-fit: cover;">
+                                    <img src="{{ asset($event->image->thumbnail)}}" alt="event filters"
+                                        style="height: 118px; width:158px; object-fit: cover;">
                                 </div>
                             </div>
                             @endforeach
@@ -325,30 +520,36 @@
                         <div
                             class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-md-between justify-content-center flex-md-nowrap">
                             <div class="salat-times__box">
-                            <div style="font-weight: 800; font-size:22px;color:#fff;">fajr  </div> <span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span> 
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">fajr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span>
                             </div>
 
                             <div class="salat-times__box">
-                                <div style="font-weight: 800; font-size:20px;color:#fff;">Jumma  </div> <span>{{ Carbon\Carbon::parse($salat->jumma)->format('h:i:a') }}</span> 
-                                </div>
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Jumma </div>
+                                <span>{{ Carbon\Carbon::parse($salat->jumma)->format('h:i:a') }}</span>
+                            </div>
 
-                                
-                            <div class="salat-times__box">
-                                <div style="font-weight: 800; font-size:20px;color:#fff;">Dhuhr  </div> <span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span> 
-                                </div>
-                                                                
-                            <div class="salat-times__box">
-                                <div style="font-weight: 800; font-size:22px;color:#fff;">Asr  </div> <span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span> 
-                                </div>
 
-                                <div class="salat-times__box">
-                                    <div style="font-weight: 800; font-size:20px;color:#fff;">Maghrib  </div> <span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span> 
-                                    </div>
-                                    
-                                <div class="salat-times__box">
-                                    <div style="font-weight: 800; font-size:22px;color:#fff;">Isha  </div> <span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span> 
-                                    </div>
-    
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Dhuhr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Asr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Maghrib </div>
+                                <span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Isha </div>
+                                <span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span>
+                            </div>
+
 
                         </div>
                     </div>
@@ -375,11 +576,12 @@
         <div class="row">
 
             @foreach ($galleries as $gallery)
-                
-          
+
+
             <a mt-4 href="{{ route('home') }}/{{ $gallery->image->url }}" data-toggle="lightbox" data-gallery="gallery"
                 class="col-md-4 mt-4">
-                <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded" style="width: 100%" alt="{{ $gallery->caption }}">
+                <img src="{{ route('home') }}/{{ $gallery->image->thumbnail }}" class="img-fluid rounded"
+                    style="width: 100%" alt="{{ $gallery->caption }}">
             </a>
             @endforeach
 
