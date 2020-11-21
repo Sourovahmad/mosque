@@ -1,8 +1,4 @@
-<?php
 
-if (!isset($_SESSION)) session_start();
-
-?>
 
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -307,7 +303,7 @@ color: #fff;
         @include('includes.footer')
 
 
-        <!-- Login Form -->
+        {{-- <!-- Login Form -->
         <div class="accountbox-wrapper">
             <div class="accountbox text-left">
                 <ul class="nav accountbox__filters" id="myTab" role="tablist">
@@ -373,8 +369,8 @@ color: #fff;
                     <span class="accountbox-close-button"><i class="icofont icofont-close"></i></span>
                 </div>
             </div>
-        </div><!-- //Login Form -->
-
+        </div><!-- //Login Form --> --}}
+{{-- 
         <!-- Cartbox -->
         <div class="cartbox-wrap">
             <div class="cartbox text-right">
@@ -444,7 +440,7 @@ color: #fff;
                     </div>
                 </div>
             </div>
-        </div><!-- //Cartbox -->
+        </div><!-- //Cartbox --> --}}
 
 
     </div><!-- //Main wrapper -->

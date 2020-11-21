@@ -20,7 +20,7 @@ class EventController extends Controller
     public function index()
     {
         $date=Carbon:: now()->format('Y-m-d');
-        $events = event::orderBy('date','desc')->orderBy('start_time')->paginate(9);
+        $events = event::orderBy('date','desc')->orderBy('start_time','desc')->get();
         return view('admin.event.index',compact('events'));
     }
 
@@ -157,7 +157,7 @@ class EventController extends Controller
     public function frontendView()
     {
          
-        $events = event:: paginate(6);
+        $events = event::orderBy('date','desc')->orderBy('start_time' ,'desc')-> paginate(6);
         return view('events.index',compact('events'));
 
     }

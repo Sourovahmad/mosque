@@ -27,6 +27,9 @@
 
 
 @section('content')
+
+
+
         <main class="page-content">
 
             <!-- Blogs area -->
@@ -54,10 +57,10 @@
                                         </nav>
                                     </div>
 
-                                    @foreach ($blogs as $blog)
+                                    @foreach ($Englishblogs as $blog)
                                         
                                   
-                                    <div class="col-lg-6 col-md-6 col-xl-4 @if($blog->language_id==1) English @else Bangla @endif" style="display: none;">
+                                    <div class="col-lg-6 col-md-6 col-xl-4 English" style="display: none;">
                                         <article class="blog wow fadeInUp">
                                             <div class="blog__thumb">
                                                 <a href="{{ route('blog-singleview', $blog->id) }}">
@@ -78,16 +81,48 @@
                                     </div><!-- //Start Single Blog -->
                                         @endforeach
 
+                                        @foreach ($Banglablogs as $blog)
+                                            
+                                      
+                                        <div class="col-lg-6 col-md-6 col-xl-4 Bangla" style="display: none;">
+                                            <article class="blog wow fadeInUp">
+                                                <div class="blog__thumb">
+                                                    <a href="{{ route('blog-singleview', $blog->id) }}">
+                                                        <img src="{{ asset($blog->image->thumbnail) }}" alt="single blog thumb">
+                                                    </a>
+                                                </div>
+                                                <div class="blog__content">
+    
+                                                    <div class="blog__content__meta">
+                                                        <p>{{ $blog->created_at->format('d F, Y') }} - <a href="{{ route('blog-singleview', $blog->id) }}">{{ $blog->author_name }}</a></p>
+                                                    </div>
+                                                    <h4 class="blog-title"><a href="{{ route('blog-singleview', $blog->id) }}">{{ $blog->title }} </a></h4>
+                                                    <p> @php echo substr($blog->description, 0,50) @endphp ... </p>
+                                                    <a href="{{ route('blog-singleview', $blog->id) }}" class="cr-readmore">Read</a>
+                                                </div>
+                                            </article>
+    
+                                        </div><!-- //Start Single Blog -->
+                                            @endforeach
+
 
 
                                     
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-12 Bangla">
                                         <div class="cr-pagination">
                                             <ul>
                 
-                                             {{$blogs->links()}}
+                                             {{$Banglablogs->links()}}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 English">
+                                        <div class="cr-pagination">
+                                            <ul>
+                
+                                             {{$Englishblogs->links()}}
                                             </ul>
                                         </div>
                                     </div>

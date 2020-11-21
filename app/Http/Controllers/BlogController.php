@@ -150,10 +150,11 @@ class BlogController extends Controller
 
     public function frontendView()
     {
-      $blogs = blog::orderBy('id','desc')->paginate(9);
+      $Banglablogs = blog::where('language_id',2)->orderBy('id','desc')->paginate(9);
+      $Englishblogs = blog::where('language_id',1)->orderBy('id','desc')->paginate(9);
       $events = event::orderBy('id','desc')->take(5)->get();
 
-      return view('blogs.index',compact('blogs','events'));
+      return view('blogs.index',compact('Banglablogs','Englishblogs','events'));
     }
 
 
