@@ -65,20 +65,6 @@
                             echo $blog->description
                             @endphp
                         </div>
-                        <div class="blog-details__footer d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="social-icons social-icons--rounded">
-                                <ul>
-                                    <li class="facebook"><a href="https://www.facebook.com/"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                    <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
-                                    </li>
-                                    <li class="instagram"><a href="https://www.instagram.com/"><i
-                                                class="fa fa-instagram"></i></a></li>
-                                    <li class="google-plus"><a href="https://plus.google.com/"><i
-                                                class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

@@ -21,7 +21,7 @@
                             <li> <a href="mailto:masjidmissioncenterusa@gmail.com" title="718-526-2451"
                                     style="font-size: 16px"> <i class=" fa fa-envelope"></i> <span
                                         class="textColor pl-2">Mail Us </span> </a> </li>
-                            <li> <a href="" title="718-526-2451" style="font-size: 16px"> <i
+                            <li> <a href="https://www.google.com/maps/place/Masjid+Mission+Center+(Haji+Camp+Mashjid)/@40.7107396,-73.7876219,21z/data=!4m12!1m6!3m5!1s0x89c261193c2f5941:0xdb852857584dd493!2sMasjid+Mission+Center+(Haji+Camp+Mashjid)!8m2!3d40.7108127!4d-73.7874962!3m4!1s0x89c261193c2f5941:0xdb852857584dd493!8m2!3d40.7108127!4d-73.7874962" title="718-526-2451" style="font-size: 16px" target="blank"> <i
                                         class=" fa fa-map-marker"></i> <span class=" pl-2 textColor">
                                         87-26 175th St, jamaica, NY 11432 </span> </a> </li>
 
@@ -114,9 +114,9 @@
                     <div class="socialLinks pt-3 pr-4 pb-4">
 
                         <ul>
-                            <li> <a href="#"> <i class="fa fa-facebook"></i></a> </li>
+                            <li> <a target="blank" href="https://web.facebook.com/Masjid-mission-center-Inc-2321829414713424/"> <i class="fa fa-facebook"></i></a> </li>
                             <li> <a href="#"> <i class="fa fa-twitter"></i></a> </li>
-                            <li> <a href="#"> <i class="fa fa-linkedin"></i></a> </li>
+                            <li> <a href="#"> <i class="fa fa-youtube"></i></a> </li>
                         </ul>
                     </div>
 
