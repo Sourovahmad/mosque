@@ -151,6 +151,7 @@
 											<li class="cr-dropdown"><a href="{{ route('about.index') }}">About</a>
 												<ul class="cr-dropdown-menu">
 													<li><a href="{{ route('about.index') }}/#imam">Imam</a></li>
+													<li><a href="{{ route('about.index') }}/#about">About MMC</a></li>
 													<li><a href="{{ route('gallery') }}">Gallery</a></li>
 													
 												</ul>

@@ -121,7 +121,7 @@
 
         <!-- Single Banner -->
         <div
-            class="banner__single right-side--bg fullscreen d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center">
+            class="banner__single right-side--bg2 fullscreen d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center">
             <div class="banner__content text-white text-center">
                 {{-- <img src="images/others-png/bismilla-word-theme.png" alt="bismillah word"> --}}
                 <h1>In the name of <strong>“Allah”</strong></h1>
@@ -229,9 +229,9 @@
 </div><!-- //Top Banner -->
 
 
-<div class="alert bg--theme alert-dismissible" role="alert" >
+<div class="alert bg--theme alert-dismissible text-danger" role="alert" >
     <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-    <strong><i class="fa fa-warning"></i> COVID 19!</strong> <marquee><p style="font-family: Impact; font-size: 18pt; color:#2D3691">
+    <strong><i class="fa fa-warning"></i> COVID 19!</strong> <marquee><p style="font-family: 'Oswald', font-weight:800;sans-serif; font-size: 18pt; color:#2D3691">
         For Your convenience and in accordance with the advice of the NYC Officials to limit crowds. Masjid Mission Center will have the following. JUMMAH SESSIONS:
         ​ 1st. 12:30PM Khutbah
          2nd. 1:00PM Khutbah

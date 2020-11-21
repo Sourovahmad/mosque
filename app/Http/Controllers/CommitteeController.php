@@ -184,9 +184,11 @@ class CommitteeController extends Controller
             $sessions[$s->id] = $s->name;
         }
 
-        $committee = committee::all();
+        $committee = committee::where('member_type',3)->get();
        
         $committeies = $committee->groupBy('session_id');
+        // return $committeies;
+        // return compact('committeies','sessions');
    
        return view('committee.executive',compact('committeies','sessions'));
 

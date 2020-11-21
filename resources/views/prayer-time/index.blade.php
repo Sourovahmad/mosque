@@ -31,6 +31,7 @@
 @section('content')
 
 
+
 <section style="background-color: lavender">
 
 	<div class="row">
@@ -65,6 +66,60 @@
 
 </section>
 	
+
+
+
+
+<section class="cr-section salat-times-area">
+    <div class="salat-times large--width d-flex align-items-center justify-content-center">
+        <div class="salat-times__inner text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <h2>Time of Salat</h2>
+                        <h4>Prayer Times</h4>
+                        <div
+                            class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-md-between justify-content-center flex-md-nowrap">
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">fajr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Jumma </div>
+                                <span>{{ Carbon\Carbon::parse($salat->jumma)->format('h:i:a') }}</span>
+                            </div>
+
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Dhuhr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Asr </div>
+                                <span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:20px;color:#fff;">Maghrib </div>
+                                <span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span>
+                            </div>
+
+                            <div class="salat-times__box">
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Isha </div>
+                                <span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- //Salat times area -->
+
 
 
 

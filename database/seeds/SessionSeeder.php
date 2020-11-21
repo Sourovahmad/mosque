@@ -13,13 +13,13 @@ class SessionSeeder extends Seeder
     public function run()
     {
         DB::table('sessions')->insert([
-            [
-                'name' => '2014 - 2018',
-                'description' => 'First Session'
-            ],
+           
             [
                 'name' => '2019 - 2020',
                 'description' =>'Secend Session'
+            ], [
+                'name' => '2014 - 2018',
+                'description' => 'First Session'
             ],
            
             

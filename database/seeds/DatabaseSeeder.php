@@ -25,8 +25,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CommitteeSeeder::class);
         $this->call(DesignationSeeder::class);
         $this->call(SessionSeeder::class);
-        $this->call(PrayingTimeSeeder::class);
-        $this->call(MonthSeeder::class);
+        // $this->call(PrayingTimeSeeder::class);
+        // $this->call(MonthSeeder::class);
      
         DB::table('users')->insert([
             [

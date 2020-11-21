@@ -2495,6 +2495,13 @@ a.mobile-logo {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover; }
+  
+.right-side--bg2 {
+  background-color: #f3f3f3;
+  background: url(images/bg/bg-custom2.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover; }
 
 .banner__single {
   position: relative; }
@@ -2529,8 +2536,12 @@ a.mobile-logo {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .banner__side-photo {
     left: 0; }
-  .right-side--bg {
-    background-position: 69% bottom; } }
+    .right-side--bg {
+      background-position: 69% bottom; }
+      .right-side--bg2 {
+        background-position: 69% bottom; }
+  
+  }
 
 @media only screen and (max-width: 767px) {
   .banner__side-photo {
@@ -2541,8 +2552,13 @@ a.mobile-logo {
     text-align: center; }
     .banner__side-photo img {
       width: auto; }
-  .right-side--bg {
-    background-position: 69% bottom; } }
+      .right-side--bg {
+        background-position: 69% bottom; }
+        .right-side--bg2 {
+          background-position: 69% bottom; }
+  
+  
+  }
 
 @media only screen and (max-width: 576px) {
   .banner__side-photo {
@@ -2553,8 +2569,13 @@ a.mobile-logo {
     text-align: center; }
     .banner__side-photo img {
       width: auto; }
-  .right-side--bg {
-    background-position: 69% bottom; } }
+      .right-side--bg {
+        background-position: 69% bottom; }
+        .right-side--bg2 {
+          background-position: 69% bottom; }
+  
+  
+  }
 
 .banner__content {
   position: relative;
