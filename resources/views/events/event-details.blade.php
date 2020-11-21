@@ -37,7 +37,19 @@
                     <div class="col-lg-8 col-xl-9">
                         <div class="event-details">
                             <div class="event-details__thumb">
+
+                                
+                                @if (is_null($event->video))
                                 <img src="{{ asset($event->image->url) }}" alt="Single event Details" style="width: 100%">
+                                @else
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    @php
+                                       echo $event->video ;
+                                    @endphp 
+                                </div>
+                                @endif
+                                
+
                             </div>
                             <h2 class="event-details__title">{{ $event->title }}</h2>
                             <div class="event-details__meta">
@@ -49,9 +61,10 @@
                                 </ul>
                             </div>
                             <div class="event-details__content">
-
+                               
                                 <p>@php echo($event->description) @endphp</p>
-
+                                
+                                
                             </div>
 
                             <div class="event-details__footer d-flex justify-content-between align-items-center flex-wrap">

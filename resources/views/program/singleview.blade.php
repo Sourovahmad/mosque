@@ -74,7 +74,17 @@
                     <div class="col-lg-8 col-xl-9">
                         <div class="event-details">
                             <div class="event-details__thumb">
+
+                                @if (is_null($program->video))
                                 <img src="{{ asset($program->image->url) }}" alt="Single Program Details" style="width: 100%">
+                                @else
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    @php
+                                    echo $program->video ;
+                                    @endphp
+                                </div>
+                                @endif
+
                             </div>
                             <h2 class="event-details__title">{{ $program->title }}</h2>
                         

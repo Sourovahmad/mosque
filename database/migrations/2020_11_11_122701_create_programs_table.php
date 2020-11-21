@@ -19,6 +19,7 @@ class CreateProgramsTable extends Migration
             $table->unsignedBigInteger('image_id');
             $table->unsignedBigInteger('category_id');
             $table->longText('description');
+            $table->longText('video')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

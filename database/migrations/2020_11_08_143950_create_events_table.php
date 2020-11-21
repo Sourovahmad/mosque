@@ -23,6 +23,7 @@ class CreateEventsTable extends Migration
             $table->string('vanu');
             $table->time('start_time');
             $table->time('end_time');
+            $table->longText('video')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
