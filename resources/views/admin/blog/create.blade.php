@@ -78,6 +78,11 @@
                             <input type="file" name="image" id="image" accept=" .jpg, .jpeg" required>
 
                         </div>
+                        <div class="form-group col-12 ">
+                            <label for="video">Video Link <i class="fa fa-info-circle"  title="Youtube embed code" aria-hidden="true"></i></label><br>
+                            <textarea class="form-control" id="video" name="video" rows="5"
+                                ></textarea>
+                        </div>
 
                     </div>
 

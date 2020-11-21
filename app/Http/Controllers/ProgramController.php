@@ -47,6 +47,9 @@ class ProgramController extends Controller
         $program->category_id = $request->category_id;
         $program->description = $request->description;
 
+        if(!is_null($request->video)){
+            $program->video = $request->video;
+        }
 
   
         $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
@@ -102,7 +105,9 @@ class ProgramController extends Controller
         $program->title = $request->title;
         $program->description = $request->description;
         $program->category_id = $request->category_id;
-
+        if(!is_null($request->video)){
+            $program->video = $request->video;
+        }
         if (!is_null($request->image)) {
 
             $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();

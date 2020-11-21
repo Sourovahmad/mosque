@@ -22,6 +22,7 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->string('author_name')->default(null);
             $table->longText('description');
+            $table->longText('video')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

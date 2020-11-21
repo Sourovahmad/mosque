@@ -52,7 +52,9 @@ class BlogController extends Controller
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;
 
-
+        if(!is_null($request->video)){
+            $blog->video = $request->video;
+        }
 
             $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
             $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();
@@ -111,7 +113,9 @@ class BlogController extends Controller
         $blog->language_id = $request->language_id;
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;
-
+        if(!is_null($request->video)){
+            $blog->video = $request->video;
+        }
         if (!is_null($request->image)) {
 
             $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
