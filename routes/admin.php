@@ -32,6 +32,13 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
+    Route::resource('/users','UserController');
+
+
+
+
     Route::post('/committee_position','CommitteeController@position');
     Route::post('/store-event-category','EventCategoryController@storeCategory');
     Route::post('/store-blog-category','BlogCategoryController@storeCategory');

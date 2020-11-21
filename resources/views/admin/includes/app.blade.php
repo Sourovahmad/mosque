@@ -193,7 +193,8 @@ $(document).ready(function(){
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <p >Developed By <a target="_blank" href="https://abasas.tech"> <span class="font-weight-bold text-success"> Abasas Technologies</span> </a>
+                        </p>
                     </div>
                 </div>
             </footer>
