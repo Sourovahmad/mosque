@@ -22,7 +22,6 @@
                 {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari].</h3> --}}
                 <div class="banner__content__button">
                     <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--gra cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
-										
                 </div>
             </div>
 
@@ -52,67 +51,55 @@
 
                             <tr>
                                 <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Dhuhr</td>
+                                <td>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Asr</td>
+                                <td>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Maghrib</td>
+                                <td>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Isha</td>
+                                <td>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }} </td>
 
                             </tr>
 
-                            <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
-
-                            </tr>
+                         
 
                         </tbody>
 
 
                     </table>
-                    <div class="bg-abasas-dark" style="padding-left: 40px;padding-right: 40px;">
+                    <div class="bg-abasas-dark text-left" style="padding-left: 40px;padding-right: 40px;">
 
-                        <div>JUMMAH SESSIONS:</div>
+                        <div class="text-center" >JUMMAH SESSIONS:</div>
                         <hr style="padding: 0; margin:0; color:white; width:100%">
-                        <div>1st. 12:30PM Khutbah </div>
-                        <div>2nd. 1:00PM Khutbah </div>
-                        <div>3rd. 1:30PM Khutbah </div>
+                        <div class="text-left">1st. 12:30PM Khutbah </div>
+                        <div class="text-left">2nd. 1:00PM Khutbah </div>
+                        <div class="text-left">3rd. 1:30PM Khutbah </div>
 
                     </div>
 
-
+                    <div class=" text-center">
+                        <a href="{{ route('praying-time') }}" class="cr-btn  cr-btn--black cr-btn--sm"><span>Full Schedule</span></a>
+                                            
+                    </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -127,7 +114,7 @@
                 <h1>In the name of <strong>“Allah”</strong></h1>
                 {{-- <h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari].</h3> --}}
                 <div class="banner__content__button">
-                    <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--gra cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+                    <a href="{{ route('donations.index') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
 										
                 </div>
             </div>
@@ -139,6 +126,7 @@
 
 
 
+            
                 <div class="text-light bg-dark" style="border:2px solid; margin:25px;">
 
                     <table class="table table-sm table-bordered table-striped p-4 text-light ">
@@ -158,39 +146,35 @@
 
                             <tr>
                                 <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Dhuhr</td>
+                                <td>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Asr</td>
+                                <td>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Maghrib</td>
+                                <td>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }} </td>
 
                             </tr>
 
                             <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
+                                <td>Isha</td>
+                                <td>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }} </td>
 
                             </tr>
 
-                            <tr>
-                                <td>Fajr</td>
-                                <td>05:45 AM. </td>
-
-                            </tr>
+                         
 
                         </tbody>
 
@@ -206,9 +190,11 @@
 
                     </div>
 
-
+                    <div class=" text-center">
+                        <a href="{{ route('praying-time') }}" class="cr-btn  cr-btn--black cr-btn--sm"><span>Full Schedule</span></a>
+                                            
+                    </div>
                 </div>
-
 
 
 
@@ -508,7 +494,7 @@
     </div>
 </section>
 <!-- Salat times area -->
-
+{{-- 
 <section class="cr-section salat-times-area">
     <div class="salat-times large--width d-flex align-items-center justify-content-center">
         <div class="salat-times__inner text-center">
@@ -520,7 +506,7 @@
                         <div
                             class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-md-between justify-content-center flex-md-nowrap">
                             <div class="salat-times__box">
-                                <div style="font-weight: 800; font-size:22px;color:#fff;">fajr </div>
+                                <div style="font-weight: 800; font-size:22px;color:#fff;">Fajr </div>
                                 <span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span>
                             </div>
 
@@ -557,7 +543,66 @@
             </div>
         </div>
     </div>
-</section><!-- //Salat times area -->
+</section><!-- //Salat times area --> --}}
+
+
+
+		<!-- Salat times area -->
+		<section class="cr-section salat-times-area  ">
+			<div class="row no-gutters salat-times-wrap align-items-center">
+				<div class="col-lg-12 col-xl-5">
+					<div class="salat-times d-flex align-items-center justify-content-center">
+						<div class="salat-times__inner text-center">
+							<h2>Time of Salat</h2>
+							<h4>{{ Carbon\Carbon::today()->format('d : M : Y') }}</h4>
+							<div class="salat-times__boxes d-flex flex-sm-wrap flex-wrap justify-content-center flex-md-nowrap">
+								<div class="salat-times__box">
+									<h4>Fajr</h4>
+									<span>{{ Carbon\Carbon::parse($salat->fajr)->format('h:i:a') }}</span>
+								</div>
+								<div class="salat-times__box">
+									<h4>Dhuhr</h4>
+									<span>{{ Carbon\Carbon::parse($salat->dhuhr)->format('h:i:a') }}</span>
+								</div>
+								<div class="salat-times__box">
+									<h4>Asr</h4>
+									<span>{{ Carbon\Carbon::parse($salat->asr)->format('h:i:a') }}</span>
+								</div>
+								<div class="salat-times__box">
+									<h4>Maghrib</h4>
+									<span>{{ Carbon\Carbon::parse($salat->maghrib)->format('h:i:a') }}</span>
+								</div>
+								<div class="salat-times__box">
+									<h4>Isha</h4>
+									<span>{{ Carbon\Carbon::parse($salat->isha)->format('h:i:a') }}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-xl-7 ">
+					<div class="donation-wantend text-center ptb--130">
+						<h2>COVID-19 (Jummah Sessions)</h2>
+						{{-- <h5>Please Pray your Sunnah Prayers at home.</h5> --}}
+						<p style="font-size: 110%">​For Your convenience and in accordance with the advice of the NYC Officials to limit crowds. Masjid Mission Center will have the following.</p>
+					
+					<div class="text-left font-weight-bold">
+					
+						<hr>
+						<ul>
+							<li>1st. 12:30PM Khutbah</li>
+							<li>2nd. 1:00PM Khutbah</li>
+							<li>3rd. 1:30PM Khutbah</li>
+						</ul>
+					</div>
+
+						<p class="text-danger text-left"> * Please Pray your Sunnah Prayers at home.</p>
+					</div>
+				</div>
+			</div>
+		</section><!-- //Salat times area -->
+
+
 
 
 <!-- Offer area -->

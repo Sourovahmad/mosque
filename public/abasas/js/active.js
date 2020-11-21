@@ -106,6 +106,14 @@
 		cssEase: 'linear' 
 	});
 
+	$(document).ready(function(){
+	
+
+		setInterval(function(){
+			$('.arrow-next').trigger('click');
+		 }, 5000);
+
+	  });
 
 
 
@@ -139,7 +147,6 @@
 
 
 
-
 	/*=========== ScrollUp ===========*/
 	$.scrollUp({
 	    scrollText: '<i class="fa fa-angle-up"></i>',
@@ -169,7 +176,7 @@
 	// 		html;
 	// 	date = new Date();
 	// 	zone = date.getTimezoneOffset() / -60;
-	// 	function prayerTimesFun(lat = 43, long = -80, zone = -5) {
+	// 	function prayerTimesFun(lat = 40, long = -73, zone = -5) {
 	// 		var prayertimes = prayTimes.getTimes(date, [lat, long], zone, 0, '12h');
 	// 		var prayerNames = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
 	// 		for(var i in prayerNames) {

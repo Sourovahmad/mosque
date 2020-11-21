@@ -1338,7 +1338,8 @@ a#scrollUp {
       color: #009047;
       background: transparent;
       border-color: #009047; }
-      .cr-btn.cr-btn--transparent.cr-btn--theme:hover, a.cr-btn.cr-btn--transparent.cr-btn--theme:hover, button.cr-btn.cr-btn--transparent.cr-btn--theme:hover {
+      .cr-btn.
+      .cr-btn--theme:hover, a.cr-btn.cr-btn--transparent.cr-btn--theme:hover, button.cr-btn.cr-btn--transparent.cr-btn--theme:hover {
         background: #009047;
         color: #fff; }
   .cr-btn.cr-btn--light, a.cr-btn.cr-btn--light, button.cr-btn.cr-btn--light {
@@ -2514,11 +2515,12 @@ a.mobile-logo {
   margin-left: -50px;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 1s ease-in-out 0.8s;
+  /* -webkit-transition: all 1s ease-in-out 0.8s;
   -moz-transition: all 1s ease-in-out 0.8s;
   -ms-transition: all 1s ease-in-out 0.8s;
   -o-transition: all 1s ease-in-out 0.8s;
-  transition: all 1s ease-in-out 0.8s; }
+  transition: all 1s ease-in-out 0.8s;  */
+}
 
 .slick-current .banner__side-photo, .slick-active .banner__side-photo {
   margin-left: 0;
