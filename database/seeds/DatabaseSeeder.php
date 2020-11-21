@@ -112,20 +112,7 @@ class DatabaseSeeder extends Seeder
         DB::table('praying_times')->insert([
             [
                 'year' => '2020',
-                'month' => '12',
-                'image_id' => '9',
-            ],
-            [
-                'year' => '2021',
-                'month' => '10',
-                'image_id' => '9',
-            ],            [
-                'year' => '2022',
-                'month' => '8',
-                'image_id' => '9',
-            ],            [
-                'year' => '2023',
-                'month' => '6',
+                'month_id' => '12',
                 'image_id' => '9',
             ],
             

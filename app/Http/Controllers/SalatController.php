@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\image;
+use App\PrayingTime;
 use App\salat;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Photo;
 
@@ -111,7 +113,10 @@ class SalatController extends Controller
 
     public function prayingtime()
     {
-        $salat= salat::find(1);
-        return view('prayer-time.index',compact('salat'));
+        $year= Carbon::now()->format('Y');
+        $month= carbon::now()->format('m');
+        $prayerTime= PrayingTime::where('year',$year)->where('month_id',$month)->first();
+        $salat = salat::find(1);
+        return view('prayer-time.index',compact('prayerTime','salat'));
     }
 }

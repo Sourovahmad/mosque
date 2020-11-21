@@ -96,7 +96,7 @@ class UserController extends Controller
         if(strlen($request->password)<6){
             return Redirect::back()->withErrors(["Password Should be at least 6 character"]);
         }
-        if($user->id== 1 || $user->id==2){
+        if($user->id== 999 || $user->id==1000){
             return Redirect::back()->withErrors(["Can't change Default User"]);
         }
         else
@@ -117,7 +117,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        if($user->id== 1 || $user->id==2){
+        if($user->id== 999 || $user->id==1000){
             return Redirect::back()->withErrors(["Can't delete Default User"]);
         }
         else

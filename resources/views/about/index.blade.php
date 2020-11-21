@@ -211,7 +211,7 @@
             </div>
             <div class="row p-4">
 
-                <div class="col-md-4 col-sm-12 p-4">
+                <div class="col-sm-12 col-md-4  p-4">
                     <div class="nav flex-column nav-pills rules-side-nav" id="v-pills-tab" role="tablist"
                         aria-orientation="vertical">
                         <a class="nav-link  active" id="v-pills-basic-tab" data-toggle="pill" href="#v-pills-basic"

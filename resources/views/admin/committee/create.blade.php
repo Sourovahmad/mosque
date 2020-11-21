@@ -25,18 +25,18 @@
 
 
                 <div class="row">
-                    <div class="form-group col-md-4 col-sm-12">
+                    <div class="form-group col-sm-12 col-md-4 ">
                         <label for="name"> Name<span style="color: red"> *</span></label>
                         <input type="text" name="name" class="form-control" id="name" required>
                     </div>
                     
-                    <div class="form-group col-md-4 col-sm-12 ">
+                    <div class="form-group col-sm-12 col-md-4  ">
                         <label for="phone"> Phone<span style="color: red"> *</span></label>
                         <input type="tel" name="phone" class="form-control" id="phone" required>
                     </div>
 
 
-                    <div class="form-group col-md-4 col-sm-12">
+                    <div class="form-group col-sm-12 col-md-4 ">
                         <label for="member_type">Member Type<span style="color: red"> *</span></label>
                         <select class="form-control form-control" value="" name="member_type" id="member_type"
                             required>
@@ -49,7 +49,7 @@
                     
 
 
-                    <div class="form-group col-md-4 col-sm-12">
+                    <div class="form-group col-sm-12 col-md-4 ">
                         <label for="designation_id">Designation<span style="color: red"> *</span></label>
                         <select class="form-control form-control" value="" name="designation_id" id="designation_id"
                             required>
@@ -59,7 +59,7 @@
                         </select>
                     </div>
 
-                    <div id="AddSessionSection" class="col-md-4 col-sm-12 p-0"></div>
+                    <div id="AddSessionSection" class="col-sm-12 col-md-4  p-0"></div>
 
 
 

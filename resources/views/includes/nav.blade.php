@@ -189,7 +189,7 @@
 
 									<!-- Mobile Menu -->
 									<div class="mobile-menu hidden-lg hidden-xlg hidden-xx hidden-sp">
-										<a class="mobile-logo" href="index.html"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="logo"></a>
+										<a class="mobile-logo" href="{{ route('home') }}"><img src="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}" alt="logo"></a>
 									</div><!-- //Mobile Menu -->
 
 								</div>

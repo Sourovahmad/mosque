@@ -189,7 +189,12 @@
 				<h1 class="text-center font-weight-bold p-4" style="font-weight: 800">Praying Time of {{ Carbon\Carbon:: now()->format('F, Y') }}</h1>
 			</div>
 			<div class="pl-4">
-				<img src="{{ asset($salat->image->url) }}" alt="Praying Time" >
+				@if (!is_null($prayerTime))
+				<img src="{{ asset($prayerTime->image->url) }}" alt="Praying Time" >
+				@else 
+				<p>No Picture Found</p>
+				@endif
+				
 			</div>
 			
 		</div>

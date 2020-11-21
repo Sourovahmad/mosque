@@ -55,7 +55,7 @@
                         <span class="text-dark">Name</span>
                         <input type="text" name="name" class="form-control " id="inlineFormInput" required>
                     </div>
-                    <div class="form-group col-md-4 col-sm-12  pl-4 pr-4">
+                    <div class="form-group col-sm-12 col-md-4   pl-4 pr-4">
                         <label for="role_id"> Role</label>
                         <select class="form-control " name="role_id" id="AddTaskUserId" required>
                             <option disabled selected value> -- select a Role -- </option>
@@ -65,11 +65,11 @@
                         </select>
                     </div>
 
-                    <div class="form-group col-md-4 col-sm-12  pl-4 pr-4">
+                    <div class="form-group col-sm-12 col-md-4   pl-4 pr-4">
                         <span class="text-dark">Email</span>
                         <input type="email" name="email" class="form-control " id="inlineFormInput" required>
                     </div>
-                    <div class="form-group col-md-4 col-sm-12  pl-4 pr-4">
+                    <div class="form-group col-sm-12 col-md-4   pl-4 pr-4">
                         <span class="text-dark">Password</span>
                         <input type="text" name="password" class="form-control " id="inlineFormInput" min="6" required>
                     </div>

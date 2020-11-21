@@ -89,9 +89,9 @@
 
                         <div class="text-center" >JUMMAH SESSIONS:</div>
                         <hr style="padding: 0; margin:0; color:white; width:100%">
-                        <div class="text-left">1st. 12:30PM Khutbah </div>
-                        <div class="text-left">2nd. 1:00PM Khutbah </div>
-                        <div class="text-left">3rd. 1:30PM Khutbah </div>
+                        <div>1st.&nbsp;12:30PM&nbsp;Khutbah </div>
+                        <div>2nd.&nbsp;1:00PM&nbsp;Khutbah </div>
+                        <div>3rd.&nbsp;1:30PM&nbsp;Khutbah </div>
 
                     </div>
 
@@ -184,9 +184,9 @@
 
                         <div>JUMMAH SESSIONS:</div>
                         <hr style="padding: 0; margin:0; color:white; width:100%">
-                        <div>1st. 12:30PM Khutbah </div>
-                        <div>2nd. 1:00PM Khutbah </div>
-                        <div>3rd. 1:30PM Khutbah </div>
+                        <div>1st.&nbsp;12:30PM&nbsp;Khutbah </div>
+                        <div>2nd.&nbsp;1:00PM&nbsp;Khutbah </div>
+                        <div>3rd.&nbsp;1:30PM&nbsp;Khutbah </div>
 
                     </div>
 

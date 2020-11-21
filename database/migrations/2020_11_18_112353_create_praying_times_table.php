@@ -16,7 +16,7 @@ class CreatePrayingTimesTable extends Migration
         Schema::create('praying_times', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('year');
-            $table->unsignedBigInteger('month');
+            $table->unsignedBigInteger('month_id');
             $table->unsignedBigInteger('image_id');
             $table->softDeletes();
             $table->timestamps();

@@ -13,13 +13,9 @@ class PrayingTime extends Model
         return $this->BelongsTo('App\image','image_id','id')->withTrashed();
        } 
 
-       public function month_name()
+       public function month()
        {
-           return $this->belongsTo('App\month','month','id');
-       }
-       public function year()
-       {
-           return $this->belongsTo('App\year','month_id','id');
+           return $this->belongsTo('App\month','month_id','id');
        }
 
 

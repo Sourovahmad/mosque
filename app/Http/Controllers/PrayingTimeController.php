@@ -5,14 +5,10 @@ namespace App\Http\Controllers;
 use App\image;
 use App\month;
 use App\PrayingTime;
-use App\year;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
-
-use function PHPUnit\Framework\isNull;
 
 class PrayingTimeController extends Controller
 {
@@ -21,20 +17,20 @@ class PrayingTimeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $year= carbon::now()->format('Y');
         $month= carbon::now()->format('m');
-        
-
-        $prayingtimes = PrayingTime::where('year',$year)->orderBy('month','asc')->get();
+        if(!is_null($request->year )){
+            $year= $request->year;
+        }
+        $activePrayerTime = PrayingTime::where('year',$year)->where('month_id',$month)->first();
+        $prayingtimes = PrayingTime::where('year',$year)->orderBy('month_id','asc')->get();
     
         $months = month::all();
 
 
-         return view('admin.PrayingTime.index',compact('months','prayingtimes','year'));  
-
-
+         return view('admin.PrayingTime.index',compact('months','prayingtimes','year','activePrayerTime'));  
 
    
     }
@@ -59,15 +55,14 @@ class PrayingTimeController extends Controller
     {
        
 
-   
+        $year = $request->year;
+        $month = $request->month;
 
-$year = $request->year;
-$month = $request->month;
 
-$prayingtime = PrayingTime::where('year',$year)->where('month',$month)->first();
-if( is_null($prayingtime) ){
-    $prayingtime = new prayingtime;
-}
+        $prayingtime = PrayingTime::where('year',$year)->where('month_id',$month)->first();
+        if( is_null($prayingtime) ){
+            $prayingtime = new prayingtime;
+        }
 
         $prayingtime->year = $request->year;
         $prayingtime->month = $request->month;
@@ -79,9 +74,9 @@ if( is_null($prayingtime) ){
 
         $height = $picture->height();
         $width = $picture->width();
-
+        $smheight= (int) (500/$width*$height);
         $picture->resize($width, $height)->save('images/'.$fileNameFull);
-        $picture = Photo::make($request->image)->fit(300, 225)->save('images/'.$fileNameSmall);
+        $picture = Photo::make($request->image)->fit(500, $smheight)->save('images/'.$fileNameSmall);
 
 
         $image = new image;
@@ -144,16 +139,4 @@ if( is_null($prayingtime) ){
         return Redirect::back()->withErrors(["Item Deleted" ]);
     }
 
-    public function yearfilter($id)
-
-    {  
-        
-        $year = $id;
-        $months = month::all();
-        $prayingtimes = PrayingTime::where('year',$id)->orderBy('month','asc')->get();
-        $yearfilter = PrayingTime::where('year',$id)->orderBy('month','asc')->get();
-       
-        return view('admin.PrayingTime.index',compact('yearfilter','months','prayingtimes','year'));
-
-    }
 }

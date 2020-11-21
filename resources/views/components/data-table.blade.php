@@ -625,7 +625,7 @@ function insertInputFormData(){
 
                     html = "";
 
-                    html += '<div class="form-group col-md-4 col-sm-12  p-4">';
+                    html += '<div class="form-group col-sm-12 col-md-4   p-4">';
                     html += '<label class="col-form-label" >  {{ $field["title"]  }} '+@if($require == 1)'<span style="color: red"> *</span>'@else "" @endif +'  </label>';
                     html += '<select class="form-control form-control" name="' + databaseName +
                         '"  required > <option disabled selected value> -- select an option -- </option>';
@@ -662,7 +662,7 @@ function insertInputFormData(){
 // // </div>
 
                     html = "";
-                    html += '<div class="col-md-4 col-sm-12  p-4">';
+                    html += '<div class="col-sm-12 col-md-4   p-4">';
                     html += '<label class="text-dark pl-4"> {{ $field["title"] }} '+@if($require == 1)'<span style="color: red"> *</span>'@else "" @endif +'   </label>';
                   
                     html += '<input type="'+ inputType+'"  '+@if($field["input_type"]=="number")' step="any" '@else "" @endif +'  name="' + database_name + '" class="form-control" '+@if($require == 1) 'required' @endif +'>';
