@@ -43,7 +43,7 @@
             
                                             <div class="navbar-brand text-light"> All Post </div>
                                 
-                                            <div><select class="form-control "  >
+                                            <div><select class="form-control "  id="languageSelect" >
                                                 <option value="1"> English</option>
                                                 <option value="2">  বাংলা</option>
                                                     </option>                                                                
@@ -57,7 +57,7 @@
                                     @foreach ($blogs as $blog)
                                         
                                   
-                                    <div class="col-lg-6 col-md-6 col-xl-4">
+                                    <div class="col-lg-6 col-md-6 col-xl-4 @if($blog->language_id==1) English @else Bangla @endif" style="display: none;">
                                         <article class="blog wow fadeInUp">
                                             <div class="blog__thumb">
                                                 <a href="{{ route('blog-singleview', $blog->id) }}">
@@ -131,5 +131,41 @@
                 </div>
             </div><!-- //Blogs area -->
 
+            
         </main><!-- //Page Conent -->
+
+
+
+
+@endsection
+
+
+@section('customJS')
+
+<script>
+     $(document).ready(function(){
+         function languageChange() {
+            if($("#languageSelect").val()==1)
+            { 
+                $('.Bangla').hide();
+                $('.English').show();
+            }
+            else
+            {
+                $('.English').hide();
+                $('.Bangla').show();
+            }
+         }
+         languageChange();
+         $('#languageSelect').change(function(){
+            languageChange();
+
+         });
+
+         
+
+     });
+
+ </script>
+    
 @endsection

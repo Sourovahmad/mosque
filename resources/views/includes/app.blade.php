@@ -1,3 +1,9 @@
+<?php
+
+if (!isset($_SESSION)) session_start();
+
+?>
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -463,6 +469,7 @@ color: #fff;
         })
 
     </script>
+    @yield('customJS')
 </body>
 
 </html>
