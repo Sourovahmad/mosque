@@ -25,23 +25,32 @@ class DatabaseSeeder extends Seeder
         $this->call(CommitteeSeeder::class);
         $this->call(DesignationSeeder::class);
         $this->call(SessionSeeder::class);
-        $this->call(RoleSeeder::class);
+       // $this->call(RoleSeeder::class);
         // $this->call(PrayingTimeSeeder::class);
         // $this->call(MonthSeeder::class);
      
+        DB::table('roles')->insert([
+            [
+                'role' => 'Admin'
+            ],
+            [
+                'role' => 'Imam'
+            ],
+
+        ]);
         DB::table('users')->insert([
             [
                 'id' => 999,
-                'name' => 'Abasas',
+                'name' => 'Masum Billah',
                 'email' => 'masumbillah3416@gmail.com',
-                'password' => Hash::make('1234'),
+                'password' => Hash::make('3XMAabasas1116430701'),
                 'role_id' => 1,
             ],
             [
                 'id' => 1000,
-                'name' => 'Sourov Ahmed',
-                'email' => 'sourov.okk@gmail.com',
-                'password' => Hash::make('1234'),
+                'name' => 'Abasas',
+                'email' => 'admin@abasas.tech',
+                'password' => Hash::make('3XMAabasas1116430725'),
                 'role_id' => 1,
             ],
         ]);
