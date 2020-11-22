@@ -47,6 +47,11 @@ $(document).ready(function(){
             $('.sidebar .collapse').collapse('hide');
           };
         });
+
+        if ($(window).width() < 768) {
+          $('#sidebarToggleTop').trigger('click');
+          // $('.sidebar .collapse').collapse('hide');
+        };
       
         // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
         $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {

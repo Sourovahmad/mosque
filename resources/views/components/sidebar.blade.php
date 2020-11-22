@@ -165,7 +165,7 @@
 
     
           <!-- Sidebar -->
-          <ul class="navbar-nav bg-abasas-dark  sidebar sidebar-dark accordion " id="accordionSidebar">
+          <ul class="navbar-nav bg-abasas-dark  sidebar sidebar-dark accordion sidebar-toggled " id="accordionSidebar">
 
           
             

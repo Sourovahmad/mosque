@@ -15,10 +15,10 @@ class CreateDonatorsTable extends Migration
     {
         Schema::create('donators', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->unique();
+            $table->string('')->nullable();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('address')->nullable();
+            $table->longText('address')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('zip_code')->nullable();

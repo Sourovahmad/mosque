@@ -1,148 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Stripe Payment</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<body>
+@extends('includes.app')
 
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
-@if (session()->has('success'))
-<div class="alert alert-success">
-    @if(is_array(session('success')))
-        <ul>
-            @foreach (session('success') as $message)
-                <li>{{  $message }}</li>
-            @endforeach
-        </ul>
-    @else
-        {{ session('success') }}
-    @endif
-</div>
-@endif
+@section('content')
 
 
 
-
-
-    @php
-        $stripe_key = 'pk_test_51Hl3M4LtX3QocVix8Kq6e56OyI5ANiTi2mHpvIi24zVe6RTG3HoVpWgN7NZ8sCRyyR0ONtJfradWieV2MPQATH9P00IEC0qlfT';
-    @endphp
-    <div class="container" style="margin-top:10%;margin-bottom:10%">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="">
-                    <p>You will be charged :  <b>  {{ $currency }} {{ $amount/100 }} </b></p>
-                </div>
-                <div class="card">
-                    <form action="{{route('donationSuccess', $user )}}"  method="post" id="payment-form">
-                        @csrf                    
-                        <div class="form-group">
-                            <div class="card-header">
-                                <label for="card-element">
-                                    Enter your credit card information
-                                </label>
-                            </div>
-                            <div class="card-body">
-                                <div id="card-element">
-                                <!-- A Stripe Element will be inserted here. -->
+    
+    <!-- Donnation Form -->
+    <div class="pg-donation-area ptb--150 bg-image--5 border" id="donate" >
+        <div class="container">
+            <form action="{{ route('checkout') }}" method="get" id="pg-donation" class="pg-donation">
+                <div class="row justify-content-center">
+                    <div class="col-12 mt-4">
+                        <aside class="pg-donation__personalinfo">
+                            <h4 class="pg-dontation__title ">Personal Information</h4>
+                            <div class="col-12 row">
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" name="first_name" id="first_name" class="form-control" value="{{ $donator->first_name }}" >
                                 </div>
-                                <!-- Used to display form errors. -->
-                                <div id="card-errors" role="alert"></div>
-                                <input  name="plan" value="" hidden/>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" name="last_name" id="last_name" class="form-control" value="{{ $donator->last_name }}" >
+                                    
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                          <button
-                          id="card-button"
-                          class="btn btn-dark"
-                          type="submit"
-                          data-secret="{{ $intent }}"
-                        > Pay </button>
-                        </div>
-                    </form>
-                    {{ $intent }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        // Custom styling can be passed to options when creating an Element.
-        // (Note that this demo uses a wider set of styles than the guide below.)
+                            <div class="col-12 row">
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="cel_phone">Cel Phone</label>
+                                    <input type="tel" name="cel_phone" id="first_name" class="form-control" value="{{ $donator->cel_phone }}" >
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <label for="home_phone">Home Phone</label>
+                                    <input type="tel" name="home_phone" id="home_phone" class="form-control" value="{{ $donator->home_phone }}" >
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 row">
+                                <div class="col-12">
+                                    <label for="address">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" value="{{ $donator->email }}" >
+                                    
 
-        var style = {
-            base: {
-                color: '#32325d',
-                lineHeight: '18px',
-                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                fontSmoothing: 'antialiased',
-                fontSize: '16px',
-                '::placeholder': {
-                    color: '#aab7c4'
-                }
-            },
-            invalid: {
-                color: '#fa755a',
-                iconColor: '#fa755a'
-            }
-        };
-    
-        const stripe = Stripe('{{ $stripe_key }}', { locale: 'en' }); // Create a Stripe client.
-        const elements = stripe.elements(); // Create an instance of Elements.
-        const cardElement = elements.create('card', { style: style }); // Create an instance of the card Element.
-        const cardButton = document.getElementById('card-button');
-        const clientSecret = cardButton.dataset.secret;
-    
-        cardElement.mount('#card-element'); // Add an instance of the card Element into the `card-element` <div>.
-    
-        // Handle real-time validation errors from the card Element.
-        cardElement.addEventListener('change', function(event) {
-            var displayError = document.getElementById('card-errors');
-            if (event.error) {
-                displayError.textContent = event.error.message;
-            } else {
-                displayError.textContent = '';
-            }
-        });
-    
-        // Handle form submission.
-        var form = document.getElementById('payment-form');
-    
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-        stripe.handleCardPayment(clientSecret, cardElement, {
-                payment_method_data: {
-                    //billing_details: { name: cardHolderName.value }
-                }
-            })
-            .then(function(result) {
-                console.log(result);
-                if (result.error) {
-                    // Inform the user if there was an error.
-                    var errorElement = document.getElementById('card-errors');
-                    errorElement.textContent = result.error.message;
-                } else {
-                    console.log(result);
-                    form.submit();
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+                                </div>
+                            </div>
+                            <div class="col-12 row">
+                                <div class="col-12">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" class="form-control" value="{{ $donator->address }}" >
+                                    
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 row">
+                                <div class="col-sm-12 col-md-4">
+                                    <label for="city">City</label>
+                                    <input type="text" name="city" id="city" class="form-control" value="{{ $donator->city }}" >
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <label for="state">State</label>
+                                    <input type="text" name="state" id="state" class="form-control" value="{{ $donator->state }}" >
+                                    
+                                </div>
+                                <div class="col-sm-12 col-md-4">
+                                    <label for="zip_code">Zip Code</label>
+                                    <input type="text" name="zip_code" id="zip_code" class="form-control" value="{{ $donator->zip_code }}" >
+                                    
+                                </div>
+                            </div>
+
+
+                           
+
+
+
+
+                        </aside>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div><!-- //Donnation Form -->
+
+
+@endsection

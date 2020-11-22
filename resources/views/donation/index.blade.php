@@ -59,174 +59,26 @@
     <!-- Donnation Form -->
     <div class="pg-donation-area ptb--150 bg-image--5 border" id="donate" >
         <div class="container">
-            <form action="{{ route('donations.store') }}" method="post" id="pg-donation" class="pg-donation">
-                @csrf
-                <div class="row">
-                    <div class="col-lg-6">
+            <form action="{{ route('checkout') }}" method="get" id="pg-donation" class="pg-donation">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 mt-4">
                         <aside class="pg-donation__personalinfo">
-                            <h4 class="pg-dontation__title">Personal Information</h4>
-                            <div class="single-input">
-                                <label for="pg-donation-name">Name*</label>
-                                <input type="text" name="name" id="pg-donation-name">
-                            </div>
-                            {{-- <div class="single-input">
-                                <label for="pg-donation-email">Email*</label>
-                                <input type="email" id="pg-donation-email">
-                            </div> --}}
-                            <div class="single-input">
-                                <label for="pg-donation-phone">Phone*</label>
-                                <input type="number" name="phone" id="pg-donation-phone">
-                            </div>
-                            <div class="single-input">
-                                <label for="pg-donation-address">Address*</label>
-                                <input type="text" name="address" id="pg-donation-address">
-
-                            </div>
-                            {{-- <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="single-input">
-                                        <label for="pg-donation-country">Country*</label>
-                                        <select name="pg-donation-country" id="pg-donation-country">
-                                            <option value="united-states">United States</option>
-                                            <option value="canada">Canada</option>
-                                            <option value="australia">Australia</option>
-                                            <option value="germany">Germany</option>
-                                            <option value="sweden">Sweden</option>
-                                            <option value="india">India</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="single-input">
-                                        <label for="pg-donation-profession">Profession*</label>
-                                        <input type="text" id="pg-donation-profession">
-                                    </div>
-                                </div>
-                            </div> --}}
-                        </aside>
-                    </div>
-                    <div class="col-lg-6">
-                        <aside class="pg-donation__bankinfo">
                             <h4 class="pg-dontation__title">Donation Information</h4>
 
 
                             <div class="single-input ">
-                                <label for="pg-donation-email">Email*</label>
-                                <input type="email" name="email" id="pg-donation-email">
+                                <label for="pg-donation-email">Phone*</label>
+                                <input type="tel" name="phone" id="pg-donation-phone" required>
                             </div>
 
 
-                            {{-- <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="single-input">
-                                        <label for="pg-donation-amount">Donation Amount*</label>
-                                        <input type="number" id="pg-donation-amount">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="single-input donation-type">
-                                        <p>
-                                            <input type="radio" name="pg-donation-type" id="pg-donation-type-onetime">
-                                            <label for="pg-donation-type-onetime">Onetime</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio" name="pg-donation-type" id="pg-donation-type-monthly">
-                                            <label for="pg-donation-type-monthly">Monthly</label>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> --}}
-
-
-
-
-
-
-                            {{-- <div class="single-input">
-                                <label for="pg-donation-cardnumber">Card number</label>
-                                <input type="text" id="pg-donation-cardnumber">
-                            </div> --}}
-
-
-
-
-                            {{-- <div class="single-input">
-                                <label for="pg-donation-expiry-month">Expire Date</label>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <select name="pg-donation-country" id="pg-donation-expiry-month">
-                                            <option value="january">January</option>
-                                            <option value="february">February</option>
-                                            <option value="march">March</option>
-                                            <option value="april">April</option>
-                                            <option value="june">June</option>
-                                            <option value="july">July</option>
-                                            <option value="august">August</option>
-                                            <option value="september">September</option>
-                                            <option value="november">November</option>
-                                            <option value="december">December</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <select name="pg-donation-country" id="pg-donation-expiry-year">
-                                            <option value="2017">2017</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2014">2014</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2012">2012</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> --}}
-
-
-                            {{-- <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="single-input">
-                                        <label for="pg-donation-security">Security Code</label>
-                                        <input type="text" id="pg-donation-security">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="single-input">
-                                        <label for="pg-donation-zipcode">Zip Code</label>
-                                        <input type="text" id="pg-donation-zipcode">
-                                    </div>
-                                </div>
-                            </div> --}}
-
-
-                            {{-- <div class="single-input payment-cards">
-                                <h6>Payment Method</h6>
-                                <p>
-                                    <input type="radio" name="pg-donation-paycard" id="pg-donation-card-mastercard">
-                                    <label for="pg-donation-card-mastercard"><img src="images/icons/card-mastercard.png"
-                                            alt="card type"></label>
-                                </p>
-                                <p>
-                                    <input type="radio" name="pg-donation-paycard" id="pg-donation-card-visa">
-                                    <label for="pg-donation-card-visa"><img src="images/icons/card-visa.png"
-                                            alt="card type"></label>
-                                </p>
-                                <p>
-                                    <input type="radio" name="pg-donation-paycard" id="pg-donation-card-american-express">
-                                    <label for="pg-donation-card-american-express"><img
-                                            src="images/icons/card-american-express.png" alt="card type"></label>
-                                </p>
-                                <p>
-                                    <input type="radio" name="pg-donation-paycard" id="pg-donation-card-decover">
-                                    <label for="pg-donation-card-decover"><img src="images/icons/card-decover.png"
-                                            alt="card type"></label>
-                                </p>
-                            </div> --}}
 
                             <div class="single-input">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" placeholder="Amount" name="amount"
-                                        aria-label="amount" aria-describedby="basic-addon2">
+                                        aria-label="amount" aria-describedby="basic-addon2" required>
                                     <div class="input-group-append">
-										<select class="custom-select" id="currencySelect" name="currency">
+										<select class="custom-select" id="currencySelect" name="currency" required>
 											<option value="3">Three</option>
 										  </select>
                                     </div>

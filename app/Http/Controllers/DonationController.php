@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\donation;
+use App\donator;
 use App\Notifications\PaidNotification;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\Notifiable;
@@ -83,9 +84,9 @@ class DonationController extends Controller
 
 // pi_1HnR19LtX3QocVixHvbUS8uL_secret_QtaExCssC4fXU3EsvzIrcReIM 
 
-      $intent = 'pi_1HnR19LtX3QocVixHvbUS8uL_secret_QtaExCssC4fXU3EsvzIrcReIM';
-      $amount=500;
-      $currency="usd";
+    //   $intent = 'pi_1HnR19LtX3QocVixHvbUS8uL_secret_QtaExCssC4fXU3EsvzIrcReIM';
+    //   $amount=500;
+    //   $currency="usd";
 
     
       
@@ -183,5 +184,18 @@ class DonationController extends Controller
     //    $email->notify(new PaidNotification($email));
        return redirect()->back()->withSuccess(['Successfully Doneted']);
      
+    }
+
+
+    public function checkData(Request $request){
+        $donationData = $request;
+        $donator = donator::where('cel_phone',$request->phone)->first();
+        if(is_null($donator)){
+            $donator= new donator;
+            $donator->cel_phone= $request->phone;
+            $donator->save();
+        }
+        return view('donation.checkout',compact('donator','donationData'));
+
     }
 }
