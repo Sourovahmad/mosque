@@ -21,7 +21,17 @@ class CreateDonationsTable extends Migration
             $table->string('donation_type');
             $table->double('amount',18,2);
             $table->string('currency');
+            
+            $table->string('payment_status');
             $table->timestamps();
+
+
+
+
+
+
+
+
         });
     }
 
