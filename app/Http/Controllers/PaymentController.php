@@ -52,7 +52,7 @@ class PaymentController extends Controller
                 'amount' => $request->input('amount'),
                 'currency' => env('STRIPE_CURRENCY'),
                 'token' => $token,
-                'description'=> 'This is a test purchase transaction.',
+                'description'=> 'Donation for MMC. Donation type : '. $request->donaton_type ,
                 'receipt_email' => $request->input('email'),
             ])->send();
           
