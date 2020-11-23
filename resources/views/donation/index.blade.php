@@ -14,7 +14,7 @@
 										<div class="banner__content text-center">	
                                             <img src="{{asset('abasas/images/others-png/bismilla-word.png')}}" alt="bismillah word">
 									
-											<h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari]. </h3>
+											<h3>“Those who spend in charity will be richly rewarded.” [Quran 75:10]</h3>
 											
 											<div class="banner__content__button">
 												<a href="{{ route('donations') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
@@ -37,15 +37,15 @@
 				<!-- Team Area -->
 				<section class="cr-section team-area ptb--150 bg--white flower--left-bottom">
 					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
+						<div class="row justify-content-center">
+							<div class="col-lg-10  col-md-10 col-12 ">
 								<div class="section-title text-center">
 									<h2>REMEMBER ALLAH</h2>
-									<h5>ALLAH SAID IN QURAN</h5>
+									<h5>Ali bin Abu Talib said</h5>
 									<div>
-                                        يَسْأَلُونَكَ مَاذَا يُنفِقُونَ قُلْ مَا أَنفَقْتُم مِّنْ خَيْرٍ فَلِلْوَالِدَيْنِ وَالأَقْرَبِينَ وَالْيَتَامَى وَالْمَسَاكِينِ وَابْنِ السَّبِيلِ وَمَا تَفْعَلُواْ مِنْ خَيْرٍ فَإِنَّ اللّهَ بِهِ عَلِيمٌ 
+                                        حَدَّثَنَا الْعَبَّاسُ بْنُ عُثْمَانَ الدِّمَشْقِيُّ، حَدَّثَنَا الْوَلِيدُ بْنُ مُسْلِمٍ، عَنِ ابْنِ لَهِيعَةَ، حَدَّثَنِي أَبُو الأَسْوَدِ، عَنْ عُرْوَةَ، عَنْ عَلِيِّ بْنِ أَبِي طَالِبٍ، قَالَ قَالَ رَسُولُ اللَّهِ ـ صلى الله عليه وسلم ـ ‏ "‏ مَنْ بَنَى لِلَّهِ مَسْجِدًا مِنْ مَالِهِ بَنَى اللَّهُ لَهُ بَيْتًا فِي الْجَنَّةِ ‏"‏ ‏.‏
                                     </div>
-									<p>They will ask thee as to what they should spend on others. Say: “Whatever of your wealth you spend, shall (first) be for your parents, and for the near of kin, and the orphans, and the needy, and the wayfarer; and whatever good you do, verily, God has full knowledge thereof.” (Surah Baqarah: 215)
+									<p>The Messenger of Allah said: 'Whoever builds a mosque for the sake of Allah (from his own wealth), Allah will build a house for him in Paradise'
                                     </p>
                                         <a href="{{ route('donations') }}#donate" class="cr-btn cr-btn--transparent  cr-btn--sm"><span>Donate Now</span></a>
                                     

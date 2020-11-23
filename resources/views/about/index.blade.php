@@ -117,16 +117,8 @@
     <!-- Team Area -->
     <section class="cr-section team-area ptb--150 bg-image--7 " id="imam" data-black-overlay="8">
         <div class="container">
-            {{-- <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
-                    <div class="section-title text-center">
-                        <h4>Our “Team”</h4>
-                        <h2>Meet our Organizer</h2>
-                        <p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely
-                            painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-                    </div>
-                </div>
-            </div> --}}
+           
+            <h1 class="text-center text-light">Imams</h1>
             <div class="row">
                 <!-- Single Team -->
                 @foreach ($imams as $imam)
@@ -151,42 +143,6 @@
                     </div><!-- //Single Team -->
                 @endforeach
 
-                <!-- Single Team -->
-                {{-- <div class="col-lg-6 col-md-6 col-xl-3">
-                    <figure class="team-member wow fadeInUp">
-                        <div class="team-member__thumb">
-                            <div class="hexagon">
-                                <div class="hexagon__inner1">
-                                    <div class="hexagon__inner2">
-                                        <img src="images/team/2.jpg" alt="team member 1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="team-member__content">
-                            <h3>Nahiyan Bin Momen</h3>
-                            <h5>Event Organizer</h5>
-                        </figcaption>
-                    </figure>
-                </div><!-- //Single Team -->
-                <!-- Single Team -->
-                <div class="col-lg-6 col-md-6 col-xl-3">
-                    <figure class="team-member wow fadeInUp">
-                        <div class="team-member__thumb">
-                            <div class="hexagon">
-                                <div class="hexagon__inner1">
-                                    <div class="hexagon__inner2">
-                                        <img src="images/team/4.jpg" alt="team member 1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <figcaption class="team-member__content">
-                            <h3>Hasib Bin Asfaque</h3>
-                            <h5>Imam</h5>
-                        </figcaption>
-                    </figure>
-                </div><!-- //Single Team --> --}}
             </div>
 
             <div class="cr-pagination text-right">
@@ -432,9 +388,7 @@
                 <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12 offset-0">
                     <div class="section-title text-center">
                         <h2>OUR GALLERY</h2>
-                        {{-- <p>It is obligatory upon every muslim to offer their salaah
-                            (prayers) five times a day. The image below shows the correct positions of praying in every
-                            salah.</p> --}}
+
                     </div>
                 </div>
             </div>
