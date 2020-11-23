@@ -170,17 +170,22 @@
 											<li><a href="{{ route('events') }}">EVENT</a></li>
 										
 	
-											<li class="cr-dropdown"><a href="{{ route('programs') }}">OUR PROGRAMS</a>
+											<li ><a href="{{ route('programs') }}">OUR PROGRAMS</a>
+										
+											</li>
+											
+											<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
+											<li><a href="">Blog</a></li>
+
+											<li class="cr-dropdown"><a href="{{ route('blogs') }}">Blog</a>
 												<ul class="cr-dropdown-menu">
 													<li><a href="{{ route('program-category',1) }}">Jummah Kutba</a></li>
 													<li><a href="{{ route('program-category',2) }}">Darse Bukhari</a></li>
 													<li><a href="{{ route('program-category',3) }}">Darse Quran</a></li>
 													<li><a href="{{ route('program-category',4) }}">Special Event</a></li>
+													<li><a href="{{ route('blogs') }}">Other</a></li>
 												</ul>
 											</li>
-											
-											<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
-											<li><a href="{{ route('blogs') }}">Blog</a></li>
 											{{-- <li> <a href="{{ route('donations') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a></li> --}}
 											<a href="{{ route('donations') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm" style=" margin:10px 0"><span>Donate </span></a>
 										</ul>
