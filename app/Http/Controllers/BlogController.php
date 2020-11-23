@@ -47,7 +47,7 @@ class BlogController extends Controller
         $blog = new blog;
         $blog->title = $request->title;
         $blog->category_id = $request->category_id;
-        $blog->user_id =Auth::user()->id; //auth must be added
+        $blog->user_id =Auth::user()->id; 
         $blog->language_id = $request->language_id;
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;

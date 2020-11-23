@@ -17,6 +17,7 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('image_id');
             $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->longText('description');
             $table->date('date');

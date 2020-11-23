@@ -7,6 +7,7 @@ use App\eventCategory;
 use App\image;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
 
@@ -47,6 +48,7 @@ class EventController extends Controller
         $event->title = $request->title;
         $event->category_id = $request->category_id;
         $event->description = $request->description;
+        $event->user_id =Auth::user()->id; 
         $event->date = $request->date;
         $event->vanu = $request->vanu;
         $event->start_time = $request->start_time;

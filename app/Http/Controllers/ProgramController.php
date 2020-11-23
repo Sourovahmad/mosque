@@ -6,6 +6,7 @@ use App\image;
 use App\program;
 use App\programCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Intervention\Image\ImageManagerStatic as Photo;
 
@@ -46,6 +47,7 @@ class ProgramController extends Controller
         $program->title = $request->title;
         $program->category_id = $request->category_id;
         $program->description = $request->description;
+        $program->user_id =Auth::user()->id; 
 
         if(!is_null($request->video)){
             $program->video = $request->video;
