@@ -14,7 +14,7 @@
 								<h2 class="cr-breadcrumb__title">MMC-EXECUTIVE MEMBERS</h2>
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
-										<li><a href="index.html">Home</a></li>
+										<li><a href="{{ route('home') }}">Home</a></li>
 										<li>MMC-MEMBERS</li>
 									</ul>
 								</div>

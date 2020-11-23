@@ -10,8 +10,8 @@
 								<h2 class="cr-breadcrumb__title ">BLOG</h2>
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
-										<li><a href="index.html">blog</a></li>
-										<li>about</li>
+										<li><a href="{{ route('home') }}">home</a></li>
+										<li>blogs</li>
 									</ul>
 								</div>
 							</div>

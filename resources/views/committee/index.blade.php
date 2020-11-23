@@ -13,7 +13,7 @@
 								<h2 class="cr-breadcrumb__title TextUppercase ">MMC-{{ $TypeName }}</h2>
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
-										<li>MMC - </li>
+										<li>MMC  </li>
 										<li>{{ $TypeName }}</li>
 									</ul>
 								</div>
