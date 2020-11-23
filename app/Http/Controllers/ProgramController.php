@@ -147,8 +147,7 @@ class ProgramController extends Controller
     public function FrontendProgram()
     {
 
-        $programs = program::orderBy('id','desc')->paginate(6);
-        return view('program.index',compact('programs'));
+        return view('program.index');
     }
 
     public function FrontendProgramCategory($category_id)

@@ -175,7 +175,7 @@
 											</li>
 											
 											<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
-											<li><a href="">Blog</a></li>
+											{{-- <li><a href="">Blog</a></li> --}}
 
 											<li class="cr-dropdown"><a href="{{ route('blogs') }}">Blog</a>
 												<ul class="cr-dropdown-menu">
