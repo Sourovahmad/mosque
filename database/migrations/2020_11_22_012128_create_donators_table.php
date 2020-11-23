@@ -15,7 +15,7 @@ class CreateDonatorsTable extends Migration
     {
         Schema::create('donators', function (Blueprint $table) {
             $table->id();
-            $table->string('')->nullable();
+            $table->string('email')->nullable();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->longText('address')->nullable();
