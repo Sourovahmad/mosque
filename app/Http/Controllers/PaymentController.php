@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\donationDaily;
+use App\donationMonthly;
 use App\donator;
 use App\Payment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Omnipay\Omnipay;
 
@@ -79,6 +82,7 @@ class PaymentController extends Controller
 
                     $donator->save();
                     $payment->save();
+                    $this->addDailyMonthly($payment->amount);
                 }
  
                 return "Payment is successful. Your payment id is: ". $arr_payment_data['id'];
@@ -145,6 +149,26 @@ class PaymentController extends Controller
             $donator->save();
         }
         return view('donation.checkout',compact('donator','donationData'));
+
+    }
+    public function addDailyMonthly($amount){
+        $date = Carbon::now()->format('Y-m-d');
+        $month = Carbon::now()->format('Y-m-01');
+        $dailyDonation = donationDaily::where('date',$date)->first();
+        $monthlyDonation = donationMonthly::where('month',$month)->first();
+        if(is_null($dailyDonation)){
+            $dailyDonation =new donationDaily;
+            $dailyDonation->date= $date;
+        }
+        if(is_null($monthlyDonation)){
+            $monthlyDonation =new donationMonthly;
+            $monthlyDonation->month= $month;
+        }
+        $dailyDonation->amount+= $amount;
+        $monthlyDonation->amount+= $amount;
+        
+        $dailyDonation->save();
+        $monthlyDonation->save();
 
     }
 }

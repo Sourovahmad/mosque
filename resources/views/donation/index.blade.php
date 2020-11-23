@@ -75,7 +75,7 @@
 
                             <div class="single-input">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Amount($)" name="amount"
+                                    <input type="number" step="any" class="form-control" placeholder="Amount($)" name="amount"
                                         aria-label="amount" aria-describedby="basic-addon2" required>
                                    
                                 </div>
@@ -87,45 +87,45 @@
                                 <div class="col-12 pt-0 mt-0">
                                     <div class="single-input donation-type mt-4 ">
                                         <p>
-                                            <input type="radio"   value="onetime" class="text-dark"
+                                            <input type="radio"   value="Onetime" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-onetime" checked>
                                             <label for="pg-donation-type-onetime" class="text-dark">Onetime</label>
                                         </p>
                                         <p>
-                                            <input type="radio"   value="monthly" class="text-dark"
+                                            <input type="radio"   value="Monthly" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-monthly">
                                             <label for="pg-donation-type-monthly" class="text-dark">Monthly</label>
                                         </p>
                                         <p>
-                                            <input type="radio"   value="general" class="text-dark"
+                                            <input type="radio"   value="General" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-general">
                                             <label for="pg-donation-type-general" class="text-dark">General</label>
                                         </p>
                                        
                                         <p>
-                                            <input type="radio"   value="zakath" class="text-dark"
+                                            <input type="radio"   value="Zakat/Fitrah" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-zakat">
                                             <label for="pg-donation-type-zakat" class="text-dark">Zakat/Fitrah</label>
                                         </p>
                                        
                                       
                                         <p>
-                                            <input type="radio"   value="lifeMember" class="text-dark"
+                                            <input type="radio"   value="Life Member ($1000)" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-lifeMember">
                                             <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($1000)</label>
                                         </p>
                                         <p>
-                                            <input type="radio"   value="sadaqah" class="text-dark"
+                                            <input type="radio"   value="Sadaqah" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-sadaqah">
                                             <label for="pg-donation-type-sadaqah" class="text-dark">Sadaqah</label>
                                         </p>
                                         <p>
-                                            <input type="radio"   value="quard-e-hasanah" class="text-dark"
+                                            <input type="radio"   value="Quard-e-Hasanah" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-quard-e-hasanah">
                                             <label for="pg-donation-type-quard-e-hasanah" class="text-dark">Quard-e-Hasanah</label>
                                         </p>
                                         <p>
-                                            <input type="radio"   value="others" class="text-dark"
+                                            <input type="radio"   value="Others" class="text-dark"
                                                  name="donation_type" id="pg-donation-type-others">
                                             <label for="pg-donation-type-others" class="text-dark">Others</label>
                                         </p>

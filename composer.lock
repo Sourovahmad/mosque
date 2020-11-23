@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-
-
-
     "content-hash": "51b37bd8a6331ea92d65b00dbd2fa271",
-
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2974,16 +2970,16 @@
         },
         {
             "name": "stripe/stripe-php",
-            "version": "v7.64.0",
+            "version": "v7.65.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stripe/stripe-php.git",
-                "reference": "783557801e6def695ff134291d9614e6268834da"
+                "reference": "d4a22eeec7654efb8476fe8bea95b1e9928025a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/783557801e6def695ff134291d9614e6268834da",
-                "reference": "783557801e6def695ff134291d9614e6268834da",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/d4a22eeec7654efb8476fe8bea95b1e9928025a6",
+                "reference": "d4a22eeec7654efb8476fe8bea95b1e9928025a6",
                 "shasum": ""
             },
             "require": {
@@ -3027,7 +3023,7 @@
                 "payment processing",
                 "stripe"
             ],
-            "time": "2020-11-18T21:03:34+00:00"
+            "time": "2020-11-19T19:37:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
