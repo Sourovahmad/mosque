@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\donator;
 use App\Payment;
 use Illuminate\Http\Request;
 use Omnipay\Omnipay;
@@ -36,7 +37,6 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request;
         if ($request->input('stripeToken')) {
   
             $gateway = Omnipay::create('Stripe');
@@ -61,13 +61,23 @@ class PaymentController extends Controller
                 if(!$isPaymentExist)
                 {
                     $payment = new Payment;
-                    $payment->donator_id=12;
-                    $payment->donation_type='one_time';
+                    $donator = donator::find($request->donator_id);
+
+                    $payment->donator_id= $request->donator_id;
+                    $payment->donation_type= $request->donaton_type;
                     $payment->payment_id = $arr_payment_data['id'];
                     $payment->payer_email = $request->input('email');
                     $payment->amount = $arr_payment_data['amount']/100;
                     $payment->currency = env('STRIPE_CURRENCY');
                     $payment->payment_status = $arr_payment_data['status'];
+
+                    $donator->first_name = $request->first_name;
+                    $donator->last_name = $request->last_name;
+                    $donator->home_phone = $request->home_phone;
+                    $donator->address = $request->address;
+                    $donator->email = $request->email;
+
+                    $donator->save();
                     $payment->save();
                 }
  
@@ -123,5 +133,18 @@ class PaymentController extends Controller
     public function destroy($id)
     {
         return abort(404);
+    }
+    
+    public function checkData(Request $request){
+        // return $request;
+        $donationData = $request;
+        $donator = donator::where('cel_phone',$request->phone)->first();
+        if(is_null($donator)){
+            $donator= new donator;
+            $donator->cel_phone= $request->phone;
+            $donator->save();
+        }
+        return view('donation.checkout',compact('donator','donationData'));
+
     }
 }

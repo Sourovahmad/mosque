@@ -187,15 +187,4 @@ class DonationController extends Controller
     }
 
 
-    public function checkData(Request $request){
-        $donationData = $request;
-        $donator = donator::where('cel_phone',$request->phone)->first();
-        if(is_null($donator)){
-            $donator= new donator;
-            $donator->cel_phone= $request->phone;
-            $donator->save();
-        }
-        return view('donation.checkout',compact('donator','donationData'));
-
-    }
 }

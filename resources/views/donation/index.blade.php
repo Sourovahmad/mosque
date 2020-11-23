@@ -75,13 +75,9 @@
 
                             <div class="single-input">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Amount" name="amount"
+                                    <input type="text" class="form-control" placeholder="Amount($)" name="amount"
                                         aria-label="amount" aria-describedby="basic-addon2" required>
-                                    <div class="input-group-append">
-										<select class="custom-select" id="currencySelect" name="currency" required>
-											<option value="3">Three</option>
-										  </select>
-                                    </div>
+                                   
                                 </div>
                             </div>
 
@@ -91,46 +87,46 @@
                                 <div class="col-12 pt-0 mt-0">
                                     <div class="single-input donation-type mt-4 ">
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="onetime" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-onetime" checked>
+                                            <input type="radio"   value="onetime" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-onetime" checked>
                                             <label for="pg-donation-type-onetime" class="text-dark">Onetime</label>
                                         </p>
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="monthly" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-monthly">
+                                            <input type="radio"   value="monthly" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-monthly">
                                             <label for="pg-donation-type-monthly" class="text-dark">Monthly</label>
                                         </p>
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="general" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-general">
+                                            <input type="radio"   value="general" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-general">
                                             <label for="pg-donation-type-general" class="text-dark">General</label>
                                         </p>
                                        
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="zakath" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-zakat">
+                                            <input type="radio"   value="zakath" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-zakat">
                                             <label for="pg-donation-type-zakat" class="text-dark">Zakat/Fitrah</label>
                                         </p>
                                        
                                       
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="lifeMember" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-lifeMember">
+                                            <input type="radio"   value="lifeMember" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-lifeMember">
                                             <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($1000)</label>
                                         </p>
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="sadaqah" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-sadaqah">
+                                            <input type="radio"   value="sadaqah" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-sadaqah">
                                             <label for="pg-donation-type-sadaqah" class="text-dark">Sadaqah</label>
                                         </p>
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="quard-e-hasanah" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-quard-e-hasanah">
+                                            <input type="radio"   value="quard-e-hasanah" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-quard-e-hasanah">
                                             <label for="pg-donation-type-quard-e-hasanah" class="text-dark">Quard-e-Hasanah</label>
                                         </p>
                                         <p>
-                                            <input type="radio" name="pg-donation-type" value="others" class="text-dark"
-                                                name="donation-type" id="pg-donation-type-others">
+                                            <input type="radio"   value="others" class="text-dark"
+                                                 name="donation_type" id="pg-donation-type-others">
                                             <label for="pg-donation-type-others" class="text-dark">Others</label>
                                         </p>
                                     </div>
