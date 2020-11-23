@@ -28,7 +28,7 @@ Route::group([  'middleware' => 'auth'], function()
     Route::resource('/salat','SalatController');
     Route::resource('/imam','ImamController');
     Route::resource('/designation','DesignationController');
-    Route::resource('/committee','CommitteeController')->middleware(['auth','admin']);
+    Route::resource('/committee','CommitteeController');
     Route::resource('/programs','ProgramController');
     Route::resource('/gallery','GalleryController');
     Route::resource('/sessions','SessionController');
@@ -38,7 +38,7 @@ Route::group([  'middleware' => 'auth'], function()
 
 
 
-    Route::resource('/users','UserController');
+    Route::resource('/users','UserController')->middleware(['auth','admin']);
 
 
 
