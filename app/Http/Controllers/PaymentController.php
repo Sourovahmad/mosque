@@ -128,6 +128,13 @@ class PaymentController extends Controller
         return abort(404);
     }
 
+
+
+    public function donationIndex()
+    {
+        return view('donation.index');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

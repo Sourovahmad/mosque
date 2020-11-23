@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\donation;
-use App\donator;
 use App\Notifications\PaidNotification;
 use Illuminate\Http\Request;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Notification;
 
 class DonationController extends Controller
@@ -18,7 +16,8 @@ class DonationController extends Controller
      */
     public function index(Request $request)
     {
-        return view('donation.index');
+        $donations = donation:: orderBy('id','desc')->get();
+        return view('admin.donation.index',compact('donations'));
     }
 
     /**
@@ -30,11 +29,11 @@ class DonationController extends Controller
     {
         return abort(404);
 
-         \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
+    //      \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
      
-         $stripe = new \Stripe\StripeClient(
-        'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
-      );
+    //      $stripe = new \Stripe\StripeClient(
+    //     'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
+    //   );
 
       
     //    $a= \Stripe\Balance::retrieve();
@@ -90,7 +89,7 @@ class DonationController extends Controller
 
     
       
-		return view('donation.checkout',compact('intent','amount','currency'));
+		// return view('donation.checkout',compact('intent','amount','currency'));
 
 }
 
@@ -103,28 +102,6 @@ class DonationController extends Controller
     public function store(Request $request)
     {
         
-        // Enter Your Stripe Secret
-        \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
-       
-        	
-        $amount = $request->amount;
-        $currency= $request->currency;
-		$amount *= 100;
-        $amount = (int) $amount;
-
-        $user = $request->email;
-        
-        $payment_intent = \Stripe\PaymentIntent::create([
-            'setup_future_usage' => 'on_session',
-            'description' => 'Donation for MMC',
-			'amount' => $amount,
-			'currency' => $currency,
-			'payment_method_types' => ['card'],
-		]);
-        $intent = $payment_intent->client_secret;
-        
-
-		return view('donation.checkout',compact('intent','amount','currency','user'));
         //
     }
 

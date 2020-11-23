@@ -76,7 +76,7 @@
                             <li> <a href="{{ route('programs') }} "> <i class=" fa fa-hand-o-right"></i> <span
                                         class="p-2 textColor textColor" style="font-size:18px"> Our Programs
                                     </span></a> </li>
-                            <li> <a href="{{ route('donations.index') }} "> <i class=" fa fa-hand-o-right"></i> <span
+                            <li> <a href="{{ route('donations') }} "> <i class=" fa fa-hand-o-right"></i> <span
                                         class="p-2 textColor textColor" style="font-size:18px"> Donation
                                     </span></a> </li>
                             {{-- <li> <a href="{{ route('mmc-members') }} "> <i class=" fa fa-hand-o-right"></i> <span

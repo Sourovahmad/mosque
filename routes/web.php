@@ -25,7 +25,7 @@ Route::get('/','IndexController@index')->name('home');
 
 
 
-Route::resource('donations','DonationController');
+Route::get('donations','PaymentController@donationIndex')->name('donations');
 Route::get('checkout','PaymentController@checkData')->name('checkout');
 
 Route::resource('payments','PaymentController');

@@ -17,7 +17,7 @@
 											<h3>Whoever builds a Masjid, seeking the pleasure of Allah, Allah shall build a house for him in Paradise." [Bukhari]. </h3>
 											
 											<div class="banner__content__button">
-												<a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
+												<a href="{{ route('donations') }}#donate" class="cr-btn cr-btn--transparent cr-btn--light cr-btn--sm"><span>Donate Now</span></a>
 											</div>
 										</div>
 									</div>
@@ -47,7 +47,7 @@
                                     </div>
 									<p>They will ask thee as to what they should spend on others. Say: “Whatever of your wealth you spend, shall (first) be for your parents, and for the near of kin, and the orphans, and the needy, and the wayfarer; and whatever good you do, verily, God has full knowledge thereof.” (Surah Baqarah: 215)
                                     </p>
-                                        <a href="{{ route('donations.index') }}#donate" class="cr-btn cr-btn--transparent  cr-btn--sm"><span>Donate Now</span></a>
+                                        <a href="{{ route('donations') }}#donate" class="cr-btn cr-btn--transparent  cr-btn--sm"><span>Donate Now</span></a>
                                     
 								</div>
 							</div>

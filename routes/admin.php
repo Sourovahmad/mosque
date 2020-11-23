@@ -29,6 +29,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/gallery','GalleryController');
     Route::resource('/sessions','SessionController');
     Route::resource('/praying','PrayingTimeController');
+    Route::resource('/donations','DonationController');
 
 
 

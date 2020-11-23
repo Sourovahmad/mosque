@@ -71,7 +71,7 @@
 											</ul>
 										</li>
 										<li><a href="{{ route('events') }}">EVENT</a></li>
-										<li><a href="{{ route('donations.index') }}">DONATION</a></li>
+										<li><a href="{{ route('donations') }}">DONATION</a></li>
 
 										<li class="cr-dropdown"><a href="{{ route('programs') }}">OUR PROGRAMS</a>
 											<ul class="cr-dropdown-menu">
@@ -181,10 +181,10 @@
 											
 											<li><a href="{{ route('praying-time') }}">Praying Times</a></li>
 											<li><a href="{{ route('blogs') }}">Blog</a></li>
-											{{-- <li> <a href="{{ route('donations.index') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a></li> --}}
-											<a href="{{ route('donations.index') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm" style=" margin:10px 0"><span>Donate </span></a>
+											{{-- <li> <a href="{{ route('donations') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a></li> --}}
+											<a href="{{ route('donations') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm" style=" margin:10px 0"><span>Donate </span></a>
 										</ul>
-										{{-- <a href="{{ route('donations.index') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a> --}}
+										{{-- <a href="{{ route('donations') }}#donate" class="cr-btn  cr-btn--light cr-btn--sm"><span>Donate Now</span></a> --}}
 									</nav><!-- //Main naviagtion --> 
 
 									<!-- Mobile Menu -->
