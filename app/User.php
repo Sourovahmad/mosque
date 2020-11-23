@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 
 class User extends Authenticatable
 {
@@ -42,5 +43,12 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo('App\role','role_id','id');
+    }
+    public function isAdmin(){
+        if (Auth::user()->role_id==1){
+            return true; 
+        
+        }
+        else return false;
     }
 }

@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
  
 
+Route::group([  'middleware' => 'auth'], function()
+{
+   
+
     Route::get('/','DashboardController@index')->name('dashboard');
     Route::get('/post','PostController@index')->name('post');
 
@@ -24,7 +28,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('/salat','SalatController');
     Route::resource('/imam','ImamController');
     Route::resource('/designation','DesignationController');
-    Route::resource('/committee','CommitteeController');
+    Route::resource('/committee','CommitteeController')->middleware(['auth','admin']);
     Route::resource('/programs','ProgramController');
     Route::resource('/gallery','GalleryController');
     Route::resource('/sessions','SessionController');
@@ -45,5 +49,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
+});
 
 

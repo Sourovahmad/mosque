@@ -244,8 +244,6 @@
     </li>
 
 
-    <!-- Divider -->
-
     <hr class="sidebar-divider m-1 p-0 ">
 
     <li class="nav-item">
@@ -281,6 +279,7 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Salat</span></a>
     </li>
+    <hr class="sidebar-divider m-1 p-0 ">
     <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.praying.index',2020) }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -293,6 +292,7 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Imam</span></a>
     </li>
+    <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.gallery.index') }}">
@@ -301,6 +301,8 @@
     </li>
 
 
+    <!-- Divider -->
+    @if(Auth::user()->isAdmin())
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">
@@ -308,7 +310,7 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>User </span></a>
     </li>
-
+@endif
     <!-- Divider -->
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
