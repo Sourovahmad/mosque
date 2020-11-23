@@ -8,6 +8,7 @@ use App\donator;
 use App\Payment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Omnipay\Omnipay;
 
 class PaymentController extends Controller
@@ -58,7 +59,7 @@ class PaymentController extends Controller
             if ($response->isSuccessful()) {
                 // payment was successful: insert transaction data into the database
                 $arr_payment_data = $response->getData();
-                 
+                
                 $isPaymentExist = Payment::where('payment_id', $arr_payment_data['id'])->first();
           
                 if(!$isPaymentExist)
@@ -84,8 +85,9 @@ class PaymentController extends Controller
                     $payment->save();
                     $this->addDailyMonthly($payment->amount);
                 }
- 
-                return "Payment is successful. Your payment id is: ". $arr_payment_data['id'];
+                $paymentData = array("amount"=>$payment->amount, "email"=>$payment->payer_email, "payment_id"=>$payment->payment_id);
+                
+                return redirect(route('donationSuccess',$paymentData)) ;
             } else {
                 // payment failed: display message to customer
                 return "..." . $response->getMessage();
@@ -177,5 +179,9 @@ class PaymentController extends Controller
         $dailyDonation->save();
         $monthlyDonation->save();
 
+    }
+    public function success(Request $request){
+        $payment=$request;
+        return view('donation.done',compact('payment')) ;
     }
 }

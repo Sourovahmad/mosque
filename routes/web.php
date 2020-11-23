@@ -30,9 +30,9 @@ Route::get('checkout','PaymentController@checkData')->name('checkout');
 
 Route::resource('payments','PaymentController');
 Route::resource('about','AboutController');
+Route::get('donation-success','PaymentController@success')->name('donationSuccess');
 
-Route::post('donation-success','DonationController@success')->name('donationSuccess');
-Route::post('donation-success/{user}','DonationController@success')->name('donationSuccess');
+// Route::post('donation-success/{user}','DonationController@success')->name('donationSuccess');
 
 Route::get('events','EventController@frontendView')->name('events');
 Route::get('events/{id}','EventController@singleview')->name('event-single');
