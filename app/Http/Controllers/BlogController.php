@@ -8,8 +8,8 @@ use App\blogLanguage;
 use App\event;
 use App\image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Intervention\Image\ImageManager;
 use Intervention\Image\ImageManagerStatic as Photo;
 class BlogController extends Controller
 {
@@ -47,7 +47,7 @@ class BlogController extends Controller
         $blog = new blog;
         $blog->title = $request->title;
         $blog->category_id = $request->category_id;
-        $blog->user_id = 1; //auth must be added
+        $blog->user_id =Auth::user()->id; //auth must be added
         $blog->language_id = $request->language_id;
         $blog->author_name = $request->author_name;
         $blog->description = $request->description;
