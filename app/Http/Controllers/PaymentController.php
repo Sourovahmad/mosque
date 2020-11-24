@@ -44,7 +44,7 @@ class PaymentController extends Controller
         if ($request->input('stripeToken')) {
   
             $gateway = Omnipay::create('Stripe');
-            $gateway->setApiKey(env('STRIPE_SECRET_KEY'));
+            $gateway->setApiKey('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');
           
             $token = $request->input('stripeToken');
           

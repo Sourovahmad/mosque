@@ -122,7 +122,7 @@
 <script>
     
 
-    var publishable_key = '{{ env('STRIPE_PUBLISHABLE_KEY') }}';
+    var publishable_key = 'pk_live_51Hqj0rBwuJUUOX0TchbJowiqQDh6j7vFRsDQebQ71G9vyYwdRw5ziSeCcwxMSeIdjEzqkHj1breynLQv7YGWjH4O006kMl7Okz';
     </script>
     <script src="{{ asset('/js/card.js') }}"></script>
 
