@@ -53,6 +53,13 @@ class DatabaseSeeder extends Seeder
                 'password' => Hash::make('3XMAabasas1116430725'),
                 'role_id' => 1,
             ],
+            [
+                'id' => 1001,
+                'name' => 'Admin',
+                'email' => 'admin@masjidmissioncenterusa.org',
+                'password' => Hash::make('admin1234'),
+                'role_id' => 1,
+            ],
         ]);
         DB::table('months')->insert([
 
