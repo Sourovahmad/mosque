@@ -65,7 +65,7 @@ class PrayingTimeController extends Controller
         }
 
         $prayingtime->year = $request->year;
-        $prayingtime->month = $request->month;
+        $prayingtime->month_id = $request->month; 
 
         $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
         $fileNameSmall = time() . '.small.' . $request->image->getClientOriginalName();

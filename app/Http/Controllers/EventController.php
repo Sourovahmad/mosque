@@ -169,7 +169,7 @@ class EventController extends Controller
 
         $event = event::find($id);
         $eventCategories = eventCategory::all();
-        $events = event::orderBy('id','desc')->take(10)->get();
+        $events = event::orderBy('id','desc')->take(5)->get();
       
 
         return view('events.event-details',compact('event','eventCategories','events'));

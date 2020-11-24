@@ -211,7 +211,7 @@
                         <input type="text" name="id" class="form-control" id="modal-input-id" required readonly>
                     </div>
                     <div class="form-group">
-                        <label class="col-form-label" for="modal-input-password">enter your new password</label>
+                        <label class="col-form-label" for="modal-input-password">Enter your new password</label>
                         <input type="text" name="password" class="form-control" id="modal-input-password" required>
                     </div>
                     <div class="form-group">

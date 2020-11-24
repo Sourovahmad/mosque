@@ -19,7 +19,7 @@ class ProgramController extends Controller
      */
     public function index()
     {
-        $programs = program::all();
+        $programs = program::orderBy('created_at', 'desc')->get();
         return view('admin.program.index', compact('programs'));
     }
 

@@ -3,13 +3,12 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-<!-- Mirrored from demo.hasthemes.com/azan-preview/azan/index-text-slider.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Oct 2020 04:25:56 GMT -->
-
 <head>
 
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>MASJID MISSION CENTER INC.</title>
+        <title>MASJID MISSION CENTER INC.</title>
+        <link rel="icon" href="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}"/>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 

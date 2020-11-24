@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masjid Mission Center</title>
+    <link rel="icon" href="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}"/>
 
     <link rel="stylesheet" href="{{asset('css/fontawesome-free/css/all.min.css')}}" type="text/css">
 
