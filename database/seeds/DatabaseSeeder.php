@@ -34,23 +34,17 @@ class DatabaseSeeder extends Seeder
                 'role' => 'Admin'
             ],
             [
-                'role' => 'Imam'
+                'role' => 'Editor'
             ],
 
         ]);
         DB::table('users')->insert([
-            [
-                'id' => 999,
-                'name' => 'Masum Billah',
-                'email' => 'masumbillah3416@gmail.com',
-                'password' => Hash::make('3XMAabasas1116430701'),
-                'role_id' => 1,
-            ],
+       
             [
                 'id' => 1000,
                 'name' => 'Abasas',
                 'email' => 'admin@abasas.tech',
-                'password' => Hash::make('3XMAabasas1116430725'),
+                'password' => Hash::make('3XMAabasas'),
                 'role_id' => 1,
             ],
             [
