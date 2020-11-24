@@ -13,8 +13,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Favicons -->
-		<link rel="shortcut icon" href="images/favicon.ico">
-		<link rel="apple-touch-icon" href="images/icon.png">
+		<link rel="shortcut icon" href="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}">
+		<link rel="apple-touch-icon" href="{{ asset('abasas/images/logo/MMC_Title_logo-removebg-preview.png') }}">
 
 		<!-- Google font (font-family: 'Hind', sans-serif;) -->
 		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
