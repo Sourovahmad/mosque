@@ -1,0 +1,1 @@
+http://api.aladhan.com/v1/calendar?latitude=40.7498243&school=1&longitude=-73.7976337&method=2&month=12&year=2020
