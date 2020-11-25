@@ -14,12 +14,12 @@ class SalatSeeder extends Seeder
     {
         DB::table('salats')->insert([
             [
-                'fajr' => '05:20:00',
-                'dhuhr' => '11:40:00',
+                'fajr' => '05:35:00',
+                'dhuhr' => '11:43:00',
                 'jumma' => '11:40:00',
-                'asr' => '14:21:00',
-                'maghrib' => '16:44:00',
-                'isha' => '18:42:00',
+                'asr' => '14:49:00',
+                'maghrib' => '16:30:00',
+                'isha' => '17:50:00',
             ],
         ]);
     }
