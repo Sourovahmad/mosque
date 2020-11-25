@@ -16,7 +16,7 @@ class DonationController extends Controller
      */
     public function index(Request $request)
     {
-        $donations = donation:: orderBy('id','desc')->get();
+        $donations = donation::where('payment_status','success') ->orderBy('id','desc')->get();
         return view('admin.donation.index',compact('donations'));
     }
 
