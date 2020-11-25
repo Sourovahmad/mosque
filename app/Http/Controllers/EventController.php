@@ -120,7 +120,7 @@ class EventController extends Controller
             $event->video = $request->video;
         }
 
-        if (!is_null($request->file)) {
+        if (!is_null($request->image)) {
 
 
             $fileNameFull = time() . '.full.' . $request->image->getClientOriginalName();
