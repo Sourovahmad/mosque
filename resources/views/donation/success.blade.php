@@ -17,9 +17,9 @@
             </div>
         </div>
         <h1 class="text-center">Thank You For Your Donation</h1>
-        <h6 class="text-center"> Amount : {{ $payment->amount }}</h6>
-        <h6 class="text-center">Email : {{ $payment->email }}</h6>
-        <h6 class="text-center">Payment Id : {{ $payment->payment_id }}</h6>
+        <h6 class="text-center"> Amount : {{ $donation->amount }}</h6>
+        <h6 class="text-center">Phone : {{ $donation->cell_phone }}</h6>
+        <h6 class="text-center">Email : {{ $donation->payer_email }}</h6>
         <h6 class="text-center"><a class="text-center" href="{{ route('home') }}">Back to Home</a></h6>
     </div>
 

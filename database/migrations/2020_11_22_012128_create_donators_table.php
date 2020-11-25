@@ -23,7 +23,7 @@ class CreateDonatorsTable extends Migration
             $table->string('state')->nullable();
             $table->string('zip_code')->nullable();
             $table->string('home_phone')->nullable();
-            $table->string('cel_phone')->unique();
+            $table->string('cell_phone')->unique();
             $table->timestamps();
         });
     }

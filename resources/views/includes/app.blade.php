@@ -29,7 +29,8 @@
 	   <link rel="stylesheet" href="{{asset('abasas/css/custom.css')}}">
 
 		<!-- Modernizer js -->
-		<script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+        <script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
+        <script src="https://js.stripe.com/v3/"></script>
 		<style>
             .bg-abasas-dark {
 

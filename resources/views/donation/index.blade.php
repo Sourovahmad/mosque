@@ -59,29 +59,41 @@
     <!-- Donnation Form -->
     <div class="pg-donation-area ptb--150 bg-image--5 border" id="donate" >
         <div class="container">
-            <form action="{{ route('checkout') }}" method="get" id="pg-donation" class="pg-donation">
-                
+            <form action="{{ route('testSession') }}" method="post" id="pgDonation" class="pg-donation">
+                @csrf
                     <div class="row">
                         <div class="col-lg-6">
                             <aside class="pg-donation__personalinfo">
                                 <h4 class="pg-dontation__title">Personal Information</h4>
-                                <div class="single-input">
-                                    <label for="first_name">First Name*</label>
-                                    <input type="text" name="first_name" id="first_name" class="form-control" required>
-                                </div>
-                                <div class="single-input">
-                                    <label for="last_name">Last Name*</label>
-                                    <input type="text" name="last_name" id="last_name" class="form-control">
-                                </div>
+                             
                                 
-                                <div class="single-input">
-                                    <label for="email">Email*</label>
-                                    <input type="email" name="email" id="email" class="form-control" required>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                     
+                                        <div class="single-input">
+                                            <label for="first_name">First Name*</label>
+                                            <input type="text" name="first_name" id="first_name" class="form-control" required>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        
+                                        <div class="single-input">
+                                            <label for="last_name">Last Name*</label>
+                                            <input type="text" name="last_name" id="last_name" class="form-control">
+                                        </div>
+
+                                    </div>
                                 </div>
 
+
+                             
+                                
+                            
+
                                 <div class="single-input">
-                                    <label for="cel_phone">Cell Phone*</label>
-                                    <input type="tel" name="cel_phone" id="cel_phone" class="form-control" required >
+                                    <label for="cell_phone">Cell Phone*</label>
+                                    <input type="tel" name="cell_phone" id="cell_phone" class="form-control" required >
                                 </div>
                                 <div class="single-input">
                                     <label for="home_phone">Home Phone</label>
@@ -148,49 +160,10 @@
                                 </div>
 
 
+                         
+                            
                                 <div class="single-input">
-                                    <label for="card_number">Card number*</label>
-                                    <input type="text" name="card_number" id="card_number" class="form-control" required>
-                                </div>
-                                <div class="single-input">
-                                    <label for="expiry_month">Expire Date</label>
-                                    <div class="row">
-                                        <div class="col-lg-6 col-md-6">
-                                            <select name="expiry_month" id="expiry_month" required>
-                                                <option value="january">January</option>
-                                                <option value="february">February</option>
-                                                <option value="march">March</option>
-                                                <option value="april">April</option>
-                                                <option value="june">June</option>
-                                                <option value="july">July</option>
-                                                <option value="august">August</option>
-                                                <option value="september">September</option>
-                                                <option value="november">November</option>
-                                                <option value="december">December</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-lg-6 col-md-6">
-                                           
-                                            <input type="number" name="expiry_year" id="expiry_year" class="form-control" placeholder="Year" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="single-input">
-                                            <label for="security">Security Code</label>
-                                            <input type="text" name="security" id="security" class="form-control" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="single-input">
-                                            <label for="zipcode">Zip Code</label>
-                                            <input type="text" name="zipcode" id="zipcode" class="form-control" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-input">
-                                    <button type="submit">Donate Now</button>
+                                    <button type="button" id="checkout-button">Donate Now</button>
                                 </div>
                             </aside>
                         </div>
@@ -201,4 +174,61 @@
     </div><!-- //Donnation Form -->
 
 
+@endsection
+
+@section('customJS')
+<script type="text/javascript">
+    // Create an instance of the Stripe object with your publishable API key
+    var stripe = Stripe("pk_test_51Hl3M4LtX3QocVix8Kq6e56OyI5ANiTi2mHpvIi24zVe6RTG3HoVpWgN7NZ8sCRyyR0ONtJfradWieV2MPQATH9P00IEC0qlfT");
+    var checkoutButton = document.getElementById("checkout-button");
+
+    checkoutButton.addEventListener("click", function () {
+
+        var frm= $("#pgDonation");
+        console.log(frm)
+       
+        var act = $("#pgDonation").attr('action');            
+        console.log("---------- action " + act);
+     
+        $.ajax({
+            type: 'post',
+            url: act,
+            data:frm.serialize(),
+            success: function (data) {
+                console.log(data);
+                return stripe.redirectToCheckout({ sessionId: data.id });
+                // viewSupplierData(supplier);
+            },
+            error: function (data) {
+                alert("Failed payment ..... Try Again !!!!!!!!!!!")
+                console.log('An error occurred.');
+                console.log(data);
+            },
+        });
+
+        
+        
+    //   fetch("{{ route('testSession') }}", {
+    //     method: "POST",
+    //   })
+    //     .then(function (response) {
+    //       return response.json();
+    //     })
+    //     .then(function (session) {
+    //       return stripe.redirectToCheckout({ sessionId: 'session.id' });
+    //     })
+    //     .then(function (result) {
+    //       // If redirectToCheckout fails due to a browser or network
+    //       // error, you should display the localized error message to your
+    //       // customer using error.message.
+    //       if (result.error) {
+    //         alert(result.error.message);
+    //       }
+    //     })
+    //     .catch(function (error) {
+    //       console.error("Error:", error);
+    //     });
+    });
+  </script>
+    
 @endsection

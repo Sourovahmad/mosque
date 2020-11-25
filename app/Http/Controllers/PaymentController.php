@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\donation;
 use App\donationDaily;
 use App\donationMonthly;
 use App\donator;
@@ -20,7 +21,73 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        return abort(404);
+       
+       return view('donation.test.index');
+
+    }
+    public function testCreateSession(Request $request){
+     
+        $donation = new donation;
+        
+$donation->save();
+       
+        \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
+        
+        header('Content-Type: application/json');
+        
+        
+        $checkout_session = \Stripe\Checkout\Session::create([
+        
+          'payment_method_types' => ['card'],
+        
+          'line_items' => [[
+        
+            'price_data' => [
+        
+              'currency' => 'usd',
+        
+              'unit_amount' => $request->amount*100 ,
+        
+              'product_data' => [
+        
+                'name' => 'Donation for MMC'." - ".$request->donation_type,
+        
+                'images' => [ "https://masjidmissioncenterusa.org/abasas/images/logo/MMC_Title_logo-removebg-preview.png" ],
+        
+              ],
+        
+            ],
+        
+            'quantity' => 1,
+        
+          ]],
+        
+          'mode' => 'payment',
+        
+          'success_url' => route('donationSuccess',['donation'=>$donation->id]),
+        
+          'cancel_url' => route('donationFailed'),
+        
+        ]);
+
+
+$donation->first_name = $request->first_name;
+$donation->last_name = $request->last_name;
+$donation->address = $request->address;
+$donation->home_phone = $request->home_phone;
+$donation->cell_phone = $request->cell_phone;
+$donation->donation_type = $request->donation_type;
+$donation->amount = $request->amount;
+$donation->session = $checkout_session->id;
+$donation->save();
+
+
+        
+        return ['id' => $checkout_session->id];
+
+
+
+
     }
 
     /**
@@ -181,7 +248,55 @@ class PaymentController extends Controller
 
     }
     public function success(Request $request){
-        $payment=$request;
-        return view('donation.done',compact('payment')) ;
+        $donation = donation::find($request->donation);
+        
+
+        $stripe = new \Stripe\StripeClient(
+            'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
+          );
+       $currentSession=    $stripe->checkout->sessions->retrieve(
+        $donation->session,
+            []
+          );
+           $currentSession;
+        $customer=  $stripe->customers->retrieve(
+            $currentSession->customer,
+            []
+          );
+
+
+          $email = $customer->email;
+
+
+
+          $donation->payer_email= $email;
+          $donation->payment_status= 'success';
+          $donation->save();
+
+       
+         $this->addDailyMonthly($donation->amount);
+        // $payment = new Payment;
+        // $donator = new donator;
+
+        // $payment->donator_id= $request->donator_id;
+        // $payment->donation_type= $request->donaton_type;
+        // $payment->payment_id = $arr_payment_data['id'];
+        // $payment->payer_email = $request->input('email');
+        // $payment->amount = $arr_payment_data['amount']/100;
+        // $payment->currency = env('STRIPE_CURRENCY');
+        // $payment->payment_status = $arr_payment_data['status'];
+
+        // $donator->first_name = $request->first_name;
+        // $donator->last_name = $request->last_name;
+        // $donator->home_phone = $request->home_phone;
+        // $donator->address = $request->address;
+        // $donator->email = $request->email;
+
+        // $donator->save();
+        // $payment->save();
+        return view('donation.success',compact('donation')) ;
+    }
+    public function failed(){
+        return view('donation.failed') ;
     }
 }

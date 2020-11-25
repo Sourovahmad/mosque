@@ -28,7 +28,6 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Amount</th>
-                        <th>Payment id</th>
                         <th>Date</th>
 
                     </tr>
@@ -41,7 +40,6 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Amount</th>
-                        <th>Payment id</th>
                         <th>Date</th>
 
                     </tr>
@@ -58,11 +56,10 @@
 
                     <tr class="data-row">
                         <td class="iteration">{{$itr++}}</td>
-                        <td class="word-break">{{ $donation->donator->first_name }}  {{ $donation->donator->last_name }} </td>
-                        <td class="word-break">{{ $donation->donator->email }}</td>
-                        <td class="word-break">{{ $donation->donator->cel_phone }}</td>
+                        <td class="word-break">{{ $donation->first_name }}  {{ $donation->last_name }} </td>
+                        <td class="word-break">{{ $donation->payer_email }}</td>
+                        <td class="word-break">{{ $donation->cell_phone }}</td>
                         <td class="word-break">{{ $donation->amount }}</td>
-                        <td class="word-break">{{ $donation->payment_id }}</td>
                         <td class="word-break">{{ $donation->created_at->format('d M,Y h:i:a') }}</td>
 
 

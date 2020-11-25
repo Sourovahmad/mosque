@@ -31,6 +31,7 @@ Route::get('checkout','PaymentController@checkData')->name('checkout');
 Route::resource('payments','PaymentController');
 Route::resource('about','AboutController');
 Route::get('donation-success','PaymentController@success')->name('donationSuccess');
+Route::get('donation-failed','PaymentController@failed')->name('donationFailed');
 
 // Route::post('donation-success/{user}','DonationController@success')->name('donationSuccess');
 
@@ -70,7 +71,16 @@ Auth::routes();
 // Route::get('/test-mail','test@index')->name('test');
 
 
-
+Route::post('/test-session','PaymentController@testCreateSession')->name('testSession');
+Route::get('/haha',function(){
+    $stripe = new \Stripe\StripeClient(
+        'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
+      );
+   return   $stripe->checkout->sessions->retrieve(
+        'cs_test_a1TS8C0zIIyPgMJy9CUY8hIcaxKJerDN8Kxfc9ojWc8OnAAWmest2E6KNY',
+        []
+      );
+});
 
 
 
