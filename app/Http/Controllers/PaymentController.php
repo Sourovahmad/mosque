@@ -149,7 +149,7 @@ class PaymentController extends Controller
     }
     
     public function checkData(Request $request){
-        // return $request;
+         return "Under Construction";
         $donationData = $request;
         $donator = donator::where('cel_phone',$request->phone)->first();
         if(is_null($donator)){
