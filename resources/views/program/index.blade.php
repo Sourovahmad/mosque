@@ -44,7 +44,7 @@
                     <div class="card bg-light " >
                         <div class="card-header font-weight-bold ">Darse Quran </div>
                         <div class="card-body">
-                            <p class="card-text">Time: Tuesday after Maghrib.> </p>
+                            <p class="card-text">Time: Tuesday after Maghrib. </p>
                             <p> <br></p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     <div class="card bg-light ">
                         <div class="card-header font-weight-bold">​COVID-19 (Jummah Sessions)</div>
                         <div class="card-body">
-                            <p class="card-text">Time: 1st-> 12:30PM Khutbah, 2nd-> 1:00PM Khutbah, 3rd-> 1:30PM Khutbah.</p>
+                            <p class="card-text">Time: 1st- 12:30PM Khutbah, 2nd- 1:00PM Khutbah, 3rd- 1:30PM Khutbah.</p>
                         </div>
                     </div>
                 </div>
