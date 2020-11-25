@@ -633,7 +633,9 @@
         </div>
     </div>
 </section><!-- //Offer area -->
-
+<a target="blank" href="https://transfotechacademy.com/">
+<img src="{{ asset('abasas/images/adds/transfotechacademy.jpg') }}" alt="transfotechacademy" width="100%">
+</a>
 
 
 
