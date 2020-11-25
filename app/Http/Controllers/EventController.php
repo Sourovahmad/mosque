@@ -116,9 +116,7 @@ class EventController extends Controller
         $event->vanu = $request->vanu;
         $event->start_time = $request->start_time;
         $event->end_time = $request->end_time;
-        if(!is_null($request->video)){
-            $event->video = $request->video;
-        }
+        $event->video = $request->video;
 
         if (!is_null($request->image)) {
 
