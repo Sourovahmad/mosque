@@ -87,7 +87,7 @@
                         <div class="form-group col-12 ">
 
                             <button type="submit" id="createPostSubmit"
-                                class="btn btn-success btn-lg d-none d-sm-block d-md-none"> Publish</button>
+                                class="btn btn-success btn-lg d-block  d-md-none"> Publish</button>
                         </div>
 
                     </div>
