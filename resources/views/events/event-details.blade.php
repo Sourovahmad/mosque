@@ -13,7 +13,7 @@
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
 										<li><a href="{{ route('home') }}">Home</a></li>
-										<li>Event -  {{ $event->title }} </li>
+										<li>Event - Event Details </li>
 									</ul>
 								</div>
 							</div>

@@ -14,7 +14,7 @@
 								<h2 class="cr-breadcrumb__title">{{ $category->name }}</h2>
 								<div class="cr-breadcrumb__tree text-left text-md-left text-center">
 									<ul>
-										<li><a href="index.html">Program</a></li>
+										<li>home</li>
 										<li>{{ $category->name }}</li>
 									</ul>   
 								</div>

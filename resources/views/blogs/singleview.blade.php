@@ -13,7 +13,7 @@
                     <div class="cr-breadcrumb__tree text-left text-md-left text-center">
                         <ul>
                             <li>Blog</li>
-                            <li> {{ $blog ->title }}</li>
+                            <li> BLOG DETAILS </li>
 
                         </ul>
                     </div>
