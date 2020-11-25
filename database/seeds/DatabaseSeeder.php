@@ -36,7 +36,7 @@ class DatabaseSeeder extends Seeder
             [
                 'role' => 'Editor'
             ],
-
+ 
         ]);
         DB::table('users')->insert([
        
