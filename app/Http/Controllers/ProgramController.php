@@ -152,6 +152,13 @@ class ProgramController extends Controller
     {
 
        $category = programCategory::find($category_id);
+
+
+       
+       if(is_null($category)){
+        abort(404);
+    }
+
         $programs = program::where('category_id',$category_id)->orderBy('id','desc')->paginate(6);
         return view('program.category',compact('programs','category'));
         
@@ -160,6 +167,11 @@ class ProgramController extends Controller
     { 
         $programs = program::orderBy('id','desc')->take(5)->get();
         $program = program::find($id);
+
+        if(is_null($program)){
+            abort(404);
+        }
+
         return view('program.singleview',compact('program','programs'));
     }
 }

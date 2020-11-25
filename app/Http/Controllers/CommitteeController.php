@@ -160,15 +160,16 @@ class CommitteeController extends Controller
     
     public function frontendViewTwo($type_id)
     {
-    if($type_id < 1){
-    $committees = committee::all();
-    return view('committee.index',compact('committees'));
- }
 
       $memberType = memberType::find($type_id); 
+      if(is_null($memberType)){
+          return abort(404);
+      }
+
+
       $TypeName =  $memberType->name;
    
-      $committees = committee::whereIn('member_type',  $memberType)->get();
+      $committees = committee::whereIn('member_type',  $memberType)->orderBy('position')->get();
        
      
        return view('committee.index',compact('committees','TypeName'));
@@ -184,7 +185,7 @@ class CommitteeController extends Controller
             $sessions[$s->id] = $s->name;
         }
 
-        $committee = committee::where('member_type',3)->get();
+        $committee = committee::where('member_type',3)->orderBy('position')->get();
        
         $committeies = $committee->groupBy('session_id');
         // return $committeies;

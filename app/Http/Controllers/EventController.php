@@ -166,6 +166,11 @@ class EventController extends Controller
     { 
 
         $event = event::find($id);
+
+        if(is_null($event)){
+            return abort(404);
+        }
+
         $eventCategories = eventCategory::all();
         $events = event::orderBy('id','desc')->take(5)->get();
       

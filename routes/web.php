@@ -44,12 +44,12 @@ Route::get('program-category/{category_id}','ProgramController@FrontendProgramCa
 Route::get('blogs','BlogController@frontendView')->name('blogs');
 Route::get('blog/{id}','BlogController@singleview')->name('blog-singleview');
 
-Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
+// Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
 
 
 
 
-Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
+// Route::get('mmc-members','CommitteeController@frontendView')->name('mmc-members');
 Route::get('mmc-members/{type_id}','CommitteeController@frontendViewTwo')->name('mmc-type');
 Route::get('executive','CommitteeController@executive')->name('executive');
 
@@ -61,13 +61,13 @@ Route::get('praying-time','SalatController@prayingtime')->name('praying-time');
 
 
 // setting development
-Route::resource('/setting','SettingController');
+// Route::resource('/setting','SettingController');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/test-mail','test@index')->name('test');
+// Route::get('/test-mail','test@index')->name('test');
 
 
 

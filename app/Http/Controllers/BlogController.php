@@ -160,6 +160,11 @@ class BlogController extends Controller
     public function singleview($id)
     {
         $blog = blog::find($id);
+
+        if(is_null($blog)){
+            return abort(404);
+        }
+
         $blogs = blog::orderBy('id','desc')->take(5)->get();
         return view('blogs.singleview',compact('blog','blogs'));
     }
