@@ -31,7 +31,7 @@
 
 
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
     <div class="card mb-4 shadow">
 
 
@@ -51,7 +51,7 @@
                 <div class="form-row align-items-center">
 
 
-                    <div class="form-group col-12  pl-4 pr-4">
+                    <div class="form-group col-12  pl-4 pr-4 ">
                         <span class="text-dark">Name</span>
                         <input type="text" name="name" class="form-control " id="inlineFormInput" required>
                     </div>
@@ -99,7 +99,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead class="bg-abasas-dark">
 
 
@@ -252,6 +252,16 @@
             $('.edit-item-trigger-clicked').removeClass('edit-item-trigger-clicked')
             $("#user-edit-form").trigger("reset");
         });
+
+
+        
+
+        $('#dataTable').DataTable({   
+                    dom: 'lBfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel' , 'pdf' , 'print'
+                    ]
+                });
 
     });
 </script>

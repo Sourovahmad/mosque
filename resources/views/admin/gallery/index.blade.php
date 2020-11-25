@@ -37,7 +37,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
     
 <!-- Begin Page Content -->
 <div class="collapse" id="createNewForm">
@@ -197,6 +197,15 @@
             $('#PlusButton').toggleClass('fa-plus').toggleClass('fa-minus');
 
         });
+
+        
+
+        $('#dataTable').DataTable({   
+                    dom: 'lBfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel' , 'pdf' , 'print'
+                    ]
+                });
     })
 </script>
 
