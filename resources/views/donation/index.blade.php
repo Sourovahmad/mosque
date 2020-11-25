@@ -179,7 +179,7 @@
 @section('customJS')
 <script type="text/javascript">
     // Create an instance of the Stripe object with your publishable API key
-    var stripe = Stripe("pk_test_51Hl3M4LtX3QocVix8Kq6e56OyI5ANiTi2mHpvIi24zVe6RTG3HoVpWgN7NZ8sCRyyR0ONtJfradWieV2MPQATH9P00IEC0qlfT");
+    var stripe = Stripe("pk_live_51Hqj0rBwuJUUOX0TchbJowiqQDh6j7vFRsDQebQ71G9vyYwdRw5ziSeCcwxMSeIdjEzqkHj1breynLQv7YGWjH4O006kMl7Okz");
     var checkoutButton = document.getElementById("checkout-button");
 
     checkoutButton.addEventListener("click", function () {

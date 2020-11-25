@@ -31,7 +31,7 @@ class PaymentController extends Controller
         
 $donation->save();
        
-        \Stripe\Stripe::setApiKey('sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo');
+        \Stripe\Stripe::setApiKey('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');
         
         header('Content-Type: application/json');
         
@@ -252,7 +252,7 @@ $donation->save();
         
 
         $stripe = new \Stripe\StripeClient(
-            'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
+            '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'
           );
        $currentSession=    $stripe->checkout->sessions->retrieve(
         $donation->session,

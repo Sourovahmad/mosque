@@ -50,7 +50,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => 1001,
                 'name' => 'Admin',
-                'email' => 'admin@masjidmissioncenterusa.org',
+                'email' => 'masjidmissioncenterusa@gmail.com',
                 'password' => Hash::make('admin1234'),
                 'role_id' => 1,
             ],
