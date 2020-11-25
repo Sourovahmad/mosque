@@ -60,134 +60,145 @@
     <div class="pg-donation-area ptb--150 bg-image--5 border" id="donate" >
         <div class="container">
             <form action="{{ route('checkout') }}" method="get" id="pg-donation" class="pg-donation">
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 mt-4">
-                        <aside class="pg-donation__personalinfo">
-                            <h4 class="pg-dontation__title">Donation Information</h4>
-
-
-                            <div class="single-input ">
-                                <label for="pg-donation-email">Phone*</label>
-                                <input type="tel" name="phone" id="pg-donation-phone" required>
-                            </div>
-
-
-
-                            <div class="single-input">
-                                <div class="input-group mb-3">
-                                    <input type="number" step="any" class="form-control" placeholder="Amount($)" name="amount"
-                                        aria-label="amount" aria-describedby="basic-addon2" required>
-                                   
+                
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <aside class="pg-donation__personalinfo">
+                                <h4 class="pg-dontation__title">Personal Information</h4>
+                                <div class="single-input">
+                                    <label for="first_name">First Name*</label>
+                                    <input type="text" name="first_name" id="first_name" class="form-control" required>
                                 </div>
-                            </div>
+                                <div class="single-input">
+                                    <label for="last_name">Last Name*</label>
+                                    <input type="text" name="last_name" id="last_name" class="form-control">
+                                </div>
+                                
+                                <div class="single-input">
+                                    <label for="email">Email*</label>
+                                    <input type="email" name="email" id="email" class="form-control" required>
+                                </div>
 
-							
-                            <div class="row mt-0 pt-0 " >
+                                <div class="single-input">
+                                    <label for="cel_phone">Cell Phone*</label>
+                                    <input type="tel" name="cel_phone" id="cel_phone" class="form-control" required >
+                                </div>
+                                <div class="single-input">
+                                    <label for="home_phone">Home Phone</label>
+                                    <input type="tel" name="home_phone" id="home_phone" class="form-control">
+                                </div>
+                                <div class="single-input">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" class="form-control">
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-6">
+                            <aside class="pg-donation__bankinfo">
+                                <h4 class="pg-dontation__title">Donation Information</h4>
+                                
+                                <div class="single-input">
+                                    <label for="amount">Donation Amount (USD)*</label>
+                                    <input type="number" name="amount" id="amount" class="form-control" required>
+                                </div>
+                                <div class="single-input donation-type">
+                                    <p>
+                                        <input type="radio"   value="Onetime" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-onetime" checked>
+                                        <label for="pg-donation-type-onetime" class="text-dark">Onetime</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio"   value="Monthly" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-monthly">
+                                        <label for="pg-donation-type-monthly" class="text-dark">Monthly</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio"   value="General" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-general">
+                                        <label for="pg-donation-type-general" class="text-dark">General</label>
+                                    </p>
+                                   
+                                    <p>
+                                        <input type="radio"   value="Zakat/Fitrah" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-zakat">
+                                        <label for="pg-donation-type-zakat" class="text-dark">Zakat/Fitrah</label>
+                                    </p>
+                                   
+                                  
+                                    <p>
+                                        <input type="radio"   value="Life Member ($1000)" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-lifeMember">
+                                        <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($1000)</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio"   value="Sadaqah" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-sadaqah">
+                                        <label for="pg-donation-type-sadaqah" class="text-dark">Sadaqah</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio"   value="Quard-e-Hasanah" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-quard-e-hasanah">
+                                        <label for="pg-donation-type-quard-e-hasanah" class="text-dark">Quard-e-Hasanah</label>
+                                    </p>
+                                    <p>
+                                        <input type="radio"   value="Others" class="text-dark"
+                                             name="donation_type" id="pg-donation-type-others">
+                                        <label for="pg-donation-type-others" class="text-dark">Others</label>
+                                    </p>
+                                </div>
 
-                                <div class="col-12 pt-0 mt-0">
-                                    <div class="single-input donation-type mt-4 ">
-                                        <p>
-                                            <input type="radio"   value="Onetime" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-onetime" checked>
-                                            <label for="pg-donation-type-onetime" class="text-dark">Onetime</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio"   value="Monthly" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-monthly">
-                                            <label for="pg-donation-type-monthly" class="text-dark">Monthly</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio"   value="General" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-general">
-                                            <label for="pg-donation-type-general" class="text-dark">General</label>
-                                        </p>
-                                       
-                                        <p>
-                                            <input type="radio"   value="Zakat/Fitrah" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-zakat">
-                                            <label for="pg-donation-type-zakat" class="text-dark">Zakat/Fitrah</label>
-                                        </p>
-                                       
-                                      
-                                        <p>
-                                            <input type="radio"   value="Life Member ($1000)" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-lifeMember">
-                                            <label for="pg-donation-type-lifeMember" class="text-dark">Life Member ($1000)</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio"   value="Sadaqah" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-sadaqah">
-                                            <label for="pg-donation-type-sadaqah" class="text-dark">Sadaqah</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio"   value="Quard-e-Hasanah" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-quard-e-hasanah">
-                                            <label for="pg-donation-type-quard-e-hasanah" class="text-dark">Quard-e-Hasanah</label>
-                                        </p>
-                                        <p>
-                                            <input type="radio"   value="Others" class="text-dark"
-                                                 name="donation_type" id="pg-donation-type-others">
-                                            <label for="pg-donation-type-others" class="text-dark">Others</label>
-                                        </p>
+
+                                <div class="single-input">
+                                    <label for="card_number">Card number*</label>
+                                    <input type="text" name="card_number" id="card_number" class="form-control" required>
+                                </div>
+                                <div class="single-input">
+                                    <label for="expiry_month">Expire Date</label>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6">
+                                            <select name="expiry_month" id="expiry_month" required>
+                                                <option value="january">January</option>
+                                                <option value="february">February</option>
+                                                <option value="march">March</option>
+                                                <option value="april">April</option>
+                                                <option value="june">June</option>
+                                                <option value="july">July</option>
+                                                <option value="august">August</option>
+                                                <option value="september">September</option>
+                                                <option value="november">November</option>
+                                                <option value="december">December</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6">
+                                           
+                                            <input type="number" name="expiry_year" id="expiry_year" class="form-control" placeholder="Year" required>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-
-                            <div class="single-input">
-                                <button type="submit" class="cr-btn cr-btn--black text-light">Donate Now</button>
-                            </div>
-
-
-
-
-
-
-                        </aside>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <label for="security">Security Code</label>
+                                            <input type="text" name="security" id="security" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-input">
+                                            <label for="zipcode">Zip Code</label>
+                                            <input type="text" name="zipcode" id="zipcode" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-input">
+                                    <button type="submit">Donate Now</button>
+                                </div>
+                            </aside>
+                        </div>
                     </div>
-                </div>
 
             </form>
         </div>
     </div><!-- //Donnation Form -->
 
-    <script>
-        var currencies = ["aed", "afn", "all", "amd", "ang", "aoa", "ars", "aud", "awg", "azn", "bam", "bbd", "bdt", "bgn",
-            "bhd", "bif", "bmd", "bnd", "bob", "brl", "bsd", "btn", "bwp", "byr", "bzd", "cad", "cdf", "chf", "clf",
-            "clp", "cny", "cop", "crc", "cuc", "cup", "cve", "czk", "djf", "dkk", "dop", "dzd", "egp", "ern", "etb",
-            "eur", "fjd", "fkp", "gbp", "gel", "ghs", "gip", "gmd", "gnf", "gtq", "gyd", "hkd", "hnl", "hrk", "htg",
-            "huf", "idr", "ils", "inr", "iqd", "irr", "isk", "jmd", "jod", "jpy", "kes", "kgs", "khr", "kmf", "kpw",
-            "krw", "kwd", "kyd", "kzt", "lak", "lbp", "lkr", "lrd", "lsl", "ltl", "lvl", "lyd", "mad", "mdl", "mga",
-            "mkd", "mmk", "mnt", "mop", "mro", "mur", "mvr", "mwk", "mxn", "myr", "mzn", "nad", "ngn", "nio", "nok",
-            "npr", "nzd", "omr", "pab", "pen", "pgk", "php", "pkr", "pln", "pyg", "qar", "ron", "rsd", "rub", "rwf",
-            "sar", "sbd", "scr", "sdg", "sek", "sgd", "shp", "skk", "sll", "sos", "srd", "ssp", "std", "svc", "syp",
-            "szl", "thb", "tjs", "tmt", "tnd", "top", "try", "ttd", "twd", "tzs", "uah", "ugx", "usd", "uyu", "uzs",
-            "vef", "vnd", "vuv", "wst", "xaf", "xag", "xau", "xcd", "xdr", "xof", "xpf", "yer", "zar", "zmk", "zmw",
-            "btc", "jep", "eek", "ghc", "mtl", "tmm", "yen", "zwd", "zwl", "zwn", "zwr"
-		];
-		
-		var html='';
-		currencies.forEach(function(currency){
-			if(currency=='usd'){
-				
-				html +='<option value='+currency+'  selected ="selected">'+currency+'</option>';
-			}
-			else{
-
-				html +='<option value='+currency+'>'+currency+'</option>';
-			}
-			
-		document.getElementById("currencySelect").innerHTML = html; 
-		})
-		
-	
-
-		
-
-        function donate() {
-            alert();
-        }
-
-    </script>
 
 @endsection
