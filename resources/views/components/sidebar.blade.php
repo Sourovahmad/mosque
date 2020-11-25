@@ -272,13 +272,13 @@
             <span>Donations</span></a>
     </li>
 
-    <hr class="sidebar-divider m-1 p-0 ">
+    {{-- <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.salat.index') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Salat</span></a>
-    </li>
+    </li> --}}
     <hr class="sidebar-divider m-1 p-0 ">
     <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.praying.index',2020) }}">
