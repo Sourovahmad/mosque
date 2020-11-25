@@ -274,39 +274,6 @@ color: #fff;
     
         </style>
 	</head>
-	<body >
-		<!--[if lte IE 9]>
-			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-		<![endif]-->
-
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>MASJID MISSION CENTER INC.</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Hind', sans-serif;) -->
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
-    <link rel="stylesheet" href="{{asset('abasas/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('abasas/css/plugins.css')}}">
-    <link rel="stylesheet" href="{{asset('abasas/style.css')}}">
-
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="{{asset('abasas/css/custom.css')}}">
-
-    <!-- Modernizer js -->
-    <script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-   
-</head>
-
 <body>
     <!--[if lte IE 9]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>

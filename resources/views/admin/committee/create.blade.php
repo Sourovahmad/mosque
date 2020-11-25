@@ -5,7 +5,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
 
     <div class="card mb-4 shadow " id="addCommittee">
 

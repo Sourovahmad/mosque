@@ -4,7 +4,7 @@
 
 
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
     <div class="card mb-4 shadow">
 
         <form method="POST" id="createEventForm" action="{{ route('admin.blog.update',$blog->id) }}"
@@ -15,7 +15,7 @@
             <div class="card-header py-3 bg-abasas-dark">
                 <nav class="navbar navbar-dark ">
                     <a class="navbar-brand">Edit Blog</a>
-                    <button type="submit" id="createEventSubmit" class="btn btn-success btn-lg"> Publish</button>
+                    <button type="submit" id="createEventSubmit" class="btn btn-success btn-lg d-none d-md-block"> Publish</button>
                 </nav>
             </div>
             <div class="card-body">
@@ -91,6 +91,12 @@
                             <label for="video">Video Link <i class="fa fa-info-circle"  title="Youtube embed code" aria-hidden="true"></i></label><br>
                             <textarea class="form-control" id="video" name="video" rows="5"
                                 >{{ $blog->video }}</textarea>
+                        </div>
+                        
+                        <div class="form-group col-12 ">
+
+                            <button type="submit" id="createPostSubmit"
+                                class="btn btn-success btn-lg d-none d-sm-block d-md-none"> Publish</button>
                         </div>
 
 

@@ -228,6 +228,7 @@
 
 <script>
     $(document).ready(function(){
+        
 
 
         $(document).on('click', "#user-edit-item", function () {
@@ -256,12 +257,7 @@
 
         
 
-        $('#dataTable').DataTable({   
-                    dom: 'lBfrtip',
-                    buttons: [
-                        'copy', 'csv', 'excel' , 'pdf' , 'print'
-                    ]
-                });
+        
 
     });
 </script>

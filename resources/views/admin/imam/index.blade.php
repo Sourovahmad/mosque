@@ -29,7 +29,7 @@
 @endif
 
 
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
     
     <!-- Begin Page Content -->
     <div class="" id="createNewForm"  style="display: none">

@@ -38,13 +38,13 @@ $currentYear = Carbon\Carbon:: now()->format('Y');
 
 
 
-<div class="container-fluid">
+<div class="container-fluid m-0 p-0">
 
     <div class="card mb-4 shadow">
 
         <div class="card-header py-3  bg-abasas-dark ">
             <nav class="navbar navbar-dark">
-                <a class="navbar-brand text-light"> Salat Time Of current Month </a>
+                <a class="navbar-brand text-light"> {{ Carbon\Carbon:: now()->format('F, Y') }} </a>
             </nav>
         </div>
         <div class="card-body">
@@ -74,7 +74,7 @@ $currentYear = Carbon\Carbon:: now()->format('Y');
 
             <div class="card-header py-3  bg-abasas-dark ">
                 <nav class="navbar navbar-dark">
-                    <a class="navbar-brand text-light"> Add new and Update Schedule </a>
+                    <a class="navbar-brand text-light"> Schedule </a>
                 </nav>
             </div>
             <div class="card-body">
