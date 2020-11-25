@@ -19,7 +19,7 @@ class IndexController extends Controller
     {
 
         $date = Carbon::now()->format('Y-m-d');
-        $events = event::where('date','>=',$date)->take(6)->get();
+        $events = event::where('date','>=',$date)->orderBy('date')->take(6)->get();
         $salat = salat::find(1);
         $galleries = gallery::orderBy('id','desc')->take(6)->get();
         return view('index',compact('events','salat','galleries'));
