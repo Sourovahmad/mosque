@@ -58,7 +58,7 @@
                             <th scope="col">PHONE</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="DataTableTest" >
 
                         @php
                         $i =1
