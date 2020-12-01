@@ -28,6 +28,8 @@
 		<!-- Cusom css -->
 	   <link rel="stylesheet" href="{{asset('abasas/css/custom.css')}}">
 
+    <link rel="stylesheet" href="{{asset('css/admin/datatables.min.css')}}">
+    
 		<!-- Modernizer js -->
         <script src="{{asset('abasas/js/vendor/modernizr-3.5.0.min.js')}}"></script>
         <script src="https://js.stripe.com/v3/"></script>
@@ -456,6 +458,8 @@ color: #fff;
     <script src="{{asset('abasas/js/active.js')}}"></script>
     <script src="{{asset('abasas/js/scripts.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    
+    <script src="{{asset('js/admin/dataTables.min.js')}}"></script>
     <script>
         $(document).ready(function () {
             $("#covidModal").modal();
@@ -466,6 +470,23 @@ color: #fff;
         })
 
     </script>
+    
+    
+    <script>
+    $(document).ready(function(){
+
+
+        $('.DataTableTest').DataTable({   
+                    dom: 'lBfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel' , 'pdf' , 'print'
+                    ]
+                });
+
+
+    });
+</script>
+    
     @yield('customJS')
 </body>
 
