@@ -32,7 +32,7 @@
                     
                     <div class="form-group col-sm-12 col-md-4  ">
                         <label for="phone"> Phone<span style="color: red"> *</span></label>
-                        <input type="tel" name="phone" class="form-control" id="phone" required>
+                        <input type="tel" name="phone" class="form-control" id="phone" >
                     </div>
 
 
