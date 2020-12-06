@@ -263,6 +263,29 @@
         </div>
     </li>
 
+
+    <hr class="sidebar-divider m-1 p-0 ">
+
+    <li class="nav-item">
+        <a class="nav-link collapsed  p-3 " href="#" data-toggle="collapse" data-target="#HighLights" aria-expanded="true" aria-controls="collapsePurchase">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>HighLights</span>
+        </a>
+        <div id="HighLights" class="collapse" aria-labelledby="headingPurchase" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+
+                <a class="collapse-item" href="{{ route('hightlights.index') }}">HighLights </a>
+                <a class="collapse-item" href="{{ route('hightlights.create') }}">Add HighLights </a>
+
+            </div>
+        </div>
+    </li>
+
+
+
+
+ 
+
     
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
@@ -279,12 +302,12 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Salat</span></a>
     </li> --}}
-    <hr class="sidebar-divider m-1 p-0 ">
+    {{-- <hr class="sidebar-divider m-1 p-0 ">
     <li class="nav-item  ">
         <a class="nav-link p-3 " href="{{ route('admin.praying.index',2020) }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Praying Time</span></a>
-    </li>
+    </li> --}}
     <hr class="sidebar-divider m-1 p-0 ">
     <!-- Nav Item - Dashboard -->
     <li class="nav-item  ">

@@ -29,6 +29,7 @@ Route::get('donations','PaymentController@donationIndex')->name('donations');
 Route::get('checkout','PaymentController@checkData')->name('checkout');
 
 Route::resource('payments','PaymentController');
+Route::resource('hightlights','highLightController');
 Route::resource('about','AboutController');
 Route::get('donation-success','PaymentController@success')->name('donationSuccess');
 Route::get('donation-failed','PaymentController@failed')->name('donationFailed');

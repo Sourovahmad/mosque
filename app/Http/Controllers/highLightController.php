@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\event;
-use App\gallery;
 use App\highLight;
-use App\salat;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
-class IndexController extends Controller
+class highLightController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,13 +15,9 @@ class IndexController extends Controller
      */
     public function index()
     {
+        $highligts= highLight::orderBy('id','desc')->get();
 
-        $date = Carbon::now()->format('Y-m-d');
-        $events = event::where('date','>=',$date)->orderBy('date')->take(6)->get();
-        $salat = salat::find(1);
-        $galleries = gallery::orderBy('id','desc')->take(6)->get();
-        $highlight = highLight::latest()->first();
-        return view('index',compact('events','salat','galleries','highlight'));
+        return view('admin.highlight.index',compact('highligts'));
     }
 
     /**
@@ -34,7 +27,7 @@ class IndexController extends Controller
      */
     public function create()
     {
-        return abort(404);
+        return view('admin.highlight.create');
     }
 
     /**
@@ -45,7 +38,11 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        return abort(404);
+        $highligts = new highLight;
+        $highligts->title = $request->title;
+        $highligts->description = $request->description;
+        $highligts->save();
+        return back()->withSuccess(['highLight Created']);;
     }
 
     /**
@@ -56,7 +53,7 @@ class IndexController extends Controller
      */
     public function show($id)
     {
-        return abort(404);
+        //
     }
 
     /**
@@ -67,7 +64,7 @@ class IndexController extends Controller
      */
     public function edit($id)
     {
-        return abort(404);
+        //
     }
 
     /**
@@ -79,7 +76,11 @@ class IndexController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return abort(404);
+        // $highligts =  highLight::find(1);
+        // $highligts->title = $request->title;
+        // $highligts->description = $request->description;
+        // $highligts->save();
+        // return back()->withSuccess(['highLight Created']);;
     }
 
     /**
@@ -90,6 +91,10 @@ class IndexController extends Controller
      */
     public function destroy($id)
     {
-        return abort(404);
+        $highligts = highLight::find($id);
+        $highligts->delete();
+        return Redirect::back()->withErrors(["highlight Deleted"]);
     }
+
+
 }
