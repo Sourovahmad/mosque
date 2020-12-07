@@ -15,9 +15,9 @@ class highLightController extends Controller
      */
     public function index()
     {
-        $highligts= highLight::orderBy('id','desc')->get();
+        $highligt= highLight::orderBy('id','desc')->first();
 
-        return view('admin.highlight.index',compact('highligts'));
+        return view('admin.highlight.index',compact('highligt'));
     }
 
     /**
@@ -76,11 +76,11 @@ class highLightController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $highligts =  highLight::find(1);
-        // $highligts->title = $request->title;
-        // $highligts->description = $request->description;
-        // $highligts->save();
-        // return back()->withSuccess(['highLight Created']);;
+        $highligts =  highLight::find(1);
+        $highligts->title = $request->title;
+        $highligts->description = $request->description;
+        $highligts->save();
+        return back()->withSuccess(['Top news updated successfully']);
     }
 
     /**
@@ -91,9 +91,7 @@ class highLightController extends Controller
      */
     public function destroy($id)
     {
-        $highligts = highLight::find($id);
-        $highligts->delete();
-        return Redirect::back()->withErrors(["highlight Deleted"]);
+        
     }
 
 

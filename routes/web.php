@@ -73,15 +73,7 @@ Auth::routes();
 
 
 Route::post('/test-session','PaymentController@testCreateSession')->name('testSession');
-Route::get('/haha',function(){
-    $stripe = new \Stripe\StripeClient(
-        'sk_test_51Hl3M4LtX3QocVixJGQqsrEysAwfyQlm2dYD5WJbG6ns2zFbD71UjPBBxUGNz8kEe2lOQpcNhvIIQjGR0mUvQpjj00oXrXAZvo'
-      );
-   return   $stripe->checkout->sessions->retrieve(
-        'cs_test_a1TS8C0zIIyPgMJy9CUY8hIcaxKJerDN8Kxfc9ojWc8OnAAWmest2E6KNY',
-        []
-      );
-});
+
 
 
 

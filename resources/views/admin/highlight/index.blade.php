@@ -1,6 +1,6 @@
+
 @extends('admin.includes.app')
 @section('content')
-
 
 
 @if ($errors->any())
@@ -28,120 +28,122 @@
 @endif
 
 
-<div class="card shadow mb-4">
 
-    <div class="card-header py-3 bg-abasas-dark">
-        <nav class="navbar  ">
-
-            <div class="navbar-brand"><span id="eventList"> HighLight List</span> </div>
-
-            <a href="{{route('hightlights.create')}}"><button type="button" class="btn btn-success btn-lg"
-                    id="AddNewFormButton"><i class="fas fa-plus" id="PlusButton"></i></button></a>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+ 
 
 
-        </nav>
-    </div>
-    <div class="card-body">
-
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead class="bg-abasas-dark">
-
-                    
-                    <tr>
-
-                        <th> #</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Action</th>
-
-                    </tr>
-                </thead>
-                <tfoot class="bg-abasas-dark">
-                    <tr>
-
-                        <th> #</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Action</th>
-
-                    </tr>
-
-                </tfoot>
-
-                <tbody>
-
-                    @php
-                    $itr=1;
-                    @endphp
-                    @foreach ($highligts as $highligt)
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        
+        <div class="card-header py-3 bg-abasas-dark">
+            <nav class="navbar navbar-dark ">
+                <a class="navbar-brand"> Top News</a>
+               
+            </nav>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                    <thead class="bg-abasas-dark">
 
 
-                    <tr class="data-row">
-                        <td class="iteration">{{$itr++}}</td>
-                        <td class="word-break">{{ $highligt->title}}</td>
-                        <td class="word-break">{{ $highligt->description}}</td>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                         
+                        </tr>
+                    </thead>
+                    <tfoot class="bg-abasas-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
 
+                    </tfoot>
+                    <tbody>
 
-                        <td class="align-middle">
-                            <form method="POST" action="{{route('hightlights.destroy',$highligt->id)}}"
-                                id="delete-form-{{ $highligt->id}}" style="display:none; ">
-                                {{csrf_field() }}
-                                {{ method_field("delete") }}
-                            </form>
+                        <?php $itr = 1; ?>
+                        
 
+                       
+                        <tr class="data-row">
+                           
+                            <td class="iteration">{{$itr++}}</td>
+                            <td class="word-break">{{ $highligt->title}}</td>
+                            <td class="word-break">{{ $highligt->description}}</td>
+    
+<td>  <button type="button" class="btn btn-success" onclick="$('#edit-modal').modal();" > <i class="fa fa-edit" aria-hidden="false"> </i></button>
+</td>
+                        </tr>
 
-
-
-                            <button title="Delete" class="dataDeleteItemClass btn btn-danger btn-sm" onclick="if(confirm('are you sure to delete this')){
-				document.getElementById('delete-form-{{ $highligt->id }}').submit();
-			}
-			else{
-				event.preventDefault();
-			}
-			" class="btn btn-danger btn-sm btn-raised">
-                                <i class="fa fa-trash" aria-hidden="false">
-
-                                </i>
-                            </button>
-
-
-
-
-                        </td>
-
-
-                    </tr>
-                    @endforeach
-
-                </tbody>
-
-
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+
 </div>
 
 
-<script>
-    $(document).ready(function(){
-        
-        $('#dataTable').DataTable({   
-                    dom: 'lBfrtip',
-                    buttons: [
-                        'copy', 'csv', 'excel' , 'pdf' , 'print'
-                    ]
-                });
-     
-    });
-</script>
+<!-- Attachment Modal -->
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-dark" id="edit-modal-label ">Edit News</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="attachment-body-content">
+                <form id="edit-form" class="form-horizontal" method="POST" action="{{ route('hightlights.update',1) }}">
+                    @csrf
+                    @method('put')
+
+
+
+                    <!-- /id -->
+                    <!-- name -->
+                    <div class="form-group">
+                        <label class="col-form-label" for="modal-input-name">Title</label>
+                        <input type="text" name="title" class="form-control" value="{{ $highligt->title}}" id="modal-input-name" required autofocus>
+                    </div>
+                    <!-- /name -->
+                    <!-- description -->
+                    <div class="form-group">
+                        <label class="col-form-label" for="modal-input-description">Description</label>
+                  
+                        <textarea class="form-control" name="description"  rows="3">
+                            {{ $highligt->description}}
+
+                        </textarea>
+  
+                    </div>
+
+                    <div class="form-group">
+
+                        <input type="submit" value=" সাবমিট" class="form-control btn btn-success">
+                    </div>
+                    <!-- /description -->
 
 
 
 
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- /Attachment Modal -->
 
 
 
-
-
+ 
 @endsection
