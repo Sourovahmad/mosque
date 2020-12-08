@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\event;
 use App\gallery;
+use App\highLight;
 use App\salat;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -22,7 +23,8 @@ class IndexController extends Controller
         $events = event::where('date','>=',$date)->orderBy('date')->take(6)->get();
         $salat = salat::find(1);
         $galleries = gallery::orderBy('id','desc')->take(6)->get();
-        return view('index',compact('events','salat','galleries'));
+        $highlight = highLight::latest()->first();
+        return view('index',compact('events','salat','galleries','highlight'));
     }
 
     /**

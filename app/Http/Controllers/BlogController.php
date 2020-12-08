@@ -66,7 +66,7 @@ class BlogController extends Controller
             $image->url = 'images/' . $fileNameFull;
             $image->thumbnail = 'images/' . $fileNameSmall;
             $image->save();
-        $blog->image_id = $image->id;
+            $blog->image_id = $image->id;
 
 
 

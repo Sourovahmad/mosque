@@ -1,0 +1,28 @@
+{
+    "title": "MASJID MISSION CENTER",
+    "tagline": "Admin documentation For MASJID MISSION CENTER ",
+    "author": "abasas Technologies Inc",
+    "image": "app.png",
+    "ignore": {
+            "files": ["Work_In_Progress.md"],
+            "folders": ["99_Not_Ready"]
+    },
+    "live": {
+        "clean_urls": true
+    },
+    "html": {
+        "theme": "daux-navy",
+        "breadcrumbs": true,
+        "breadcrumb_separator": "Chevrons",
+        "toggle_code": true,
+        "date_modified": true,
+        "inherit_index": true,
+
+      
+        "google_analytics": false,
+        "plausible_domain": false,
+     
+        "powered_by": "Abasas Technologies Inc"
+    }
+
+}
