@@ -1,0 +1,7 @@
+Masjid Mission center (Haji Camp) which is a community based non-profit organization that was established in the year of 2012
+
+The Mission of the Masjid mission center is to assist the Muslim communities of Jamaica Queens in the fields of social, education, religious development, cultural orientation and other humanitarian programs. We fulfill our mission through a variety of programs and activities including giving to charitable causes and feeding the hungry, hosting meetings and conference for a better understanding, providing cultural and community outreach programs and other services with the collaboration and coordination of local Muslim organizations and other concerned non-profit humanitarian agencies.
+
+Due to largely growing the Muslim communities in the city of New York we established this nonprofit organizations (Masjid Mission center) with your help, support and generous contributions to continue serving and advocate the Muslim communities with dedicated efforts in the fields of religious development, education, social, community development and other humanitarian services including the needs and interests of the community people.
+
+Masjid Mission center is a place where we always gather to worship Allah, learn religious education and knowledge, help each other, socialize, and share our joys and problems
