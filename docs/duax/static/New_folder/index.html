@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-    <title>imam - MMC</title>
+    <title>New folder - MMC</title>
     <meta name="description" content="Admin documentation For MASJID MISSION CENTER ">
     <meta name="author" content="abasas Technologies Inc">
     <meta charset="UTF-8">
@@ -61,7 +61,7 @@
 
         <div class="Collapsible__content" id="sidebar_content">
             <!-- Navigation -->
-            <ul class='Nav'><li class='Nav__item '><a href="../Getting_Started.html">Getting Started</a></li><li class='Nav__item  has-children'><a href="../Post/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Post</a><ul class='Nav'><li class='Nav__item '><a href="../Post/Event/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Event</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Post/Blog/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Blog</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Post/Program/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Program</a><ul class='Nav'></ul></li></ul></li><li class='Nav__item '><a href="../Top_News/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Top News</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Committe/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Committe</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../donation/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>donation</a><ul class='Nav'></ul></li><li class='Nav__item Nav__item--open'><a href="../imam/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>imam</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../gallery/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>gallery</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../New_folder/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>New folder</a><ul class='Nav'></ul></li></ul>
+            <ul class='Nav'><li class='Nav__item '><a href="../Getting_Started.html">Getting Started</a></li><li class='Nav__item  has-children'><a href="../Post/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Post</a><ul class='Nav'><li class='Nav__item '><a href="../Post/Event/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Event</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Post/Blog/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Blog</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Post/Program/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Program</a><ul class='Nav'></ul></li></ul></li><li class='Nav__item '><a href="../Top_News/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Top News</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../Committe/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>Committe</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../donation/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>donation</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../imam/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>imam</a><ul class='Nav'></ul></li><li class='Nav__item '><a href="../gallery/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>gallery</a><ul class='Nav'></ul></li><li class='Nav__item Nav__item--open'><a href="../New_folder/index.html" class="Nav__item__link"><i class="Nav__arrow">&nbsp;</i>New folder</a><ul class='Nav'></ul></li></ul>
             <div class="Links">
                             </div>
 
@@ -84,18 +84,59 @@
                 <article class="Page">
 
     <div class="Page__header">
-        <h1><a href="../imam/index.html">imam</a></h1>
+        <h1><a href="../New_folder/index.html">New folder</a></h1>
                 <span class="ModifiedDate">
-            December 8, 2020 at 8:33 AM        </span>
+            December 8, 2020 at 10:33 AM        </span>
                     </div>
 
     <div class="s-content">
-        <img src="index.JPG">
+        <p class="HeroText">
+	<strong>Daux.io</strong> is a documentation generator that uses a simple folder structure and Markdown files to create custom documentation on the fly. It helps you create great looking documentation in a developer friendly way.
+</p>
+<hr />
+<h3 id="page_Features">Features</h3>
+<hr />
+<div class="Row">
+<div class="Row__third">
+<h4 id="page_For_Authors">For Authors</h4>
+</div>
+<div class="Row__third">
+<h4 id="page_For_Developers">For Developers</h4>
+<ul>
+<li>Full access to the internal API to create new pages programatically</li>
+<li>Work with pages metadata</li>
+</ul>
+</div>
+<div class="Row__third">
+<h4 id="page_For_Marketing">For Marketing</h4>
+<ul>
+<li>100% Mobile Responsive</li>
+<li>4 Built-In Themes or roll your own</li>
+<li>Functional, Flat Design Style</li>
+<li>Optional code float layout</li>
+<li>Shareable/Linkable SEO Friendly URLs</li>
+<li>Supports Google Analytics and Piwik Analytics</li>
+</ul>
+</div>
+</div>
+<hr />
+<h3 id="page_Installation_and_usage">Installation and usage</h3>
+<p>If you have <strong>PHP</strong> and Composer installed</p>
+<pre><code class="hljs bash">composer global require daux/daux.io
+
+<span class="hljs-comment"># Next to your `docs` folder, run</span>
+daux generate
+</code></pre>
+<p>Or if you wish to use <strong>Docker</strong></p>
+<pre><code class="hljs bash"><span class="hljs-comment"># Next to your `docs` folder, run</span>
+docker run --rm -it -w /build -v <span class="hljs-string">"<span class="hljs-variable">$PWD</span>"</span>:/build daux/daux.io daux generate
+</code></pre>
+<hr />
     </div>
 
         <nav>
         <ul class="Pager">
-            <li class=Pager--prev><a href="../donation/index.html">Previous</a></li>            <li class=Pager--next><a href="../gallery/index.html">Next</a></li>        </ul>
+            <li class=Pager--prev><a href="../gallery/index.html">Previous</a></li>                    </ul>
     </nav>
     </article>
 
